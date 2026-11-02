@@ -1,0 +1,245 @@
+[
+  {
+    "id": "wohnung", "topic": "wohnung", "order": 1, "pos": "noun",
+    "article": "die", "de": "Wohnung", "plural": "-en",
+    "ru": "квартира", "ru_ok": [],
+    "tr": "ВОнунк", "tr_ok": ["вонунк", "вонунг"],
+    "syllables": ["Woh", "nung"],
+    "phrase_de": "Die Wohnung ist klein.", "phrase_ru": "Квартира маленькая.",
+    "note": "-ung всегда женского рода."
+  },
+  {
+    "id": "haus", "topic": "wohnung", "order": 3, "pos": "noun",
+    "article": "das", "de": "Haus", "plural": "Häuser",
+    "ru": "дом", "ru_ok": [],
+    "tr": "ХАУС", "tr_ok": ["хаус"],
+    "syllables": ["Haus"],
+    "phrase_de": "Das Haus ist alt.", "phrase_ru": "Дом старый.",
+    "note": "h в начале слова — мягкое, почти выдох."
+  },
+  {
+    "id": "zimmer", "topic": "wohnung", "order": 7, "pos": "noun",
+    "article": "das", "de": "Zimmer", "plural": "-",
+    "ru": "комната", "ru_ok": [],
+    "tr": "ЦИма", "tr_ok": ["цима", "цимэр", "циммер"],
+    "syllables": ["Zim", "mer"],
+    "phrase_de": "Mein Zimmer ist groß.", "phrase_ru": "Моя комната большая.",
+    "note": "z всегда читается как ц."
+  },
+  {
+    "id": "kueche", "topic": "wohnung", "order": 8, "pos": "noun",
+    "article": "die", "de": "Küche", "plural": "-n",
+    "ru": "кухня", "ru_ok": [],
+    "tr": "КЮхе", "tr_ok": ["кюхе", "кюхэ", "кухе"],
+    "syllables": ["Kü", "che"],
+    "phrase_de": "Die Küche ist sauber.", "phrase_ru": "Кухня чистая.",
+    "note": "ü — это ю."
+  },
+  {
+    "id": "bad", "topic": "wohnung", "order": 9, "pos": "noun",
+    "article": "das", "de": "Bad", "plural": "Bäder",
+    "ru": "ванная", "ru_ok": ["ванная комната", "санузел"],
+    "tr": "БАТ", "tr_ok": ["бат", "бад"],
+    "syllables": ["Bad"],
+    "phrase_de": "Das Bad ist hinten.", "phrase_ru": "Ванная сзади.",
+    "note": ""
+  },
+  {
+    "id": "tuer", "topic": "wohnung", "order": 10, "pos": "noun",
+    "article": "die", "de": "Tür", "plural": "-en",
+    "ru": "дверь", "ru_ok": [],
+    "tr": "ТЮА", "tr_ok": ["тюа", "тюр", "тур"],
+    "syllables": ["Tür"],
+    "phrase_de": "Die Tür ist zu.", "phrase_ru": "Дверь закрыта.",
+    "note": "r на конце звучит почти как а."
+  },
+  {
+    "id": "fenster", "topic": "wohnung", "order": 11, "pos": "noun",
+    "article": "das", "de": "Fenster", "plural": "-",
+    "ru": "окно", "ru_ok": [],
+    "tr": "ФЭНста", "tr_ok": ["фэнста", "фэнстэр", "фенстер"],
+    "syllables": ["Fens", "ter"],
+    "phrase_de": "Das Fenster ist offen.", "phrase_ru": "Окно открыто.",
+    "note": ""
+  },
+  {
+    "id": "tisch", "topic": "wohnung", "order": 13, "pos": "noun",
+    "article": "der", "de": "Tisch", "plural": "-e",
+    "ru": "стол", "ru_ok": [],
+    "tr": "ТИш", "tr_ok": ["тиш", "тишь"],
+    "syllables": ["Tisch"],
+    "phrase_de": "Der Tisch ist klein.", "phrase_ru": "Стол маленький.",
+    "note": "sch читается как ш."
+  },
+  {
+    "id": "stuhl", "topic": "wohnung", "order": 17, "pos": "noun",
+    "article": "der", "de": "Stuhl", "plural": "Stühle",
+    "ru": "стул", "ru_ok": [],
+    "tr": "ШТУЛЬ", "tr_ok": ["штуль", "штул"],
+    "syllables": ["Stuhl"],
+    "phrase_de": "Der Stuhl ist frei.", "phrase_ru": "Стул свободен.",
+    "note": "st в начале слова читается как шт."
+  },
+  {
+    "id": "bett", "topic": "wohnung", "order": 18, "pos": "noun",
+    "article": "das", "de": "Bett", "plural": "-en",
+    "ru": "кровать", "ru_ok": ["постель"],
+    "tr": "БЭТ", "tr_ok": ["бэт", "бет", "бэтт"],
+    "syllables": ["Bett"],
+    "phrase_de": "Das Bett ist groß.", "phrase_ru": "Кровать большая.",
+    "note": ""
+  },
+  {
+    "id": "schrank", "topic": "wohnung", "order": 19, "pos": "noun",
+    "article": "der", "de": "Schrank", "plural": "Schränke",
+    "ru": "шкаф", "ru_ok": [],
+    "tr": "ШРАНК", "tr_ok": ["шранк", "шранг"],
+    "syllables": ["Schrank"],
+    "phrase_de": "Der Schrank ist leer.", "phrase_ru": "Шкаф пустой.",
+    "note": ""
+  },
+  {
+    "id": "lampe", "topic": "wohnung", "order": 20, "pos": "noun",
+    "article": "die", "de": "Lampe", "plural": "-n",
+    "ru": "лампа", "ru_ok": ["светильник"],
+    "tr": "ЛАМпэ", "tr_ok": ["лампэ", "лампе"],
+    "syllables": ["Lam", "pe"],
+    "phrase_de": "Die Lampe ist kaputt.", "phrase_ru": "Лампа сломана.",
+    "note": ""
+  },
+  {
+    "id": "schluessel", "topic": "wohnung", "order": 21, "pos": "noun",
+    "article": "der", "de": "Schlüssel", "plural": "-",
+    "ru": "ключ", "ru_ok": [],
+    "tr": "ШЛЮсэль", "tr_ok": ["шлюсэль", "шлюссель", "шлюсель"],
+    "syllables": ["Schlüs", "sel"],
+    "phrase_de": "Wo ist der Schlüssel?", "phrase_ru": "Где ключ?",
+    "note": ""
+  },
+  {
+    "id": "miete", "topic": "wohnung", "order": 23, "pos": "noun",
+    "article": "die", "de": "Miete", "plural": "-n",
+    "ru": "квартплата", "ru_ok": ["плата за квартиру", "аренда"],
+    "tr": "МИтэ", "tr_ok": ["митэ", "мите"],
+    "syllables": ["Mie", "te"],
+    "phrase_de": "Die Miete ist hoch.", "phrase_ru": "Квартплата высокая.",
+    "note": "ie читается как долгое и."
+  },
+  {
+    "id": "wasser", "topic": "wohnung", "order": 27, "pos": "noun",
+    "article": "das", "de": "Wasser", "plural": "-",
+    "ru": "вода", "ru_ok": [],
+    "tr": "ВАсэр", "tr_ok": ["васер", "вассер", "уасер", "уассер", "васа", "васэа"],
+    "syllables": ["Was", "ser"],
+    "phrase_de": "Das Wasser ist kalt.", "phrase_ru": "Вода холодная.",
+    "note": ""
+  },
+  {
+    "id": "heizung", "topic": "wohnung", "order": 28, "pos": "noun",
+    "article": "die", "de": "Heizung", "plural": "-en",
+    "ru": "отопление", "ru_ok": ["батарея"],
+    "tr": "ХАЙцунк", "tr_ok": ["хайцунк", "хайцунг"],
+    "syllables": ["Hei", "zung"],
+    "phrase_de": "Die Heizung ist kalt.", "phrase_ru": "Отопление холодное.",
+    "note": "ei читается как ай."
+  },
+  {
+    "id": "strom", "topic": "wohnung", "order": 29, "pos": "noun",
+    "article": "der", "de": "Strom", "plural": "-",
+    "ru": "электричество", "ru_ok": ["ток", "свет"],
+    "tr": "ШТРОМ", "tr_ok": ["штром"],
+    "syllables": ["Strom"],
+    "phrase_de": "Der Strom ist weg.", "phrase_ru": "Электричества нет.",
+    "note": ""
+  },
+  {
+    "id": "internet", "topic": "wohnung", "order": 30, "pos": "noun",
+    "article": "das", "de": "Internet", "plural": "-",
+    "ru": "интернет", "ru_ok": [],
+    "tr": "ИНтанэт", "tr_ok": ["интанэт", "интернет", "интэрнэт"],
+    "syllables": ["In", "ter", "net"],
+    "phrase_de": "Das Internet geht nicht.", "phrase_ru": "Интернет не работает.",
+    "note": ""
+  },
+  {
+    "id": "wasserhahn", "topic": "wohnung", "order": 31, "pos": "noun",
+    "article": "der", "de": "Wasserhahn", "plural": "Wasserhähne",
+    "ru": "кран", "ru_ok": ["водопроводный кран"],
+    "tr": "ВАсэрхан", "tr_ok": ["васерхан", "вассерхан", "васэрхан"],
+    "syllables": ["Was", "ser", "hahn"],
+    "phrase_de": "Der Wasserhahn tropft.", "phrase_ru": "Кран капает.",
+    "note": "Из Wasser и Hahn: вода и петух."
+  },
+  {
+    "id": "teller", "topic": "wohnung", "order": 33, "pos": "noun",
+    "article": "der", "de": "Teller", "plural": "-",
+    "ru": "тарелка", "ru_ok": [],
+    "tr": "ТЭла", "tr_ok": ["тэла", "тэлэр", "теллер", "тэллер"],
+    "syllables": ["Tel", "ler"],
+    "phrase_de": "Der Teller ist schmutzig.", "phrase_ru": "Тарелка грязная.",
+    "note": ""
+  },
+  {
+    "id": "spuelen", "topic": "wohnung", "order": 37, "pos": "verb",
+    "article": "", "de": "spülen", "plural": "",
+    "ru": "мыть посуду", "ru_ok": ["мыть", "помыть"],
+    "tr": "ШПЮлэн", "tr_ok": ["шпюлэн", "шпюлен", "шпулен"],
+    "syllables": ["spü", "len"],
+    "phrase_de": "Ich spüle heute.", "phrase_ru": "Сегодня мою я.",
+    "note": "Можно писать spuelen."
+  },
+  {
+    "id": "putzen", "topic": "wohnung", "order": 38, "pos": "verb",
+    "article": "", "de": "putzen", "plural": "",
+    "ru": "убирать", "ru_ok": ["чистить", "убираться"],
+    "tr": "ПУцэн", "tr_ok": ["пуцэн", "пуцен"],
+    "syllables": ["put", "zen"],
+    "phrase_de": "Wir putzen die Wohnung.", "phrase_ru": "Мы убираем квартиру.",
+    "note": ""
+  },
+  {
+    "id": "kochen", "topic": "wohnung", "order": 39, "pos": "verb",
+    "article": "", "de": "kochen", "plural": "",
+    "ru": "готовить", "ru_ok": ["варить"],
+    "tr": "КОхен", "tr_ok": ["кохен", "кохэн"],
+    "syllables": ["ko", "chen"],
+    "phrase_de": "Ich koche gern.", "phrase_ru": "Я люблю готовить.",
+    "note": ""
+  },
+  {
+    "id": "laut", "topic": "wohnung", "order": 40, "pos": "adj",
+    "article": "", "de": "laut", "plural": "",
+    "ru": "громкий", "ru_ok": ["громко", "шумный"],
+    "tr": "ЛАУТ", "tr_ok": ["лаут"],
+    "syllables": ["laut"],
+    "phrase_de": "Die Musik ist laut.", "phrase_ru": "Музыка громкая.",
+    "note": ""
+  },
+  {
+    "id": "leise", "topic": "wohnung", "order": 41, "pos": "adj",
+    "article": "", "de": "leise", "plural": "",
+    "ru": "тихий", "ru_ok": ["тихо"],
+    "tr": "ЛАЙзэ", "tr_ok": ["лайзэ", "лайзе", "лайсэ"],
+    "syllables": ["lei", "se"],
+    "phrase_de": "Bitte leise.", "phrase_ru": "Пожалуйста, тише.",
+    "note": "leiser — тише."
+  },
+  {
+    "id": "gross", "topic": "wohnung", "order": 43, "pos": "adj",
+    "article": "", "de": "groß", "plural": "",
+    "ru": "большой", "ru_ok": ["крупный", "высокий"],
+    "tr": "ГРОС", "tr_ok": ["грос", "гросс"],
+    "syllables": ["groß"],
+    "phrase_de": "Das Haus ist groß.", "phrase_ru": "Дом большой.",
+    "note": "Можно писать gross."
+  },
+  {
+    "id": "klein", "topic": "wohnung", "order": 47, "pos": "adj",
+    "article": "", "de": "klein", "plural": "",
+    "ru": "маленький", "ru_ok": ["небольшой"],
+    "tr": "КЛАЙН", "tr_ok": ["клайн"],
+    "syllables": ["klein"],
+    "phrase_de": "Die Küche ist klein.", "phrase_ru": "Кухня маленькая.",
+    "note": ""
+  }
+]

@@ -1,0 +1,209 @@
+[
+  {
+    "id": "mann", "topic": "menschen", "order": 1, "pos": "noun",
+    "article": "der", "de": "Mann", "plural": "Männer",
+    "ru": "мужчина", "ru_ok": ["муж"],
+    "tr": "МАН", "tr_ok": ["ман", "манн"],
+    "syllables": ["Mann"],
+    "phrase_de": "Der Mann ist nett.", "phrase_ru": "Мужчина милый.",
+    "note": ""
+  },
+  {
+    "id": "frau", "topic": "menschen", "order": 3, "pos": "noun",
+    "article": "die", "de": "Frau", "plural": "-en",
+    "ru": "женщина", "ru_ok": ["жена"],
+    "tr": "ФРАУ", "tr_ok": ["фрау"],
+    "syllables": ["Frau"],
+    "phrase_de": "Die Frau wohnt hier.", "phrase_ru": "Женщина живёт здесь.",
+    "note": "Frau — ещё и обращение: Frau Schmidt."
+  },
+  {
+    "id": "mensch", "topic": "menschen", "order": 7, "pos": "noun",
+    "article": "der", "de": "Mensch", "plural": "-en",
+    "ru": "человек", "ru_ok": [],
+    "tr": "МЭНШ", "tr_ok": ["мэнш", "менш"],
+    "syllables": ["Mensch"],
+    "phrase_de": "Er ist ein guter Mensch.", "phrase_ru": "Он хороший человек.",
+    "note": ""
+  },
+  {
+    "id": "kind", "topic": "menschen", "order": 8, "pos": "noun",
+    "article": "das", "de": "Kind", "plural": "-er",
+    "ru": "ребёнок", "ru_ok": ["ребенок", "дитя"],
+    "tr": "КИНТ", "tr_ok": ["кинт", "кинд"],
+    "syllables": ["Kind"],
+    "phrase_de": "Das Kind ist klein.", "phrase_ru": "Ребёнок маленький.",
+    "note": "d на конце читается как т."
+  },
+  {
+    "id": "bruder", "topic": "menschen", "order": 9, "pos": "noun",
+    "article": "der", "de": "Bruder", "plural": "Brüder",
+    "ru": "брат", "ru_ok": [],
+    "tr": "БРУда", "tr_ok": ["бруда", "брудэр", "брудер"],
+    "syllables": ["Bru", "der"],
+    "phrase_de": "Mein Bruder heißt Tim.", "phrase_ru": "Моего брата зовут Тим.",
+    "note": ""
+  },
+  {
+    "id": "schwester", "topic": "menschen", "order": 10, "pos": "noun",
+    "article": "die", "de": "Schwester", "plural": "-n",
+    "ru": "сестра", "ru_ok": [],
+    "tr": "ШВЭста", "tr_ok": ["швэста", "швэстэр", "швестер", "швэстер"],
+    "syllables": ["Schwes", "ter"],
+    "phrase_de": "Meine Schwester wohnt in Berlin.", "phrase_ru": "Моя сестра живёт в Берлине.",
+    "note": ""
+  },
+  {
+    "id": "sohn", "topic": "menschen", "order": 11, "pos": "noun",
+    "article": "der", "de": "Sohn", "plural": "Söhne",
+    "ru": "сын", "ru_ok": [],
+    "tr": "ЗОН", "tr_ok": ["зон", "сон"],
+    "syllables": ["Sohn"],
+    "phrase_de": "Ihr Sohn ist nett.", "phrase_ru": "Её сын милый.",
+    "note": "s в начале слова читается как з. h после гласной не читается."
+  },
+  {
+    "id": "tochter", "topic": "menschen", "order": 13, "pos": "noun",
+    "article": "die", "de": "Tochter", "plural": "Töchter",
+    "ru": "дочь", "ru_ok": ["дочка"],
+    "tr": "ТОХта", "tr_ok": ["тохта", "тохтэр", "тохтер"],
+    "syllables": ["Toch", "ter"],
+    "phrase_de": "Die Tochter spricht Deutsch.", "phrase_ru": "Дочь говорит по-немецки.",
+    "note": ""
+  },
+  {
+    "id": "freund", "topic": "menschen", "order": 17, "pos": "noun",
+    "article": "der", "de": "Freund", "plural": "-e",
+    "ru": "друг", "ru_ok": ["парень"],
+    "tr": "ФРОЙНТ", "tr_ok": ["фройнт", "фройнд"],
+    "syllables": ["Freund"],
+    "phrase_de": "Mein Freund kommt heute.", "phrase_ru": "Мой друг придёт сегодня.",
+    "note": "eu читается как ой."
+  },
+  {
+    "id": "freundin", "topic": "menschen", "order": 18, "pos": "noun",
+    "article": "die", "de": "Freundin", "plural": "-nen",
+    "ru": "подруга", "ru_ok": ["девушка"],
+    "tr": "ФРОЙНдин", "tr_ok": ["фройндин"],
+    "syllables": ["Freun", "din"],
+    "phrase_de": "Meine Freundin heißt Amiko.", "phrase_ru": "Мою подругу зовут Амико.",
+    "note": "-in делает из слова женский род."
+  },
+  {
+    "id": "nachbar", "topic": "menschen", "order": 19, "pos": "noun",
+    "article": "der", "de": "Nachbar", "plural": "-n",
+    "ru": "сосед", "ru_ok": [],
+    "tr": "НАХбар", "tr_ok": ["нахбар", "нахба"],
+    "syllables": ["Nach", "bar"],
+    "phrase_de": "Der Nachbar ist laut.", "phrase_ru": "Сосед громкий.",
+    "note": "ch после a читается как х."
+  },
+  {
+    "id": "nachbarin", "topic": "menschen", "order": 20, "pos": "noun",
+    "article": "die", "de": "Nachbarin", "plural": "-nen",
+    "ru": "соседка", "ru_ok": [],
+    "tr": "НАХбарин", "tr_ok": ["нахбарин"],
+    "syllables": ["Nach", "ba", "rin"],
+    "phrase_de": "Die Nachbarin wohnt oben.", "phrase_ru": "Соседка живёт наверху.",
+    "note": ""
+  },
+  {
+    "id": "junge", "topic": "menschen", "order": 21, "pos": "noun",
+    "article": "der", "de": "Junge", "plural": "-n",
+    "ru": "мальчик", "ru_ok": [],
+    "tr": "ЮНэ", "tr_ok": ["юнэ", "юнге", "юнгэ"],
+    "syllables": ["Jun", "ge"],
+    "phrase_de": "Der Junge spielt.", "phrase_ru": "Мальчик играет.",
+    "note": "j читается как й, поэтому Ju — это ю."
+  },
+  {
+    "id": "maedchen", "topic": "menschen", "order": 23, "pos": "noun",
+    "article": "das", "de": "Mädchen", "plural": "-",
+    "ru": "девочка", "ru_ok": [],
+    "tr": "МЭТхен", "tr_ok": ["мэтхен", "метхен", "мэдхен", "медхен"],
+    "syllables": ["Mäd", "chen"],
+    "phrase_de": "Das Mädchen spricht laut.", "phrase_ru": "Девочка говорит громко.",
+    "note": "das, хотя девочка: все слова на -chen среднего рода."
+  },
+  {
+    "id": "name", "topic": "menschen", "order": 27, "pos": "noun",
+    "article": "der", "de": "Name", "plural": "-n",
+    "ru": "имя", "ru_ok": [],
+    "tr": "НАмэ", "tr_ok": ["намэ", "наме"],
+    "syllables": ["Na", "me"],
+    "phrase_de": "Mein Name ist Matt.", "phrase_ru": "Меня зовут Мэтт.",
+    "note": ""
+  },
+  {
+    "id": "heissen", "topic": "menschen", "order": 28, "pos": "verb",
+    "article": "", "de": "heißen", "plural": "",
+    "ru": "зваться", "ru_ok": ["называться", "звать"],
+    "tr": "ХАЙсэн", "tr_ok": ["хайсэн", "хайсен", "хайссен"],
+    "syllables": ["hei", "ßen"],
+    "phrase_de": "Wie heißt du?", "phrase_ru": "Как тебя зовут?",
+    "note": "ß читается как с. Можно писать heissen."
+  },
+  {
+    "id": "wohnen", "topic": "menschen", "order": 29, "pos": "verb",
+    "article": "", "de": "wohnen", "plural": "",
+    "ru": "жить", "ru_ok": ["проживать"],
+    "tr": "ВОнэн", "tr_ok": ["вонэн", "вонен"],
+    "syllables": ["woh", "nen"],
+    "phrase_de": "Wo wohnst du?", "phrase_ru": "Где ты живёшь?",
+    "note": "w читается как в."
+  },
+  {
+    "id": "kommen", "topic": "menschen", "order": 30, "pos": "verb",
+    "article": "", "de": "kommen", "plural": "",
+    "ru": "приходить", "ru_ok": ["идти", "приезжать"],
+    "tr": "КОмэн", "tr_ok": ["комэн", "комен"],
+    "syllables": ["kom", "men"],
+    "phrase_de": "Ich komme aus Russland.", "phrase_ru": "Я из России.",
+    "note": "kommen aus — быть родом из."
+  },
+  {
+    "id": "sprechen", "topic": "menschen", "order": 31, "pos": "verb",
+    "article": "", "de": "sprechen", "plural": "",
+    "ru": "говорить", "ru_ok": ["разговаривать"],
+    "tr": "ШПРЭхен", "tr_ok": ["шпрэхен", "шпрехен"],
+    "syllables": ["spre", "chen"],
+    "phrase_de": "Sprichst du Deutsch?", "phrase_ru": "Ты говоришь по-немецки?",
+    "note": "Неправильный глагол: du sprichst, er spricht. sp в начале читается как шп."
+  },
+  {
+    "id": "jung", "topic": "menschen", "order": 33, "pos": "adj",
+    "article": "", "de": "jung", "plural": "",
+    "ru": "молодой", "ru_ok": ["юный"],
+    "tr": "ЮНК", "tr_ok": ["юнк", "юнг"],
+    "syllables": ["jung"],
+    "phrase_de": "Sie ist jung.", "phrase_ru": "Она молодая.",
+    "note": ""
+  },
+  {
+    "id": "alt", "topic": "menschen", "order": 37, "pos": "adj",
+    "article": "", "de": "alt", "plural": "",
+    "ru": "старый", "ru_ok": ["пожилой"],
+    "tr": "АЛЬТ", "tr_ok": ["альт", "алт"],
+    "syllables": ["alt"],
+    "phrase_de": "Wie alt bist du?", "phrase_ru": "Сколько тебе лет?",
+    "note": ""
+  },
+  {
+    "id": "nett", "topic": "menschen", "order": 38, "pos": "adj",
+    "article": "", "de": "nett", "plural": "",
+    "ru": "милый", "ru_ok": ["приятный", "славный"],
+    "tr": "НЭТ", "tr_ok": ["нэт", "нет", "нэтт"],
+    "syllables": ["nett"],
+    "phrase_de": "Du bist nett.", "phrase_ru": "Ты милый.",
+    "note": ""
+  },
+  {
+    "id": "gut", "topic": "menschen", "order": 39, "pos": "adj",
+    "article": "", "de": "gut", "plural": "",
+    "ru": "хороший", "ru_ok": ["хорошо"],
+    "tr": "ГУТ", "tr_ok": ["гут"],
+    "syllables": ["gut"],
+    "phrase_de": "Das ist gut.", "phrase_ru": "Это хорошо.",
+    "note": ""
+  }
+]

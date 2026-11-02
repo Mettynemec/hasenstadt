@@ -1,0 +1,33 @@
+[
+  {
+    "id": "menschen",
+    "title_ru": "Люди",
+    "title_de": "die Menschen",
+    "order": 1,
+    "bonus": false,
+    "rule_before": "alphabet"
+  },
+  {
+    "id": "wohnung",
+    "title_ru": "Дом и квартира",
+    "title_de": "die Wohnung",
+    "order": 3,
+    "bonus": false,
+    "rule_before": "artikel"
+  },
+  {
+    "id": "essen",
+    "title_ru": "Еда",
+    "title_de": "das Essen",
+    "order": 7,
+    "bonus": false,
+    "rule_before": "sein"
+  },
+  {
+    "id": "schimpf",
+    "title_ru": "Ласковые оскорбления",
+    "title_de": "die Schimpfwörter",
+    "order": 1000,
+    "bonus": true
+  }
+]

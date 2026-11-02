@@ -1,0 +1,12 @@
+{
+  "name": "Hasenstadt",
+  "short_name": "Hasen",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "lang": "ru",
+  "background_color": "rgb(13, 23, 33)",
+  "theme_color": "rgb(13, 23, 33)",
+  "icons": [
+    { "src": "img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "id": "notruf",
+  "title_de": "der Notruf",
+  "title_ru": "Экстренное",
+  "icon": "phone",
+  "order": 1000,
+  "always_open": true,
+  "exit_to": "",
+  "numbers": [
+    {
+      "what": "Скорая и пожарные",
+      "words": "сто двенадцать",
+      "digits": "112",
+      "de": "Notruf einhundertzwölf"
+    },
+    {
+      "what": "Полиция",
+      "words": "сто десять",
+      "digits": "110",
+      "de": "Polizei einhundertzehn"
+    }
+  ],
+  "memo": [
+    {
+      "point": "Где. Адрес или место.",
+      "de": "Ich bin in der Bergstraße zehn.",
+      "tr": "ихь бин ин дэа БЭРКштрасэ цэн"
+    },
+    {
+      "point": "Что случилось.",
+      "de": "Es gibt einen Unfall.",
+      "tr": "эс гипт АЙнэн Унфаль"
+    },
+    {
+      "point": "Сколько человек пострадало.",
+      "de": "Eine Person ist verletzt.",
+      "tr": "АЙнэ пэрЗОН ист фэрЛЭЦТ"
+    },
+    {
+      "point": "Своё имя.",
+      "de": "Mein Name ist Matt.",
+      "tr": "майн НАмэ ист мэт"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "notruf-feuer",
+      "title_ru": "Горит дом",
+      "needs_words": [],
+      "needs_rules": [],
+      "roles": { "bot": "Диспетчер", "human": "Ты" },
+      "lines": [
+        {
+          "who": "human",
+          "task_ru": "Скажи, что горит.",
+          "de": "Es brennt.",
+          "ru": "Горит.",
+          "chunks": ["Es", "brennt."]
+        },
+        {
+          "who": "bot",
+          "de": "Wo brennt es?",
+          "ru": "Где горит?",
+          "options_ru": [
+            "Он спрашивает адрес",
+            "Он спрашивает имя",
+            "Он спрашивает, есть ли дым"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Назови адрес: Бергштрассе десять.",
+          "de": "In der Bergstraße zehn.",
+          "ru": "На Бергштрассе десять.",
+          "chunks": ["In der", "Bergstraße", "zehn."]
+        },
+        {
+          "who": "bot",
+          "de": "Sind Menschen im Haus?",
+          "ru": "В доме есть люди?",
+          "options_ru": [
+            "Он спрашивает, есть ли люди внутри",
+            "Он спрашивает, большой ли дом",
+            "Он спрашивает, кто вызвал"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи, что в доме два человека.",
+          "de": "Ja, zwei Personen.",
+          "ru": "Да, два человека.",
+          "chunks": ["Ja,", "zwei Personen."]
+        },
+        {
+          "who": "bot",
+          "de": "Wir kommen sofort.",
+          "ru": "Мы сейчас приедем.",
+          "options_ru": [
+            "Они едут",
+            "Они просят перезвонить",
+            "Они дают инструкцию"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "id": "notruf-arzt",
+      "title_ru": "Нужна скорая",
+      "needs_words": [],
+      "needs_rules": [],
+      "roles": { "bot": "Диспетчер", "human": "Ты" },
+      "lines": [
+        {
+          "who": "human",
+          "task_ru": "Скажи, что нужен врач.",
+          "de": "Ich brauche einen Arzt.",
+          "ru": "Мне нужен врач.",
+          "chunks": ["Ich brauche", "einen Arzt."]
+        },
+        {
+          "who": "bot",
+          "de": "Was ist passiert?",
+          "ru": "Что случилось?",
+          "options_ru": [
+            "Он спрашивает, что случилось",
+            "Он спрашивает, где ты",
+            "Он спрашивает, как тебя зовут"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи, что человек пострадал.",
+          "de": "Eine Person ist verletzt.",
+          "ru": "Один человек пострадал.",
+          "chunks": ["Eine Person", "ist verletzt."]
+        },
+        {
+          "who": "bot",
+          "de": "Wie ist Ihr Name?",
+          "ru": "Как вас зовут?",
+          "options_ru": [
+            "Он спрашивает имя",
+            "Он спрашивает возраст",
+            "Он спрашивает адрес"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Назови своё имя.",
+          "de": "Mein Name ist Matt.",
+          "ru": "Меня зовут Мэтт.",
+          "chunks": ["Mein Name", "ist Matt."]
+        }
+      ]
+    }
+  ]
+}

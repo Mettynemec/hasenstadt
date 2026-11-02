@@ -1,0 +1,74 @@
+[
+  {
+    "id": "dummkopf", "topic": "schimpf", "order": 1, "pos": "noun",
+    "article": "der", "de": "Dummkopf", "plural": "Dummköpfe",
+    "ru": "болван", "ru_ok": ["дурак", "тупица"],
+    "tr": "ДУМкопф", "tr_ok": ["думкопф", "думмкопф"],
+    "syllables": ["Dumm", "kopf"],
+    "phrase_de": "Du bist ein Dummkopf.", "phrase_ru": "Ты болван.",
+    "note": "Из dumm и Kopf: глупый и голова."
+  },
+  {
+    "id": "trottel", "topic": "schimpf", "order": 3, "pos": "noun",
+    "article": "der", "de": "Trottel", "plural": "-",
+    "ru": "недотёпа", "ru_ok": ["недотепа", "лопух", "балбес"],
+    "tr": "ТРОтэль", "tr_ok": ["тротэль", "троттель", "тротель"],
+    "syllables": ["Trot", "tel"],
+    "phrase_de": "So ein Trottel.", "phrase_ru": "Ну и недотёпа.",
+    "note": ""
+  },
+  {
+    "id": "faulpelz", "topic": "schimpf", "order": 7, "pos": "noun",
+    "article": "der", "de": "Faulpelz", "plural": "-e",
+    "ru": "лентяй", "ru_ok": ["ленивец", "бездельник"],
+    "tr": "ФАУЛЬпэльц", "tr_ok": ["фаульпэльц", "фаулпельц"],
+    "syllables": ["Faul", "pelz"],
+    "phrase_de": "Mein Faulpelz spült nie.", "phrase_ru": "Мой лентяй никогда не моет посуду.",
+    "note": "Из faul и Pelz: ленивый и шуба."
+  },
+  {
+    "id": "schlafmuetze", "topic": "schimpf", "order": 8, "pos": "noun",
+    "article": "die", "de": "Schlafmütze", "plural": "-n",
+    "ru": "соня", "ru_ok": ["сонная тетеря"],
+    "tr": "ШЛАФмюцэ", "tr_ok": ["шлафмюцэ", "шлафмюце"],
+    "syllables": ["Schlaf", "müt", "ze"],
+    "phrase_de": "Guten Morgen, Schlafmütze.", "phrase_ru": "Доброе утро, соня.",
+    "note": "Из schlafen и Mütze: спать и шапка."
+  },
+  {
+    "id": "dickkopf", "topic": "schimpf", "order": 9, "pos": "noun",
+    "article": "der", "de": "Dickkopf", "plural": "Dickköpfe",
+    "ru": "упрямец", "ru_ok": ["баран", "упрямый"],
+    "tr": "ДИКкопф", "tr_ok": ["диккопф", "дикопф"],
+    "syllables": ["Dick", "kopf"],
+    "phrase_de": "Du bist ein Dickkopf.", "phrase_ru": "Ты упрямец.",
+    "note": "Из dick и Kopf: толстый и голова."
+  },
+  {
+    "id": "nervensaege", "topic": "schimpf", "order": 10, "pos": "noun",
+    "article": "die", "de": "Nervensäge", "plural": "-n",
+    "ru": "зануда", "ru_ok": ["пила", "душнила"],
+    "tr": "НЭРфэнзэгэ", "tr_ok": ["нэрфэнзэгэ", "нервензеге", "нэрвэнзэгэ"],
+    "syllables": ["Ner", "ven", "sä", "ge"],
+    "phrase_de": "Der Nachbar ist eine Nervensäge.", "phrase_ru": "Сосед — зануда.",
+    "note": "Досл. пила по нервам. v в этом слове читается как ф."
+  },
+  {
+    "id": "weichei", "topic": "schimpf", "order": 11, "pos": "noun",
+    "article": "das", "de": "Weichei", "plural": "-er",
+    "ru": "слабак", "ru_ok": ["нюня", "тряпка"],
+    "tr": "ВАЙХай", "tr_ok": ["вайхай", "вайхьай"],
+    "syllables": ["Weich", "ei"],
+    "phrase_de": "Kein Weichei sein.", "phrase_ru": "Не быть слабаком.",
+    "note": "Из weich и Ei: мягкий и яйцо."
+  },
+  {
+    "id": "hosenscheisser", "topic": "schimpf", "order": 13, "pos": "noun",
+    "article": "der", "de": "Hosenscheißer", "plural": "-",
+    "ru": "трус", "ru_ok": ["ссыкун", "зассанец"],
+    "tr": "ХОзэншайса", "tr_ok": ["хозэншайса", "хозеншайсер", "хозэншайсэр"],
+    "syllables": ["Ho", "sen", "schei", "ßer"],
+    "phrase_de": "Du kleiner Hosenscheißer.", "phrase_ru": "Ты мелкий трус.",
+    "note": "Из Hose и scheißen: штаны и то, что в них случилось."
+  }
+]

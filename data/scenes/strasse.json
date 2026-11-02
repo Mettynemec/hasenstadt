@@ -1,0 +1,97 @@
+{
+  "id": "strasse",
+  "title_de": "die Straße",
+  "title_ru": "Улица",
+  "icon": "street",
+  "order": 7,
+  "always_open": false,
+  "exit_to": "",
+  "scenes": [
+    {
+      "id": "strasse-weg",
+      "title_ru": "Спросить дорогу",
+      "needs_words": [],
+      "needs_rules": ["wortfolge"],
+      "roles": { "bot": "Прохожий", "human": "Ты" },
+      "lines": [
+        {
+          "who": "human",
+          "task_ru": "Спроси, где Бергштрассе.",
+          "de": "Entschuldigung, wo ist die Bergstraße?",
+          "ru": "Извините, где Бергштрассе?",
+          "chunks": ["Entschuldigung,", "wo ist", "die Bergstraße?"]
+        },
+        {
+          "who": "bot",
+          "de": "Gehen Sie hier links und dann geradeaus.",
+          "ru": "Идите здесь налево и потом прямо.",
+          "options_ru": [
+            "Он объясняет дорогу",
+            "Он говорит, что не знает",
+            "Он просит показать карту"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Переспроси: налево, потом прямо?",
+          "de": "Links und dann geradeaus?",
+          "ru": "Налево и потом прямо?",
+          "chunks": ["Links", "und dann", "geradeaus?"]
+        },
+        {
+          "who": "bot",
+          "de": "Genau. Es ist nicht weit.",
+          "ru": "Именно. Это недалеко.",
+          "options_ru": [
+            "Он подтверждает и говорит, что близко",
+            "Он поправляет дорогу",
+            "Он предлагает проводить"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Поблагодари.",
+          "de": "Vielen Dank.",
+          "ru": "Большое спасибо.",
+          "chunks": ["Vielen", "Dank."]
+        }
+      ]
+    },
+    {
+      "id": "strasse-zeit",
+      "title_ru": "Спросить время",
+      "needs_words": [],
+      "needs_rules": ["wortfolge"],
+      "roles": { "bot": "Прохожая", "human": "Ты" },
+      "lines": [
+        {
+          "who": "human",
+          "task_ru": "Спроси, который час.",
+          "de": "Entschuldigung, wie viel Uhr ist es?",
+          "ru": "Извините, который час?",
+          "chunks": ["Entschuldigung,", "wie viel Uhr", "ist es?"]
+        },
+        {
+          "who": "bot",
+          "de": "Es ist zehn nach drei.",
+          "ru": "Десять минут четвёртого.",
+          "options_ru": [
+            "Она говорит время",
+            "Она говорит, что часов нет",
+            "Она спрашивает, зачем тебе"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи спасибо.",
+          "de": "Danke, sehr nett.",
+          "ru": "Спасибо, очень мило.",
+          "chunks": ["Danke,", "sehr nett."]
+        }
+      ]
+    }
+  ]
+}

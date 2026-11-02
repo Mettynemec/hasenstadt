@@ -1,0 +1,108 @@
+{
+  "id": "laden",
+  "title_de": "der Laden",
+  "title_ru": "Магазин у дома",
+  "icon": "bag",
+  "order": 3,
+  "always_open": false,
+  "exit_to": "strasse",
+  "scenes": [
+    {
+      "id": "laden-kaufen",
+      "title_ru": "Купить самое нужное",
+      "needs_words": ["brot", "milch", "kaufen"],
+      "needs_rules": ["wortfolge"],
+      "roles": { "bot": "Продавец", "human": "Ты" },
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Guten Tag, was möchten Sie?",
+          "ru": "Добрый день, что вы хотите?",
+          "options_ru": [
+            "Он спрашивает, что тебе нужно",
+            "Он спрашивает, как дела",
+            "Он спрашивает, где ты живёшь"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи, что хочешь хлеб и молоко.",
+          "de": "Ich möchte Brot und Milch.",
+          "ru": "Я хочу хлеб и молоко.",
+          "chunks": ["Ich möchte", "Brot", "und Milch."]
+        },
+        {
+          "who": "bot",
+          "de": "Das macht drei Euro.",
+          "ru": "С вас три евро.",
+          "options_ru": [
+            "Он говорит цену",
+            "Он спрашивает, нужен ли пакет",
+            "Он говорит, что молока нет"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи, что хочешь заплатить картой.",
+          "de": "Ich möchte mit Karte bezahlen.",
+          "ru": "Я хочу заплатить картой.",
+          "chunks": ["Ich möchte", "mit Karte", "bezahlen."]
+        },
+        {
+          "who": "bot",
+          "de": "Gern. Möchten Sie eine Tüte?",
+          "ru": "Пожалуйста. Пакет нужен?",
+          "options_ru": [
+            "Он спрашивает про пакет",
+            "Он спрашивает про сдачу",
+            "Он спрашивает про скидку"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи: нет, спасибо.",
+          "de": "Nein, danke.",
+          "ru": "Нет, спасибо.",
+          "chunks": ["Nein,", "danke."]
+        }
+      ]
+    },
+    {
+      "id": "laden-wo",
+      "title_ru": "Спросить, где лежит",
+      "needs_words": ["kaese"],
+      "needs_rules": ["wortfolge"],
+      "roles": { "bot": "Продавец", "human": "Ты" },
+      "lines": [
+        {
+          "who": "human",
+          "task_ru": "Спроси, где лежит сыр.",
+          "de": "Entschuldigung, wo ist der Käse?",
+          "ru": "Извините, где сыр?",
+          "chunks": ["Entschuldigung,", "wo ist", "der Käse?"]
+        },
+        {
+          "who": "bot",
+          "de": "Der Käse ist da hinten links.",
+          "ru": "Сыр вон там, сзади слева.",
+          "options_ru": [
+            "Он показывает, где сыр",
+            "Он говорит, что сыра нет",
+            "Он спрашивает, какой сыр нужен"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи спасибо.",
+          "de": "Danke schön.",
+          "ru": "Спасибо.",
+          "chunks": ["Danke", "schön."]
+        }
+      ]
+    }
+  ]
+}

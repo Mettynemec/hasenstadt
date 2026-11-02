@@ -1,0 +1,161 @@
+/* Каркас: меню, шапка, область экрана. */
+
+.shell {
+  display: grid;
+  grid-template-columns: var(--menu-w) 1fr;
+  min-height: 100vh;
+}
+
+/* ── меню ─────────────────────────────────────────── */
+
+.menu {
+  background: var(--bg-2);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  padding: var(--s4) 0 var(--s3);
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  min-height: var(--tap);
+  padding: 0 var(--s4) 0 calc(var(--s4) - 3px);
+  border: none;
+  border-left: 3px solid transparent;
+  background: none;
+  color: var(--text);
+  text-align: left;
+  width: 100%;
+  transition: background var(--t-fast);
+}
+.menu-item:hover { background: var(--surface); }
+.menu-item { text-decoration: none; color: var(--text); }
+.menu-more { display: none; }
+.menu-item[aria-current="true"] {
+  background: var(--surface);
+  border-left-color: var(--accent);
+  font-weight: 700;
+}
+.menu-item svg { width: 1.1rem; height: 1.1rem; flex: none; }
+.menu-foot {
+  margin-top: auto;
+  padding: var(--s4);
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+/* ── правая часть ─────────────────────────────────── */
+
+.side { display: flex; flex-direction: column; min-width: 0; }
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  justify-content: space-between;
+  padding: var(--s4) var(--s5);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.bar {
+  height: 8px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left center;
+  transition: transform var(--t-slow);
+}
+
+.main {
+  padding: var(--s5);
+  max-width: var(--page-w);
+  width: 100%;
+}
+
+.stack  { display: flex; flex-direction: column; gap: var(--s4); }
+.stack-s { display: flex; flex-direction: column; gap: var(--s3); }
+.row    { display: flex; gap: var(--s3); flex-wrap: wrap; align-items: center; }
+.row-tight { display: flex; gap: var(--s2); flex-wrap: wrap; align-items: center; }
+.grow   { flex: 1 1 auto; min-width: 0; }
+
+/* ── планшет ──────────────────────────────────────── */
+
+@media (max-width: 1000px) {
+  :root { --menu-w: calc(90 * var(--k)); }
+  .menu-item { justify-content: center; padding: 0; gap: 0; }
+  .menu-label { display: none; }
+  .menu-foot { display: none; }
+  .main { padding: var(--s4); }
+}
+
+/* ── телефон ──────────────────────────────────────── */
+
+@media (max-width: 700px) {
+  .shell { grid-template-columns: 1fr; }
+
+  .menu {
+    position: fixed;
+    inset: auto 0 0 0;
+    height: auto;
+    flex-direction: row;
+    border-right: none;
+    border-top: 1px solid var(--line);
+    padding: 0;
+    z-index: 7;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .menu-item {
+    flex: 1 1 0;
+    flex-direction: column;
+    gap: 0;
+    min-height: calc(60 * var(--k));
+    border-left: none;
+    border-top: 3px solid transparent;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: var(--s1) 0;
+  }
+  .menu-item[aria-current="true"] { border-left-color: transparent; border-top-color: var(--accent); }
+  .menu-item svg { width: 1rem; height: 1rem; }
+  .menu-label { display: block; font-size: 0.7rem; }
+  .menu-item.phone-hide { display: none; }
+  .menu-more { display: flex; }
+
+  .side { order: -1; }
+  .top { padding: var(--s3); gap: var(--s2); flex-wrap: wrap; }
+  .top .h-screen {
+    font-size: 1.3rem;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .save-chip { flex: none; }
+  .main { padding: var(--s3) var(--s3) 5rem; }
+}
+
+/* нижнее меню на телефоне: восемь пунктов не влезают, часть живёт под «ЕЩЁ» */
+.more-sheet {
+  position: fixed;
+  inset: auto 0 0 0;
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+  padding: var(--s4) var(--s3) calc(var(--s4) + 60 * var(--k));
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}

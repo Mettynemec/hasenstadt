@@ -1,0 +1,164 @@
+{
+  "id": "wohnung",
+  "title_de": "die Wohnung",
+  "title_ru": "Квартира",
+  "icon": "home",
+  "order": 1,
+  "always_open": false,
+  "exit_to": "",
+  "scenes": [
+    {
+      "id": "wohnung-nachbar",
+      "title_ru": "Сосед за стеной",
+      "needs_words": ["laut", "nachbar"],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Сосед", "human": "Ты" },
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Entschuldigung, die Musik ist sehr laut.",
+          "ru": "Извините, музыка очень громкая.",
+          "options_ru": [
+            "Он просит сделать тише",
+            "Он спрашивает, где музыкальный магазин",
+            "Он хочет послушать вместе"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Извинись и скажи, что сделаешь музыку тише.",
+          "de": "Entschuldigung, ich mache die Musik leiser.",
+          "ru": "Извините, я сделаю музыку тише.",
+          "chunks": ["Entschuldigung,", "ich mache", "die Musik", "leiser."]
+        },
+        {
+          "who": "bot",
+          "de": "Danke. Ich arbeite morgen früh.",
+          "ru": "Спасибо. Я завтра рано работаю.",
+          "options_ru": [
+            "Он благодарит и объясняет, почему просит",
+            "Он приглашает в гости",
+            "Он жалуется на лампу"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи, что всё понятно, и пожелай доброго вечера.",
+          "de": "Alles klar. Guten Abend.",
+          "ru": "Всё понятно. Доброго вечера.",
+          "chunks": ["Alles klar.", "Guten Abend."]
+        }
+      ]
+    },
+    {
+      "id": "wohnung-kran",
+      "title_ru": "Течёт кран",
+      "needs_words": ["wasserhahn"],
+      "needs_rules": ["wortfolge"],
+      "roles": { "bot": "Хозяин квартиры", "human": "Ты" },
+      "lines": [
+        {
+          "who": "human",
+          "task_ru": "Позвони хозяину и скажи, что кран капает.",
+          "de": "Guten Tag, der Wasserhahn tropft.",
+          "ru": "Добрый день, кран капает.",
+          "chunks": ["Guten Tag,", "der Wasserhahn", "tropft."]
+        },
+        {
+          "who": "bot",
+          "de": "Seit wann tropft er?",
+          "ru": "С каких пор он капает?",
+          "options_ru": [
+            "Он спрашивает, давно ли это",
+            "Он спрашивает, где кран",
+            "Он спрашивает, сколько стоит вода"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи: с сегодняшнего утра.",
+          "de": "Seit heute Morgen.",
+          "ru": "С сегодняшнего утра.",
+          "chunks": ["Seit", "heute Morgen."]
+        },
+        {
+          "who": "bot",
+          "de": "Gut, ich komme morgen um zehn.",
+          "ru": "Хорошо, я приду завтра в десять.",
+          "options_ru": [
+            "Он придёт завтра утром",
+            "Он просит починить самому",
+            "Он не придёт вообще"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи спасибо и до завтра.",
+          "de": "Danke, bis morgen.",
+          "ru": "Спасибо, до завтра.",
+          "chunks": ["Danke,", "bis morgen."]
+        }
+      ]
+    },
+    {
+      "id": "wohnung-internet",
+      "title_ru": "Не работает интернет",
+      "needs_words": ["internet"],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Служба поддержки", "human": "Ты" },
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Guten Tag, was ist das Problem?",
+          "ru": "Добрый день, в чём проблема?",
+          "options_ru": [
+            "Он спрашивает, что случилось",
+            "Он спрашивает, как тебя зовут",
+            "Он спрашивает адрес"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи, что интернет не работает.",
+          "de": "Das Internet geht nicht.",
+          "ru": "Интернет не работает.",
+          "chunks": ["Das Internet", "geht", "nicht."]
+        },
+        {
+          "who": "bot",
+          "de": "Ist die Lampe am Router rot?",
+          "ru": "Лампочка на роутере красная?",
+          "options_ru": [
+            "Он спрашивает про лампочку на роутере",
+            "Он спрашивает про цвет стены",
+            "Он спрашивает, есть ли свет в квартире"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "task_ru": "Скажи: да, лампочка красная.",
+          "de": "Ja, die Lampe ist rot.",
+          "ru": "Да, лампочка красная.",
+          "chunks": ["Ja,", "die Lampe", "ist rot."]
+        },
+        {
+          "who": "bot",
+          "de": "Alles klar, wir prüfen das.",
+          "ru": "Понятно, мы проверим.",
+          "options_ru": [
+            "Они проверят",
+            "Они приедут сегодня",
+            "Они просят перезвонить завтра"
+          ],
+          "answer": 0
+        }
+      ]
+    }
+  ]
+}

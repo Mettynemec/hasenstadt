@@ -1,0 +1,134 @@
+[
+  {
+    "id": "handschuh",
+    "article": "der",
+    "de": "Handschuh",
+    "parts": [
+      { "de": "Hand", "ru": "рука" },
+      { "de": "Schuh", "ru": "туфля" }
+    ],
+    "ru": "перчатка",
+    "ru_ok": ["перчатки", "рукавица"]
+  },
+  {
+    "id": "kuehlschrank",
+    "article": "der",
+    "de": "Kühlschrank",
+    "parts": [
+      { "de": "kühl", "ru": "прохладный" },
+      { "de": "Schrank", "ru": "шкаф" }
+    ],
+    "ru": "холодильник",
+    "ru_ok": []
+  },
+  {
+    "id": "krankenhaus",
+    "article": "das",
+    "de": "Krankenhaus",
+    "parts": [
+      { "de": "krank", "ru": "больной" },
+      { "de": "Haus", "ru": "дом" }
+    ],
+    "ru": "больница",
+    "ru_ok": ["госпиталь"]
+  },
+  {
+    "id": "staubsauger",
+    "article": "der",
+    "de": "Staubsauger",
+    "parts": [
+      { "de": "Staub", "ru": "пыль" },
+      { "de": "Sauger", "ru": "сосун" }
+    ],
+    "ru": "пылесос",
+    "ru_ok": []
+  },
+  {
+    "id": "zahnbuerste",
+    "article": "die",
+    "de": "Zahnbürste",
+    "parts": [
+      { "de": "Zahn", "ru": "зуб" },
+      { "de": "Bürste", "ru": "щётка" }
+    ],
+    "ru": "зубная щётка",
+    "ru_ok": ["щётка для зубов", "зубная щетка"]
+  },
+  {
+    "id": "regenschirm",
+    "article": "der",
+    "de": "Regenschirm",
+    "parts": [
+      { "de": "Regen", "ru": "дождь" },
+      { "de": "Schirm", "ru": "щит" }
+    ],
+    "ru": "зонт",
+    "ru_ok": ["зонтик"]
+  },
+  {
+    "id": "fahrrad",
+    "article": "das",
+    "de": "Fahrrad",
+    "parts": [
+      { "de": "fahren", "ru": "ехать" },
+      { "de": "Rad", "ru": "колесо" }
+    ],
+    "ru": "велосипед",
+    "ru_ok": ["велик"]
+  },
+  {
+    "id": "haltestelle",
+    "article": "die",
+    "de": "Haltestelle",
+    "parts": [
+      { "de": "halten", "ru": "держать, останавливаться" },
+      { "de": "Stelle", "ru": "место" }
+    ],
+    "ru": "остановка",
+    "ru_ok": []
+  },
+  {
+    "id": "woerterbuch",
+    "article": "das",
+    "de": "Wörterbuch",
+    "parts": [
+      { "de": "Wörter", "ru": "слова" },
+      { "de": "Buch", "ru": "книга" }
+    ],
+    "ru": "словарь",
+    "ru_ok": []
+  },
+  {
+    "id": "schreibtisch",
+    "article": "der",
+    "de": "Schreibtisch",
+    "parts": [
+      { "de": "schreiben", "ru": "писать" },
+      { "de": "Tisch", "ru": "стол" }
+    ],
+    "ru": "письменный стол",
+    "ru_ok": ["рабочий стол", "стол"]
+  },
+  {
+    "id": "flughafen",
+    "article": "der",
+    "de": "Flughafen",
+    "parts": [
+      { "de": "Flug", "ru": "полёт" },
+      { "de": "Hafen", "ru": "порт" }
+    ],
+    "ru": "аэропорт",
+    "ru_ok": []
+  },
+  {
+    "id": "waschmaschine",
+    "article": "die",
+    "de": "Waschmaschine",
+    "parts": [
+      { "de": "waschen", "ru": "мыть, стирать" },
+      { "de": "Maschine", "ru": "машина" }
+    ],
+    "ru": "стиральная машина",
+    "ru_ok": ["стиралка"]
+  }
+]

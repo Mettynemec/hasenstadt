@@ -1,0 +1,122 @@
+[
+  {
+    "id": "gurken",
+    "de": "Ich möchte achtzig Gurken.",
+    "ru": "Я хочу восемьдесят огурцов.",
+    "gap_words": ["achtzig", "Gurken"],
+    "needs_words": ["gurke"],
+    "place": "laden"
+  },
+  {
+    "id": "tisch-klein",
+    "de": "Der Tisch ist klein.",
+    "ru": "Стол маленький.",
+    "gap_words": ["Tisch", "klein"],
+    "needs_words": ["tisch", "klein"],
+    "place": "wohnung"
+  },
+  {
+    "id": "tuer-gross",
+    "de": "Die Tür ist groß.",
+    "ru": "Дверь большая.",
+    "gap_words": ["Tür", "groß"],
+    "needs_words": ["tuer", "gross"],
+    "place": "wohnung"
+  },
+  {
+    "id": "brot-milch",
+    "de": "Ich kaufe Brot und Milch.",
+    "ru": "Я покупаю хлеб и молоко.",
+    "gap_words": ["kaufe", "Brot", "Milch"],
+    "needs_words": ["brot", "milch", "kaufen"],
+    "place": "laden"
+  },
+  {
+    "id": "nachbar-laut",
+    "de": "Der Nachbar ist sehr laut.",
+    "ru": "Сосед очень громкий.",
+    "gap_words": ["Nachbar", "laut"],
+    "needs_words": ["nachbar", "laut"],
+    "place": "wohnung"
+  },
+  {
+    "id": "kaese-kostet",
+    "de": "Wie viel kostet der Käse?",
+    "ru": "Сколько стоит сыр?",
+    "gap_words": ["kostet", "Käse"],
+    "needs_words": ["kosten", "kaese"],
+    "place": "laden"
+  },
+  {
+    "id": "zimmer-leise",
+    "de": "Das Zimmer ist leise.",
+    "ru": "В комнате тихо.",
+    "gap_words": ["Zimmer", "leise"],
+    "needs_words": ["zimmer", "leise"],
+    "place": "wohnung"
+  },
+  {
+    "id": "kaffee-ohne",
+    "de": "Ich trinke Kaffee ohne Milch.",
+    "ru": "Я пью кофе без молока.",
+    "gap_words": ["trinke", "Kaffee", "Milch"],
+    "needs_words": ["kaffee", "milch", "trinken"],
+    "place": "wohnung"
+  },
+  {
+    "id": "schluessel-wo",
+    "de": "Wo ist der Schlüssel?",
+    "ru": "Где ключ?",
+    "gap_words": ["Schlüssel"],
+    "needs_words": ["schluessel"],
+    "place": "wohnung"
+  },
+  {
+    "id": "wasser-kalt",
+    "de": "Das Wasser ist kalt.",
+    "ru": "Вода холодная.",
+    "gap_words": ["Wasser", "kalt"],
+    "needs_words": ["wasser"],
+    "place": "wohnung"
+  },
+  {
+    "id": "kochen-heute",
+    "de": "Heute koche ich.",
+    "ru": "Сегодня готовлю я.",
+    "gap_words": ["koche"],
+    "needs_words": ["kochen"],
+    "place": "wohnung"
+  },
+  {
+    "id": "miete-hoch",
+    "de": "Die Miete ist zu hoch.",
+    "ru": "Квартплата слишком высокая.",
+    "gap_words": ["Miete", "hoch"],
+    "needs_words": ["miete"],
+    "place": "wohnung"
+  },
+  {
+    "id": "freundin-heisst",
+    "de": "Meine Freundin heißt Amiko.",
+    "ru": "Мою подругу зовут Амико.",
+    "gap_words": ["Freundin", "heißt"],
+    "needs_words": ["freundin", "heissen"],
+    "place": "wohnung"
+  },
+  {
+    "id": "wasserhahn-tropft",
+    "de": "Der Wasserhahn tropft.",
+    "ru": "Кран капает.",
+    "gap_words": ["Wasserhahn", "tropft"],
+    "needs_words": ["wasserhahn"],
+    "place": "wohnung"
+  },
+  {
+    "id": "teller-schmutzig",
+    "de": "Der Teller ist schmutzig.",
+    "ru": "Тарелка грязная.",
+    "gap_words": ["Teller", "schmutzig"],
+    "needs_words": ["teller"],
+    "place": "wohnung"
+  }
+]

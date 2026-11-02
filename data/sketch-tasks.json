@@ -1,0 +1,65 @@
+[
+  {
+    "id": "geschirr",
+    "title": "Немытая посуда",
+    "situation": "Посуда стоит третий день. Поругайтесь и решите, кто моет.",
+    "roles": ["Тот, кто мыл в прошлый раз", "Тот, кто точно не мыл"],
+    "must": ["spuelen", "teller", "ich muss", "du musst"],
+    "needs_words": ["spuelen", "teller"],
+    "needs_rules": ["wortfolge"]
+  },
+  {
+    "id": "nachbar-laerm",
+    "title": "Сосед пришёл жаловаться на шум",
+    "situation": "За стеной играла музыка. Сосед стоит в дверях и очень недоволен.",
+    "roles": ["Сосед, которому утром на работу", "Тот, кто включил музыку"],
+    "must": ["laut", "leise", "wohnung", "Entschuldigung"],
+    "needs_words": ["laut", "leise", "wohnung"],
+    "needs_rules": ["sein"]
+  },
+  {
+    "id": "pizza",
+    "title": "Последний кусок",
+    "situation": "Остался один кусок. Каждый уверен, что он его.",
+    "roles": ["Тот, кто купил", "Тот, кто голоднее"],
+    "must": ["essen", "ich will", "du willst", "bitte"],
+    "needs_words": ["essen"],
+    "needs_rules": ["wortfolge"]
+  },
+  {
+    "id": "kasse-ohne-geld",
+    "title": "Забыл кошелёк",
+    "situation": "Всё уже на ленте, а кошелёк остался дома. Очередь смотрит.",
+    "roles": ["Кассир, который всё это уже видел", "Тот, кто без денег"],
+    "must": ["kasse", "bezahlen", "euro", "Entschuldigung"],
+    "needs_words": ["kasse", "bezahlen", "euro"],
+    "needs_rules": ["sein"]
+  },
+  {
+    "id": "hase-name",
+    "title": "Кролик из приюта",
+    "situation": "Кролика берёте точно. Спорите только об имени.",
+    "roles": ["Тот, кто придумал имя", "Тот, кто считает его ужасным"],
+    "must": ["name", "heissen", "nett", "ich möchte"],
+    "needs_words": ["name", "heissen", "nett"],
+    "needs_rules": ["sein"]
+  },
+  {
+    "id": "kuehlschrank",
+    "title": "Что в холодильнике",
+    "situation": "В холодильнике только масло и половина огурца. Решите, кто идёт в магазин.",
+    "roles": ["Тот, кто всё съел", "Тот, кто ходил в прошлый раз"],
+    "must": ["butter", "gurke", "kaufen", "ich gehe"],
+    "needs_words": ["butter", "gurke", "kaufen"],
+    "needs_rules": ["wortfolge"]
+  },
+  {
+    "id": "chef-hasen",
+    "title": "Работа выгуливать кроликов",
+    "situation": "Собеседование. Один начальник, второй очень хочет эту работу.",
+    "roles": ["Начальник, который задаёт странные вопросы", "Тот, кто устраивается"],
+    "must": ["heissen", "alt", "gut", "ich kann"],
+    "needs_words": ["heissen", "alt", "gut"],
+    "needs_rules": ["sein"]
+  }
+]

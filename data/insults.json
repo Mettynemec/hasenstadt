@@ -1,0 +1,62 @@
+[
+  {
+    "de": "Dummkopf",
+    "ru": "болван",
+    "parts": ["dumm — глупый", "der Kopf — голова"]
+  },
+  {
+    "de": "Schnapsdrossel",
+    "ru": "пьянчуга",
+    "parts": ["der Schnaps — шнапс", "die Drossel — дрозд"]
+  },
+  {
+    "de": "Hosenscheißer",
+    "ru": "трус",
+    "parts": ["die Hose — штаны", "scheißen — срать"]
+  },
+  {
+    "de": "Lästermaul",
+    "ru": "сплетник",
+    "parts": ["lästern — злословить", "das Maul — пасть"]
+  },
+  {
+    "de": "Erbsenzähler",
+    "ru": "зануда, который считает каждую копейку",
+    "parts": ["die Erbse — горошина", "zählen — считать"]
+  },
+  {
+    "de": "Spaßbremse",
+    "ru": "тот, кто портит всё веселье",
+    "parts": ["der Spaß — веселье", "die Bremse — тормоз"]
+  },
+  {
+    "de": "Weichei",
+    "ru": "слабак",
+    "parts": ["weich — мягкий", "das Ei — яйцо"]
+  },
+  {
+    "de": "Trantüte",
+    "ru": "тюфяк",
+    "parts": ["der Tran — рыбий жир", "die Tüte — пакет"]
+  },
+  {
+    "de": "Schlafmütze",
+    "ru": "соня",
+    "parts": ["schlafen — спать", "die Mütze — шапка"]
+  },
+  {
+    "de": "Korinthenkacker",
+    "ru": "душнила, придирающийся к мелочам",
+    "parts": ["die Korinthe — изюминка", "kacken — какать"]
+  },
+  {
+    "de": "Rotzlöffel",
+    "ru": "сопляк",
+    "parts": ["der Rotz — сопли", "der Löffel — ложка"]
+  },
+  {
+    "de": "Arschgeige",
+    "ru": "редкостный балбес",
+    "parts": ["der Arsch — задница", "die Geige — скрипка"]
+  }
+]

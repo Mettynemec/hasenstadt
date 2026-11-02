@@ -1,0 +1,173 @@
+[
+  {
+    "id": "brot", "topic": "essen", "order": 1, "pos": "noun",
+    "article": "das", "de": "Brot", "plural": "-e",
+    "ru": "хлеб", "ru_ok": [],
+    "tr": "БРОТ", "tr_ok": ["брот"],
+    "syllables": ["Brot"],
+    "phrase_de": "Ich kaufe Brot.", "phrase_ru": "Я покупаю хлеб.",
+    "note": ""
+  },
+  {
+    "id": "milch", "topic": "essen", "order": 3, "pos": "noun",
+    "article": "die", "de": "Milch", "plural": "-",
+    "ru": "молоко", "ru_ok": [],
+    "tr": "МИЛЬХ", "tr_ok": ["мильх", "милх"],
+    "syllables": ["Milch"],
+    "phrase_de": "Die Milch ist kalt.", "phrase_ru": "Молоко холодное.",
+    "note": "ch после согласной — мягкое хь."
+  },
+  {
+    "id": "apfel", "topic": "essen", "order": 7, "pos": "noun",
+    "article": "der", "de": "Apfel", "plural": "Äpfel",
+    "ru": "яблоко", "ru_ok": [],
+    "tr": "Апфэль", "tr_ok": ["апфэль", "апфель"],
+    "syllables": ["Ap", "fel"],
+    "phrase_de": "Der Apfel ist süß.", "phrase_ru": "Яблоко сладкое.",
+    "note": ""
+  },
+  {
+    "id": "gurke", "topic": "essen", "order": 8, "pos": "noun",
+    "article": "die", "de": "Gurke", "plural": "-n",
+    "ru": "огурец", "ru_ok": [],
+    "tr": "ГУРкэ", "tr_ok": ["гуркэ", "гурке"],
+    "syllables": ["Gur", "ke"],
+    "phrase_de": "Ich möchte achtzig Gurken.", "phrase_ru": "Я хочу восемьдесят огурцов.",
+    "note": ""
+  },
+  {
+    "id": "kaese", "topic": "essen", "order": 9, "pos": "noun",
+    "article": "der", "de": "Käse", "plural": "-",
+    "ru": "сыр", "ru_ok": [],
+    "tr": "КЭзэ", "tr_ok": ["кэзэ", "кезе", "кэзе"],
+    "syllables": ["Kä", "se"],
+    "phrase_de": "Der Käse ist teuer.", "phrase_ru": "Сыр дорогой.",
+    "note": "ä — это э."
+  },
+  {
+    "id": "butter", "topic": "essen", "order": 10, "pos": "noun",
+    "article": "die", "de": "Butter", "plural": "-",
+    "ru": "масло", "ru_ok": ["сливочное масло"],
+    "tr": "БУта", "tr_ok": ["бута", "бутэр", "буттер"],
+    "syllables": ["But", "ter"],
+    "phrase_de": "Die Butter ist im Kühlschrank.", "phrase_ru": "Масло в холодильнике.",
+    "note": ""
+  },
+  {
+    "id": "ei", "topic": "essen", "order": 11, "pos": "noun",
+    "article": "das", "de": "Ei", "plural": "-er",
+    "ru": "яйцо", "ru_ok": [],
+    "tr": "АЙ", "tr_ok": ["ай"],
+    "syllables": ["Ei"],
+    "phrase_de": "Das Ei ist hart.", "phrase_ru": "Яйцо твёрдое.",
+    "note": ""
+  },
+  {
+    "id": "kaffee", "topic": "essen", "order": 13, "pos": "noun",
+    "article": "der", "de": "Kaffee", "plural": "-s",
+    "ru": "кофе", "ru_ok": [],
+    "tr": "КАфэ", "tr_ok": ["кафэ", "кафе", "кафээ"],
+    "syllables": ["Kaf", "fee"],
+    "phrase_de": "Ich trinke Kaffee ohne Milch.", "phrase_ru": "Я пью кофе без молока.",
+    "note": ""
+  },
+  {
+    "id": "tee", "topic": "essen", "order": 17, "pos": "noun",
+    "article": "der", "de": "Tee", "plural": "-s",
+    "ru": "чай", "ru_ok": [],
+    "tr": "ТЭ", "tr_ok": ["тэ", "те", "тээ"],
+    "syllables": ["Tee"],
+    "phrase_de": "Der Tee ist heiß.", "phrase_ru": "Чай горячий.",
+    "note": ""
+  },
+  {
+    "id": "kasse", "topic": "essen", "order": 18, "pos": "noun",
+    "article": "die", "de": "Kasse", "plural": "-n",
+    "ru": "касса", "ru_ok": [],
+    "tr": "КАсэ", "tr_ok": ["касэ", "кассе", "касе"],
+    "syllables": ["Kas", "se"],
+    "phrase_de": "Die Kasse ist da hinten.", "phrase_ru": "Касса вон там, сзади.",
+    "note": ""
+  },
+  {
+    "id": "tuete", "topic": "essen", "order": 19, "pos": "noun",
+    "article": "die", "de": "Tüte", "plural": "-n",
+    "ru": "пакет", "ru_ok": ["сумка", "мешок"],
+    "tr": "ТЮтэ", "tr_ok": ["тютэ", "тюте"],
+    "syllables": ["Tü", "te"],
+    "phrase_de": "Eine Tüte, bitte.", "phrase_ru": "Пакет, пожалуйста.",
+    "note": ""
+  },
+  {
+    "id": "euro", "topic": "essen", "order": 20, "pos": "noun",
+    "article": "der", "de": "Euro", "plural": "-s",
+    "ru": "евро", "ru_ok": [],
+    "tr": "ОЙро", "tr_ok": ["ойро", "эуро"],
+    "syllables": ["Eu", "ro"],
+    "phrase_de": "Das kostet drei Euro.", "phrase_ru": "Это стоит три евро.",
+    "note": "eu читается как ой."
+  },
+  {
+    "id": "kosten", "topic": "essen", "order": 21, "pos": "verb",
+    "article": "", "de": "kosten", "plural": "",
+    "ru": "стоить", "ru_ok": [],
+    "tr": "КОстэн", "tr_ok": ["костэн", "костен"],
+    "syllables": ["kos", "ten"],
+    "phrase_de": "Wie viel kostet der Käse?", "phrase_ru": "Сколько стоит сыр?",
+    "note": ""
+  },
+  {
+    "id": "bezahlen", "topic": "essen", "order": 23, "pos": "verb",
+    "article": "", "de": "bezahlen", "plural": "",
+    "ru": "платить", "ru_ok": ["оплатить", "заплатить"],
+    "tr": "бэЦАлэн", "tr_ok": ["бэцалэн", "бецален"],
+    "syllables": ["be", "zah", "len"],
+    "phrase_de": "Ich möchte bezahlen.", "phrase_ru": "Я хочу заплатить.",
+    "note": ""
+  },
+  {
+    "id": "kaufen", "topic": "essen", "order": 27, "pos": "verb",
+    "article": "", "de": "kaufen", "plural": "",
+    "ru": "покупать", "ru_ok": ["купить"],
+    "tr": "КАУфэн", "tr_ok": ["кауфэн", "кауфен"],
+    "syllables": ["kau", "fen"],
+    "phrase_de": "Wir kaufen Brot und Milch.", "phrase_ru": "Мы покупаем хлеб и молоко.",
+    "note": ""
+  },
+  {
+    "id": "essen", "topic": "essen", "order": 28, "pos": "verb",
+    "article": "", "de": "essen", "plural": "",
+    "ru": "есть", "ru_ok": ["кушать", "поесть"],
+    "tr": "Эсэн", "tr_ok": ["эсэн", "ессен", "эссен"],
+    "syllables": ["es", "sen"],
+    "phrase_de": "Was isst du?", "phrase_ru": "Что ты ешь?",
+    "note": "Неправильный глагол: du isst, er isst."
+  },
+  {
+    "id": "trinken", "topic": "essen", "order": 29, "pos": "verb",
+    "article": "", "de": "trinken", "plural": "",
+    "ru": "пить", "ru_ok": ["выпить"],
+    "tr": "ТРИНкэн", "tr_ok": ["тринкэн", "тринкен"],
+    "syllables": ["trin", "ken"],
+    "phrase_de": "Ich trinke Tee.", "phrase_ru": "Я пью чай.",
+    "note": ""
+  },
+  {
+    "id": "billig", "topic": "essen", "order": 30, "pos": "adj",
+    "article": "", "de": "billig", "plural": "",
+    "ru": "дешёвый", "ru_ok": ["дешевый", "дешёво"],
+    "tr": "БИлихь", "tr_ok": ["билихь", "билих", "билиг"],
+    "syllables": ["bil", "lig"],
+    "phrase_de": "Das Brot ist billig.", "phrase_ru": "Хлеб дешёвый.",
+    "note": "-ig на конце читается как ихь."
+  },
+  {
+    "id": "teuer", "topic": "essen", "order": 31, "pos": "adj",
+    "article": "", "de": "teuer", "plural": "",
+    "ru": "дорогой", "ru_ok": ["дорого"],
+    "tr": "ТОЙа", "tr_ok": ["тойа", "тойэр", "тойер"],
+    "syllables": ["teu", "er"],
+    "phrase_de": "Die Wohnung ist teuer.", "phrase_ru": "Квартира дорогая.",
+    "note": ""
+  }
+]

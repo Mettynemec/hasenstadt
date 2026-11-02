@@ -1,0 +1,137 @@
+/* Частные правила игр. */
+
+/* ── карта города ─────────────────────────────────── */
+
+.city-map { display: flex; flex-direction: column; gap: var(--s3); }
+.places {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s3);
+}
+@media (max-width: 700px) {
+  .places { grid-template-columns: 1fr; }
+}
+.place {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  min-height: calc(110 * var(--k));
+}
+.place-top { display: flex; align-items: center; gap: var(--s3); }
+.place-top svg { width: 1.3rem; height: 1.3rem; flex: none; }
+.place-wide { grid-column: 1 / -1; }
+.place-notruf { border-color: var(--soft); border-width: 2px; }
+
+.other-games {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s3);
+}
+@media (max-width: 1000px) {
+  .other-games { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .other-games { grid-template-columns: 1fr; }
+}
+
+/* ── сцена ────────────────────────────────────────── */
+
+.scene-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s3);
+  flex-wrap: wrap;
+}
+.line-bot {
+  display: flex;
+  gap: var(--s4);
+  align-items: flex-start;
+}
+.line-bot .mascot { width: 70px; height: 70px; }
+@media (max-width: 700px) {
+  .line-bot .mascot { width: 48px; height: 48px; }
+}
+.said {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
+  padding: var(--s4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.said .de { font-size: 1.3rem; font-weight: 700; }
+.turn-hand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+.handover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s6) var(--s4);
+}
+.handover .who { font-size: 1.7rem; font-weight: 700; }
+
+/* ── экстренное ───────────────────────────────────── */
+
+.notruf-nums {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+.notruf-line {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.notruf-line .what { min-width: 11rem; }
+
+/* ── прочие игры ──────────────────────────────────── */
+
+.circle-count { color: var(--text-dim); font-size: 0.9rem; }
+.article-btns { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); }
+.article-btns .btn { min-height: var(--h-main); font-size: 1.3rem; }
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  max-height: 23rem;
+  overflow-y: auto;
+  padding-right: var(--s2);
+}
+.msg {
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
+  padding: var(--s3) var(--s4);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+.msg[data-mine="true"] { border-color: var(--accent-dim); background: var(--bg-2); }
+.msg .who { font-size: 0.9rem; color: var(--text-dim); }
+.msg .marks { font-size: 0.9rem; color: var(--text-dim); }
+.msg .unknown { text-decoration: underline dotted; text-underline-offset: 3px; }
+
+.gap-input {
+  display: inline-block;
+  min-width: 7rem;
+  border: none;
+  border-bottom: 2px solid var(--accent);
+  background: none;
+  color: var(--text);
+  font-size: 1.3rem;
+  padding: 0 var(--s2);
+  border-radius: 0;
+}
+.phrase-line { font-size: 1.3rem; line-height: 1.9; }

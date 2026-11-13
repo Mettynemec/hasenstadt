@@ -8,7 +8,7 @@ export const CONFIG = {
   APP_NAME: "Hasenstadt",
 
   // Адрес проекта базы. Похож на https://abcdefgh.supabase.co
-  SUPABASE_URL: "https://ttrmbjkyqumcvejqspye.supabase.co/rest/v1/",
+  SUPABASE_URL: "https://ttrmbjkyqumcvejqspye.supabase.co",
 
   // Открытый ключ. Очень длинная строка, помеченная anon public.
   SUPABASE_ANON_KEY: "sb_publishable_ZHydIw0O1sBzg_HoSQUV_w_BgL7UVsd",

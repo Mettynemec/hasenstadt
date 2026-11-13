@@ -255,7 +255,6 @@ function known() {
   };
   for (const w of c.words || []) { add(w.de); if (w.phrase_de) add(w.phrase_de); }
   for (const x of c.compounds || []) add(x.de);
-  for (const x of c.insults || []) add(x.de);
   for (const f of c.phrases || []) add(f.de);
   for (const p of c.places || []) for (const sc of p.scenes || []) for (const l of sc.lines || []) if (l.de) add(l.de);
   knownSet = set;

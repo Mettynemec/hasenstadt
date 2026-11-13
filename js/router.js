@@ -7,7 +7,7 @@ import { unbindScreenKeys } from "./keys.js";
 import * as tts from "./tts.js";
 
 import * as home from "./screens/home.js";
-import * as alphabet from "./screens/alphabet.js";
+import * as rules from "./screens/rules.js";
 import * as words from "./screens/words.js";
 import * as trainer from "./screens/trainer.js";
 import * as learned from "./screens/learned.js";
@@ -23,10 +23,12 @@ import * as gaps from "./games/gaps.js";
 
 const ROUTES = [
   { re: /^\/home$/, mod: home, menu: "home", title: () => T.menu.home },
-  { re: /^\/alphabet$/, mod: alphabet, menu: "alphabet", title: () => T.menu.alphabet },
+  { re: /^\/rules$/, mod: rules, menu: "rules", title: () => T.menu.rules },
+  { re: /^\/rules\/([a-z_-]+)$/, mod: rules, menu: "rules", title: () => T.menu.rules, keys: ["ruleId"] },
   { re: /^\/words$/, mod: words, menu: "words", title: () => T.menu.words },
   { re: /^\/words\/([a-z_-]+)$/, mod: words, menu: "words", title: () => T.menu.words, keys: ["topicId"] },
   { re: /^\/trainer(?:\/(repeat))?$/, mod: trainer, menu: "trainer", title: () => T.menu.trainer, keys: ["mode"] },
+  { re: /^\/trainer\/new\/([a-z_-]+)$/, mod: trainer, menu: "trainer", title: () => T.menu.trainer, keys: ["topic"] },
   { re: /^\/learned$/, mod: learned, menu: "learned", title: () => T.menu.learned },
   { re: /^\/game$/, mod: games, menu: "game", title: () => T.menu.game },
   { re: /^\/game\/city\/([a-z_-]+)$/, mod: city, menu: "game", title: () => T.game.cityTitle, keys: ["placeId"] },

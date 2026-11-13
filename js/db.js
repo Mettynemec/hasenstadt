@@ -13,12 +13,15 @@ import { store } from "./store.js";
 // CDN то есть, то нет, и программа не должна от этого зависеть.
 const LIB = "./vendor/supabase.js";
 const QKEY = "hasen.queue";
+const STUCK_KEY = "hasen.stuck";
 const RETRY = 3000;
 const PAGE = 1000;
+const MAX_TRIES = 3;
 
 let sb = null;
 let cfg = null;
 let queue = [];
+let stuck = [];
 let timer = null;
 let sending = false;
 const listeners = { queue: new Set(), auth: new Set() };
@@ -57,6 +60,7 @@ export async function init(config) {
     auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
   });
   loadQueue();
+  loadStuck();
   startTimer();
   window.addEventListener("online", () => flush());
   window.addEventListener("beforeunload", (e) => {
@@ -121,7 +125,7 @@ export async function loadEverything(user, nameForEmail) {
     pageAll("word_progress"),
     pageAll("rule_progress"),
     pageAll("scene_progress"),
-    sb.from("day_log").select("*").eq("day", today()),
+    pageAll("day_log"), // весь журнал, не только сегодня — нужен для очков и прогноза
     sb.from("kv").select("*").eq("user_id", myId)
   ]);
 
@@ -143,8 +147,8 @@ export async function loadEverything(user, nameForEmail) {
     settings = data;
   }
 
-  const mine = split(wp, rp, scp, dl.data || [], myId);
-  const theirs = partnerRow ? split(wp, rp, scp, dl.data || [], partnerRow.id) : emptyProgress();
+  const mine = split(wp, rp, scp, dl, myId);
+  const theirs = partnerRow ? split(wp, rp, scp, dl, partnerRow.id) : emptyProgress();
   for (const r of (kvRows.data || [])) mine.kv[r.key] = r.value;
 
   return {
@@ -152,7 +156,8 @@ export async function loadEverything(user, nameForEmail) {
     partner: partnerRow ? { id: partnerRow.id, name: partnerRow.name } : null,
     settings,
     progress: mine,
-    partnerProgress: theirs
+    partnerProgress: theirs,
+    dayLogAll: dl // весь журнал обоих, для очков и прогноза (строк немного)
   };
 }
 
@@ -194,13 +199,17 @@ export async function refreshPartner() {
       pageAll("word_progress"),
       pageAll("rule_progress"),
       pageAll("scene_progress"),
-      sb.from("day_log").select("*").eq("day", today())
+      pageAll("day_log")
     ]);
     const row = users.find((u) => u.id !== s.me.id) || null;
     const partner = row ? { id: row.id, name: row.name } : null;
+    // s.progress.today — своё, живое, из локального состояния, его здесь не
+    // трогаем (иначе можно затереть ещё не отправленные в базу очки);
+    // dayLogAll нужен только для сумм по остальным дням и по второму человеку
     store.set({
       partner,
-      partnerProgress: partner ? split(wp, rp, scp, dl.data || [], partner.id) : emptyProgress()
+      partnerProgress: partner ? split(wp, rp, scp, dl, partner.id) : emptyProgress(),
+      dayLogAll: dl
     });
   } catch (e) {
     console.warn("второй не обновился, работаем на том, что есть", e);
@@ -226,6 +235,7 @@ export function saveWord(wordId, patch) {
 
 export function saveRule(ruleId, done) {
   const s = store.get();
+  const wasDone = !!(s.progress.rules[ruleId] && s.progress.rules[ruleId].done);
   const row = {
     user_id: s.me.id, rule_id: ruleId, done: !!done,
     done_at: done ? now() : null
@@ -233,6 +243,8 @@ export function saveRule(ruleId, done) {
   s.progress.rules[ruleId] = row;
   store.set({ progress: s.progress });
   enqueue("rule:" + ruleId, "rule_progress", row);
+  // десять очков — один раз за правило, при первом «разобрали»
+  if (done && !wasDone) bumpDay({ points: 10 });
 }
 
 export function saveScene(sceneId, patch) {
@@ -258,16 +270,19 @@ export function saveSettings(patch) {
 }
 
 // Журнал дня пишется целиком, а не приращением: повтор ничего не испортит.
+// points тоже копится сюда же — очки не сгорают и не отнимаются, поэтому
+// простое сложение ничем не грозит даже при повторной отправке.
 export function bumpDay(patch) {
   const s = store.get();
-  const cur = s.progress.today || { day: today(), cards: 0, right_n: 0, wrong_n: 0, new_n: 0 };
+  const cur = s.progress.today || { day: today(), cards: 0, right_n: 0, wrong_n: 0, new_n: 0, points: 0 };
   const row = {
     user_id: s.me.id,
     day: today(),
     cards: (cur.cards || 0) + (patch.cards || 0),
     right_n: (cur.right_n || 0) + (patch.right_n || 0),
     wrong_n: (cur.wrong_n || 0) + (patch.wrong_n || 0),
-    new_n: (cur.new_n || 0) + (patch.new_n || 0)
+    new_n: (cur.new_n || 0) + (patch.new_n || 0),
+    points: (cur.points || 0) + (patch.points || 0)
   };
   s.progress.today = row;
   store.set({ progress: s.progress });
@@ -305,6 +320,37 @@ function saveQueue() {
   try { localStorage.setItem(QKEY, JSON.stringify(queue)); } catch (e) { /* буфер не обязателен */ }
 }
 
+function loadStuck() {
+  try {
+    const raw = localStorage.getItem(STUCK_KEY);
+    stuck = raw ? JSON.parse(raw) : [];
+  } catch (e) { stuck = []; }
+}
+
+function saveStuck() {
+  try { localStorage.setItem(STUCK_KEY, JSON.stringify(stuck)); } catch (e) { /* не обязательно */ }
+}
+
+// Список записей, которые база стабильно отказывается принимать (расхождение
+// со схемой и подобное). Их больше незачем пытаться отправить: они не мешают
+// очереди, но и сами никуда не уйдут. Смотреть можно из консоли браузера.
+export function stuckSize() { return stuck.length; }
+export function stuckItems() { return stuck.slice(); }
+
+// Ошибка похожа на расхождение со схемой или данными, а не на сеть: повторять
+// её бессмысленно, сеть тут ни при чём. 400 — отказ в данных, 42xxx — класс
+// ошибок Postgres (например, 42703: такого столбца нет), PGRST... — отказ
+// PostgREST (например, PGRST204: лишнее поле).
+function looksPermanent(error) {
+  if (!error) return false;
+  const status = Number(error.status || error.statusCode || 0);
+  const code = String(error.code || "");
+  if (status === 400) return true;
+  if (/^42/.test(code)) return true;
+  if (/^PGRST/.test(code)) return true;
+  return false;
+}
+
 function report(state) {
   const q = { size: queue.length, state: queue.length ? state : "ok" };
   store.set({ queue: q });
@@ -328,6 +374,23 @@ export async function flush() {
       const { error } = await sb.from(item.table).upsert(item.row);
       if (error) {
         if (isAuthError(error)) emit("auth", "stale");
+
+        if (looksPermanent(error)) {
+          item.tries = (item.tries || 0) + 1;
+          if (item.tries >= MAX_TRIES) {
+            // дальше пытаться бессмысленно: убираем из головы очереди,
+            // чтобы не блокировать всё, что идёт следом
+            queue.shift();
+            stuck.push({ key: item.key, table: item.table, row: item.row, error: error.message || String(error), stuck_at: now() });
+            saveQueue();
+            saveStuck();
+            console.warn("запись отложена насовсем (похоже на расхождение со схемой базы):", item.table, item.key, error);
+            report("sending");
+            continue;
+          }
+          saveQueue();
+        }
+
         console.warn("запись не прошла, вернёмся к ней:", error.message || error);
         report("waiting");
         return;

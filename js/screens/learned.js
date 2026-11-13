@@ -7,8 +7,9 @@ import * as db from "../db.js";
 import * as sch from "../scheduler.js";
 import { dictLine, canonical } from "../check.js";
 import { note, dot, lockIcons, speakBtn, switchBtn, modal, setTitle } from "../ui.js";
-import { toGold, backToTrainer, resetLocks } from "./words.js";
+import { toGold, toBronze, toSilver, toHard, fromHard, backToTrainer, resetLocks } from "./words.js";
 
+const TABS = ["hard", "plain", "bronze", "silver", "gold"];
 const view = { tab: "gold", sort: "abc", query: "", partner: false, onlyStumbled: false, openId: null };
 let offStore = null;
 
@@ -29,7 +30,7 @@ function paint(root) {
   const side = view.partner && s.partner ? s.partnerProgress : s.progress;
   const readOnly = view.partner && !!s.partner;
 
-  const counts = { bronze: 0, silver: 0, gold: 0 };
+  const counts = { hard: 0, plain: 0, bronze: 0, silver: 0, gold: 0 };
   for (const p of Object.values(side.byWordId)) {
     const st = sch.stateOf(p);
     if (counts[st] !== undefined) counts[st]++;
@@ -38,7 +39,7 @@ function paint(root) {
   const box = el("div.stack");
 
   const tabs = el("div.tabs", { role: "tablist" });
-  for (const key of ["bronze", "silver", "gold"]) {
+  for (const key of TABS) {
     const b = el("button.tab", { type: "button", role: "tab", aria: { selected: String(view.tab === key) } },
       el("span", { text: T.words.tabs[key] }),
       el("span.small.dim", { text: " " + counts[key] })
@@ -47,6 +48,8 @@ function paint(root) {
     tabs.appendChild(b);
   }
   box.appendChild(tabs);
+  // «Изученное» легко спутать с названием экрана — поясняем прямо под вкладкой
+  if (view.tab === "plain") box.appendChild(el("p.small.dim", { text: T.words.plainNote }));
 
   const tools = el("div.row");
   for (const [key, label] of [["abc", T.words.sortAbc], ["topic", T.words.sortTopic], ["date", T.words.sortDate]]) {
@@ -87,8 +90,8 @@ function paint(root) {
 
     clear(list);
     if (!items.length) {
-      const empty = view.tab === "gold" ? T.words.emptyGold
-        : view.tab === "silver" ? T.words.emptySilver : T.words.emptyBronze;
+      const empty = { hard: T.words.emptyHard, plain: T.words.emptyPlain,
+        bronze: T.words.emptyBronze, silver: T.words.emptySilver, gold: T.words.emptyGold }[view.tab];
       list.appendChild(el("p.small.dim", { text: empty }));
       return;
     }
@@ -115,7 +118,7 @@ function row(w, p, readOnly, redraw) {
   const wrap = el("div");
   const line = el("button.wline", { type: "button", aria: { expanded: String(view.openId === w.id) } },
     dot(sch.stateOf(p)),
-    el("span.txt", el("b", { text: dictLine(w) })),
+    el("span.txt", el("b", dictLine(w, store.get().settings))),
     Number(p.game_stumbles || 0) > 0 ? el("span.small.dim", { text: " · " + T.words.stumble }) : null
   );
   line.addEventListener("click", () => { view.openId = view.openId === w.id ? null : w.id; redraw(); });
@@ -132,13 +135,26 @@ function row(w, p, readOnly, redraw) {
       box.appendChild(el("div.row-tight", el("span.small", { text: w.phrase_de }),
         w.phrase_ru ? el("span.small.dim", { text: " — " + w.phrase_ru }) : null, speakBtn(w.phrase_de)));
     }
-    box.appendChild(lockIcons(p, T.words.locks));
-    box.appendChild(el("p.small.dim", {
-      text: T.words.shows(Number(p.shows || 0)) + " · " + T.words.errors(Number(p.errors || 0))
-    }));
+    const st = sch.stateOf(p);
+    if (st !== "hard") {
+      box.appendChild(lockIcons(p, T.words.locks));
+      box.appendChild(el("p.small.dim", {
+        text: T.words.shows(Number(p.shows || 0)) + " · " + T.words.errors(Number(p.errors || 0))
+      }));
+    }
 
     if (!readOnly) {
       const r = el("div.row");
+
+      if (st === "hard") {
+        const take = el("button.btn", { type: "button", text: T.words.fromHard });
+        take.addEventListener("click", () => fromHard(w, redraw));
+        r.appendChild(take);
+        box.appendChild(r);
+        wrap.appendChild(box);
+        return wrap;
+      }
+
       const back = el("button.btn", { type: "button", text: T.words.back });
       back.addEventListener("click", () => {
         if (p.grade === 5) {
@@ -149,10 +165,6 @@ function row(w, p, readOnly, redraw) {
       r.appendChild(back);
 
       if (p.grade !== 5) {
-        const g = el("button.btn", { type: "button", text: T.words.toGold });
-        g.addEventListener("click", () => toGold(w, p, s.voiceOk, redraw));
-        r.appendChild(g);
-
         const a = el("button.btn", { type: "button", text: T.words.askNow });
         a.addEventListener("click", () => { db.saveWord(w.id, { next_due: db.today() }); redraw(); });
         r.appendChild(a);
@@ -164,6 +176,26 @@ function row(w, p, readOnly, redraw) {
           onOk: () => { resetLocks(w); redraw(); } });
       });
       r.appendChild(res);
+
+      const hardBtn = el("button.btn", { type: "button", text: T.words.toHard });
+      hardBtn.addEventListener("click", () => toHard(w, redraw));
+      r.appendChild(hardBtn);
+
+      // ручной перевод на следующий уровень — в самом конце строки действий
+      if (st === "plain") {
+        const b = el("button.btn", { type: "button", text: T.words.toBronze });
+        b.addEventListener("click", () => toBronze(w, redraw));
+        r.appendChild(b);
+      } else if (st === "bronze") {
+        const b = el("button.btn", { type: "button", text: T.words.toSilver });
+        b.addEventListener("click", () => toSilver(w, redraw));
+        r.appendChild(b);
+      } else if (st === "silver") {
+        const g = el("button.btn", { type: "button", text: T.words.toGold });
+        g.addEventListener("click", () => toGold(w, p, s.voiceOk, redraw));
+        r.appendChild(g);
+      }
+
       box.appendChild(r);
     }
     wrap.appendChild(box);

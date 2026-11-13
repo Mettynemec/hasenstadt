@@ -11,11 +11,11 @@ import {
 } from "../ui.js";
 
 const FONTS = [18, 19, 20, 21, 23, 27, 30];
-const RATES = [0.7, 0.8, 0.9, 1, 1.1];
+const RATE_PCT = [40, 50, 60, 70, 80, 90, 100];
 const VOLUMES = [10, 30, 50, 70, 90];
 const SIZES = [10, 20, 30, 40, 50, 60, 70, 80];
-const NEWS = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13];
-const DEBTS = [30, 40, 50, 60, 70, 80, 90, 100, 110, 130];
+const NEWS = [5, 7, 8, 10, 11, 13, 17, 18, 20];
+const DEBTS = [30, 40, 50, 60, 70, 80, 90, 100];
 
 let offVoices = null;
 
@@ -73,10 +73,12 @@ function voiceGroup(s, set, root) {
     box.appendChild(el("div.set-row", el("span.label", { text: T.settings.voice }), sel));
   }
 
-  box.appendChild(slider(T.settings.rate, RATES, Number(set.voice_rate) || 0.9, (v) => save({ voice_rate: v })));
+  // хранится как доля (0.4–1), на экране — в процентах, как просил Мэтт
+  const ratePct = Math.round((Number(set.voice_rate) || 0.7) * 100);
+  box.appendChild(slider(T.settings.rate, RATE_PCT, ratePct, (v) => save({ voice_rate: v / 100 }), null, "%"));
 
   const testB = el("button.btn", { type: "button", text: T.settings.testVoice });
-  testB.addEventListener("click", () => tts.test(set.voice_name, Number(set.voice_rate) || 0.9, T.settings.testPhrase));
+  testB.addEventListener("click", () => tts.test(set.voice_name, Number(set.voice_rate) || 0.7, T.settings.testPhrase));
   box.appendChild(testB);
 
   const origin = forvoOrigin(s);
@@ -121,12 +123,17 @@ function lookGroup(set, root) {
   box.appendChild(sample);
 
   box.appendChild(switchBtn(
+    T.settings.accent + ": " + (set.accent_style === "upper" ? T.settings.accentUpper : T.settings.accentMark),
+    set.accent_style === "upper",
+    (on) => save({ accent_style: on ? "upper" : "mark" })
+  ));
+  box.appendChild(el("p.small.dim", { text: T.settings.accentSample(set.accent_style === "upper") }));
+
+  box.appendChild(switchBtn(
     T.settings.counter + ": " + (set.counter_digits !== false ? T.settings.counterBoth : T.settings.counterBar),
     set.counter_digits !== false,
     (on) => { save({ counter_digits: on }); paint(root); }
   ));
-
-  box.appendChild(switchBtn(T.settings.insult, set.insult_button !== false, (on) => save({ insult_button: on })));
 
   box.appendChild(switchBtn(
     T.settings.anim + ": " + (set.animations !== false ? T.settings.animOn : T.settings.animOff),

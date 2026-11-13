@@ -143,6 +143,7 @@ async function enter(user) {
       settings: data.settings,
       progress: data.progress,
       partnerProgress: data.partnerProgress,
+      dayLogAll: data.dayLogAll,
       content: cnt,
       config: CONFIG
     });

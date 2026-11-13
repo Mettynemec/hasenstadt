@@ -32,6 +32,7 @@ export const isGold = (p) => !!p && p.grade === 5;
 
 export function stateOf(p) {
   if (!p) return "new";
+  if (p.hard) return "hard";
   if (p.grade === 5) return "gold";
   if (p.grade === 4) return "silver";
   if (p.grade === 3) return "bronze";
@@ -52,100 +53,212 @@ export function currentRule(progress, content) {
 
 export const ruleDone = (progress, id) => !!(progress.rules[id] && progress.rules[id].done);
 
-export function isTopicClosed(topicId, mine, theirs, content, partnerExists) {
+// ── очки и уровни (пункт 11) ───────────────────────
+// Пороги — числа Мэтта как есть. Названия — свои, кроличьи, по-доброму.
+
+export const LEVELS = [
+  { min: 0, name: "Новичок в норке" },
+  { min: 100, name: "Любопытный хвостик" },
+  { min: 300, name: "Шуршащие лапки" },
+  { min: 700, name: "Бодрый крольчонок" },
+  { min: 1000, name: "Знаток морковки" },
+  { min: 1300, name: "Уверенный прыжок" },
+  { min: 1700, name: "Следопыт слов" },
+  { min: 2000, name: "Хранитель норы" },
+  { min: 3000, name: "Быстрые уши" },
+  { min: 3700, name: "Мастер маршрутов" },
+  { min: 5000, name: "Вожак стаи" },
+  { min: 7000, name: "Мудрый кролик" },
+  { min: 8000, name: "Легенда Хазенштадта" },
+  { min: 10000, name: "Старейшина нор" }
+];
+
+export function levelOf(points) {
+  let cur = LEVELS[0], i = 0;
+  for (; i < LEVELS.length; i++) { if (points >= LEVELS[i].min) cur = LEVELS[i]; else break; }
+  const next = LEVELS[i] || null;
+  return { name: cur.name, min: cur.min, next, index: i - 1 >= 0 ? i - 1 : 0 };
+}
+
+// Очки одного человека: всего и за последние семь дней (с сегодня).
+// todayRow — живое, из своего store.progress.today (у партнёра это то же
+// самое, что уже лежит в dayLogAll, так что расхождения не будет).
+export function pointsFor(dayLogAll, userId, todayRow, today) {
+  let total = 0, week = 0;
+  const since = addDays(today, -6);
+  const hasToday = !!(todayRow && todayRow.day === today);
+  for (const r of dayLogAll || []) {
+    if (r.user_id !== userId) continue;
+    if (hasToday && r.day === today) continue; // сегодня возьмём из todayRow
+    total += Number(r.points || 0);
+    if (r.day >= since) week += Number(r.points || 0);
+  }
+  if (hasToday) {
+    total += Number(todayRow.points || 0);
+    week += Number(todayRow.points || 0);
+  }
+  return { total, week };
+}
+
+// ── золотые слова по датам: для графика и прогноза (пункт 18) ──
+
+export function goldDates(side) {
+  const out = [];
+  for (const p of Object.values(side.byWordId)) {
+    if (p.grade === 5 && p.gold_at) out.push(String(p.gold_at).slice(0, 10));
+  }
+  return out.sort();
+}
+
+// Темп — по последним четырнадцати дням (с сегодня включительно).
+export function goldForecast(side, totalWords, today) {
+  const dates = goldDates(side);
+  const left = Math.max(0, totalWords - dates.length);
+  if (left === 0) return { left: 0, enough: true, etaDays: 0, etaDate: today };
+  const since = addDays(today, -13);
+  const recent = dates.filter((d) => d >= since).length;
+  const perDay = recent / 14;
+  if (perDay <= 0) return { left, enough: false, etaDays: null, etaDate: null };
+  const etaDays = Math.ceil(left / perDay);
+  return { left, enough: true, etaDays, etaDate: addDays(today, etaDays) };
+}
+
+// Состояние каждого шага дорожки целиком: пройден, открыт или закрыт,
+// и из-за чего именно закрыт (первый непройденный шаг перед ним).
+// Экран ПРАВИЛА и дорожка на главной берут отсюда всё, что им нужно.
+export function pathStatus(content, mine) {
+  const tbid = topicsById(content);
+  const out = [];
+  let blockReason = null;
+  for (const step of content.path || []) {
+    let kind, item, complete, title;
+    if (step.type === "rule") {
+      item = content.rulesById[step.id];
+      if (!item) continue;
+      kind = "rule";
+      complete = ruleDone(mine, step.id);
+      title = item.title;
+    } else {
+      item = tbid[step.topic];
+      if (!item) continue;
+      kind = "words";
+      complete = isTopicClosed(item.id, mine, content);
+      title = item.title_ru;
+    }
+    const state = complete ? "done" : (!blockReason ? "open" : "locked");
+    out.push({ step, kind, item, state, reason: state === "locked" ? blockReason : null });
+    if (!complete && !blockReason) blockReason = { kind, title };
+  }
+  return out;
+}
+
+// Какой блок слов идёт в дорожке сразу после этого правила — просто для
+// подсказки-ссылки на главной, не для гейта.
+export function nextAfterRule(content, ruleId) {
+  const path = content.path || [];
+  const i = path.findIndex((s) => s.type === "rule" && s.id === ruleId);
+  if (i === -1) return null;
+  const nxt = path[i + 1];
+  if (!nxt || nxt.type !== "words") return null;
+  return content.topics.find((t) => t.id === nxt.topic) || null;
+}
+
+// Блок закрыт, если у человека открыты все его слова и ни одно не сидит
+// на единице или двойке. Слова в «Сложных» не в счёт: они временно не мешают.
+// Смотрим только на своё — у каждого своя позиция на пути.
+export function isTopicClosed(topicId, mine, content) {
   const words = content.byTopic[topicId] || [];
   if (!words.length) return false;
-  const sides = partnerExists ? [mine, theirs] : [mine];
-  for (const side of sides) {
-    for (const w of words) {
-      const p = side.byWordId[w.id];
-      if (!p) return false;
-      if (p.grade === 1 || p.grade === 2) return false;
-    }
+  for (const w of words) {
+    const p = mine.byWordId[w.id];
+    if (p && p.hard) continue;
+    if (!p) return false;
+    if (p.grade === 1 || p.grade === 2) return false;
   }
   return true;
 }
 
-// Сколько единиц и двоек осталось в блоке у каждого.
+// Сколько единиц и двоек осталось в блоке (без «Сложных»).
 export function topicLeft(topicId, side, content) {
   const words = content.byTopic[topicId] || [];
   let n = 0;
   for (const w of words) {
     const p = side.byWordId[w.id];
+    if (p && p.hard) continue;
     if (!p || p.grade === 1 || p.grade === 2) n++;
   }
   return n;
 }
 
-const mainTopics = (content) => content.topics.filter((t) => !t.bonus);
+function topicsById(content) {
+  const out = {};
+  for (const t of content.topics) out[t.id] = t;
+  return out;
+}
 
 // Блок, из которого сейчас идут новые слова, плюс честная причина, если не идут.
-export function topicForNew(content, mine, theirs, partnerExists) {
-  for (const t of mainTopics(content)) {
+// Идём строго по дорожке (path.json): шаг за шагом, без оглядки на партнёра —
+// у каждого своя позиция на пути.
+export function topicForNew(content, mine) {
+  const tbid = topicsById(content);
+  for (const step of content.path || []) {
+    if (step.type === "rule") {
+      if (!ruleDone(mine, step.id)) {
+        return { topic: null, left: 0, waitingTopic: null, waitingRule: content.rulesById[step.id] };
+      }
+      continue;
+    }
+    const t = tbid[step.topic];
+    if (!t) continue;
     const words = content.byTopic[t.id] || [];
     if (!words.length) continue;
     const unopened = words.filter((w) => !mine.byWordId[w.id]);
     if (unopened.length) return { topic: t, left: unopened.length, waitingTopic: null };
-    if (!isTopicClosed(t.id, mine, theirs, content, partnerExists)) {
+    if (!isTopicClosed(t.id, mine, content)) {
       return { topic: t, left: 0, waitingTopic: t };
     }
   }
   return { topic: null, left: 0, waitingTopic: null };
 }
 
-// Блок для экрана СЛОВА и для строки на главной.
+// Блок для экрана СЛОВА и для строки на главной: первый по дорожке блок,
+// в котором ещё остались единицы, двойки или совсем не открытые слова.
 export function currentTopic(content, mine) {
-  for (const t of mainTopics(content)) {
+  const tbid = topicsById(content);
+  let last = null;
+  for (const step of content.path || []) {
+    if (step.type !== "words") continue;
+    const t = tbid[step.topic];
+    if (!t) continue;
+    last = t;
     const words = content.byTopic[t.id] || [];
-    if (!words.length) continue;
     for (const w of words) {
       const p = mine.byWordId[w.id];
+      if (p && p.hard) continue;
       if (!p || p.grade === 1 || p.grade === 2) return t;
     }
   }
-  return mainTopics(content).slice(-1)[0] || null;
+  return last;
 }
 
 // ── сколько новых слов можно сегодня ───────────────
 
-export function newWordsAllowed(content, mine, theirs, settings, today, partnerExists) {
+// Новых слов больше не выдают порциями каждый день сами по себе: их просит
+// человек кнопкой («Новых слов за заход»), и ждать партнёра для этого не надо —
+// у каждого свой темп. Функция просто говорит, сколько можно выдать по кнопке
+// прямо сейчас и почему, если нельзя.
+export function newWordsAllowed(content, mine, settings, today) {
   const N = Number(settings.new_per_day) || 8;
 
-  const pick = topicForNew(content, mine, theirs, partnerExists);
+  const pick = topicForNew(content, mine);
+  if (pick.waitingRule) return { n: 0, why: "rule", rule: pick.waitingRule, topic: null };
   if (!pick.topic) return { n: 0, why: "done", topic: null };
-
-  // Новые слова ждут галочки на том правиле, которое нужно этому блоку.
-  // Галочки на всех правилах подряд никто не требует: иначе после первого же
-  // блока занятия бы встали.
-  if (pick.topic.rule_before && !ruleDone(mine, pick.topic.rule_before)) {
-    return { n: 0, why: "rule", rule: content.rulesById[pick.topic.rule_before], topic: pick.topic };
-  }
   if (pick.waitingTopic) return { n: 0, why: "topic", topic: pick.waitingTopic };
 
-  const mainIds = new Set();
-  for (const t of mainTopics(content)) for (const w of content.byTopic[t.id] || []) mainIds.add(w.id);
-
-  const openedMine = countIn(mine, mainIds);
-  const openedTheirs = partnerExists ? countIn(theirs, mainIds) : openedMine;
-
-  const ceiling = Math.min(openedMine, openedTheirs) + N;
-  const free = Math.max(0, ceiling - openedMine);
   const doneToday = Number((mine.today && mine.today.new_n) || 0);
-
-  const n = Math.max(0, Math.min(free, N - doneToday, pick.left));
-  let why = "ok";
-  if (n === 0) {
-    if (free === 0) why = "sync";
-    else if (N - doneToday <= 0) why = "quota";
-    else why = "done";
-  }
+  const n = Math.max(0, Math.min(N - doneToday, pick.left));
+  const why = n === 0 ? (N - doneToday <= 0 ? "quota" : "done") : "ok";
   return { n, why, topic: pick.topic };
-}
-
-function countIn(side, ids) {
-  let n = 0;
-  for (const id of Object.keys(side.byWordId)) if (ids.has(id)) n++;
-  return n;
 }
 
 // Бонусный блок берётся отдельно и на основной счёт не влияет.
@@ -180,9 +293,9 @@ function asArray(x) {
 
 // ── выбор замка ────────────────────────────────────
 
-export function pickLock(word, prog, today, hasGerman) {
+export function pickLock(word, prog, today, hasGerman, noListen) {
   const p = prog || {};
-  const usable = hasGerman === false ? ["see", "write"] : LOCKS;
+  const usable = (hasGerman === false || noListen) ? ["see", "write"] : LOCKS;
 
   let cands = usable.filter((l) => !p["lock_" + l]);
   cands = cands.filter((l) => p["lock_" + l + "_day"] !== today);
@@ -241,7 +354,7 @@ export function debtList(content, mine, today) {
   for (const [id, p] of Object.entries(mine.byWordId)) {
     const w = content.wordsById[id];
     if (!w) continue;
-    if (isGold(p)) continue;
+    if (isGold(p) || p.hard) continue;
     const graded = p.grade >= 1 && p.grade <= 4;
     const halfDone = (p.grade === null || p.grade === undefined) && Number(p.shows || 0) > 0;
     if (!graded && !halfDone) continue;
@@ -258,13 +371,55 @@ function earlyRepeats(content, mine, today, limit) {
   const out = [];
   for (const [id, p] of Object.entries(mine.byWordId)) {
     const w = content.wordsById[id];
-    if (!w || isGold(p)) continue;
+    if (!w || isGold(p) || p.hard) continue;
     if (p.grade !== 3 && p.grade !== 4) continue;
     if (p.next_due && p.next_due <= today) continue;
     out.push({ w, p, due: p.next_due || "9999-99-99" });
   }
   out.sort((a, b) => String(a.due).localeCompare(String(b.due)));
   return out.slice(0, Math.max(0, limit));
+}
+
+// «Учить новые слова»: порция («Новых слов за заход») из конкретного блока,
+// только по нажатию кнопки, и никогда сама по себе.
+export function newWordsSession(content, mine, settings, today, topicId, hasGerman, noListen) {
+  const N = Number(settings.new_per_day) || 8;
+  const words = content.byTopic[topicId] || [];
+  const unopened = words.filter((w) => !mine.byWordId[w.id]).slice(0, N);
+  const queue = unopened.map((w) => card(w, null, today, hasGerman, true, noListen));
+  queue.forEach((c, i) => { c.index = i + 1; });
+  return {
+    queue, total: queue.length, mode: "newWords", cleanup: false,
+    allow: { n: queue.length, why: "ok" }, newPlanned: queue.length, topicId
+  };
+}
+
+// «Повторить выученное»: кнопка всегда работает и никогда не говорит
+// «заданий нет». Берёт всё, что не ниже «Изученного» (без «Сложных»),
+// сначала просроченное, потом самое слабое и давно не виденное.
+export function reviewSession(content, mine, settings, today, includeGold, hasGerman, noListen) {
+  const S = Number(settings.session_size) || 30;
+  const picked = [];
+  for (const [id, p] of Object.entries(mine.byWordId)) {
+    const w = content.wordsById[id];
+    if (!w || p.hard) continue;
+    const st = stateOf(p);
+    if (st === "new" || st === "hard") continue;
+    if (st === "gold" && !includeGold) continue;
+    const overdue = p.next_due && p.next_due <= today ? 0 : 1;
+    picked.push({ w, p, overdue, grade: Number(p.grade) || 0, lastSeen: p.last_seen || "" });
+  }
+  picked.sort((a, b) =>
+    (a.overdue - b.overdue) ||
+    (a.grade - b.grade) ||
+    String(a.lastSeen).localeCompare(String(b.lastSeen))
+  );
+  const queue = picked.slice(0, S).map((x) => card(x.w, x.p, today, hasGerman, false, noListen));
+  queue.forEach((c, i) => { c.index = i + 1; });
+  return {
+    queue, total: queue.length, mode: "reviewAll", cleanup: false,
+    allow: { n: 0, why: "repeat" }, newPlanned: 0
+  };
 }
 
 // ── сборка пачки ───────────────────────────────────
@@ -274,6 +429,7 @@ export function buildSession(content, mine, theirs, settings, today, opts) {
   const S = Number(settings.session_size) || 30;
   const Tdebt = Number(settings.debt_limit) || 80;
   const hasGerman = o.hasGerman !== false;
+  const noListen = !!o.noListen;
 
   const debt = debtList(content, mine, today);
 
@@ -288,7 +444,7 @@ export function buildSession(content, mine, theirs, settings, today, opts) {
     cleanup = true;
     allow = { n: 0, why: "debt" };
   } else {
-    allow = newWordsAllowed(content, mine, theirs, settings, today, !!o.partnerExists);
+    allow = newWordsAllowed(content, mine, settings, today);
     newCount = allow.n;
   }
 
@@ -313,8 +469,8 @@ export function buildSession(content, mine, theirs, settings, today, opts) {
   }
 
   const cards = [];
-  for (const r of repeats) cards.push(card(r.w, r.p, today, hasGerman, false));
-  const newCards = newWords.map((w) => card(w, null, today, hasGerman, true));
+  for (const r of repeats) cards.push(card(r.w, r.p, today, hasGerman, false, noListen));
+  const newCards = newWords.map((w) => card(w, null, today, hasGerman, true, noListen));
 
   const queue = arrange(cards, newCards);
   queue.forEach((c, i) => { c.index = i + 1; });
@@ -331,8 +487,8 @@ export function buildSession(content, mine, theirs, settings, today, opts) {
   };
 }
 
-function card(word, prog, today, hasGerman, isNew) {
-  const pl = isNew ? { lock: "see", canOpen: true } : pickLock(word, prog, today, hasGerman);
+export function card(word, prog, today, hasGerman, isNew, noListen) {
+  const pl = isNew ? { lock: "see", canOpen: true } : pickLock(word, prog, today, hasGerman, noListen);
   const ex = pickExercise(word, prog, pl.lock, hasGerman);
   return {
     wordId: word.id,
@@ -372,7 +528,7 @@ function arrange(repeats, news) {
 // Слово с оценкой один возвращается в эту же сессию, но не раньше чем
 // через семь карточек и не больше трёх раз за пачку.
 // Если до конца пачки столько карточек не осталось — слово придёт завтра.
-export function pushBack(session, cardObj, prog, today, hasGerman) {
+export function pushBack(session, cardObj, prog, today, hasGerman, noListen) {
   const shown = session.queue.filter((c) => c.wordId === cardObj.wordId).length;
   if (shown >= MAX_SHOWS) return false;
 
@@ -380,7 +536,7 @@ export function pushBack(session, cardObj, prog, today, hasGerman) {
   const at = i + GAP;
   if (at > session.queue.length) return false;
 
-  const again = card(cardObj.word, prog, today, hasGerman, false);
+  const again = card(cardObj.word, prog, today, hasGerman, false, noListen);
   again.again = true;
   session.queue.splice(at, 0, again);
   session.total = session.queue.length;

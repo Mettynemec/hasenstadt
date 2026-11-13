@@ -10,41 +10,48 @@ import * as chk from "../check.js";
 import * as tts from "../tts.js";
 import * as mascot from "../mascot.js";
 import { umlautRow, germanField, bindScreenKeys, arrowList } from "../keys.js";
+import { toHard } from "./words.js";
 import {
   note, speakBtn, say, sayIfAuto, sound, modal, sessionBar, setTitle, ico, switchBtn
 } from "../ui.js";
 
 const SEEN_PAIR = "hasen.seenPairNote";
 const SEEN_LEAVE = "hasen.seenLeaveNote";
+const NO_LISTEN_KEY = "hasen.noListenUntil";
+const NO_LISTEN_MS = 2 * 60 * 60 * 1000; // два часа
 
 let S = null;          // сессия
 let host = null;
 let hare = null;
+let partnerHare = null;
 let stats = null;
+
+let includeGold = false;
+
+// Авто-подмешивания новых слов в обычную сессию больше нет (пункт 16):
+// «повторить выученное» и обычный заход в тренажёр — одно и то же, всё
+// по-настоящему новое выдаётся только явной кнопкой «учить новые слова».
+function buildFor(s, mode, topicId) {
+  if (mode === "new" && topicId) {
+    return sch.newWordsSession(s.content, s.progress, s.settings, db.today(), topicId, s.voiceOk, noListenActive());
+  }
+  return sch.reviewSession(s.content, s.progress, s.settings, db.today(), includeGold, s.voiceOk, noListenActive());
+}
 
 export function mount(root, params) {
   host = root;
   const s = store.get();
-  const mode = params && params.mode === "repeat" ? "repeat" : "normal";
+  const mode = params && params.topic ? "new" : "review";
+  const topicId = params && params.topic;
+  includeGold = false;
 
-  S = sch.buildSession(s.content, s.progress, s.partnerProgress, s.settings, db.today(), {
-    mode,
-    partnerExists: !!s.partner,
-    hasGerman: s.voiceOk,
-    pairCheck: false
-  });
+  S = buildFor(s, mode, topicId);
   stats = { cards: 0, newOpened: 0, gold: 0, silver: 0 };
 
-  // второй мог зайти впервые или уже позаниматься: пересобираем пачку,
-  // пока ни одна карточка не отвечена
-  db.refreshPartner().then(() => {
-    if (!S || stats.cards > 0 || S.at > 0) return;
-    const st = store.get();
-    S = sch.buildSession(st.content, st.progress, st.partnerProgress, st.settings, db.today(), {
-      mode, partnerExists: !!st.partner, hasGerman: st.voiceOk, pairCheck: !!S.pairCheck
-    });
-    paint();
-  });
+  // второй мог зайти впервые или уже позаниматься — на новые слова своей
+  // темы это не влияет, только на игры и соревнование, так что пересборка
+  // тут не нужна; второго просто обновим на будущее
+  db.refreshPartner();
 
   paint();
   return () => unmount();
@@ -61,6 +68,54 @@ export function unmount() {
   S = null;
   host = null;
   hare = null;
+  partnerHare = null;
+}
+
+// ── «не могу слушать»: на этом устройстве, два часа, не в базе ────
+
+function noListenUntil() {
+  try { return Number(localStorage.getItem(NO_LISTEN_KEY)) || 0; } catch (e) { return 0; }
+}
+
+function noListenActive() {
+  return Date.now() < noListenUntil();
+}
+
+function startNoListen() {
+  try { localStorage.setItem(NO_LISTEN_KEY, String(Date.now() + NO_LISTEN_MS)); } catch (e) { /* не обязательно */ }
+  // текущая карточка, если она как раз на слух, заменяется сразу же
+  if (S && S.queue[S.at] && S.queue[S.at].exercise === 4) {
+    const c = S.queue[S.at];
+    const s = store.get();
+    const prog = s.progress.byWordId[c.wordId] || null;
+    const pl = sch.pickLock(c.word, prog, db.today(), s.voiceOk, true);
+    c.lock = pl.lock;
+    c.canOpenLock = pl.canOpen;
+    c.exercise = sch.pickExercise(c.word, prog, pl.lock, s.voiceOk);
+    c.state = "ask";
+    c.result = null;
+    c.step = 1;
+  }
+  paint();
+}
+
+function endNoListen() {
+  try { localStorage.removeItem(NO_LISTEN_KEY); } catch (e) { /* не обязательно */ }
+  paint();
+}
+
+function noListenRow(s) {
+  if (!tts.supported() || s.voiceOk === false) return null; // уже и так без звука
+  if (noListenActive()) {
+    const left = Math.max(0, noListenUntil() - Date.now());
+    const mins = Math.ceil(left / (60 * 1000));
+    const btn = el("button.btn", { type: "button", text: T.trainer.noListenOn });
+    btn.addEventListener("click", endNoListen);
+    return el("div.row-tight", el("p.small.dim", { text: T.trainer.noListenLeft(mins) }), btn);
+  }
+  const btn = el("button.btn", { type: "button", text: T.trainer.noListen });
+  btn.addEventListener("click", startNoListen);
+  return el("div.row-tight", btn);
 }
 
 // ── общий каркас экрана ────────────────────────────
@@ -106,20 +161,37 @@ function paint() {
     card.step = 1;
     paint();
   }));
+  const nlRow = noListenRow(s);
+  if (nlRow) box.appendChild(nlRow);
+
+  if (S.mode === "reviewAll") {
+    box.appendChild(switchBtn(T.trainer.includeGold, includeGold, (on) => {
+      includeGold = on;
+      const st = store.get();
+      S = buildFor(st, "review");
+      stats = { cards: 0, newOpened: 0, gold: 0, silver: 0 };
+      paint();
+    }));
+  }
 
   const askZone = el("div.ask");
   const ansZone = el("div.answer-zone", { hidden: true });
   const hint = el("p.hint-line");
   const gradeRow = el("div.grades", { hidden: true });
 
-  hare = mascot.make("matt", 70, "calm");
-  hare.dataset.who = whoKey(s);
-  mascot.set(hare, "calm");
+  const my = whoKey(s);
+  const their = my === "matt" ? "amiko" : "matt";
+  hare = mascot.make(my, 150, "calm");
+  hare.dataset.who = my;
+  partnerHare = s.partner ? mascot.make(their, 150, "calm") : null;
+  if (partnerHare) partnerHare.dataset.who = their;
 
   box.appendChild(askZone);
   box.appendChild(ansZone);
   box.appendChild(hint);
-  box.appendChild(el("div.trainer-bottom", gradeRow, hare));
+  box.appendChild(el("div.trainer-bottom", gradeRow,
+    el("div.trainer-mascots", partnerHare, hare)
+  ));
 
   put(host, box);
 
@@ -419,11 +491,15 @@ function paintHear(ctx) {
   const btn = el("button.btn.btn-main", { type: "button", text: T.trainer.checkBtn });
   const listen = el("button.btn", { type: "button", text: T.trainer.listenMore });
 
+  const noListenBtn = el("button.btn", { type: "button", text: T.trainer.noListen });
+  noListenBtn.addEventListener("click", startNoListen);
+
   put(askZone,
     el("p.small.dim", { text: T.trainer.hearTitle }),
     el("button.btn.btn-main", { type: "button", text: T.trainer.listen, on: { click: () => say(full) } }),
     listen,
-    field, row, btn
+    field, row, btn,
+    noListenBtn
   );
   listen.addEventListener("click", () => say(full));
   sayIfAuto(full);
@@ -465,19 +541,24 @@ function writeAnswer(card, result) {
   if (lock) patch.last_lock = lock;
 
   const bad = !result.ok || result.articleError || (result.trMissed && !result.trMissed.ok);
+  let openedLock = false;
   if (bad) {
     patch.errors = Number((prog && prog.errors) || 0) + 1;
     if (lock) patch["err_" + lock] = true;
   } else if (lock) {
     patch["err_" + lock] = false;
-    if (card.canOpenLock) {
+    if (card.canOpenLock && !(prog && prog["lock_" + lock])) {
       patch["lock_" + lock] = true;
       patch["lock_" + lock + "_day"] = day;
+      openedLock = true;
     }
   }
 
   db.saveWord(w.id, patch);
-  db.bumpDay({ cards: 1, right_n: bad ? 0 : 1, wrong_n: bad ? 1 : 0 });
+  // очки: одно за верный ответ, три — за по-настоящему открытый замок
+  // (сюда и так не попадает режим «проверяем друг друга» — см. answered())
+  const points = (bad ? 0 : 1) + (openedLock ? 3 : 0);
+  db.bumpDay({ cards: 1, right_n: bad ? 0 : 1, wrong_n: bad ? 1 : 0, points });
   stats.cards++;
 
   if (result.ok && !bad) sound(result.almost ? "almost" : "right");
@@ -493,7 +574,7 @@ function paintAnswered(ctx, fresh) {
   ansZone.hidden = false;
   clear(ansZone);
   ansZone.appendChild(el("div.row-tight",
-    el("b", { text: chk.dictLine(w) }),
+    el("b", chk.dictLine(w, s.settings)),
     speakBtn(chk.canonical(w))
   ));
 
@@ -511,35 +592,24 @@ function paintAnswered(ctx, fresh) {
     ));
   }
 
-  // кнопка ругательства: только при верном ответе
-  if (r.ok && !r.articleError && s.settings.insult_button && (s.content.insults || []).length) {
-    const b = el("button.btn", { type: "button", text: T.trainer.insult });
-    b.addEventListener("click", () => {
-      const bubble = mascot.insultBubble(s.content.insults, (t) => say(t));
-      if (!bubble) return;
-      ansZone.appendChild(bubble);
-      b.disabled = true;
-      if (hare) mascot.set(hare, "angry");
-      const close = (e) => {
-        if (e.type === "keydown" && e.key !== "Escape") return;
-        bubble.remove();
-        if (hare) mascot.set(hare, "calm");
-        window.removeEventListener("keydown", close);
-        window.removeEventListener("pointerdown", close);
-      };
-      setTimeout(() => {
-        window.addEventListener("keydown", close);
-        window.addEventListener("pointerdown", close);
-      }, 300);
-    });
-    ansZone.appendChild(b);
+  if (!r.pair) {
+    const hardBtn = el("button.btn", { type: "button", text: T.words.toHard });
+    hardBtn.addEventListener("click", () => { toHard(w, null); hardBtn.disabled = true; });
+    ansZone.appendChild(hardBtn);
   }
 
-  // кролик: доволен при верном, молчит при неверном
+  // кролики: свой доволен при верном, второй хвалит; при неверном — молчат оба
   if (hare && fresh) {
-    if (r.pair) mascot.set(hare, "calm");
-    else if (r.ok && !r.articleError) mascot.flash(hare, "glad", 1300);
-    else mascot.set(hare, "calm");
+    if (r.pair) {
+      mascot.set(hare, "calm");
+      if (partnerHare) mascot.set(partnerHare, "calm");
+    } else if (r.ok && !r.articleError) {
+      mascot.flash(hare, "glad", 1300);
+      if (partnerHare) mascot.flash(partnerHare, "praise", 1300);
+    } else {
+      mascot.set(hare, "calm");
+      if (partnerHare) mascot.set(partnerHare, "calm");
+    }
   }
 
   // подсказка над оценками
@@ -617,7 +687,12 @@ function applyGrade(card, n) {
   const before = prog ? prog.grade : null;
   db.saveWord(w.id, patch);
 
-  if (n === 5 && before !== 5) { stats.gold++; sound("gold"); if (hare) mascot.flash(hare, "proud", 1300); }
+  if (n === 5 && before !== 5) {
+    stats.gold++; sound("gold");
+    if (hare) mascot.flash(hare, "proud", 1300);
+    if (partnerHare) mascot.flash(partnerHare, "praise", 1300);
+    db.bumpDay({ points: 10 }); // слово стало золотым через тренажёр с тремя замками
+  }
   if (n === 4 && before !== 4) stats.silver++;
 
   // новое слово засчитывается один раз; в дневную норму идут только слова
@@ -657,9 +732,7 @@ function paintFinish() {
   const again = el("button.btn.btn-main", { type: "button", text: T.trainer.again });
   again.addEventListener("click", () => {
     const st = store.get();
-    S = sch.buildSession(st.content, st.progress, st.partnerProgress, st.settings, db.today(), {
-      mode: "normal", partnerExists: !!st.partner, hasGerman: st.voiceOk
-    });
+    S = buildFor(st, S.mode === "newWords" ? "new" : "review", S.topicId);
     S.at = 0;
     stats = { cards: 0, newOpened: 0, gold: 0, silver: 0 };
     paint();

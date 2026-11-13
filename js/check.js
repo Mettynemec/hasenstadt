@@ -1,6 +1,8 @@
 // Проверка ввода. Общее правило: сомнение в пользу человека.
 // Регистр, ударение, лишние пробелы и точки не штрафуются никогда.
 
+import { el } from "./el.js";
+
 const ARTICLES = ["der", "die", "das"];
 
 export function normalizeCommon(s) {
@@ -15,6 +17,9 @@ export function normalizeCommon(s) {
 
 export function normalizeTr(s) {
   return normalizeCommon(s)
+    // только сам знак ударения (U+0301), а не вся декомпозиция —
+    // иначе от .normalize() развалятся «й» и «ё»
+    .replace(/\u0301/g, "")
     .replace(/ё/g, "е")
     .replace(/[-'’`]/g, "")
     .replace(/[ъь]/g, "");
@@ -135,11 +140,58 @@ export function canonical(word) {
   return art + word.de;
 }
 
-// Полная строка словаря: der Tisch, -e — ТИш — стол
-export function dictLine(word) {
-  const art = word.pos === "noun" && word.article ? word.article + " " : "";
-  const pl = word.pos === "noun" && word.plural ? ", " + word.plural : "";
-  return art + word.de + pl + " — " + word.tr + " — " + word.ru;
+// Полная строка словаря: der Tisch, die Tische — ТИш, ТИше — стол.
+// Возвращает элемент, а не текст, чтобы артикль можно было подсветить
+// отдельным цветом, когда род по-русски не совпадает с немецким (пункт 19).
+// settings — настройки человека (нужен только accent_style), необязательны.
+export function dictLine(word, settings) {
+  const isNoun = word.pos === "noun" && !!word.article;
+  const nodes = [];
+
+  if (isNoun) {
+    const mismatch = word.ru_gender && word.ru_gender !== genderOf(word.article);
+    nodes.push(el(mismatch ? "span.article-odd" : "span", {
+      text: word.article + " ",
+      title: mismatch ? "по-русски этот род другой — здесь запоминать нужно отдельно" : undefined
+    }));
+  }
+
+  nodes.push(el("span.de", { text: word.de }));
+  nodes.push(el("span", { text: pluralTail(word) }));
+  nodes.push(el("span.small.dim", { text: " — " + trTail(word, settings) + " — " + word.ru }));
+
+  return el("span.dict-line", nodes);
+}
+
+function genderOf(article) {
+  return article === "der" ? "m" : article === "die" ? "f" : article === "das" ? "n" : "";
+}
+
+// Множественное число: новые поля (plural_de/no_plural/plural_only)
+// побеждают, старое поле plural — пока они не заведены у слова.
+function pluralTail(word) {
+  if (word.pos !== "noun") return "";
+  if (word.plural_only) return "";
+  if (word.no_plural) return ", мн. числа нет";
+  if (word.plural_de) return ", die " + word.plural_de;
+  if (word.plural) return ", " + word.plural;
+  return "";
+}
+
+// Транскрипция: в новом формате — ед. и мн. число через запятую.
+function trTail(word, settings) {
+  const style = settings && settings.accent_style;
+  const sg = withAccent(word.tr, style);
+  if (word.plural_tr && !word.plural_only) return sg + ", " + withAccent(word.plural_tr, style);
+  return sg;
+}
+
+// По умолчанию — значком (объединяющий акут). В запасном варианте —
+// ударная буква становится заглавной, знак убирается.
+function withAccent(tr, style) {
+  if (!tr) return "";
+  if (style === "upper") return tr.replace(/(.)\u0301/g, (m, v) => v.toUpperCase());
+  return tr;
 }
 
 // ── перевод по-русски ──────────────────────────────

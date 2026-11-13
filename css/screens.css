@@ -36,6 +36,27 @@
 .pair-strip .mascot.small { width: 73px; height: 73px; }
 .pair-lines { display: flex; flex-direction: column; gap: var(--s2); flex: 1 1 13rem; }
 
+.path-ribbon {
+  display: flex;
+  gap: var(--s3);
+  overflow-x: auto;
+  padding-bottom: var(--s2);
+}
+.path-step {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  white-space: nowrap;
+  padding: var(--s2) var(--s3);
+  border-radius: var(--r-m);
+  border: 1px solid var(--line);
+  color: var(--text-dim);
+  flex: 0 0 auto;
+}
+.path-step[data-state="done"] { color: var(--text); }
+.path-step[data-state="open"] { color: var(--text); border-color: var(--accent); font-weight: 600; }
+.path-step[data-state="locked"] { opacity: 0.71; }
+
 /* ── алфавит ──────────────────────────────────────── */
 
 .acc { border: 1px solid var(--line); border-radius: var(--r-m); overflow: hidden; }
@@ -138,11 +159,17 @@
   flex-direction: column;
   gap: var(--s2);
 }
-.trainer-bottom { display: flex; align-items: flex-end; gap: var(--s4); }
-.trainer-bottom .grades { flex: 1 1 auto; }
-.trainer-bottom .mascot { width: 70px; height: 70px; margin-left: auto; }
+.trainer-bottom { display: flex; flex-direction: column; gap: var(--s3); }
+.trainer-bottom .grades { width: 100%; }
+.trainer-mascots {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--s4);
+}
+.trainer-mascots .mascot { width: 150px; height: 150px; }
 @media (max-width: 700px) {
-  .trainer-bottom .mascot { display: none; }
+  .trainer-mascots .mascot { width: 90px; height: 90px; }
 }
 .hint-line { color: var(--text-dim); font-size: 0.9rem; min-height: 1.3rem; }
 
@@ -215,3 +242,29 @@
   color: var(--text-dim);
 }
 select.field { font-size: 1rem; }
+
+/* экран прогресса: шкала бронза/серебро/золото и график золота по неделям */
+.progress-card { display: flex; flex-direction: column; gap: var(--s2); }
+.scale3 {
+  display: flex;
+  height: 14px;
+  border-radius: var(--r-s);
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.scale3-seg[data-k="bronze"] { background: var(--bronze); }
+.scale3-seg[data-k="silver"] { background: var(--silver); }
+.scale3-seg[data-k="gold"]   { background: var(--gold); }
+
+.gold-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--s3);
+  height: 110px;
+  overflow-x: auto;
+}
+.gold-col { display: flex; flex-direction: column; align-items: center; gap: var(--s2); flex: 1 0 auto; height: 100%; }
+.gold-bars { display: flex; align-items: flex-end; gap: 3px; flex: 1 1 auto; }
+.gold-bar { width: 10px; min-height: 2px; border-radius: 2px 2px 0 0; }
+.gold-bar.mine { background: var(--accent); }
+.gold-bar.theirs { background: var(--silver); }

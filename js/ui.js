@@ -20,7 +20,7 @@ export function applyLook(settings) {
 
 const PATHS = {
   home: "M3 11 L11.5 3.5 L20 11 M5.5 9 V19.5 H17.5 V9",
-  alphabet: "M5 19 L11.5 4.5 L18 19 M8.2 14 H14.8",
+  rules: "M5 4.5 H15.5 L18.5 7.5 V19.5 H5 Z M15.5 4.5 V7.5 H18.5 M8 11.5 H15 M8 15 H13",
   words: "M3.5 6.5 H20 M3.5 11.5 H20 M3.5 16.5 H14",
   trainer: "M3 6.5 H20 V16.5 H3 Z M7.5 11.5 H15.5",
   learned: "M19.5 11.5 A8 8 0 1 1 11.5 3.5 M7.5 11 L10.5 14 L18.5 5.5",
@@ -69,8 +69,8 @@ export function ico(name, size) {
 
 const MENU = [
   ["home", "home", "#/home", false],
-  ["alphabet", "alphabet", "#/alphabet", true],
-  ["words", "words", "#/words", false],
+  ["rules", "rules", "#/rules", false],
+  ["words", "words", "#/words", true],
   ["trainer", "trainer", "#/trainer", false],
   ["learned", "learned", "#/learned", true],
   ["game", "game", "#/game", false],
@@ -432,14 +432,24 @@ export function renderMd(text) {
   return box;
 }
 
-export function slider(label, values, current, onDone, noteText) {
-  const i = values.indexOf(current);
-  const val = el("span.slider-val", { text: String(current) });
+export function slider(label, values, current, onDone, noteText, unit) {
+  const u = unit || "";
+  // текущее значение может не совпасть ровно ни с одним шагом (например, старое
+  // значение осталось за пределами новой шкалы) — тогда берём ближайший шаг,
+  // а не молча прыгаем на первый
+  let i = values.indexOf(current);
+  if (i < 0 && typeof current === "number") {
+    let best = 0, bestDiff = Infinity;
+    values.forEach((v, k) => { const d = Math.abs(v - current); if (d < bestDiff) { bestDiff = d; best = k; } });
+    i = best;
+  }
+  if (i < 0) i = 0;
+  const val = el("span.slider-val", { text: String(values[i]) + u });
   const input = el("input", {
     type: "range", min: 0, max: values.length - 1, step: 1,
-    value: String(i < 0 ? 0 : i), "aria-label": label
+    value: String(i), "aria-label": label
   });
-  input.addEventListener("input", () => { val.textContent = String(values[Number(input.value)]); });
+  input.addEventListener("input", () => { val.textContent = String(values[Number(input.value)]) + u; });
   input.addEventListener("change", () => onDone(values[Number(input.value)]));
   return el("div.set-row",
     el("span.label", { text: label }),

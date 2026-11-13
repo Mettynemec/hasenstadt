@@ -26,6 +26,7 @@ const BANNED = [
   "oma", "omas", "opa", "opas", "tante", "tanten", "onkel",
   "eltern", "grosseltern", "grossmutter", "grossvater",
   "muetterlich", "vaeterlich", "elterlich",
+  "familie", "familien", "familiaer", "geschwister",
   "ами", "мелочь", "мелочи", "мелочью"
 ];
 
@@ -89,7 +90,14 @@ export async function ruleText(id, version) {
     const r = await fetch(url, { cache: "no-cache" });
     if (r.ok) {
       const t = await r.text();
-      out = t.trim() ? t : null;
+      if (t.trim()) {
+        const hits = bannedIn(t);
+        if (hits.length) {
+          console.warn("правило " + id + ": запрещённые слова в тексте — " + hits.join(", ") + ", текст не показан");
+        } else {
+          out = t;
+        }
+      }
     }
   } catch (e) { out = null; }
   ruleCache.set(id, out);
@@ -111,7 +119,7 @@ export async function loadAll(version) {
     scene: new Set(), task: new Set(), compound: new Set(), phrase: new Set()
   };
 
-  const [topicsRaw, rulesRaw, alphabet, placesIndex, sketchRaw, compRaw, insRaw, phrRaw] =
+  const [topicsRaw, rulesRaw, alphabet, placesIndex, sketchRaw, compRaw, phrRaw, pathRaw] =
     await Promise.all([
       grabSoft("topics.json", version, []),
       grabSoft("rules.json", version, []),
@@ -119,8 +127,8 @@ export async function loadAll(version) {
       grabSoft("places.json", version, []),
       grabSoft("sketch-tasks.json", version, []),
       grabSoft("compounds.json", version, []),
-      grabSoft("insults.json", version, []),
-      grabSoft("phrases.json", version, [])
+      grabSoft("phrases.json", version, []),
+      grabSoft("path.json", version, [])
     ]);
 
   // блоки словаря
@@ -256,16 +264,6 @@ export async function loadAll(version) {
     compounds.push(c);
   }
 
-  // ругательства кролика: тут мат разрешён, проверяем только родню
-  const insults = [];
-  for (const [i, s] of asArray(insRaw).entries()) {
-    const p = [];
-    if (!s.de || !s.ru) p.push("запись " + (i + 1) + ": нужны de и ru");
-    scanText(s, "ругательство " + (s.de || i), p);
-    if (p.length) { bad.push({ file: "insults.json", problems: p }); continue; }
-    insults.push(s);
-  }
-
   // фразы для пропусков
   const phrases = [];
   for (const f of asArray(phrRaw)) {
@@ -298,6 +296,14 @@ export async function loadAll(version) {
     }
   }
 
+  // путь: шаги-правила и шаги-блоки по порядку
+  const path = [];
+  for (const [i, step] of asArray(pathRaw).entries()) {
+    if (step && step.type === "rule" && rulesById[step.id]) { path.push(step); continue; }
+    if (step && step.type === "words" && byTopic[step.topic]) { path.push(step); continue; }
+    bad.push({ file: "path.json[" + i + "]", problems: ["шаг указывает в пустоту: " + JSON.stringify(step)] });
+  }
+
   if (bad.length) {
     console.warn("── контент: что не загрузилось ──");
     for (const b of bad) {
@@ -308,9 +314,9 @@ export async function loadAll(version) {
 
   return {
     topics, words, wordsById, byTopic,
-    rules, rulesById,
+    rules, rulesById, path,
     places, placesById: byId(places), scenesById,
-    sketchTasks, compounds, insults, phrases,
+    sketchTasks, compounds, phrases,
     alphabet: alphabet || { letters: [], combos: [], transcription_help: [] },
     bad
   };

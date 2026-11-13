@@ -131,6 +131,12 @@ alter table public.settings add column if not exists volume       integer not nu
 alter table public.settings add column if not exists animations   boolean not null default true;
 alter table public.settings add column if not exists bonus_topics jsonb   not null default '[]'::jsonb;
 alter table public.settings add column if not exists gaps_count   integer;
+alter table public.settings add column if not exists accent_style text    not null default 'mark';
+
+alter table public.word_progress add column if not exists hard    boolean not null default false;
+alter table public.word_progress add column if not exists hard_at timestamptz;
+
+alter table public.day_log add column if not exists points integer not null default 0;
 
 -- ЧАСТЬ ВТОРАЯ: ускорители
 

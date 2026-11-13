@@ -22,12 +22,5 @@
     "order": 7,
     "bonus": false,
     "rule_before": "sein"
-  },
-  {
-    "id": "schimpf",
-    "title_ru": "Ласковые оскорбления",
-    "title_de": "die Schimpfwörter",
-    "order": 1000,
-    "bonus": true
   }
 ]

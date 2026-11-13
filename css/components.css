@@ -405,3 +405,12 @@ input[type="range"]::-moz-range-thumb { width: 1.3rem; height: 1.3rem; border: n
 }
 .moved { animation: moved var(--t-mid) both; }
 @keyframes moved { from { transform: scale(0.97); } to { transform: scale(1); } }
+
+/* строка словаря: артикль, чей род по-русски не совпадает с немецким —
+   не красный, и не только цвет: ещё и пунктирное подчёркивание */
+.dict-line { display: inline; }
+.article-odd {
+  color: var(--soft);
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}

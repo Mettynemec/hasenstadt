@@ -8,6 +8,7 @@ const state = {
   content: null,            // {topics, words, wordsById, rules, scenes, ...}
   progress: { byWordId: {}, rules: {}, scenes: {}, today: null, kv: {} },
   partnerProgress: { byWordId: {}, rules: {}, scenes: {}, today: null, kv: {} },
+  dayLogAll: [],             // весь журнал дней обоих — для очков и прогноза
   session: null,
   queue: { size: 0, state: "ok" },
   voiceOk: false

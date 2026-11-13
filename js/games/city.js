@@ -438,11 +438,14 @@ function finishScene() {
   const s = store.get();
   const { scene, place } = live;
   const prog = s.progress.scenes[scene.id] || { done_count: 0, pair_count: 0 };
+  const firstToday = String(prog.last_done_at || "").slice(0, 10) !== db.today();
 
   db.saveScene(scene.id, {
     done_count: Number(prog.done_count || 0) + 1,
     pair_count: Number(prog.pair_count || 0) + (live.mode === "two" ? 1 : 0)
   });
+  // десять очков — не чаще раза в день за одну и ту же сцену
+  if (firstToday) db.bumpDay({ points: 10 });
 
   for (const id of live.stumbles) {
     const p = s.progress.byWordId[id];

@@ -1,0 +1,8 @@
+[
+  { "type": "rule", "id": "sein" },
+  { "type": "rule", "id": "wortfolge" },
+  { "type": "words", "topic": "menschen" },
+  { "type": "rule", "id": "artikel" },
+  { "type": "words", "topic": "wohnung" },
+  { "type": "words", "topic": "essen" }
+]

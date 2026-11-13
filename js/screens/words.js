@@ -50,7 +50,7 @@ function paintList(root) {
 
 function topicTile(t, s, c, current) {
   const list = c.byTopic[t.id] || [];
-  const closed = sch.isTopicClosed(t.id, s.progress, s.partnerProgress, c, !!s.partner);
+  const closed = sch.isTopicClosed(t.id, s.progress, c);
   const reached = list.some((w) => s.progress.byWordId[w.id]) || (current && current.id === t.id);
   const locked = !closed && !reached;
 
@@ -217,7 +217,7 @@ export function wordRow(w, p, readOnly, redraw) {
   const wrap = el("div");
   const line = el("button.wline", { type: "button", aria: { expanded: String(view.openId === w.id) } },
     dot(sch.stateOf(p)),
-    el("span.txt", el("b", { text: dictLine(w) })),
+    el("span.txt", el("b", dictLine(w, store.get().settings))),
     p && Number(p.game_stumbles || 0) > 0 && p.grade === 5
       ? el("span.small.dim", { text: " · " + T.words.stumble }) : null
   );
@@ -261,8 +261,18 @@ function details(w, p, readOnly, redraw) {
 
   if (readOnly) return box;
 
+  const st = p ? sch.stateOf(p) : "new";
   const row = el("div.row");
-  const gold = p && p.grade === 5;
+
+  if (st === "hard") {
+    const take = el("button.btn", { type: "button", text: T.words.fromHard });
+    take.addEventListener("click", () => fromHard(w, redraw));
+    row.appendChild(take);
+    box.appendChild(row);
+    return box;
+  }
+
+  const gold = st === "gold";
 
   if (!gold) {
     const ready = sch.goldReady(p, s.voiceOk);
@@ -288,6 +298,20 @@ function details(w, p, readOnly, redraw) {
       const a = el("button.btn", { type: "button", text: T.words.askNow });
       a.addEventListener("click", () => { db.saveWord(w.id, { next_due: db.today() }); redraw(); });
       row.appendChild(a);
+
+      const h = el("button.btn", { type: "button", text: T.words.toHard });
+      h.addEventListener("click", () => toHard(w, redraw));
+      row.appendChild(h);
+
+      if (st === "plain") {
+        const nb = el("button.btn", { type: "button", text: T.words.toBronze });
+        nb.addEventListener("click", () => toBronze(w, redraw));
+        row.appendChild(nb);
+      } else if (st === "bronze") {
+        const nb = el("button.btn", { type: "button", text: T.words.toSilver });
+        nb.addEventListener("click", () => toSilver(w, redraw));
+        row.appendChild(nb);
+      }
     }
   }
 
@@ -313,6 +337,29 @@ export function toGold(w, p, voiceOk, redraw) {
 
 export function backToTrainer(w) {
   db.saveWord(w.id, { topic_id: w.topic, grade: 3, next_due: db.today(), gold_at: null });
+}
+
+// Ручные переводы на следующий уровень — очков не дают и замков не открывают.
+export function toBronze(w, redraw) {
+  db.saveWord(w.id, { topic_id: w.topic, grade: 3, next_due: sch.nextDue(3, db.today()) });
+  if (redraw) redraw();
+}
+
+export function toSilver(w, redraw) {
+  db.saveWord(w.id, { topic_id: w.topic, grade: 4, next_due: sch.nextDue(4, db.today()) });
+  if (redraw) redraw();
+}
+
+// «в Сложные» и обратно — слово не в долге, не мешает закрыть блок,
+// не выпадает в тренажёре, но прогресс и оценка не теряются.
+export function toHard(w, redraw) {
+  db.saveWord(w.id, { topic_id: w.topic, hard: true, hard_at: new Date().toISOString() });
+  if (redraw) redraw();
+}
+
+export function fromHard(w, redraw) {
+  db.saveWord(w.id, { topic_id: w.topic, hard: false, next_due: db.today() });
+  if (redraw) redraw();
 }
 
 export function resetLocks(w) {

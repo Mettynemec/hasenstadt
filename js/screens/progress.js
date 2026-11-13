@@ -1,10 +1,14 @@
-// Экран ПРОГРЕСС. Только факты, никаких оценок и никаких сравнений.
+// Экран ПРОГРЕСС. Карточки по каждому, очки и уровни, золото по неделям,
+// прогноз — и ниже привычная таблица по блокам и Город.
 
 import { el, put } from "../el.js";
-import { T, cards as cardsN } from "../texts.js";
+import { T } from "../texts.js";
 import { store } from "../store.js";
+import * as db from "../db.js";
 import * as sch from "../scheduler.js";
-import { note, dot, setTitle } from "../ui.js";
+import { note, setTitle } from "../ui.js";
+
+const WEEKS = 8;
 
 export function mount(root) {
   const s = store.get();
@@ -16,36 +20,19 @@ export function mount(root) {
     const t = c.topics.find((x) => x.id === w.topic);
     return t && !t.bonus;
   });
+  const today = db.today();
 
   const box = el("div.stack");
 
-  // сверху: сколько выучено
-  box.appendChild(el("p.h-block", { text: T.progress.learned(learnedCount(s.progress, main), main.length) }));
-  if (s.partner) {
-    box.appendChild(el("p.h-block", { text: s.partner.name + ": " + T.progress.learned(learnedCount(s.partnerProgress, main), main.length) }));
-  }
-  box.appendChild(el("p.small.dim.prose", { text: T.progress.whatCounts }));
+  box.appendChild(personCard(s.me.name, s.progress, main, s, today));
+  if (s.partner) box.appendChild(personCard(s.partner.name, s.partnerProgress, main, s, today, s.partner.id));
 
-  // сетки
-  box.appendChild(gridBlock(s.me.name, s.progress, main, c));
-  if (s.partner) box.appendChild(gridBlock(s.partner.name, s.partnerProgress, main, c));
+  box.appendChild(goldChart(s, main.length, today));
 
-  box.appendChild(legend());
-
-  // по блокам
   box.appendChild(el("h2.h-block", { text: T.progress.byTopic }));
   box.appendChild(topicTable(s, c));
   box.appendChild(el("p.small.dim", { text: T.progress.cellNote }));
 
-  // сегодня
-  const t1 = s.progress.today || {};
-  box.appendChild(el("p", { text: T.progress.today(Number(t1.cards || 0), Number(t1.new_n || 0)) }));
-  if (s.partner) {
-    const t2 = s.partnerProgress.today || {};
-    box.appendChild(el("p", { text: s.partner.name + ": " + T.progress.today(Number(t2.cards || 0), Number(t2.new_n || 0)) }));
-  }
-
-  // город
   if (c.places.length) {
     box.appendChild(el("h2.h-block", { text: T.progress.city }));
     const list = el("div.stack-s");
@@ -65,35 +52,95 @@ export function mount(root) {
 
 export function unmount() {}
 
-const learnedCount = (side, words) =>
-  words.filter((w) => sch.isLearned(side.byWordId[w.id])).length;
+// ── карточка человека: число, шкала, очки, уровень, прогноз ──
 
-function gridBlock(name, side, words, c) {
-  const wrap = el("div.stack-s", el("p.small.dim", { text: name }));
-  const grid = el("div.sqgrid");
-  let lastTopic = null;
-  for (const w of words) {
-    if (lastTopic !== null && w.topic !== lastTopic) grid.appendChild(el("span.sq.sq-gap"));
-    lastTopic = w.topic;
+function personCard(name, side, main, s, today, userId) {
+  const counts = { bronze: 0, silver: 0, gold: 0 };
+  for (const w of main) {
     const st = sch.stateOf(side.byWordId[w.id]);
-    grid.appendChild(el("span.sq", { data: { s: st, w: w.id, t: w.topic }, title: w.de + " — " + w.ru }));
+    if (counts[st] !== undefined) counts[st]++;
   }
-  grid.addEventListener("click", (e) => {
-    const sq = e.target.closest(".sq");
-    if (!sq || !sq.dataset.t) return;
-    location.hash = "#/words/" + sq.dataset.t;
-  });
-  wrap.appendChild(el("div.grid-wrap", grid));
-  return wrap;
+  const learned = counts.bronze + counts.silver + counts.gold;
+  const myId = userId || s.me.id;
+  const pts = sch.pointsFor(s.dayLogAll, myId, side.today, today);
+  const lvl = sch.levelOf(pts.total);
+  const fc = sch.goldForecast(side, main.length, today);
+
+  const box = el("div.card.card-accent.progress-card");
+  box.appendChild(el("div.row-tight",
+    el("p.word-big", { text: name }),
+    el("span.small.dim", { text: lvl.name })
+  ));
+  box.appendChild(el("p.h-screen", { text: T.progress.learnedCard(learned, main.length) }));
+
+  const scale = el("div.scale3");
+  for (const [key, n] of [["bronze", counts.bronze], ["silver", counts.silver], ["gold", counts.gold]]) {
+    const pct = main.length ? Math.round((n / main.length) * 100) : 0;
+    scale.appendChild(el("span.scale3-seg", { data: { k: key }, style: { width: pct + "%" } }));
+  }
+  box.appendChild(scale);
+  box.appendChild(el("div.row-tight.small.dim",
+    el("span", { text: T.progress.scaleBronze + " " + counts.bronze }),
+    el("span", { text: T.progress.scaleSilver + " " + counts.silver }),
+    el("span", { text: T.progress.scaleGold + " " + counts.gold })
+  ));
+
+  box.appendChild(el("p", { text: T.progress.pointsTotal(pts.total) + " · " + T.progress.pointsWeek(pts.week) }));
+
+  box.appendChild(el("p.small.dim", {
+    text: fc.left === 0 ? T.progress.forecastDone
+      : fc.enough ? T.progress.forecastLine(humanDate(fc.etaDate))
+      : T.progress.forecastNone
+  }));
+
+  return box;
 }
 
-function legend() {
-  const row = el("div.legend");
-  for (const [key, label] of Object.entries(T.progress.legend)) {
-    row.appendChild(el("span", dot(key), el("span", { text: label })));
-  }
-  return row;
+function humanDate(iso) {
+  const [y, m, d] = String(iso).split("-");
+  return d + "." + m + "." + y;
 }
+
+// ── золото по неделям, вручную в CSS, без библиотек ──
+
+function goldChart(s, total, today) {
+  const mineDates = sch.goldDates(s.progress);
+  const theirDates = s.partner ? sch.goldDates(s.partnerProgress) : [];
+
+  const buckets = [];
+  for (let i = WEEKS - 1; i >= 0; i--) {
+    const end = sch.addDays(today, -7 * i);
+    const start = sch.addDays(end, -6);
+    buckets.push({ start, end, mine: 0, theirs: 0 });
+  }
+  const put1 = (d, key) => { const b = buckets.find((x) => d >= x.start && d <= x.end); if (b) b[key]++; };
+  for (const d of mineDates) put1(d, "mine");
+  for (const d of theirDates) put1(d, "theirs");
+
+  const max = Math.max(1, ...buckets.map((b) => Math.max(b.mine, b.theirs)));
+
+  const box = el("div.card.card-accent");
+  box.appendChild(el("p.h-block", { text: T.progress.goldChartTitle }));
+  const chart = el("div.gold-chart");
+  for (const b of buckets) {
+    const col = el("div.gold-col");
+    col.appendChild(el("div.gold-bars",
+      el("span.gold-bar.mine", { style: { height: Math.round((b.mine / max) * 100) + "%" }, title: String(b.mine) }),
+      s.partner ? el("span.gold-bar.theirs", { style: { height: Math.round((b.theirs / max) * 100) + "%" }, title: String(b.theirs) }) : null
+    ));
+    col.appendChild(el("span.small.dim", { text: shortDate(b.end) }));
+    chart.appendChild(col);
+  }
+  box.appendChild(chart);
+  return box;
+}
+
+function shortDate(iso) {
+  const [, m, d] = String(iso).split("-");
+  return d + "." + m;
+}
+
+// ── по блокам (как было) ──
 
 function topicTable(s, c) {
   const head = el("tr",

@@ -1,11 +1,7 @@
 // Кролики. Фигуры уже нарисованы, здесь только подстановка и состояния.
 // При ошибке кролик показывает calm и больше ничего: молчит и ждёт.
 
-import { el, put } from "./el.js";
-import { T } from "./texts.js";
-
 const STATES = ["calm", "glad", "proud", "brush", "leaf", "praise", "really", "sleep", "angry", "wonder"];
-const JOKES = ["brush", "leaf", "really"];
 
 let loaded = false;
 const living = new Set();
@@ -69,10 +65,6 @@ export function flash(svg, state, ms) {
 
 export function forget(svg) { living.delete(svg); }
 
-export function randomJoke() {
-  return JOKES[Math.floor(Math.random() * JOKES.length)];
-}
-
 // ── сон ────────────────────────────────────────────
 // Пара минут без единого действия — кролик засыпает.
 
@@ -96,35 +88,6 @@ export function startIdleWatch() {
     window.addEventListener(ev, wake, { passive: true });
   }
   wake();
-}
-
-// ── облачко с ругательством ────────────────────────
-
-let lastInsult = "";
-
-export function insultBubble(insults, onSpeak) {
-  const list = (insults || []).filter((i) => i && i.de);
-  if (!list.length) return null;
-  let pick = list[Math.floor(Math.random() * list.length)];
-  if (list.length > 1) {
-    let guard = 0;
-    while (pick.de === lastInsult && guard < 8) { pick = list[Math.floor(Math.random() * list.length)]; guard++; }
-  }
-  lastInsult = pick.de;
-
-  const box = el("div.bubble", { role: "status" },
-    el("p.word-big", { text: pick.de }),
-    pick.parts && pick.parts.length
-      ? el("p.small.dim", { text: pick.parts.join("  +  ") })
-      : null,
-    el("p", { text: pick.ru }),
-    el("button.btn.btn-icon", {
-      type: "button",
-      on: { click: () => onSpeak && onSpeak(pick.de) }
-    }, T.common.speak)
-  );
-  box._insult = pick;
-  return box;
 }
 
 export { STATES };

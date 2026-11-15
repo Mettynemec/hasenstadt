@@ -1,0 +1,418 @@
+[
+  {
+    "id": "sofa",
+    "topic": "moebel",
+    "order": 1,
+    "pos": "noun",
+    "article": "das",
+    "de": "Sofa",
+    "plural_de": "Sofas",
+    "ru": "диван",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "зо́фа",
+    "tr_ok": [
+      "софа"
+    ],
+    "syllables": [
+      "So",
+      "fa"
+    ],
+    "phrase_de": "Das Sofa ist bequem.",
+    "phrase_ru": "Диван удобный.",
+    "note": ""
+  },
+  {
+    "id": "regal",
+    "topic": "moebel",
+    "order": 3,
+    "pos": "noun",
+    "article": "das",
+    "de": "Regal",
+    "plural_de": "Regale",
+    "ru": "полка",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "рега́ль",
+    "tr_ok": [
+      "регал"
+    ],
+    "syllables": [
+      "Re",
+      "gal"
+    ],
+    "phrase_de": "Das Regal ist leer.",
+    "phrase_ru": "Полка пустая.",
+    "note": ""
+  },
+  {
+    "id": "spiegel",
+    "topic": "moebel",
+    "order": 7,
+    "pos": "noun",
+    "article": "der",
+    "de": "Spiegel",
+    "plural_de": "Spiegel",
+    "ru": "зеркало",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "шпи́гель",
+    "tr_ok": [
+      "шпигел",
+      "спигель"
+    ],
+    "syllables": [
+      "Spie",
+      "gel"
+    ],
+    "phrase_de": "Der Spiegel ist alt.",
+    "phrase_ru": "Зеркало старое.",
+    "note": "sp в начале слова читается как шп."
+  },
+  {
+    "id": "teppich",
+    "topic": "moebel",
+    "order": 8,
+    "pos": "noun",
+    "article": "der",
+    "de": "Teppich",
+    "plural_de": "Teppiche",
+    "ru": "ковёр",
+    "ru_ok": [],
+    "tr": "тэ́пихь",
+    "tr_ok": [
+      "тэппихь",
+      "тепих"
+    ],
+    "syllables": [
+      "Tep",
+      "pich"
+    ],
+    "phrase_de": "Der Teppich ist bunt.",
+    "phrase_ru": "Ковёр пёстрый.",
+    "note": ""
+  },
+  {
+    "id": "kissen",
+    "topic": "moebel",
+    "order": 9,
+    "pos": "noun",
+    "article": "das",
+    "de": "Kissen",
+    "plural_de": "Kissen",
+    "ru": "подушка",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "ки́сен",
+    "tr_ok": [
+      "киссен"
+    ],
+    "syllables": [
+      "Kis",
+      "sen"
+    ],
+    "phrase_de": "Das Kissen ist weich.",
+    "phrase_ru": "Подушка мягкая.",
+    "note": ""
+  },
+  {
+    "id": "decke",
+    "topic": "moebel",
+    "order": 10,
+    "pos": "noun",
+    "article": "die",
+    "de": "Decke",
+    "plural_de": "Decken",
+    "ru": "одеяло",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "дэ́ке",
+    "tr_ok": [
+      "декэ",
+      "дэкэ"
+    ],
+    "syllables": [
+      "De",
+      "cke"
+    ],
+    "phrase_de": "Die Decke ist warm.",
+    "phrase_ru": "Одеяло тёплое.",
+    "note": "Ещё означает потолок — смысл понятен по ситуации."
+  },
+  {
+    "id": "bild",
+    "topic": "moebel",
+    "order": 11,
+    "pos": "noun",
+    "article": "das",
+    "de": "Bild",
+    "plural_de": "Bilder",
+    "ru": "картина",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "бильт",
+    "tr_ok": [
+      "бильд",
+      "бильдь"
+    ],
+    "syllables": [
+      "Bild"
+    ],
+    "phrase_de": "Das Bild ist schön.",
+    "phrase_ru": "Картина красивая.",
+    "note": "d на конце читается как т."
+  },
+  {
+    "id": "uhr",
+    "topic": "moebel",
+    "order": 13,
+    "pos": "noun",
+    "article": "die",
+    "de": "Uhr",
+    "plural_de": "Uhren",
+    "ru": "часы",
+    "ru_ok": [],
+    "tr": "уа",
+    "tr_ok": [
+      "ур",
+      "уар"
+    ],
+    "syllables": [
+      "Uhr"
+    ],
+    "phrase_de": "Die Uhr ist kaputt.",
+    "phrase_ru": "Часы сломаны.",
+    "note": "h после гласной не читается, r на конце звучит как а."
+  },
+  {
+    "id": "sessel",
+    "topic": "moebel",
+    "order": 17,
+    "pos": "noun",
+    "article": "der",
+    "de": "Sessel",
+    "plural_de": "Sessel",
+    "ru": "кресло",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "зэ́сель",
+    "tr_ok": [
+      "зессель",
+      "сессель"
+    ],
+    "syllables": [
+      "Ses",
+      "sel"
+    ],
+    "phrase_de": "Der Sessel ist bequem.",
+    "phrase_ru": "Кресло удобное.",
+    "note": ""
+  },
+  {
+    "id": "schreibtisch",
+    "topic": "moebel",
+    "order": 18,
+    "pos": "noun",
+    "article": "der",
+    "de": "Schreibtisch",
+    "plural_de": "Schreibtische",
+    "ru": "письменный стол",
+    "ru_ok": [
+      "рабочий стол"
+    ],
+    "tr": "шра́йптишь",
+    "tr_ok": [
+      "шрайбтиш"
+    ],
+    "syllables": [
+      "Schreib",
+      "tisch"
+    ],
+    "phrase_de": "Der Schreibtisch ist groß.",
+    "phrase_ru": "Письменный стол большой.",
+    "note": "Составное слово: schreiben (писать) + Tisch (стол)."
+  },
+  {
+    "id": "nachttisch",
+    "topic": "moebel",
+    "order": 19,
+    "pos": "noun",
+    "article": "der",
+    "de": "Nachttisch",
+    "plural_de": "Nachttische",
+    "ru": "тумбочка",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "на́хттишь",
+    "tr_ok": [
+      "нахтиш"
+    ],
+    "syllables": [
+      "Nacht",
+      "tisch"
+    ],
+    "phrase_de": "Der Nachttisch ist klein.",
+    "phrase_ru": "Тумбочка маленькая.",
+    "note": "Составное слово: Nacht (ночь) + Tisch (стол)."
+  },
+  {
+    "id": "vorhang",
+    "topic": "moebel",
+    "order": 20,
+    "pos": "noun",
+    "article": "der",
+    "de": "Vorhang",
+    "plural_de": "Vorhänge",
+    "ru": "штора",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "фо́рхангк",
+    "tr_ok": [
+      "форханг",
+      "форханк"
+    ],
+    "syllables": [
+      "Vor",
+      "hang"
+    ],
+    "phrase_de": "Der Vorhang ist lang.",
+    "phrase_ru": "Штора длинная.",
+    "note": "g на конце читается как к."
+  },
+  {
+    "id": "kerze",
+    "topic": "moebel",
+    "order": 21,
+    "pos": "noun",
+    "article": "die",
+    "de": "Kerze",
+    "plural_de": "Kerzen",
+    "ru": "свеча",
+    "ru_ok": [],
+    "tr": "кэ́рце",
+    "tr_ok": [
+      "керце"
+    ],
+    "syllables": [
+      "Ker",
+      "ze"
+    ],
+    "phrase_de": "Die Kerze brennt.",
+    "phrase_ru": "Свеча горит.",
+    "note": "z всегда читается как ц."
+  },
+  {
+    "id": "schublade",
+    "topic": "moebel",
+    "order": 23,
+    "pos": "noun",
+    "article": "die",
+    "de": "Schublade",
+    "plural_de": "Schubladen",
+    "ru": "ящик",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "шу́пладэ",
+    "tr_ok": [
+      "шубладе",
+      "шублядэ"
+    ],
+    "syllables": [
+      "Schub",
+      "la",
+      "de"
+    ],
+    "phrase_de": "Die Schublade ist voll.",
+    "phrase_ru": "Ящик полон.",
+    "note": ""
+  },
+  {
+    "id": "poster",
+    "topic": "moebel",
+    "order": 27,
+    "pos": "noun",
+    "article": "das",
+    "de": "Poster",
+    "plural_de": "Poster",
+    "ru": "постер",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "по́стеа",
+    "tr_ok": [
+      "постер"
+    ],
+    "syllables": [
+      "Pos",
+      "ter"
+    ],
+    "phrase_de": "Das Poster ist neu.",
+    "phrase_ru": "Постер новый.",
+    "note": ""
+  },
+  {
+    "id": "stellen",
+    "topic": "moebel",
+    "order": 28,
+    "pos": "verb",
+    "de": "stellen",
+    "ru": "ставить",
+    "ru_ok": [
+      "поставить"
+    ],
+    "tr": "штэ́лен",
+    "tr_ok": [
+      "штелен"
+    ],
+    "syllables": [
+      "stel",
+      "len"
+    ],
+    "phrase_de": "Wo stellst du die Lampe?",
+    "phrase_ru": "Куда ты ставишь лампу?",
+    "note": ""
+  },
+  {
+    "id": "haengen",
+    "topic": "moebel",
+    "order": 29,
+    "pos": "verb",
+    "de": "hängen",
+    "ru": "висеть",
+    "ru_ok": [
+      "вешать"
+    ],
+    "tr": "хэ́нген",
+    "tr_ok": [
+      "хенген"
+    ],
+    "syllables": [
+      "hän",
+      "gen"
+    ],
+    "phrase_de": "Das Bild hängt hier.",
+    "phrase_ru": "Картина висит здесь.",
+    "note": "Можно писать haengen."
+  },
+  {
+    "id": "bequem",
+    "topic": "moebel",
+    "order": 30,
+    "pos": "adj",
+    "de": "bequem",
+    "ru": "удобный",
+    "ru_ok": [
+      "комфортный"
+    ],
+    "tr": "бекве́м",
+    "tr_ok": [
+      "беквэм"
+    ],
+    "syllables": [
+      "be",
+      "quem"
+    ],
+    "phrase_de": "Der Sessel ist bequem.",
+    "phrase_ru": "Кресло удобное.",
+    "note": ""
+  }
+]

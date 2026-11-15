@@ -5,7 +5,8 @@
     "title_de": "die Menschen",
     "order": 1,
     "bonus": false,
-    "rule_before": "alphabet"
+    "rule_before": "alphabet",
+    "level": "a1"
   },
   {
     "id": "wohnung",
@@ -13,7 +14,16 @@
     "title_de": "die Wohnung",
     "order": 3,
     "bonus": false,
-    "rule_before": "artikel"
+    "rule_before": "artikel",
+    "level": "a1"
+  },
+  {
+    "id": "moebel",
+    "title_ru": "Мебель и вещи",
+    "title_de": "die Möbel",
+    "order": 8,
+    "bonus": false,
+    "level": "a1"
   },
   {
     "id": "essen",
@@ -21,6 +31,7 @@
     "title_de": "das Essen",
     "order": 7,
     "bonus": false,
-    "rule_before": "sein"
+    "rule_before": "sein",
+    "level": "a1"
   }
 ]

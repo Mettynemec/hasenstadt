@@ -4,5 +4,7 @@
   { "type": "words", "topic": "menschen" },
   { "type": "rule", "id": "artikel" },
   { "type": "words", "topic": "wohnung" },
+  { "type": "rule", "id": "wortbildung" },
+  { "type": "words", "topic": "moebel" },
   { "type": "words", "topic": "essen" }
 ]

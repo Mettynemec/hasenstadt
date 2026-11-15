@@ -172,7 +172,9 @@ export async function loadAll(version) {
       checkId(w.id, wp, ids.word);
       if (w.pos === "noun") {
         if (!w.article) wp.push(w.id + ": у существительного нет article");
-        if (!w.plural) wp.push(w.id + ": у существительного нет plural");
+        if (!w.plural && !w.plural_de && !w.no_plural && !w.plural_only) {
+          wp.push(w.id + ": у существительного нет данных о множественном числе (plural / plural_de / no_plural / plural_only)");
+        }
       }
       if (!String(w.tr || "").trim()) wp.push(w.id + ": пустой tr");
       if (Array.isArray(w.syllables) && w.syllables.join("") !== w.de) {

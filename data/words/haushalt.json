@@ -1,0 +1,370 @@
+[
+  {
+    "id": "besen",
+    "topic": "haushalt",
+    "order": 1,
+    "pos": "noun",
+    "article": "der",
+    "de": "Besen",
+    "plural_de": "Besen",
+    "ru": "метла",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "бэ́зен",
+    "tr_ok": [
+      "безен"
+    ],
+    "syllables": [
+      "Be",
+      "sen"
+    ],
+    "phrase_de": "Der Besen steht in der Ecke.",
+    "phrase_ru": "Метла стоит в углу.",
+    "note": ""
+  },
+  {
+    "id": "eimer",
+    "topic": "haushalt",
+    "order": 3,
+    "pos": "noun",
+    "article": "der",
+    "de": "Eimer",
+    "plural_de": "Eimer",
+    "ru": "ведро",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "а́йма",
+    "tr_ok": [
+      "аймер",
+      "еймер"
+    ],
+    "syllables": [
+      "Ei",
+      "mer"
+    ],
+    "phrase_de": "Der Eimer ist voll.",
+    "phrase_ru": "Ведро полное.",
+    "note": "ei читается как ай."
+  },
+  {
+    "id": "muelleimer",
+    "topic": "haushalt",
+    "order": 7,
+    "pos": "noun",
+    "article": "der",
+    "de": "Mülleimer",
+    "plural_de": "Mülleimer",
+    "ru": "мусорное ведро",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "мю́льайма",
+    "tr_ok": [
+      "мюлляймер",
+      "мюльаймер"
+    ],
+    "syllables": [
+      "Müll",
+      "ei",
+      "mer"
+    ],
+    "phrase_de": "Der Mülleimer ist voll.",
+    "phrase_ru": "Мусорное ведро полное.",
+    "note": "Составное слово: Müll (мусор) + Eimer (ведро). Можно писать muelleimer."
+  },
+  {
+    "id": "staubsauger",
+    "topic": "haushalt",
+    "order": 8,
+    "pos": "noun",
+    "article": "der",
+    "de": "Staubsauger",
+    "plural_de": "Staubsauger",
+    "ru": "пылесос",
+    "ru_ok": [],
+    "tr": "шта́упзауга",
+    "tr_ok": [
+      "штаубзаугер",
+      "штаупзаугер"
+    ],
+    "syllables": [
+      "Staub",
+      "sau",
+      "ger"
+    ],
+    "phrase_de": "Der Staubsauger ist kaputt.",
+    "phrase_ru": "Пылесос сломан.",
+    "note": "st в начале слова читается как шт."
+  },
+  {
+    "id": "seife",
+    "topic": "haushalt",
+    "order": 9,
+    "pos": "noun",
+    "article": "die",
+    "de": "Seife",
+    "plural_de": "Seifen",
+    "ru": "мыло",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "за́йфе",
+    "tr_ok": [
+      "зайфэ",
+      "сайфе"
+    ],
+    "syllables": [
+      "Sei",
+      "fe"
+    ],
+    "phrase_de": "Die Seife ist neu.",
+    "phrase_ru": "Мыло новое.",
+    "note": ""
+  },
+  {
+    "id": "handtuch",
+    "topic": "haushalt",
+    "order": 10,
+    "pos": "noun",
+    "article": "das",
+    "de": "Handtuch",
+    "plural_de": "Handtücher",
+    "ru": "полотенце",
+    "ru_ok": [],
+    "tr": "ха́нтух",
+    "tr_ok": [
+      "хандтух"
+    ],
+    "syllables": [
+      "Hand",
+      "tuch"
+    ],
+    "phrase_de": "Das Handtuch ist nass.",
+    "phrase_ru": "Полотенце мокрое.",
+    "note": "Составное слово: Hand (рука) + Tuch (платок, ткань)."
+  },
+  {
+    "id": "dusche",
+    "topic": "haushalt",
+    "order": 11,
+    "pos": "noun",
+    "article": "die",
+    "de": "Dusche",
+    "plural_de": "Duschen",
+    "ru": "душ",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "ду́ше",
+    "tr_ok": [
+      "душэ"
+    ],
+    "syllables": [
+      "Du",
+      "sche"
+    ],
+    "phrase_de": "Die Dusche ist kalt.",
+    "phrase_ru": "Душ холодный.",
+    "note": ""
+  },
+  {
+    "id": "toilette",
+    "topic": "haushalt",
+    "order": 13,
+    "pos": "noun",
+    "article": "die",
+    "de": "Toilette",
+    "plural_de": "Toiletten",
+    "ru": "туалет",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "туалэ́тэ",
+    "tr_ok": [
+      "туалете",
+      "туалет"
+    ],
+    "syllables": [
+      "Toi",
+      "let",
+      "te"
+    ],
+    "phrase_de": "Wo ist die Toilette?",
+    "phrase_ru": "Где туалет?",
+    "note": ""
+  },
+  {
+    "id": "buerste",
+    "topic": "haushalt",
+    "order": 17,
+    "pos": "noun",
+    "article": "die",
+    "de": "Bürste",
+    "plural_de": "Bürsten",
+    "ru": "щётка",
+    "ru_ok": [],
+    "tr": "бю́рстэ",
+    "tr_ok": [
+      "бюрсте"
+    ],
+    "syllables": [
+      "Bürs",
+      "te"
+    ],
+    "phrase_de": "Die Bürste ist alt.",
+    "phrase_ru": "Щётка старая.",
+    "note": ""
+  },
+  {
+    "id": "waesche",
+    "topic": "haushalt",
+    "order": 18,
+    "pos": "noun",
+    "article": "die",
+    "de": "Wäsche",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "бельё",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "вэ́ше",
+    "tr_ok": [
+      "вэшэ"
+    ],
+    "syllables": [
+      "Wä",
+      "sche"
+    ],
+    "phrase_de": "Die Wäsche ist trocken.",
+    "phrase_ru": "Бельё сухое.",
+    "note": "Множественного числа нет. Можно писать waesche."
+  },
+  {
+    "id": "muell",
+    "topic": "haushalt",
+    "order": 19,
+    "pos": "noun",
+    "article": "der",
+    "de": "Müll",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "мусор",
+    "ru_ok": [],
+    "tr": "мюль",
+    "tr_ok": [
+      "мюл"
+    ],
+    "syllables": [
+      "Müll"
+    ],
+    "phrase_de": "Der Müll ist hier.",
+    "phrase_ru": "Мусор здесь.",
+    "note": "Множественного числа нет. Можно писать muell."
+  },
+  {
+    "id": "waschen",
+    "topic": "haushalt",
+    "order": 20,
+    "pos": "verb",
+    "de": "waschen",
+    "ru": "мыть",
+    "ru_ok": [
+      "стирать"
+    ],
+    "tr": "ва́шен",
+    "tr_ok": [
+      "вашэн"
+    ],
+    "syllables": [
+      "wa",
+      "schen"
+    ],
+    "phrase_de": "Ich wasche die Wäsche.",
+    "phrase_ru": "Я стираю бельё.",
+    "note": ""
+  },
+  {
+    "id": "sauber",
+    "topic": "haushalt",
+    "order": 21,
+    "pos": "adj",
+    "de": "sauber",
+    "ru": "чистый",
+    "ru_ok": [
+      "чисто"
+    ],
+    "tr": "за́уба",
+    "tr_ok": [
+      "заубэр",
+      "зауба"
+    ],
+    "syllables": [
+      "sau",
+      "ber"
+    ],
+    "phrase_de": "Die Küche ist sauber.",
+    "phrase_ru": "Кухня чистая.",
+    "note": ""
+  },
+  {
+    "id": "schmutzig",
+    "topic": "haushalt",
+    "order": 23,
+    "pos": "adj",
+    "de": "schmutzig",
+    "ru": "грязный",
+    "ru_ok": [
+      "грязно"
+    ],
+    "tr": "шму́тцихь",
+    "tr_ok": [
+      "шмутциг"
+    ],
+    "syllables": [
+      "schmu",
+      "tzig"
+    ],
+    "phrase_de": "Der Teppich ist schmutzig.",
+    "phrase_ru": "Ковёр грязный.",
+    "note": "-ig на конце читается как ихь."
+  },
+  {
+    "id": "trocken",
+    "topic": "haushalt",
+    "order": 27,
+    "pos": "adj",
+    "de": "trocken",
+    "ru": "сухой",
+    "ru_ok": [
+      "сухо"
+    ],
+    "tr": "тро́кен",
+    "tr_ok": [
+      "трокэн"
+    ],
+    "syllables": [
+      "tro",
+      "cken"
+    ],
+    "phrase_de": "Das Handtuch ist trocken.",
+    "phrase_ru": "Полотенце сухое.",
+    "note": ""
+  },
+  {
+    "id": "nass",
+    "topic": "haushalt",
+    "order": 28,
+    "pos": "adj",
+    "de": "nass",
+    "ru": "мокрый",
+    "ru_ok": [
+      "мокро"
+    ],
+    "tr": "нас",
+    "tr_ok": [
+      "насс"
+    ],
+    "syllables": [
+      "nass"
+    ],
+    "phrase_de": "Der Boden ist nass.",
+    "phrase_ru": "Пол мокрый.",
+    "note": ""
+  }
+]

@@ -6,5 +6,8 @@
   { "type": "words", "topic": "wohnung" },
   { "type": "rule", "id": "wortbildung" },
   { "type": "words", "topic": "moebel" },
+  { "type": "rule", "id": "plural" },
+  { "type": "words", "topic": "haushalt" },
+  { "type": "rule", "id": "praesens" },
   { "type": "words", "topic": "essen" }
 ]

@@ -1,0 +1,388 @@
+[
+  {
+    "id": "zucker",
+    "topic": "produkte",
+    "order": 1,
+    "pos": "noun",
+    "article": "der",
+    "de": "Zucker",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "сахар",
+    "ru_ok": [],
+    "tr": "цу́ка",
+    "tr_ok": [
+      "цукер",
+      "цукар"
+    ],
+    "syllables": [
+      "Zu",
+      "cker"
+    ],
+    "phrase_de": "Der Zucker ist süß.",
+    "phrase_ru": "Сахар сладкий.",
+    "note": "Множественного числа нет."
+  },
+  {
+    "id": "salz",
+    "topic": "produkte",
+    "order": 3,
+    "pos": "noun",
+    "article": "das",
+    "de": "Salz",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "соль",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "залц",
+    "tr_ok": [
+      "зальц"
+    ],
+    "syllables": [
+      "Salz"
+    ],
+    "phrase_de": "Das Salz ist hier.",
+    "phrase_ru": "Соль здесь.",
+    "note": "Множественного числа нет."
+  },
+  {
+    "id": "reis",
+    "topic": "produkte",
+    "order": 7,
+    "pos": "noun",
+    "article": "der",
+    "de": "Reis",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "рис",
+    "ru_ok": [],
+    "tr": "райс",
+    "tr_ok": [
+      "рейс"
+    ],
+    "syllables": [
+      "Reis"
+    ],
+    "phrase_de": "Der Reis kocht.",
+    "phrase_ru": "Рис варится.",
+    "note": "ei читается как ай. Множественного числа нет."
+  },
+  {
+    "id": "nudeln",
+    "topic": "produkte",
+    "order": 8,
+    "pos": "noun",
+    "article": "die",
+    "de": "Nudeln",
+    "plural_only": true,
+    "ru": "макароны",
+    "ru_ok": [],
+    "tr": "ну́дельн",
+    "tr_ok": [
+      "нуделн"
+    ],
+    "syllables": [
+      "Nu",
+      "deln"
+    ],
+    "phrase_de": "Die Nudeln sind fertig.",
+    "phrase_ru": "Макароны готовы.",
+    "note": "Говорят почти всегда во множественном числе."
+  },
+  {
+    "id": "fleisch",
+    "topic": "produkte",
+    "order": 9,
+    "pos": "noun",
+    "article": "das",
+    "de": "Fleisch",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "мясо",
+    "ru_ok": [],
+    "tr": "флайш",
+    "tr_ok": [
+      "фляйш"
+    ],
+    "syllables": [
+      "Fleisch"
+    ],
+    "phrase_de": "Das Fleisch ist frisch.",
+    "phrase_ru": "Мясо свежее.",
+    "note": "Множественного числа нет."
+  },
+  {
+    "id": "fisch",
+    "topic": "produkte",
+    "order": 10,
+    "pos": "noun",
+    "article": "der",
+    "de": "Fisch",
+    "plural_de": "Fische",
+    "ru": "рыба",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "фиш",
+    "tr_ok": [
+      "фыш"
+    ],
+    "syllables": [
+      "Fisch"
+    ],
+    "phrase_de": "Der Fisch ist lecker.",
+    "phrase_ru": "Рыба вкусная.",
+    "note": ""
+  },
+  {
+    "id": "gemuese",
+    "topic": "produkte",
+    "order": 11,
+    "pos": "noun",
+    "article": "das",
+    "de": "Gemüse",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "овощи",
+    "ru_ok": [],
+    "tr": "гемю́зе",
+    "tr_ok": [
+      "гемюзэ"
+    ],
+    "syllables": [
+      "Ge",
+      "mü",
+      "se"
+    ],
+    "phrase_de": "Das Gemüse ist billig.",
+    "phrase_ru": "Овощи дешёвые.",
+    "note": "Множественного числа нет, хотя по-русски — овощи, во множественном. Можно писать gemuese."
+  },
+  {
+    "id": "obst",
+    "topic": "produkte",
+    "order": 13,
+    "pos": "noun",
+    "article": "das",
+    "de": "Obst",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "фрукты",
+    "ru_ok": [],
+    "tr": "опст",
+    "tr_ok": [
+      "обст"
+    ],
+    "syllables": [
+      "Obst"
+    ],
+    "phrase_de": "Das Obst ist teuer.",
+    "phrase_ru": "Фрукты дорогие.",
+    "note": "Множественного числа нет, хотя по-русски — фрукты, во множественном."
+  },
+  {
+    "id": "saft",
+    "topic": "produkte",
+    "order": 17,
+    "pos": "noun",
+    "article": "der",
+    "de": "Saft",
+    "plural_de": "Säfte",
+    "ru": "сок",
+    "ru_ok": [],
+    "tr": "зафт",
+    "tr_ok": [
+      "сафт"
+    ],
+    "syllables": [
+      "Saft"
+    ],
+    "phrase_de": "Der Saft ist kalt.",
+    "phrase_ru": "Сок холодный.",
+    "note": ""
+  },
+  {
+    "id": "wein",
+    "topic": "produkte",
+    "order": 18,
+    "pos": "noun",
+    "article": "der",
+    "de": "Wein",
+    "plural_de": "Weine",
+    "ru": "вино",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "вайн",
+    "tr_ok": [
+      "вейн"
+    ],
+    "syllables": [
+      "Wein"
+    ],
+    "phrase_de": "Der Wein ist gut.",
+    "phrase_ru": "Вино хорошее.",
+    "note": ""
+  },
+  {
+    "id": "bier",
+    "topic": "produkte",
+    "order": 19,
+    "pos": "noun",
+    "article": "das",
+    "de": "Bier",
+    "plural_de": "Biere",
+    "ru": "пиво",
+    "ru_ok": [],
+    "tr": "биа",
+    "tr_ok": [
+      "бир"
+    ],
+    "syllables": [
+      "Bier"
+    ],
+    "phrase_de": "Das Bier ist kalt.",
+    "phrase_ru": "Пиво холодное.",
+    "note": ""
+  },
+  {
+    "id": "zwiebel",
+    "topic": "produkte",
+    "order": 20,
+    "pos": "noun",
+    "article": "die",
+    "de": "Zwiebel",
+    "plural_de": "Zwiebeln",
+    "ru": "лук",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "цви́бель",
+    "tr_ok": [
+      "цвибел"
+    ],
+    "syllables": [
+      "Zwie",
+      "bel"
+    ],
+    "phrase_de": "Die Zwiebel ist klein.",
+    "phrase_ru": "Лук маленький.",
+    "note": ""
+  },
+  {
+    "id": "kartoffel",
+    "topic": "produkte",
+    "order": 21,
+    "pos": "noun",
+    "article": "die",
+    "de": "Kartoffel",
+    "plural_de": "Kartoffeln",
+    "ru": "картошка",
+    "ru_ok": [],
+    "tr": "карто́фель",
+    "tr_ok": [
+      "картофел"
+    ],
+    "syllables": [
+      "Kar",
+      "tof",
+      "fel"
+    ],
+    "phrase_de": "Die Kartoffel ist billig.",
+    "phrase_ru": "Картошка дешёвая.",
+    "note": "Русское слово «картофель» пришло как раз из немецкого."
+  },
+  {
+    "id": "tomate",
+    "topic": "produkte",
+    "order": 23,
+    "pos": "noun",
+    "article": "die",
+    "de": "Tomate",
+    "plural_de": "Tomaten",
+    "ru": "помидор",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "тома́те",
+    "tr_ok": [
+      "томате"
+    ],
+    "syllables": [
+      "To",
+      "ma",
+      "te"
+    ],
+    "phrase_de": "Die Tomate ist rot.",
+    "phrase_ru": "Помидор красный.",
+    "note": ""
+  },
+  {
+    "id": "schokolade",
+    "topic": "produkte",
+    "order": 27,
+    "pos": "noun",
+    "article": "die",
+    "de": "Schokolade",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "шоколад",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "шокола́де",
+    "tr_ok": [
+      "шоколаде",
+      "шеколад"
+    ],
+    "syllables": [
+      "Scho",
+      "ko",
+      "la",
+      "de"
+    ],
+    "phrase_de": "Die Schokolade ist süß.",
+    "phrase_ru": "Шоколад сладкий.",
+    "note": "Множественного числа нет."
+  },
+  {
+    "id": "frisch",
+    "topic": "produkte",
+    "order": 28,
+    "pos": "adj",
+    "de": "frisch",
+    "ru": "свежий",
+    "ru_ok": [
+      "свежо"
+    ],
+    "tr": "фриш",
+    "tr_ok": [
+      "фриш"
+    ],
+    "syllables": [
+      "frisch"
+    ],
+    "phrase_de": "Das Brot ist frisch.",
+    "phrase_ru": "Хлеб свежий.",
+    "note": ""
+  },
+  {
+    "id": "brauchen",
+    "topic": "produkte",
+    "order": 29,
+    "pos": "verb",
+    "de": "brauchen",
+    "ru": "нуждаться",
+    "ru_ok": [
+      "быть нужным",
+      "требоваться"
+    ],
+    "tr": "бра́ухен",
+    "tr_ok": [
+      "браухэн"
+    ],
+    "syllables": [
+      "brau",
+      "chen"
+    ],
+    "phrase_de": "Ich brauche Zucker.",
+    "phrase_ru": "Мне нужен сахар.",
+    "note": ""
+  }
+]

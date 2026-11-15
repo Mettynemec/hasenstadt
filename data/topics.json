@@ -26,6 +26,14 @@
     "level": "a1"
   },
   {
+    "id": "haushalt",
+    "title_ru": "Быт и уборка",
+    "title_de": "der Haushalt",
+    "order": 9,
+    "bonus": false,
+    "level": "a1"
+  },
+  {
     "id": "essen",
     "title_ru": "Еда",
     "title_de": "das Essen",

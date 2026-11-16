@@ -65,5 +65,13 @@
     "order": 13,
     "bonus": false,
     "level": "a1"
+  },
+  {
+    "id": "kleidung",
+    "title_ru": "Одежда и цвета",
+    "title_de": "die Kleidung",
+    "order": 17,
+    "bonus": false,
+    "level": "a1"
   }
 ]

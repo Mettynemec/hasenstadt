@@ -66,5 +66,11 @@
     "order": 18,
     "title": "Отрицание: nicht и kein",
     "level": "a1"
+  },
+  {
+    "id": "akkusativ",
+    "order": 19,
+    "title": "Кого? Что?",
+    "level": "a1"
   }
 ]

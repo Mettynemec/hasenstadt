@@ -1,0 +1,355 @@
+[
+  {
+    "id": "hose",
+    "topic": "kleidung",
+    "order": 1,
+    "pos": "noun",
+    "article": "die",
+    "de": "Hose",
+    "plural_de": "Hosen",
+    "ru": "штаны",
+    "ru_ok": [],
+    "tr": "хо́зе",
+    "tr_ok": [
+      "хосе"
+    ],
+    "syllables": [
+      "Ho",
+      "se"
+    ],
+    "phrase_de": "Die Hose ist neu.",
+    "phrase_ru": "Штаны новые.",
+    "note": ""
+  },
+  {
+    "id": "hemd",
+    "topic": "kleidung",
+    "order": 3,
+    "pos": "noun",
+    "article": "das",
+    "de": "Hemd",
+    "plural_de": "Hemden",
+    "ru": "рубашка",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "хэмт",
+    "tr_ok": [
+      "хемд"
+    ],
+    "syllables": [
+      "Hemd"
+    ],
+    "phrase_de": "Das Hemd ist weiß.",
+    "phrase_ru": "Рубашка белая.",
+    "note": ""
+  },
+  {
+    "id": "kleid",
+    "topic": "kleidung",
+    "order": 7,
+    "pos": "noun",
+    "article": "das",
+    "de": "Kleid",
+    "plural_de": "Kleider",
+    "ru": "платье",
+    "ru_ok": [],
+    "tr": "клайт",
+    "tr_ok": [
+      "кляйд"
+    ],
+    "syllables": [
+      "Kleid"
+    ],
+    "phrase_de": "Das Kleid ist rot.",
+    "phrase_ru": "Платье красное.",
+    "note": ""
+  },
+  {
+    "id": "rock",
+    "topic": "kleidung",
+    "order": 8,
+    "pos": "noun",
+    "article": "der",
+    "de": "Rock",
+    "plural_de": "Röcke",
+    "ru": "юбка",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "рок",
+    "tr_ok": [
+      "рокк"
+    ],
+    "syllables": [
+      "Rock"
+    ],
+    "phrase_de": "Der Rock ist blau.",
+    "phrase_ru": "Юбка синяя.",
+    "note": ""
+  },
+  {
+    "id": "mantel",
+    "topic": "kleidung",
+    "order": 9,
+    "pos": "noun",
+    "article": "der",
+    "de": "Mantel",
+    "plural_de": "Mäntel",
+    "ru": "пальто",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "ма́нтель",
+    "tr_ok": [
+      "мантэль"
+    ],
+    "syllables": [
+      "Man",
+      "tel"
+    ],
+    "phrase_de": "Der Mantel ist braun.",
+    "phrase_ru": "Пальто коричневое.",
+    "note": ""
+  },
+  {
+    "id": "schuh",
+    "topic": "kleidung",
+    "order": 10,
+    "pos": "noun",
+    "article": "der",
+    "de": "Schuh",
+    "plural_de": "Schuhe",
+    "ru": "ботинок",
+    "ru_ok": [],
+    "tr": "шу",
+    "tr_ok": [
+      "шух"
+    ],
+    "syllables": [
+      "Schuh"
+    ],
+    "phrase_de": "Der Schuh ist klein.",
+    "phrase_ru": "Ботинок маленький.",
+    "note": "h после гласной не читается."
+  },
+  {
+    "id": "muetze",
+    "topic": "kleidung",
+    "order": 11,
+    "pos": "noun",
+    "article": "die",
+    "de": "Mütze",
+    "plural_de": "Mützen",
+    "ru": "шапка",
+    "ru_ok": [],
+    "tr": "мю́це",
+    "tr_ok": [
+      "мютце"
+    ],
+    "syllables": [
+      "Müt",
+      "ze"
+    ],
+    "phrase_de": "Die Mütze ist gelb.",
+    "phrase_ru": "Шапка жёлтая.",
+    "note": "Можно писать muetze."
+  },
+  {
+    "id": "tasche",
+    "topic": "kleidung",
+    "order": 13,
+    "pos": "noun",
+    "article": "die",
+    "de": "Tasche",
+    "plural_de": "Taschen",
+    "ru": "сумка",
+    "ru_ok": [],
+    "tr": "та́ше",
+    "tr_ok": [
+      "таше"
+    ],
+    "syllables": [
+      "Ta",
+      "sche"
+    ],
+    "phrase_de": "Die Tasche ist schwarz.",
+    "phrase_ru": "Сумка чёрная.",
+    "note": ""
+  },
+  {
+    "id": "farbe",
+    "topic": "kleidung",
+    "order": 17,
+    "pos": "noun",
+    "article": "die",
+    "de": "Farbe",
+    "plural_de": "Farben",
+    "ru": "цвет",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "фа́рбе",
+    "tr_ok": [
+      "фарбэ"
+    ],
+    "syllables": [
+      "Far",
+      "be"
+    ],
+    "phrase_de": "Die Farbe ist schön.",
+    "phrase_ru": "Цвет красивый.",
+    "note": ""
+  },
+  {
+    "id": "rot",
+    "topic": "kleidung",
+    "order": 18,
+    "pos": "adj",
+    "de": "rot",
+    "ru": "красный",
+    "ru_ok": [],
+    "tr": "рот",
+    "tr_ok": [
+      "роот"
+    ],
+    "syllables": [
+      "rot"
+    ],
+    "phrase_de": "Das Kleid ist rot.",
+    "phrase_ru": "Платье красное.",
+    "note": ""
+  },
+  {
+    "id": "blau",
+    "topic": "kleidung",
+    "order": 19,
+    "pos": "adj",
+    "de": "blau",
+    "ru": "синий",
+    "ru_ok": [
+      "голубой"
+    ],
+    "tr": "блау",
+    "tr_ok": [
+      "блаy"
+    ],
+    "syllables": [
+      "blau"
+    ],
+    "phrase_de": "Der Rock ist blau.",
+    "phrase_ru": "Юбка синяя.",
+    "note": ""
+  },
+  {
+    "id": "gruen",
+    "topic": "kleidung",
+    "order": 20,
+    "pos": "adj",
+    "de": "grün",
+    "ru": "зелёный",
+    "ru_ok": [],
+    "tr": "грюн",
+    "tr_ok": [
+      "грюнь"
+    ],
+    "syllables": [
+      "grün"
+    ],
+    "phrase_de": "Die Tasche ist grün.",
+    "phrase_ru": "Сумка зелёная.",
+    "note": "Можно писать gruen."
+  },
+  {
+    "id": "gelb",
+    "topic": "kleidung",
+    "order": 21,
+    "pos": "adj",
+    "de": "gelb",
+    "ru": "жёлтый",
+    "ru_ok": [],
+    "tr": "гэльп",
+    "tr_ok": [
+      "гельб"
+    ],
+    "syllables": [
+      "gelb"
+    ],
+    "phrase_de": "Die Mütze ist gelb.",
+    "phrase_ru": "Шапка жёлтая.",
+    "note": ""
+  },
+  {
+    "id": "schwarz",
+    "topic": "kleidung",
+    "order": 23,
+    "pos": "adj",
+    "de": "schwarz",
+    "ru": "чёрный",
+    "ru_ok": [],
+    "tr": "шварц",
+    "tr_ok": [
+      "шварз"
+    ],
+    "syllables": [
+      "schwarz"
+    ],
+    "phrase_de": "Die Tasche ist schwarz.",
+    "phrase_ru": "Сумка чёрная.",
+    "note": ""
+  },
+  {
+    "id": "weiss",
+    "topic": "kleidung",
+    "order": 27,
+    "pos": "adj",
+    "de": "weiß",
+    "ru": "белый",
+    "ru_ok": [],
+    "tr": "вайс",
+    "tr_ok": [
+      "вайсс"
+    ],
+    "syllables": [
+      "weiß"
+    ],
+    "phrase_de": "Das Hemd ist weiß.",
+    "phrase_ru": "Рубашка белая.",
+    "note": "Можно писать weiss."
+  },
+  {
+    "id": "braun",
+    "topic": "kleidung",
+    "order": 28,
+    "pos": "adj",
+    "de": "braun",
+    "ru": "коричневый",
+    "ru_ok": [],
+    "tr": "браун",
+    "tr_ok": [
+      "браyн"
+    ],
+    "syllables": [
+      "braun"
+    ],
+    "phrase_de": "Der Mantel ist braun.",
+    "phrase_ru": "Пальто коричневое.",
+    "note": ""
+  },
+  {
+    "id": "tragen",
+    "topic": "kleidung",
+    "order": 29,
+    "pos": "verb",
+    "de": "tragen",
+    "ru": "носить",
+    "ru_ok": [],
+    "tr": "тра́ген",
+    "tr_ok": [
+      "трагэн"
+    ],
+    "syllables": [
+      "tra",
+      "gen"
+    ],
+    "phrase_de": "Ich trage die Mütze.",
+    "phrase_ru": "Я ношу шапку.",
+    "note": "Неправильный глагол: du trägst, er trägt."
+  }
+]

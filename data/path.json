@@ -15,5 +15,7 @@
   { "type": "rule", "id": "unregelmaessig" },
   { "type": "words", "topic": "cafe" },
   { "type": "rule", "id": "verneinung" },
-  { "type": "words", "topic": "einkaufen" }
+  { "type": "words", "topic": "einkaufen" },
+  { "type": "rule", "id": "akkusativ" },
+  { "type": "words", "topic": "kleidung" }
 ]

@@ -13,5 +13,7 @@
   { "type": "rule", "id": "haben" },
   { "type": "words", "topic": "produkte" },
   { "type": "rule", "id": "unregelmaessig" },
-  { "type": "words", "topic": "cafe" }
+  { "type": "words", "topic": "cafe" },
+  { "type": "rule", "id": "verneinung" },
+  { "type": "words", "topic": "einkaufen" }
 ]

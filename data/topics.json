@@ -57,5 +57,13 @@
     "order": 11,
     "bonus": false,
     "level": "a1"
+  },
+  {
+    "id": "einkaufen",
+    "title_ru": "Покупки",
+    "title_de": "das Einkaufen",
+    "order": 13,
+    "bonus": false,
+    "level": "a1"
   }
 ]

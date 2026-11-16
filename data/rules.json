@@ -60,5 +60,11 @@
     "order": 17,
     "title": "Глаголы с изменением гласной",
     "level": "a1"
+  },
+  {
+    "id": "verneinung",
+    "order": 18,
+    "title": "Отрицание: nicht и kein",
+    "level": "a1"
   }
 ]

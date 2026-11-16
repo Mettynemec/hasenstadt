@@ -1,0 +1,356 @@
+[
+  {
+    "id": "groesse",
+    "topic": "einkaufen",
+    "order": 1,
+    "pos": "noun",
+    "article": "die",
+    "de": "Größe",
+    "plural_de": "Größen",
+    "ru": "размер",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "грё́се",
+    "tr_ok": [
+      "гроссе",
+      "грёзе"
+    ],
+    "syllables": [
+      "Grö",
+      "ße"
+    ],
+    "phrase_de": "Die Größe ist klein.",
+    "phrase_ru": "Размер маленький.",
+    "note": "Можно писать groesse."
+  },
+  {
+    "id": "preis",
+    "topic": "einkaufen",
+    "order": 3,
+    "pos": "noun",
+    "article": "der",
+    "de": "Preis",
+    "plural_de": "Preise",
+    "ru": "цена",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "прайс",
+    "tr_ok": [
+      "прейс"
+    ],
+    "syllables": [
+      "Preis"
+    ],
+    "phrase_de": "Der Preis ist gut.",
+    "phrase_ru": "Цена хорошая.",
+    "note": ""
+  },
+  {
+    "id": "angebot",
+    "topic": "einkaufen",
+    "order": 7,
+    "pos": "noun",
+    "article": "das",
+    "de": "Angebot",
+    "plural_de": "Angebote",
+    "ru": "предложение",
+    "ru_ok": [],
+    "tr": "а́нгебот",
+    "tr_ok": [
+      "ангебот"
+    ],
+    "syllables": [
+      "An",
+      "ge",
+      "bot"
+    ],
+    "phrase_de": "Das Angebot ist billig.",
+    "phrase_ru": "Предложение дешёвое.",
+    "note": ""
+  },
+  {
+    "id": "rabatt",
+    "topic": "einkaufen",
+    "order": 8,
+    "pos": "noun",
+    "article": "der",
+    "de": "Rabatt",
+    "plural_de": "Rabatte",
+    "ru": "скидка",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "раба́т",
+    "tr_ok": [
+      "рабатт"
+    ],
+    "syllables": [
+      "Ra",
+      "batt"
+    ],
+    "phrase_de": "Der Rabatt ist groß.",
+    "phrase_ru": "Скидка большая.",
+    "note": ""
+  },
+  {
+    "id": "kunde",
+    "topic": "einkaufen",
+    "order": 9,
+    "pos": "noun",
+    "article": "der",
+    "de": "Kunde",
+    "plural_de": "Kunden",
+    "ru": "клиент",
+    "ru_ok": [],
+    "tr": "ку́нде",
+    "tr_ok": [
+      "кундэ"
+    ],
+    "syllables": [
+      "Kun",
+      "de"
+    ],
+    "phrase_de": "Der Kunde sucht Brot.",
+    "phrase_ru": "Клиент ищет хлеб.",
+    "note": ""
+  },
+  {
+    "id": "kundin",
+    "topic": "einkaufen",
+    "order": 10,
+    "pos": "noun",
+    "article": "die",
+    "de": "Kundin",
+    "plural_de": "Kundinnen",
+    "ru": "клиентка",
+    "ru_ok": [],
+    "tr": "ку́ндин",
+    "tr_ok": [
+      "кундин"
+    ],
+    "syllables": [
+      "Kun",
+      "din"
+    ],
+    "phrase_de": "Die Kundin ist nett.",
+    "phrase_ru": "Клиентка приветливая.",
+    "note": ""
+  },
+  {
+    "id": "verkaeufer",
+    "topic": "einkaufen",
+    "order": 11,
+    "pos": "noun",
+    "article": "der",
+    "de": "Verkäufer",
+    "plural_de": "Verkäufer",
+    "ru": "продавец",
+    "ru_ok": [],
+    "tr": "ферко́йфа",
+    "tr_ok": [
+      "феркауфер",
+      "веркäуфер"
+    ],
+    "syllables": [
+      "Ver",
+      "käu",
+      "fer"
+    ],
+    "phrase_de": "Der Verkäufer ist nett.",
+    "phrase_ru": "Продавец приветливый.",
+    "note": "Можно писать verkaeufer."
+  },
+  {
+    "id": "verkaeuferin",
+    "topic": "einkaufen",
+    "order": 13,
+    "pos": "noun",
+    "article": "die",
+    "de": "Verkäuferin",
+    "plural_de": "Verkäuferinnen",
+    "ru": "продавщица",
+    "ru_ok": [],
+    "tr": "ферко́йферин",
+    "tr_ok": [
+      "феркауферин"
+    ],
+    "syllables": [
+      "Ver",
+      "käu",
+      "fe",
+      "rin"
+    ],
+    "phrase_de": "Die Verkäuferin ist jung.",
+    "phrase_ru": "Продавщица молодая.",
+    "note": "Можно писать verkaeuferin."
+  },
+  {
+    "id": "quittung",
+    "topic": "einkaufen",
+    "order": 17,
+    "pos": "noun",
+    "article": "die",
+    "de": "Quittung",
+    "plural_de": "Quittungen",
+    "ru": "чек",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "кви́тунк",
+    "tr_ok": [
+      "квиттунг"
+    ],
+    "syllables": [
+      "Quit",
+      "tung"
+    ],
+    "phrase_de": "Die Quittung ist hier.",
+    "phrase_ru": "Чек здесь.",
+    "note": ""
+  },
+  {
+    "id": "geld",
+    "topic": "einkaufen",
+    "order": 18,
+    "pos": "noun",
+    "article": "das",
+    "de": "Geld",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "деньги",
+    "ru_ok": [],
+    "tr": "гельт",
+    "tr_ok": [
+      "гельд"
+    ],
+    "syllables": [
+      "Geld"
+    ],
+    "phrase_de": "Das Geld ist hier.",
+    "phrase_ru": "Деньги здесь.",
+    "note": "По-русски «деньги» — только во множественном числе, а по-немецки Geld — в единственном и без множественного."
+  },
+  {
+    "id": "suchen",
+    "topic": "einkaufen",
+    "order": 19,
+    "pos": "verb",
+    "de": "suchen",
+    "ru": "искать",
+    "ru_ok": [],
+    "tr": "зу́хен",
+    "tr_ok": [
+      "сухен"
+    ],
+    "syllables": [
+      "su",
+      "chen"
+    ],
+    "phrase_de": "Ich suche die Kasse.",
+    "phrase_ru": "Я ищу кассу.",
+    "note": ""
+  },
+  {
+    "id": "finden",
+    "topic": "einkaufen",
+    "order": 20,
+    "pos": "verb",
+    "de": "finden",
+    "ru": "находить",
+    "ru_ok": [
+      "найти"
+    ],
+    "tr": "фи́нден",
+    "tr_ok": [
+      "финдэн"
+    ],
+    "syllables": [
+      "fin",
+      "den"
+    ],
+    "phrase_de": "Ich finde die Größe nicht.",
+    "phrase_ru": "Я не нахожу размер.",
+    "note": ""
+  },
+  {
+    "id": "probieren",
+    "topic": "einkaufen",
+    "order": 21,
+    "pos": "verb",
+    "de": "probieren",
+    "ru": "пробовать",
+    "ru_ok": [],
+    "tr": "проби́рен",
+    "tr_ok": [
+      "пробиерен"
+    ],
+    "syllables": [
+      "pro",
+      "bie",
+      "ren"
+    ],
+    "phrase_de": "Ich probiere die Suppe.",
+    "phrase_ru": "Я пробую суп.",
+    "note": ""
+  },
+  {
+    "id": "passen",
+    "topic": "einkaufen",
+    "order": 23,
+    "pos": "verb",
+    "de": "passen",
+    "ru": "подходить (по размеру)",
+    "ru_ok": [
+      "годиться"
+    ],
+    "tr": "па́сен",
+    "tr_ok": [
+      "пассен"
+    ],
+    "syllables": [
+      "pas",
+      "sen"
+    ],
+    "phrase_de": "Die Größe passt nicht.",
+    "phrase_ru": "Размер не подходит.",
+    "note": ""
+  },
+  {
+    "id": "oeffnen",
+    "topic": "einkaufen",
+    "order": 27,
+    "pos": "verb",
+    "de": "öffnen",
+    "ru": "открывать",
+    "ru_ok": [],
+    "tr": "ё́фнен",
+    "tr_ok": [
+      "эфнен"
+    ],
+    "syllables": [
+      "öff",
+      "nen"
+    ],
+    "phrase_de": "Der Laden öffnet früh.",
+    "phrase_ru": "Магазин открывается рано.",
+    "note": "Можно писать oeffnen."
+  },
+  {
+    "id": "schliessen",
+    "topic": "einkaufen",
+    "order": 28,
+    "pos": "verb",
+    "de": "schließen",
+    "ru": "закрывать",
+    "ru_ok": [],
+    "tr": "шли́сен",
+    "tr_ok": [
+      "шлиссен"
+    ],
+    "syllables": [
+      "schlie",
+      "ßen"
+    ],
+    "phrase_de": "Der Laden schließt spät.",
+    "phrase_ru": "Магазин закрывается поздно.",
+    "note": "Можно писать schliessen."
+  }
+]

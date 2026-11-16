@@ -9,5 +9,7 @@
   { "type": "rule", "id": "plural" },
   { "type": "words", "topic": "haushalt" },
   { "type": "rule", "id": "praesens" },
-  { "type": "words", "topic": "essen" }
+  { "type": "words", "topic": "essen" },
+  { "type": "rule", "id": "haben" },
+  { "type": "words", "topic": "produkte" }
 ]

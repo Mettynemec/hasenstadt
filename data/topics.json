@@ -41,5 +41,13 @@
     "bonus": false,
     "rule_before": "sein",
     "level": "a1"
+  },
+  {
+    "id": "produkte",
+    "title_ru": "Продукты",
+    "title_de": "die Produkte",
+    "order": 10,
+    "bonus": false,
+    "level": "a1"
   }
 ]

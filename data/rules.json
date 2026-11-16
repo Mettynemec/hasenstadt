@@ -54,5 +54,11 @@
     "order": 13,
     "title": "Глагол haben: иметь",
     "level": "a1"
+  },
+  {
+    "id": "unregelmaessig",
+    "order": 17,
+    "title": "Глаголы с изменением гласной",
+    "level": "a1"
   }
 ]

@@ -11,5 +11,7 @@
   { "type": "rule", "id": "praesens" },
   { "type": "words", "topic": "essen" },
   { "type": "rule", "id": "haben" },
-  { "type": "words", "topic": "produkte" }
+  { "type": "words", "topic": "produkte" },
+  { "type": "rule", "id": "unregelmaessig" },
+  { "type": "words", "topic": "cafe" }
 ]

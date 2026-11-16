@@ -1,0 +1,394 @@
+[
+  {
+    "id": "kellner",
+    "topic": "cafe",
+    "order": 1,
+    "pos": "noun",
+    "article": "der",
+    "de": "Kellner",
+    "plural_de": "Kellner",
+    "ru": "официант",
+    "ru_ok": [],
+    "tr": "кэ́льна",
+    "tr_ok": [
+      "келлнер"
+    ],
+    "syllables": [
+      "Kell",
+      "ner"
+    ],
+    "phrase_de": "Der Kellner kommt.",
+    "phrase_ru": "Официант идёт.",
+    "note": ""
+  },
+  {
+    "id": "speisekarte",
+    "topic": "cafe",
+    "order": 3,
+    "pos": "noun",
+    "article": "die",
+    "de": "Speisekarte",
+    "plural_de": "Speisekarten",
+    "ru": "меню",
+    "ru_gender": "n",
+    "ru_ok": [],
+    "tr": "шпа́йзекарте",
+    "tr_ok": [
+      "шпайзекарте",
+      "спайзекарте"
+    ],
+    "syllables": [
+      "Spei",
+      "se",
+      "kar",
+      "te"
+    ],
+    "phrase_de": "Die Speisekarte ist hier.",
+    "phrase_ru": "Меню здесь.",
+    "note": "Составное слово: Speise (блюдо, еда) + Karte (карта)."
+  },
+  {
+    "id": "rechnung",
+    "topic": "cafe",
+    "order": 7,
+    "pos": "noun",
+    "article": "die",
+    "de": "Rechnung",
+    "plural_de": "Rechnungen",
+    "ru": "счёт",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "рэ́хьнунк",
+    "tr_ok": [
+      "рехнунг"
+    ],
+    "syllables": [
+      "Rech",
+      "nung"
+    ],
+    "phrase_de": "Die Rechnung, bitte.",
+    "phrase_ru": "Счёт, пожалуйста.",
+    "note": ""
+  },
+  {
+    "id": "trinkgeld",
+    "topic": "cafe",
+    "order": 8,
+    "pos": "noun",
+    "article": "das",
+    "de": "Trinkgeld",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "чаевые",
+    "ru_ok": [],
+    "tr": "три́нкгельт",
+    "tr_ok": [
+      "тринкгельд"
+    ],
+    "syllables": [
+      "Trink",
+      "geld"
+    ],
+    "phrase_de": "Das Trinkgeld ist klein.",
+    "phrase_ru": "Чаевые маленькие.",
+    "note": "Составное слово: trinken (пить) + Geld (деньги). Множественного числа нет."
+  },
+  {
+    "id": "suppe",
+    "topic": "cafe",
+    "order": 9,
+    "pos": "noun",
+    "article": "die",
+    "de": "Suppe",
+    "plural_de": "Suppen",
+    "ru": "суп",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "зу́пе",
+    "tr_ok": [
+      "зуппе",
+      "суппе"
+    ],
+    "syllables": [
+      "Sup",
+      "pe"
+    ],
+    "phrase_de": "Die Suppe ist heiß.",
+    "phrase_ru": "Суп горячий.",
+    "note": ""
+  },
+  {
+    "id": "kuchen",
+    "topic": "cafe",
+    "order": 10,
+    "pos": "noun",
+    "article": "der",
+    "de": "Kuchen",
+    "plural_de": "Kuchen",
+    "ru": "пирог",
+    "ru_ok": [],
+    "tr": "ку́хен",
+    "tr_ok": [
+      "кукен"
+    ],
+    "syllables": [
+      "Ku",
+      "chen"
+    ],
+    "phrase_de": "Der Kuchen ist süß.",
+    "phrase_ru": "Пирог сладкий.",
+    "note": ""
+  },
+  {
+    "id": "torte",
+    "topic": "cafe",
+    "order": 11,
+    "pos": "noun",
+    "article": "die",
+    "de": "Torte",
+    "plural_de": "Torten",
+    "ru": "торт",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "то́рте",
+    "tr_ok": [
+      "торте"
+    ],
+    "syllables": [
+      "Tor",
+      "te"
+    ],
+    "phrase_de": "Die Torte ist frisch.",
+    "phrase_ru": "Торт свежий.",
+    "note": ""
+  },
+  {
+    "id": "loeffel",
+    "topic": "cafe",
+    "order": 13,
+    "pos": "noun",
+    "article": "der",
+    "de": "Löffel",
+    "plural_de": "Löffel",
+    "ru": "ложка",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "лё́фель",
+    "tr_ok": [
+      "лёффель",
+      "леффель"
+    ],
+    "syllables": [
+      "Löf",
+      "fel"
+    ],
+    "phrase_de": "Der Löffel ist sauber.",
+    "phrase_ru": "Ложка чистая.",
+    "note": "Можно писать loeffel."
+  },
+  {
+    "id": "gabel",
+    "topic": "cafe",
+    "order": 17,
+    "pos": "noun",
+    "article": "die",
+    "de": "Gabel",
+    "plural_de": "Gabeln",
+    "ru": "вилка",
+    "ru_ok": [],
+    "tr": "га́бель",
+    "tr_ok": [
+      "габэль"
+    ],
+    "syllables": [
+      "Ga",
+      "bel"
+    ],
+    "phrase_de": "Die Gabel ist klein.",
+    "phrase_ru": "Вилка маленькая.",
+    "note": ""
+  },
+  {
+    "id": "messer",
+    "topic": "cafe",
+    "order": 18,
+    "pos": "noun",
+    "article": "das",
+    "de": "Messer",
+    "plural_de": "Messer",
+    "ru": "нож",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "мэ́са",
+    "tr_ok": [
+      "мессер"
+    ],
+    "syllables": [
+      "Mes",
+      "ser"
+    ],
+    "phrase_de": "Das Messer ist scharf.",
+    "phrase_ru": "Нож острый.",
+    "note": ""
+  },
+  {
+    "id": "serviette",
+    "topic": "cafe",
+    "order": 19,
+    "pos": "noun",
+    "article": "die",
+    "de": "Serviette",
+    "plural_de": "Servietten",
+    "ru": "салфетка",
+    "ru_ok": [],
+    "tr": "зервиэ́те",
+    "tr_ok": [
+      "сервиетте",
+      "зервьете"
+    ],
+    "syllables": [
+      "Ser",
+      "vi",
+      "et",
+      "te"
+    ],
+    "phrase_de": "Die Serviette ist weiß.",
+    "phrase_ru": "Салфетка белая.",
+    "note": ""
+  },
+  {
+    "id": "glas",
+    "topic": "cafe",
+    "order": 20,
+    "pos": "noun",
+    "article": "das",
+    "de": "Glas",
+    "plural_de": "Gläser",
+    "ru": "стакан",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "глас",
+    "tr_ok": [
+      "глаз"
+    ],
+    "syllables": [
+      "Glas"
+    ],
+    "phrase_de": "Das Glas ist leer.",
+    "phrase_ru": "Стакан пустой.",
+    "note": ""
+  },
+  {
+    "id": "tasse",
+    "topic": "cafe",
+    "order": 21,
+    "pos": "noun",
+    "article": "die",
+    "de": "Tasse",
+    "plural_de": "Tassen",
+    "ru": "чашка",
+    "ru_ok": [],
+    "tr": "та́се",
+    "tr_ok": [
+      "тассе"
+    ],
+    "syllables": [
+      "Tas",
+      "se"
+    ],
+    "phrase_de": "Die Tasse ist heiß.",
+    "phrase_ru": "Чашка горячая.",
+    "note": ""
+  },
+  {
+    "id": "bestellen",
+    "topic": "cafe",
+    "order": 23,
+    "pos": "verb",
+    "de": "bestellen",
+    "ru": "заказывать",
+    "ru_ok": [
+      "заказать"
+    ],
+    "tr": "бештэ́лен",
+    "tr_ok": [
+      "бестеллен",
+      "бештеллен"
+    ],
+    "syllables": [
+      "be",
+      "stel",
+      "len"
+    ],
+    "phrase_de": "Ich bestelle die Suppe.",
+    "phrase_ru": "Я заказываю суп.",
+    "note": "st после приставки тоже читается как шт."
+  },
+  {
+    "id": "nehmen",
+    "topic": "cafe",
+    "order": 27,
+    "pos": "verb",
+    "de": "nehmen",
+    "ru": "брать",
+    "ru_ok": [
+      "взять"
+    ],
+    "tr": "нэ́мен",
+    "tr_ok": [
+      "немен"
+    ],
+    "syllables": [
+      "neh",
+      "men"
+    ],
+    "phrase_de": "Ich nehme die Suppe.",
+    "phrase_ru": "Я беру суп.",
+    "note": "Неправильный глагол: du nimmst, er nimmt."
+  },
+  {
+    "id": "schmecken",
+    "topic": "cafe",
+    "order": 28,
+    "pos": "verb",
+    "de": "schmecken",
+    "ru": "быть вкусным",
+    "ru_ok": [
+      "нравиться на вкус"
+    ],
+    "tr": "шмэ́кен",
+    "tr_ok": [
+      "шмекен"
+    ],
+    "syllables": [
+      "schme",
+      "cken"
+    ],
+    "phrase_de": "Die Suppe schmeckt gut.",
+    "phrase_ru": "Суп вкусный.",
+    "note": ""
+  },
+  {
+    "id": "empfehlen",
+    "topic": "cafe",
+    "order": 29,
+    "pos": "verb",
+    "de": "empfehlen",
+    "ru": "советовать",
+    "ru_ok": [
+      "рекомендовать"
+    ],
+    "tr": "эмпфэ́лен",
+    "tr_ok": [
+      "эмпфелен"
+    ],
+    "syllables": [
+      "emp",
+      "feh",
+      "len"
+    ],
+    "phrase_de": "Was empfiehlst du?",
+    "phrase_ru": "Что ты посоветуешь?",
+    "note": "Неправильный глагол: du empfiehlst, er empfiehlt."
+  }
+]

@@ -49,5 +49,13 @@
     "order": 10,
     "bonus": false,
     "level": "a1"
+  },
+  {
+    "id": "cafe",
+    "title_ru": "Кафе и ресторан",
+    "title_de": "das Café",
+    "order": 11,
+    "bonus": false,
+    "level": "a1"
   }
 ]

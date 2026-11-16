@@ -73,5 +73,13 @@
     "order": 17,
     "bonus": false,
     "level": "a1"
+  },
+  {
+    "id": "koerper",
+    "title_ru": "Тело",
+    "title_de": "der Körper",
+    "order": 18,
+    "bonus": false,
+    "level": "a1"
   }
 ]

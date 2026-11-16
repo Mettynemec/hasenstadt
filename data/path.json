@@ -17,5 +17,7 @@
   { "type": "rule", "id": "verneinung" },
   { "type": "words", "topic": "einkaufen" },
   { "type": "rule", "id": "akkusativ" },
-  { "type": "words", "topic": "kleidung" }
+  { "type": "words", "topic": "kleidung" },
+  { "type": "rule", "id": "possessiv" },
+  { "type": "words", "topic": "koerper" }
 ]

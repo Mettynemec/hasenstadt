@@ -1,0 +1,393 @@
+[
+  {
+    "id": "kopf",
+    "topic": "koerper",
+    "order": 1,
+    "pos": "noun",
+    "article": "der",
+    "de": "Kopf",
+    "plural_de": "Köpfe",
+    "ru": "голова",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "копф",
+    "tr_ok": [
+      "копв"
+    ],
+    "syllables": [
+      "Kopf"
+    ],
+    "phrase_de": "Der Kopf tut weh.",
+    "phrase_ru": "Голова болит.",
+    "note": ""
+  },
+  {
+    "id": "hand",
+    "topic": "koerper",
+    "order": 3,
+    "pos": "noun",
+    "article": "die",
+    "de": "Hand",
+    "plural_de": "Hände",
+    "ru": "кисть руки",
+    "ru_ok": [
+      "рука"
+    ],
+    "tr": "хант",
+    "tr_ok": [
+      "ханд"
+    ],
+    "syllables": [
+      "Hand"
+    ],
+    "phrase_de": "Die Hand ist klein.",
+    "phrase_ru": "Рука маленькая.",
+    "note": "Hand — кисть, от запястья. Вся рука целиком — Arm."
+  },
+  {
+    "id": "fuss",
+    "topic": "koerper",
+    "order": 7,
+    "pos": "noun",
+    "article": "der",
+    "de": "Fuß",
+    "plural_de": "Füße",
+    "ru": "ступня",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "фус",
+    "tr_ok": [
+      "фусс"
+    ],
+    "syllables": [
+      "Fuß"
+    ],
+    "phrase_de": "Der Fuß ist kalt.",
+    "phrase_ru": "Ступня холодная.",
+    "note": "Можно писать fuss."
+  },
+  {
+    "id": "arm",
+    "topic": "koerper",
+    "order": 8,
+    "pos": "noun",
+    "article": "der",
+    "de": "Arm",
+    "plural_de": "Arme",
+    "ru": "рука",
+    "ru_ok": [
+      "рука целиком"
+    ],
+    "tr": "арм",
+    "tr_ok": [
+      "арм"
+    ],
+    "syllables": [
+      "Arm"
+    ],
+    "phrase_de": "Der Arm ist lang.",
+    "phrase_ru": "Рука длинная.",
+    "note": "Arm — рука целиком, от плеча. Кисть — Hand."
+  },
+  {
+    "id": "bein",
+    "topic": "koerper",
+    "order": 9,
+    "pos": "noun",
+    "article": "das",
+    "de": "Bein",
+    "plural_de": "Beine",
+    "ru": "нога",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "байн",
+    "tr_ok": [
+      "бейн"
+    ],
+    "syllables": [
+      "Bein"
+    ],
+    "phrase_de": "Das Bein ist stark.",
+    "phrase_ru": "Нога сильная.",
+    "note": ""
+  },
+  {
+    "id": "auge",
+    "topic": "koerper",
+    "order": 10,
+    "pos": "noun",
+    "article": "das",
+    "de": "Auge",
+    "plural_de": "Augen",
+    "ru": "глаз",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "а́уге",
+    "tr_ok": [
+      "ауге"
+    ],
+    "syllables": [
+      "Au",
+      "ge"
+    ],
+    "phrase_de": "Das Auge ist blau.",
+    "phrase_ru": "Глаз голубой.",
+    "note": ""
+  },
+  {
+    "id": "ohr",
+    "topic": "koerper",
+    "order": 11,
+    "pos": "noun",
+    "article": "das",
+    "de": "Ohr",
+    "plural_de": "Ohren",
+    "ru": "ухо",
+    "ru_ok": [],
+    "tr": "оа",
+    "tr_ok": [
+      "ор"
+    ],
+    "syllables": [
+      "Ohr"
+    ],
+    "phrase_de": "Das Ohr ist klein.",
+    "phrase_ru": "Ухо маленькое.",
+    "note": "h после гласной не читается, r на конце звучит как а."
+  },
+  {
+    "id": "nase",
+    "topic": "koerper",
+    "order": 13,
+    "pos": "noun",
+    "article": "die",
+    "de": "Nase",
+    "plural_de": "Nasen",
+    "ru": "нос",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "на́зе",
+    "tr_ok": [
+      "назэ"
+    ],
+    "syllables": [
+      "Na",
+      "se"
+    ],
+    "phrase_de": "Die Nase ist rot.",
+    "phrase_ru": "Нос красный.",
+    "note": ""
+  },
+  {
+    "id": "mund",
+    "topic": "koerper",
+    "order": 17,
+    "pos": "noun",
+    "article": "der",
+    "de": "Mund",
+    "plural_de": "Münder",
+    "ru": "рот",
+    "ru_ok": [],
+    "tr": "мунт",
+    "tr_ok": [
+      "мунд"
+    ],
+    "syllables": [
+      "Mund"
+    ],
+    "phrase_de": "Der Mund ist klein.",
+    "phrase_ru": "Рот маленький.",
+    "note": ""
+  },
+  {
+    "id": "haar",
+    "topic": "koerper",
+    "order": 18,
+    "pos": "noun",
+    "article": "das",
+    "de": "Haar",
+    "plural_de": "Haare",
+    "ru": "волосы",
+    "ru_ok": [],
+    "tr": "хаа",
+    "tr_ok": [
+      "хар"
+    ],
+    "syllables": [
+      "Haar"
+    ],
+    "phrase_de": "Das Haar ist lang.",
+    "phrase_ru": "Волосы длинные.",
+    "note": ""
+  },
+  {
+    "id": "bauch",
+    "topic": "koerper",
+    "order": 19,
+    "pos": "noun",
+    "article": "der",
+    "de": "Bauch",
+    "plural_de": "Bäuche",
+    "ru": "живот",
+    "ru_ok": [],
+    "tr": "баух",
+    "tr_ok": [
+      "бах"
+    ],
+    "syllables": [
+      "Bauch"
+    ],
+    "phrase_de": "Der Bauch tut weh.",
+    "phrase_ru": "Живот болит.",
+    "note": ""
+  },
+  {
+    "id": "ruecken",
+    "topic": "koerper",
+    "order": 20,
+    "pos": "noun",
+    "article": "der",
+    "de": "Rücken",
+    "plural_de": "Rücken",
+    "ru": "спина",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "рю́кен",
+    "tr_ok": [
+      "рюккен"
+    ],
+    "syllables": [
+      "Rü",
+      "cken"
+    ],
+    "phrase_de": "Der Rücken ist stark.",
+    "phrase_ru": "Спина сильная.",
+    "note": "Можно писать ruecken."
+  },
+  {
+    "id": "finger",
+    "topic": "koerper",
+    "order": 21,
+    "pos": "noun",
+    "article": "der",
+    "de": "Finger",
+    "plural_de": "Finger",
+    "ru": "палец",
+    "ru_ok": [],
+    "tr": "фи́нга",
+    "tr_ok": [
+      "фингер"
+    ],
+    "syllables": [
+      "Fin",
+      "ger"
+    ],
+    "phrase_de": "Der Finger ist klein.",
+    "phrase_ru": "Палец маленький.",
+    "note": ""
+  },
+  {
+    "id": "zahn",
+    "topic": "koerper",
+    "order": 23,
+    "pos": "noun",
+    "article": "der",
+    "de": "Zahn",
+    "plural_de": "Zähne",
+    "ru": "зуб",
+    "ru_ok": [],
+    "tr": "цан",
+    "tr_ok": [
+      "цаан"
+    ],
+    "syllables": [
+      "Zahn"
+    ],
+    "phrase_de": "Der Zahn tut weh.",
+    "phrase_ru": "Зуб болит.",
+    "note": ""
+  },
+  {
+    "id": "hals",
+    "topic": "koerper",
+    "order": 27,
+    "pos": "noun",
+    "article": "der",
+    "de": "Hals",
+    "plural_de": "Hälse",
+    "ru": "шея",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "халс",
+    "tr_ok": [
+      "хальс"
+    ],
+    "syllables": [
+      "Hals"
+    ],
+    "phrase_de": "Der Hals tut weh.",
+    "phrase_ru": "Шея болит.",
+    "note": ""
+  },
+  {
+    "id": "gesicht",
+    "topic": "koerper",
+    "order": 28,
+    "pos": "noun",
+    "article": "das",
+    "de": "Gesicht",
+    "plural_de": "Gesichter",
+    "ru": "лицо",
+    "ru_ok": [],
+    "tr": "гези́хьт",
+    "tr_ok": [
+      "гезихт"
+    ],
+    "syllables": [
+      "Ge",
+      "sicht"
+    ],
+    "phrase_de": "Das Gesicht ist schön.",
+    "phrase_ru": "Лицо красивое.",
+    "note": ""
+  },
+  {
+    "id": "krank",
+    "topic": "koerper",
+    "order": 29,
+    "pos": "adj",
+    "de": "krank",
+    "ru": "больной",
+    "ru_ok": [],
+    "tr": "кранк",
+    "tr_ok": [
+      "кранк"
+    ],
+    "syllables": [
+      "krank"
+    ],
+    "phrase_de": "Ich bin krank.",
+    "phrase_ru": "Я болен.",
+    "note": ""
+  },
+  {
+    "id": "gesund",
+    "topic": "koerper",
+    "order": 30,
+    "pos": "adj",
+    "de": "gesund",
+    "ru": "здоровый",
+    "ru_ok": [],
+    "tr": "гезу́нт",
+    "tr_ok": [
+      "гесунд"
+    ],
+    "syllables": [
+      "ge",
+      "sund"
+    ],
+    "phrase_de": "Der Fuß ist gesund.",
+    "phrase_ru": "Ступня здорова.",
+    "note": ""
+  }
+]

@@ -72,5 +72,11 @@
     "order": 19,
     "title": "Кого? Что?",
     "level": "a1"
+  },
+  {
+    "id": "possessiv",
+    "order": 20,
+    "title": "Чьё это: mein, dein, sein...",
+    "level": "a1"
   }
 ]

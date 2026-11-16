@@ -14,7 +14,7 @@ export const CONFIG = {
   SUPABASE_ANON_KEY: "sb_publishable_ZHydIw0O1sBzg_HoSQUV_w_BgL7UVsd",
 
   // Меняется при заливке нового контента: a, b, c и дальше.
-  CONTENT_VERSION: "h",
+  CONTENT_VERSION: "i",
 
   // Имена в интерфейсе. Слева почта, справа имя.
   NAMES: {

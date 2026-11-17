@@ -1,95 +1,55 @@
 {
   "id": "cafe",
-  "title_ru": "Кафе и ресторан",
+  "title_ru": "Кафе",
   "title_de": "das Café",
-  "order": 52,
+  "order": 53,
   "scenes": [
     {
       "id": "cafe-eingang",
-      "title_ru": "Вход и поиск стола",
+      "title_ru": "Свободный стол",
       "order": 1,
-      "needs_words": ["cafe", "essen"],
+      "needs_words": [],
+      "needs_rules": ["haben"],
+      "roles": { "bot": "Официант", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Guten Tag. Haben Sie einen Tisch frei?",
-          "options_ru": [
-            "Добрый день. У вас есть свободный стол?",
-            "Добрый день. У вас есть свободный стул?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, wir haben einen Tisch.",
-          "chunks": ["Ja,", "wir", "haben", "einen", "Tisch."]
-        }
+        { "who": "human", "task_ru": "Спроси, есть ли свободный стол.", "de": "Guten Tag. Haben Sie einen Tisch frei?", "ru": "Добрый день. У вас есть свободный стол?", "chunks": ["Guten", "Tag.", "Haben", "Sie", "einen", "Tisch", "frei?"] },
+        { "who": "bot", "de": "Ja, wir haben einen Tisch.", "ru": "Да, у нас есть стол.", "options_ru": ["Он говорит, что стол есть", "Он говорит, что всё занято", "Он спрашивает имя"], "answer": 0 }
       ]
     },
     {
       "id": "cafe-bestellung",
       "title_ru": "Заказ напитков",
       "order": 3,
-      "needs_words": ["cafe", "produkte"],
+      "needs_words": [],
+      "needs_rules": ["modalverben"],
+      "roles": { "bot": "Официант", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Was moechten Sie trinken? Kaffee oder Tee?",
-          "options_ru": [
-            "Что вы хотите пить? Кофе или чай?",
-            "Что вы хотите есть? Кофе или чай?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ich moechte einen Kaffee, bitte.",
-          "chunks": ["Ich", "moechte", "einen", "Kaffee,", "bitte."]
-        }
+        { "who": "bot", "de": "Was möchten Sie trinken? Kaffee oder Tee?", "ru": "Что вы хотите пить? Кофе или чай?", "options_ru": ["Он спрашивает, кофе или чай", "Он спрашивает, что ты ешь", "Он называет цену"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что хочешь кофе.", "de": "Ich möchte einen Kaffee, bitte.", "ru": "Я хочу кофе, пожалуйста.", "chunks": ["Ich", "möchte", "einen", "Kaffee,", "bitte."] }
       ]
     },
     {
       "id": "cafe-essen",
       "title_ru": "Заказ еды",
       "order": 7,
-      "needs_words": ["essen", "produkte"],
+      "needs_words": [],
+      "needs_rules": ["akkusativ"],
+      "roles": { "bot": "Официант", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Und etwas zu essen? Ein Stueck Kuchen?",
-          "options_ru": [
-            "И что-нибудь поесть? Кусок торта?",
-            "И что-нибудь попить? Кусок торта?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, ein Stueck Kuchen, bitte.",
-          "chunks": ["Ja,", "ein", "Stueck", "Kuchen,", "bitte."]
-        }
+        { "who": "bot", "de": "Und etwas zu essen? Ein Stück Kuchen?", "ru": "И что-нибудь поесть? Кусок торта?", "options_ru": ["Он предлагает кусок торта", "Он предлагает стакан воды", "Он просит счёт"], "answer": 0 },
+        { "who": "human", "task_ru": "Согласись на кусок торта.", "de": "Ja, ein Stück Kuchen, bitte.", "ru": "Да, кусок торта, пожалуйста.", "chunks": ["Ja,", "ein", "Stück", "Kuchen,", "bitte."] }
       ]
     },
     {
       "id": "cafe-kasse",
-      "title_ru": "Оплата счёта",
+      "title_ru": "Оплата",
       "order": 8,
-      "needs_words": ["zahlen", "cafe"],
+      "needs_words": [],
+      "needs_rules": ["zahlen-zeit"],
+      "roles": { "bot": "Официант", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Das macht acht Euro.",
-          "options_ru": [
-            "С вас восемь евро.",
-            "С вас восемнадцать евро."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Hier sind acht Euro. Danke.",
-          "chunks": ["Hier", "sind", "acht", "Euro.", "Danke."]
-        }
+        { "who": "bot", "de": "Das macht acht Euro.", "ru": "С вас восемь евро.", "options_ru": ["Он называет цену", "Он говорит, что бесплатно", "Он спрашивает про чай"], "answer": 0 },
+        { "who": "human", "task_ru": "Дай восемь евро и поблагодари.", "de": "Hier sind acht Euro. Danke.", "ru": "Вот восемь евро. Спасибо.", "chunks": ["Hier", "sind", "acht", "Euro.", "Danke."] }
       ]
     }
   ]

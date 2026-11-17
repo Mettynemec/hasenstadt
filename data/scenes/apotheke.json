@@ -2,94 +2,54 @@
   "id": "apotheke",
   "title_ru": "Аптека",
   "title_de": "die Apotheke",
-  "order": 54,
+  "order": 58,
   "scenes": [
     {
       "id": "apotheke-eingang",
-      "title_ru": "Вход и описание проблемы",
+      "title_ru": "Что болит",
       "order": 1,
-      "needs_words": ["gesundheit", "stadt-weg"],
+      "needs_words": [],
+      "needs_rules": ["haben"],
+      "roles": { "bot": "Фармацевт", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Guten Tag. Was fehlt Ihnen.",
-          "options_ru": [
-            "Добрый день. Что у вас болит.",
-            "Добрый день. Где вы живете."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ich habe Kopfschmerzen.",
-          "chunks": ["Ich", "habe", "Kopfschmerzen."]
-        }
+        { "who": "bot", "de": "Guten Tag. Was fehlt Ihnen?", "ru": "Добрый день. Что у вас болит?", "options_ru": ["Он спрашивает, что болит", "Он спрашивает, где ты живёшь", "Он спрашивает имя"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что у тебя болит голова.", "de": "Ich habe Kopfschmerzen.", "ru": "У меня болит голова.", "chunks": ["Ich", "habe", "Kopfschmerzen."] }
       ]
     },
     {
       "id": "apotheke-medikament",
-      "title_ru": "Выбор лекарства",
+      "title_ru": "Таблетки",
       "order": 3,
-      "needs_words": ["gesundheit", "produkte"],
+      "needs_words": [],
+      "needs_rules": ["imperativ"],
+      "roles": { "bot": "Фармацевт", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Nehmen Sie diese Tabletten.",
-          "options_ru": [
-            "Примите эти таблетки.",
-            "Купите эти яблоки."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Wie oft muss ich nehmen.",
-          "chunks": ["Wie", "oft", "muss", "ich", "nehmen."]
-        }
+        { "who": "bot", "de": "Nehmen Sie diese Tabletten.", "ru": "Принимайте эти таблетки.", "options_ru": ["Он советует таблетки", "Он советует чай", "Он говорит, что лекарства нет"], "answer": 0 },
+        { "who": "human", "task_ru": "Спроси, как часто принимать.", "de": "Wie oft muss ich sie nehmen?", "ru": "Как часто я должен их принимать?", "chunks": ["Wie", "oft", "muss", "ich", "sie", "nehmen?"] }
       ]
     },
     {
       "id": "apotheke-anwendung",
-      "title_ru": "Инструкция по применению",
+      "title_ru": "Как принимать",
       "order": 7,
-      "needs_words": ["gesundheit", "alltag"],
+      "needs_words": [],
+      "needs_rules": ["zahlen-zeit"],
+      "roles": { "bot": "Фармацевт", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Drei Mal am Tag, nach dem Essen.",
-          "options_ru": [
-            "Три раза в день, после еды.",
-            "Один раз в неделю, до еды."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Verstanden. Vielen Dank.",
-          "chunks": ["Verstanden.", "Vielen", "Dank."]
-        }
+        { "who": "bot", "de": "Drei Mal am Tag, nach dem Essen.", "ru": "Три раза в день, после еды.", "options_ru": ["Он объясняет, как принимать", "Он называет цену", "Он просит рецепт"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что понял, и поблагодари.", "de": "Verstanden. Vielen Dank.", "ru": "Понятно. Большое спасибо.", "chunks": ["Verstanden.", "Vielen", "Dank."] }
       ]
     },
     {
       "id": "apotheke-kasse",
       "title_ru": "Оплата",
       "order": 8,
-      "needs_words": ["zahlen", "einkaufen"],
+      "needs_words": [],
+      "needs_rules": ["zahlen-zeit"],
+      "roles": { "bot": "Фармацевт", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Das macht zehn Euro.",
-          "options_ru": [
-            "С вас десять евро.",
-            "С вас сто евро."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Hier sind zehn Euro.",
-          "chunks": ["Hier", "sind", "zehn", "Euro."]
-        }
+        { "who": "bot", "de": "Das macht zehn Euro.", "ru": "С вас десять евро.", "options_ru": ["Он называет цену", "Он говорит, что бесплатно", "Он спрашивает про таблетки"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: вот десять евро.", "de": "Hier sind zehn Euro.", "ru": "Вот десять евро.", "chunks": ["Hier", "sind", "zehn", "Euro."] }
       ]
     }
   ]

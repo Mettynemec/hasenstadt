@@ -36,5 +36,7 @@
   { "type": "rule", "id": "imperativ" },
   { "type": "words", "topic": "natur-wetter" },
   { "type": "rule", "id": "konjunktionen" },
-  { "type": "words", "topic": "arbeit-beruf" }
+  { "type": "words", "topic": "arbeit-beruf" },
+  { "type": "rule", "id": "adjektive" },
+  { "type": "words", "topic": "geld-freizeit" }
 ]

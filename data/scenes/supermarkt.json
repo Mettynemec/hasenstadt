@@ -1,0 +1,96 @@
+{
+  "id": "supermarkt",
+  "title_ru": "Супермаркет",
+  "title_de": "der Supermarkt",
+  "order": 50,
+  "scenes": [
+    {
+      "id": "supermarkt-eingang",
+      "title_ru": "Вход и корзина",
+      "order": 1,
+      "needs_words": ["einkaufen", "stadt-weg"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Guten Tag. Brauchen Sie einen Korb?",
+          "options_ru": [
+            "Добрый день. Вам нужна корзина?",
+            "Добрый день. Вам нужна сумка?"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ja, bitte. Einen Korb.",
+          "chunks": ["Ja,", "bitte.", "Einen", "Korb."]
+        }
+      ]
+    },
+    {
+      "id": "supermarkt-obst",
+      "title_ru": "Отдел овощей и фруктов",
+      "order": 3,
+      "needs_words": ["produkte", "essen"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Was mochten Sie? Apfel oder Bananen?",
+          "options_ru": [
+            "Что вы хотите? Яблоки или бананы?",
+            "Что вы ищете? Яблоки или груши?"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ich mochte Apfel, bitte.",
+          "chunks": ["Ich", "mochte", "Apfel,", "bitte."]
+        }
+      ]
+    },
+    {
+      "id": "supermarkt-kasse",
+      "title_ru": "На кассе",
+      "order": 7,
+      "needs_words": ["zahlen", "einkaufen"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Das macht zwanzig Euro.",
+          "options_ru": [
+            "С вас двадцать евро.",
+            "Это стоит двадцать евро."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Hier sind zwanzig Euro.",
+          "chunks": ["Hier", "sind", "zwanzig", "Euro."]
+        }
+      ]
+    },
+    {
+      "id": "supermarkt-ausgang",
+      "title_ru": "Поиск выхода",
+      "order": 8,
+      "needs_words": ["stadt-weg", "einkaufen"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Kann ich Ihnen helfen?",
+          "options_ru": [
+            "Я могу вам помочь?",
+            "Я могу вам дать помощь?"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Wo ist der Ausgang?",
+          "chunks": ["Wo", "ist", "der", "Ausgang?"]
+        }
+      ]
+    }
+  ]
+}

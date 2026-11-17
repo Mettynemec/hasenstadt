@@ -1,5 +1,4 @@
 import { loadAll } from '../content.js';
-import { db } from '../db.js';
 
 let appData = null;
 
@@ -14,16 +13,16 @@ async function ensureData() {
 export async function render() {
   const app = document.getElementById('app');
   if (!app) return;
-  
+
   app.innerHTML = '<h2>Чтение</h2><div id="reading-list">Загрузка...</div>';
-  
+
   const version = localStorage.getItem('CONTENT_VERSION') || 'm';
   const res = await fetch(`data/reading/index.json?v=${version}`);
   const texts = await res.json();
-  
+
   const list = document.getElementById('reading-list');
   list.innerHTML = '';
-  
+
   for (const txt of texts) {
     const btn = document.createElement('button');
     btn.className = 'menu-item reading-item';
@@ -43,13 +42,13 @@ async function openText(id, title, version) {
       Я всё прочитал (+10 очков)
     </button>
   `;
-  
+
   const res = await fetch(`data/reading/${id}.json?v=${version}`);
   const data = await res.json();
   const contentDiv = document.getElementById('reading-content');
-  
+
   const currentData = await ensureData();
-  
+
   for (const segment of data.segments) {
     if (typeof segment === 'string') {
       const span = document.createElement('span');
@@ -58,10 +57,10 @@ async function openText(id, title, version) {
     } else {
       const word = currentData.wordsById[segment.w];
       const deForm = word ? (segment.f === 'pl' && word.plural_de ? word.plural_de : word.de) : '???';
-      
-      const rating = (typeof db.getWordRating === 'function') ? db.getWordRating(segment.w) : 0;
-      const showDe = rating >= 3;
-      
+
+      // Показываем немецкое слово, если оно есть в словаре; иначе русское
+      const showDe = !!word;
+
       const span = document.createElement('span');
       span.className = 'reading-word ' + (showDe ? 'known-word' : 'unknown-word');
       span.textContent = showDe ? deForm : segment.ru;
@@ -74,15 +73,17 @@ async function openText(id, title, version) {
       contentDiv.appendChild(document.createTextNode(' '));
     }
   }
-  
+
   document.getElementById('finish-reading').style.display = 'block';
   document.getElementById('finish-reading').onclick = async () => {
-    if (typeof db.bumpDay === 'function') {
-      await db.bumpDay('reading_points', 10);
-    }
-    if (typeof db.setKv === 'function') {
-      await db.setKv('read_' + id, true);
-    }
+    // Начисляем очки через localStorage напрямую
+    const pointsKey = 'reading_points_' + (localStorage.getItem('user') || 'default');
+    const current = parseInt(localStorage.getItem(pointsKey) || '0', 10);
+    localStorage.setItem(pointsKey, String(current + 10));
+
+    // Фиксируем факт прочтения
+    localStorage.setItem('read_' + id, 'true');
+
     alert('Текст прочитан! Начислено 10 очков.');
     window.history.back();
   };

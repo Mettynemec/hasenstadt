@@ -2,94 +2,54 @@
   "id": "arztpraxis",
   "title_ru": "Кабинет врача",
   "title_de": "die Arztpraxis",
-  "order": 55,
+  "order": 59,
   "scenes": [
     {
       "id": "arztpraxis-anmeldung",
-      "title_ru": "Регистрация на ресепшене",
+      "title_ru": "Регистратура",
       "order": 1,
-      "needs_words": ["gesundheit", "alltag"],
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Регистратор", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Guten Tag. Ihr Name, bitte.",
-          "options_ru": [
-            "Добрый день. Ваше имя, пожалуйста.",
-            "Добрый день. Ваш адрес, пожалуйста."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ich bin Max.",
-          "chunks": ["Ich", "bin", "Max."]
-        }
+        { "who": "bot", "de": "Guten Tag. Ihr Name, bitte.", "ru": "Добрый день. Ваше имя, пожалуйста.", "options_ru": ["Он спрашивает имя", "Он спрашивает адрес", "Он спрашивает возраст"], "answer": 0 },
+        { "who": "human", "task_ru": "Назови своё имя.", "de": "Ich bin Matt.", "ru": "Я Мэтт.", "chunks": ["Ich", "bin", "Matt."] }
       ]
     },
     {
       "id": "arztpraxis-wartezimmer",
-      "title_ru": "Ожидание в зале",
+      "title_ru": "Зал ожидания",
       "order": 3,
-      "needs_words": ["alltag", "zahlen-zeit"],
+      "needs_words": [],
+      "needs_rules": ["imperativ"],
+      "roles": { "bot": "Регистратор", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Bitte nehmen Sie Platz.",
-          "options_ru": [
-            "Пожалуйста, садитесь.",
-            "Пожалуйста, стойте."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Danke. Ich warte hier.",
-          "chunks": ["Danke.", "Ich", "warte", "hier."]
-        }
+        { "who": "bot", "de": "Bitte nehmen Sie Platz.", "ru": "Пожалуйста, садитесь.", "options_ru": ["Он просит сесть", "Он просит стоять", "Он просит выйти"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи спасибо и что подождёшь здесь.", "de": "Danke. Ich warte hier.", "ru": "Спасибо. Я подожду здесь.", "chunks": ["Danke.", "Ich", "warte", "hier."] }
       ]
     },
     {
       "id": "arztpraxis-untersuchung",
-      "title_ru": "Осмотр у врача",
+      "title_ru": "Осмотр",
       "order": 7,
-      "needs_words": ["koerper", "gesundheit"],
+      "needs_words": [],
+      "needs_rules": ["wortfolge"],
+      "roles": { "bot": "Врач", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Wo tut es weh?",
-          "options_ru": [
-            "Где у вас болит?",
-            "Где вы живете?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Mein Kopf tut weh.",
-          "chunks": ["Mein", "Kopf", "tut", "weh."]
-        }
+        { "who": "bot", "de": "Wo tut es weh?", "ru": "Где болит?", "options_ru": ["Он спрашивает, где болит", "Он спрашивает, где ты живёшь", "Он спрашивает, когда пришёл"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что болит голова.", "de": "Mein Kopf tut weh.", "ru": "У меня болит голова.", "chunks": ["Mein", "Kopf", "tut", "weh."] }
       ]
     },
     {
       "id": "arztpraxis-rezept",
-      "title_ru": "Получение рецепта",
+      "title_ru": "Рецепт",
       "order": 8,
-      "needs_words": ["gesundheit", "einkaufen"],
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Врач", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Hier ist Ihr Rezept.",
-          "options_ru": [
-            "Вот ваш рецепт.",
-            "Вот ваш чек."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Danke schon. Auf Wiedersehen.",
-          "chunks": ["Danke", "schon.", "Auf", "Wiedersehen."]
-        }
+        { "who": "bot", "de": "Hier ist Ihr Rezept.", "ru": "Вот ваш рецепт.", "options_ru": ["Он даёт рецепт", "Он даёт чек", "Он просит подождать"], "answer": 0 },
+        { "who": "human", "task_ru": "Поблагодари и попрощайся.", "de": "Danke schön. Auf Wiedersehen.", "ru": "Спасибо. До свидания.", "chunks": ["Danke", "schön.", "Auf", "Wiedersehen."] }
       ]
     }
   ]

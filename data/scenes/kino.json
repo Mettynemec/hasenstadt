@@ -1,0 +1,96 @@
+{
+  "id": "kino",
+  "title_ru": "Кинотеатр",
+  "title_de": "das Kino",
+  "order": 57,
+  "scenes": [
+    {
+      "id": "kino-eingang",
+      "title_ru": "Вход и выбор фильма",
+      "order": 1,
+      "needs_words": ["geld-freizeit", "einkaufen"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Guten Tag. Was möchten Sie sehen.",
+          "options_ru": [
+            "Добрый день. Что вы хотите посмотреть.",
+            "Добрый день. Что вы хотите купить."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ich möchte einen Film sehen.",
+          "chunks": ["Ich", "möchte", "einen", "Film", "sehen."]
+        }
+      ]
+    },
+    {
+      "id": "kino-karte",
+      "title_ru": "Покупка билета",
+      "order": 3,
+      "needs_words": ["zahlen", "einkaufen"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Eine Karte kostet zwölf Euro.",
+          "options_ru": [
+            "Один билет стоит двенадцать евро.",
+            "Один билет стоит двадцать евро."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Hier sind zwölf Euro.",
+          "chunks": ["Hier", "sind", "zwölf", "Euro."]
+        }
+      ]
+    },
+    {
+      "id": "kino-snack",
+      "title_ru": "Покупка закуски",
+      "order": 7,
+      "needs_words": ["produkte", "essen"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Möchten Sie auch Popcorn.",
+          "options_ru": [
+            "Вы хотите также попкорн.",
+            "Вы хотите также воду."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ja, ein großes Popcorn, bitte.",
+          "chunks": ["Ja,", "ein", "großes", "Popcorn,", "bitte."]
+        }
+      ]
+    },
+    {
+      "id": "kino-ausgang",
+      "title_ru": "Конец сеанса",
+      "order": 8,
+      "needs_words": ["stadt-weg", "alltag"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Der Film ist zu Ende.",
+          "options_ru": [
+            "Фильм закончился.",
+            "Фильм начинается."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Danke. Der Weg nach Hause ist kurz.",
+          "chunks": ["Danke.", "Der", "Weg", "nach", "Hause", "ist", "kurz."]
+        }
+      ]
+    }
+  ]
+}

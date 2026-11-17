@@ -1,0 +1,20 @@
+{
+  "id": "text-fertig",
+  "title_ru": "Я готов к А2",
+  "needs_topic": "a1-fertig",
+  "segments": [
+    "Я ", { "w": "lernen", "f": "base", "ru": "учить" }, " немецкий ", { "w": "sprache", "f": "base", "ru": "язык" }, " долго. ",
+    "Я ", { "w": "wissen", "f": "base", "ru": "знать" } много ", { "w": "wort", "f": "base", "ru": "слово" }, ". ",
+    "Я ", { "w": "verstehen", "f": "base", "ru": "понимать" } простые ", { "w": "text", "f": "base", "ru": "текст" }, ". ",
+    "Я ", { "w": "sprechen", "f": "base", "ru": "говорить" } с ", { "w": "menschen", "f": "base", "ru": "люди" }, ". ",
+    "Я ", { "w": "schreiben", "f": "base", "ru": "писать" } короткие ", { "w": "brief", "f": "base", "ru": "письмо" }, ". ",
+    "Я ", { "w": "lesen", "f": "base", "ru": "читать" } ", { "w": "buch", "f": "base", "ru": "книга" } и ", { "w": "zeitung", "f": "base", "ru": "газета" }, ". ",
+    "Я ", { "w": "hoeren", "f": "base", "ru": "слушать" } ", { "w": "musik", "f": "base", "ru": "музыка" } и ", { "w": "radio", "f": "base", "ru": "радио" }, ". ",
+    "Я ", { "w": "fahren", "f": "base", "ru": "ехать" } в ", { "w": "stadt", "f": "base", "ru": "город" } и ", { "w": "land", "f": "base", "ru": "страна" }, ". ",
+    "Я ", { "w": "bestellen", "f": "base", "ru": "заказывать" } ", { "w": "essen", "f": "base", "ru": "еда" } в ", { "w": "restaurant", "f": "base", "ru": "ресторан" }, ". ",
+    "Я ", { "w": "kaufen", "f": "base", "ru": "покупать" } ", { "w": "kleidung", "f": "base", "ru": "одежда" } и ", { "w": "geschenk", "f": "base", "ru": "подарок" }, ". ",
+    "Я ", { "w": "gehen", "f": "base", "ru": "идти" } к ", { "w": "arzt", "f": "base", "ru": "врач" }, " и ", { "w": "apotheke", "f": "base", "ru": "аптека" }, ". ",
+    "Я ", { "w": "sein", "f": "base", "ru": "быть" } готов к уровню А2. ",
+    "Это ", { "w": "gross", "f": "base", "ru": "большой" } ", { "w": "erfolg", "f": "base", "ru": "успех" }! "
+  ]
+}

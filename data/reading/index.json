@@ -1,0 +1,7 @@
+[
+  { "id": "text-cafe", "order": 1, "title_ru": "Утро в кафе", "needs_topic": "cafe" },
+  { "id": "text-strasse", "order": 3, "title_ru": "Прогулка по городу", "needs_topic": "stadt-weg" },
+  { "id": "text-laden", "order": 7, "title_ru": "Покупки в магазине", "needs_topic": "einkaufen" },
+  { "id": "text-wohnung", "order": 8, "title_ru": "Вечер дома", "needs_topic": "wohnung" },
+  { "id": "text-arzt", "order": 9, "title_ru": "Визит к врачу", "needs_topic": "gesundheit" }
+]

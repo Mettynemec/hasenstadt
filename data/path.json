@@ -34,5 +34,7 @@
   { "type": "rule", "id": "trennbar" },
   { "type": "words", "topic": "alltag" },
   { "type": "rule", "id": "imperativ" },
-  { "type": "words", "topic": "natur-wetter" }
+  { "type": "words", "topic": "natur-wetter" },
+  { "type": "rule", "id": "konjunktionen" },
+  { "type": "words", "topic": "arbeit-beruf" }
 ]

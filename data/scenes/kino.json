@@ -2,94 +2,54 @@
   "id": "kino",
   "title_ru": "Кинотеатр",
   "title_de": "das Kino",
-  "order": 57,
+  "order": 61,
   "scenes": [
     {
       "id": "kino-eingang",
-      "title_ru": "Вход и выбор фильма",
+      "title_ru": "Выбор фильма",
       "order": 1,
-      "needs_words": ["geld-freizeit", "einkaufen"],
+      "needs_words": [],
+      "needs_rules": ["modalverben"],
+      "roles": { "bot": "Кассир", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Guten Tag. Was möchten Sie sehen.",
-          "options_ru": [
-            "Добрый день. Что вы хотите посмотреть.",
-            "Добрый день. Что вы хотите купить."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ich möchte einen Film sehen.",
-          "chunks": ["Ich", "möchte", "einen", "Film", "sehen."]
-        }
+        { "who": "bot", "de": "Guten Tag. Was möchten Sie sehen?", "ru": "Добрый день. Что вы хотите посмотреть?", "options_ru": ["Он спрашивает, что ты хочешь посмотреть", "Он спрашивает, что ты хочешь купить", "Он спрашивает имя"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что хочешь посмотреть фильм.", "de": "Ich möchte einen Film sehen.", "ru": "Я хочу посмотреть фильм.", "chunks": ["Ich", "möchte", "einen", "Film", "sehen."] }
       ]
     },
     {
       "id": "kino-karte",
-      "title_ru": "Покупка билета",
+      "title_ru": "Билет",
       "order": 3,
-      "needs_words": ["zahlen", "einkaufen"],
+      "needs_words": [],
+      "needs_rules": ["zahlen-zeit"],
+      "roles": { "bot": "Кассир", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Eine Karte kostet zwölf Euro.",
-          "options_ru": [
-            "Один билет стоит двенадцать евро.",
-            "Один билет стоит двадцать евро."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Hier sind zwölf Euro.",
-          "chunks": ["Hier", "sind", "zwölf", "Euro."]
-        }
+        { "who": "bot", "de": "Eine Karte kostet zwölf Euro.", "ru": "Билет стоит двенадцать евро.", "options_ru": ["Он называет цену", "Он говорит, что мест нет", "Он спрашивает про попкорн"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: вот двенадцать евро.", "de": "Hier sind zwölf Euro.", "ru": "Вот двенадцать евро.", "chunks": ["Hier", "sind", "zwölf", "Euro."] }
       ]
     },
     {
       "id": "kino-snack",
-      "title_ru": "Покупка закуски",
+      "title_ru": "Попкорн",
       "order": 7,
-      "needs_words": ["produkte", "essen"],
+      "needs_words": [],
+      "needs_rules": ["modalverben"],
+      "roles": { "bot": "Продавец", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Möchten Sie auch Popcorn.",
-          "options_ru": [
-            "Вы хотите также попкорн.",
-            "Вы хотите также воду."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, ein großes Popcorn, bitte.",
-          "chunks": ["Ja,", "ein", "großes", "Popcorn,", "bitte."]
-        }
+        { "who": "bot", "de": "Möchten Sie auch Popcorn?", "ru": "Хотите также попкорн?", "options_ru": ["Он предлагает попкорн", "Он предлагает воду", "Он просит билет"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, большой попкорн, пожалуйста.", "de": "Ja, ein großes Popcorn, bitte.", "ru": "Да, большой попкорн, пожалуйста.", "chunks": ["Ja,", "ein", "großes", "Popcorn,", "bitte."] }
       ]
     },
     {
       "id": "kino-ausgang",
       "title_ru": "Конец сеанса",
       "order": 8,
-      "needs_words": ["stadt-weg", "alltag"],
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Кассир", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Der Film ist zu Ende.",
-          "options_ru": [
-            "Фильм закончился.",
-            "Фильм начинается."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Danke. Der Weg nach Hause ist kurz.",
-          "chunks": ["Danke.", "Der", "Weg", "nach", "Hause", "ist", "kurz."]
-        }
+        { "who": "bot", "de": "Der Film ist zu Ende.", "ru": "Фильм закончился.", "options_ru": ["Он говорит, что фильм закончился", "Он говорит, что фильм начинается", "Он просит подождать"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи спасибо и что дорога домой короткая.", "de": "Danke. Der Weg nach Hause ist kurz.", "ru": "Спасибо. Дорога домой короткая.", "chunks": ["Danke.", "Der", "Weg", "nach", "Hause", "ist", "kurz."] }
       ]
     }
   ]

@@ -1,0 +1,96 @@
+{
+  "id": "arztpraxis",
+  "title_ru": "Кабинет врача",
+  "title_de": "die Arztpraxis",
+  "order": 55,
+  "scenes": [
+    {
+      "id": "arztpraxis-anmeldung",
+      "title_ru": "Регистрация на ресепшене",
+      "order": 1,
+      "needs_words": ["gesundheit", "alltag"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Guten Tag. Ihr Name, bitte.",
+          "options_ru": [
+            "Добрый день. Ваше имя, пожалуйста.",
+            "Добрый день. Ваш адрес, пожалуйста."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ich bin Max.",
+          "chunks": ["Ich", "bin", "Max."]
+        }
+      ]
+    },
+    {
+      "id": "arztpraxis-wartezimmer",
+      "title_ru": "Ожидание в зале",
+      "order": 3,
+      "needs_words": ["alltag", "zahlen-zeit"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Bitte nehmen Sie Platz.",
+          "options_ru": [
+            "Пожалуйста, садитесь.",
+            "Пожалуйста, стойте."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Danke. Ich warte hier.",
+          "chunks": ["Danke.", "Ich", "warte", "hier."]
+        }
+      ]
+    },
+    {
+      "id": "arztpraxis-untersuchung",
+      "title_ru": "Осмотр у врача",
+      "order": 7,
+      "needs_words": ["koerper", "gesundheit"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Wo tut es weh?",
+          "options_ru": [
+            "Где у вас болит?",
+            "Где вы живете?"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Mein Kopf tut weh.",
+          "chunks": ["Mein", "Kopf", "tut", "weh."]
+        }
+      ]
+    },
+    {
+      "id": "arztpraxis-rezept",
+      "title_ru": "Получение рецепта",
+      "order": 8,
+      "needs_words": ["gesundheit", "einkaufen"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Hier ist Ihr Rezept.",
+          "options_ru": [
+            "Вот ваш рецепт.",
+            "Вот ваш чек."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Danke schon. Auf Wiedersehen.",
+          "chunks": ["Danke", "schon.", "Auf", "Wiedersehen."]
+        }
+      ]
+    }
+  ]
+}

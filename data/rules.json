@@ -78,5 +78,11 @@
     "order": 20,
     "title": "Чьё это: mein, dein, sein...",
     "level": "a1"
+  },
+  {
+    "id": "modalverben",
+    "order": 21,
+    "title": "Глаголы про «должен», «могу», «хочу»",
+    "level": "a1"
   }
 ]

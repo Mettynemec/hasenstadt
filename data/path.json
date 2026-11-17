@@ -19,5 +19,7 @@
   { "type": "rule", "id": "akkusativ" },
   { "type": "words", "topic": "kleidung" },
   { "type": "rule", "id": "possessiv" },
-  { "type": "words", "topic": "koerper" }
+  { "type": "words", "topic": "koerper" },
+  { "type": "rule", "id": "modalverben" },
+  { "type": "words", "topic": "gesundheit" }
 ]

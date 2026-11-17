@@ -1,0 +1,363 @@
+[
+  {
+    "id": "arzt",
+    "topic": "gesundheit",
+    "order": 1,
+    "pos": "noun",
+    "article": "der",
+    "de": "Arzt",
+    "plural_de": "Ärzte",
+    "ru": "врач",
+    "ru_ok": [],
+    "tr": "арцт",
+    "tr_ok": [
+      "артст"
+    ],
+    "syllables": [
+      "Arzt"
+    ],
+    "phrase_de": "Der Arzt hilft.",
+    "phrase_ru": "Врач помогает.",
+    "note": ""
+  },
+  {
+    "id": "aerztin",
+    "topic": "gesundheit",
+    "order": 3,
+    "pos": "noun",
+    "article": "die",
+    "de": "Ärztin",
+    "plural_de": "Ärztinnen",
+    "ru": "врач",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "э́рцтин",
+    "tr_ok": [
+      "эрстин"
+    ],
+    "syllables": [
+      "Ärz",
+      "tin"
+    ],
+    "phrase_de": "Die Ärztin ist nett.",
+    "phrase_ru": "Врач приветливая.",
+    "note": "Можно писать aerztin. По-русски «врач» — слово мужского рода, даже о женщине."
+  },
+  {
+    "id": "apotheke",
+    "topic": "gesundheit",
+    "order": 7,
+    "pos": "noun",
+    "article": "die",
+    "de": "Apotheke",
+    "plural_de": "Apotheken",
+    "ru": "аптека",
+    "ru_ok": [],
+    "tr": "апотэ́ке",
+    "tr_ok": [
+      "апотеке"
+    ],
+    "syllables": [
+      "A",
+      "po",
+      "the",
+      "ke"
+    ],
+    "phrase_de": "Die Apotheke ist hier.",
+    "phrase_ru": "Аптека здесь.",
+    "note": "th читается как т."
+  },
+  {
+    "id": "medikament",
+    "topic": "gesundheit",
+    "order": 8,
+    "pos": "noun",
+    "article": "das",
+    "de": "Medikament",
+    "plural_de": "Medikamente",
+    "ru": "лекарство",
+    "ru_ok": [],
+    "tr": "медикамэ́нт",
+    "tr_ok": [
+      "медикамент"
+    ],
+    "syllables": [
+      "Me",
+      "di",
+      "ka",
+      "ment"
+    ],
+    "phrase_de": "Das Medikament hilft.",
+    "phrase_ru": "Лекарство помогает.",
+    "note": ""
+  },
+  {
+    "id": "schmerzen",
+    "topic": "gesundheit",
+    "order": 9,
+    "pos": "noun",
+    "article": "die",
+    "de": "Schmerzen",
+    "plural_only": true,
+    "ru": "боль",
+    "ru_ok": [],
+    "tr": "шмэ́рцен",
+    "tr_ok": [
+      "шмерцен"
+    ],
+    "syllables": [
+      "Schmer",
+      "zen"
+    ],
+    "phrase_de": "Die Schmerzen sind stark.",
+    "phrase_ru": "Боль сильная.",
+    "note": "Говорят почти всегда во множественном числе."
+  },
+  {
+    "id": "fieber",
+    "topic": "gesundheit",
+    "order": 10,
+    "pos": "noun",
+    "article": "das",
+    "de": "Fieber",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "температура",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "фи́ба",
+    "tr_ok": [
+      "фибер"
+    ],
+    "syllables": [
+      "Fie",
+      "ber"
+    ],
+    "phrase_de": "Das Fieber ist hoch.",
+    "phrase_ru": "Температура высокая.",
+    "note": "Множественного числа нет."
+  },
+  {
+    "id": "erkaeltung",
+    "topic": "gesundheit",
+    "order": 11,
+    "pos": "noun",
+    "article": "die",
+    "de": "Erkältung",
+    "plural_de": "Erkältungen",
+    "ru": "простуда",
+    "ru_ok": [],
+    "tr": "эркэ́льтунк",
+    "tr_ok": [
+      "эркельтунг"
+    ],
+    "syllables": [
+      "Er",
+      "käl",
+      "tung"
+    ],
+    "phrase_de": "Die Erkältung ist schlimm.",
+    "phrase_ru": "Простуда серьёзная.",
+    "note": "Можно писать erkaeltung."
+  },
+  {
+    "id": "husten",
+    "topic": "gesundheit",
+    "order": 13,
+    "pos": "noun",
+    "article": "der",
+    "de": "Husten",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "кашель",
+    "ru_ok": [],
+    "tr": "ху́стен",
+    "tr_ok": [
+      "густен"
+    ],
+    "syllables": [
+      "Hus",
+      "ten"
+    ],
+    "phrase_de": "Der Husten ist stark.",
+    "phrase_ru": "Кашель сильный.",
+    "note": "Множественного числа нет."
+  },
+  {
+    "id": "termin",
+    "topic": "gesundheit",
+    "order": 17,
+    "pos": "noun",
+    "article": "der",
+    "de": "Termin",
+    "plural_de": "Termine",
+    "ru": "приём (к врачу)",
+    "ru_ok": [
+      "запись"
+    ],
+    "tr": "тэрми́н",
+    "tr_ok": [
+      "термин"
+    ],
+    "syllables": [
+      "Ter",
+      "min"
+    ],
+    "phrase_de": "Der Termin ist morgen.",
+    "phrase_ru": "Приём завтра.",
+    "note": ""
+  },
+  {
+    "id": "rezept",
+    "topic": "gesundheit",
+    "order": 18,
+    "pos": "noun",
+    "article": "das",
+    "de": "Rezept",
+    "plural_de": "Rezepte",
+    "ru": "рецепт",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "рецэ́пт",
+    "tr_ok": [
+      "резепт"
+    ],
+    "syllables": [
+      "Re",
+      "zept"
+    ],
+    "phrase_de": "Das Rezept ist hier.",
+    "phrase_ru": "Рецепт здесь.",
+    "note": ""
+  },
+  {
+    "id": "tablette",
+    "topic": "gesundheit",
+    "order": 19,
+    "pos": "noun",
+    "article": "die",
+    "de": "Tablette",
+    "plural_de": "Tabletten",
+    "ru": "таблетка",
+    "ru_ok": [],
+    "tr": "таблэ́те",
+    "tr_ok": [
+      "таблетте"
+    ],
+    "syllables": [
+      "Ta",
+      "blet",
+      "te"
+    ],
+    "phrase_de": "Die Tablette hilft.",
+    "phrase_ru": "Таблетка помогает.",
+    "note": ""
+  },
+  {
+    "id": "pflaster",
+    "topic": "gesundheit",
+    "order": 20,
+    "pos": "noun",
+    "article": "das",
+    "de": "Pflaster",
+    "plural_de": "Pflaster",
+    "ru": "пластырь",
+    "ru_gender": "m",
+    "ru_ok": [],
+    "tr": "пфла́ста",
+    "tr_ok": [
+      "фластер"
+    ],
+    "syllables": [
+      "Pflas",
+      "ter"
+    ],
+    "phrase_de": "Das Pflaster ist klein.",
+    "phrase_ru": "Пластырь маленький.",
+    "note": ""
+  },
+  {
+    "id": "krankenhaus",
+    "topic": "gesundheit",
+    "order": 21,
+    "pos": "noun",
+    "article": "das",
+    "de": "Krankenhaus",
+    "plural_de": "Krankenhäuser",
+    "ru": "больница",
+    "ru_gender": "f",
+    "ru_ok": [],
+    "tr": "кра́нкенхаус",
+    "tr_ok": [
+      "кранкенхаус"
+    ],
+    "syllables": [
+      "Kran",
+      "ken",
+      "haus"
+    ],
+    "phrase_de": "Das Krankenhaus ist groß.",
+    "phrase_ru": "Больница большая.",
+    "note": "Составное слово: krank (больной) + Haus (дом)."
+  },
+  {
+    "id": "muede",
+    "topic": "gesundheit",
+    "order": 23,
+    "pos": "adj",
+    "de": "müde",
+    "ru": "усталый",
+    "ru_ok": [],
+    "tr": "мю́де",
+    "tr_ok": [
+      "муде"
+    ],
+    "syllables": [
+      "mü",
+      "de"
+    ],
+    "phrase_de": "Ich bin müde.",
+    "phrase_ru": "Я устал.",
+    "note": "Можно писать muede."
+  },
+  {
+    "id": "helfen",
+    "topic": "gesundheit",
+    "order": 27,
+    "pos": "verb",
+    "de": "helfen",
+    "ru": "помогать",
+    "ru_ok": [],
+    "tr": "хэ́льфен",
+    "tr_ok": [
+      "гельфен"
+    ],
+    "syllables": [
+      "hel",
+      "fen"
+    ],
+    "phrase_de": "Der Arzt hilft mir.",
+    "phrase_ru": "Врач мне помогает.",
+    "note": "Неправильный глагол: du hilfst, er hilft."
+  },
+  {
+    "id": "schlafen",
+    "topic": "gesundheit",
+    "order": 28,
+    "pos": "verb",
+    "de": "schlafen",
+    "ru": "спать",
+    "ru_ok": [],
+    "tr": "шла́фен",
+    "tr_ok": [
+      "шляфен"
+    ],
+    "syllables": [
+      "schla",
+      "fen"
+    ],
+    "phrase_de": "Ich schlafe viel.",
+    "phrase_ru": "Я много сплю.",
+    "note": "Неправильный глагол: du schläfst, er schläft."
+  }
+]

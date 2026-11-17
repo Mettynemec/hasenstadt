@@ -81,5 +81,13 @@
     "order": 18,
     "bonus": false,
     "level": "a1"
+  },
+  {
+    "id": "gesundheit",
+    "title_ru": "Здоровье и врач",
+    "title_de": "die Gesundheit",
+    "order": 19,
+    "bonus": false,
+    "level": "a1"
   }
 ]

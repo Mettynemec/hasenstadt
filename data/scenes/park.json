@@ -1,0 +1,96 @@
+{
+  "id": "park",
+  "title_ru": "Парк и природа",
+  "title_de": "der Park",
+  "order": 53,
+  "scenes": [
+    {
+      "id": "park-eingang",
+      "title_ru": "Вход в парк",
+      "order": 1,
+      "needs_words": ["natur-wetter", "stadt-weg"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Guten Tag. Der Park ist offen.",
+          "options_ru": [
+            "Добрый день. Парк открыт.",
+            "Добрый день. Парк закрыт."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Danke. Ich gehe in den Park.",
+          "chunks": ["Danke.", "Ich", "gehe", "in", "den", "Park."]
+        }
+      ]
+    },
+    {
+      "id": "park-bank",
+      "title_ru": "Отдых на скамейке",
+      "order": 3,
+      "needs_words": ["moebel", "natur-wetter"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Moechten Sie auf der Bank sitzen?",
+          "options_ru": [
+            "Вы хотите сидеть на скамейке?",
+            "Вы хотите стоять на скамейке?"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ja, die Bank ist gut.",
+          "chunks": ["Ja,", "die", "Bank", "ist", "gut."]
+        }
+      ]
+    },
+    {
+      "id": "park-spielplatz",
+      "title_ru": "Наблюдение за птицами",
+      "order": 7,
+      "needs_words": ["tiere", "natur-wetter"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Sehen Sie die Voegel dort?",
+          "options_ru": [
+            "Вы видите там птиц?",
+            "Вы слышите там птиц?"
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ja, die Voegel sind schoen.",
+          "chunks": ["Ja,", "die", "Voegel", "sind", "schoen."]
+        }
+      ]
+    },
+    {
+      "id": "park-ausgang",
+      "title_ru": "Закрытие парка",
+      "order": 8,
+      "needs_words": ["stadt-weg", "natur-wetter"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Der Park schliesst um acht Uhr.",
+          "options_ru": [
+            "Парк закрывается в восемь часов.",
+            "Парк открывается в восемь часов."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Verstanden. Ich gehe jetzt nach Hause.",
+          "chunks": ["Verstanden.", "Ich", "gehe", "jetzt", "nach", "Hause."]
+        }
+      ]
+    }
+  ]
+}

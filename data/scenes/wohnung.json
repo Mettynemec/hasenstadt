@@ -11,198 +11,85 @@
       "id": "wohnung-nachbar",
       "title_ru": "Сосед за стеной",
       "order": 1,
-      "needs_words": ["haushalt"],
+      "needs_words": [],
       "needs_rules": ["sein"],
-      "roles": {"bot": "Сосед", "human": "Ты"},
+      "roles": { "bot": "Сосед", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Entschuldigung, die Musik ist sehr laut.",
-          "options_ru": ["Он просит сделать тише", "Он спрашивает, где музыкальный магазин", "Он хочет послушать вместе"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Entschuldigung, ich mache die Musik leiser.",
-          "chunks": ["Entschuldigung,", "ich mache", "die Musik", "leiser."]
-        },
-        {
-          "who": "bot",
-          "de": "Danke. Ich arbeite morgen früh.",
-          "options_ru": ["Он благодарит и объясняет, почему просит", "Он приглашает в гости", "Он жалуется на лампу"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Alles klar. Guten Abend.",
-          "chunks": ["Alles klar.", "Guten Abend."]
-        }
+        { "who": "bot", "de": "Entschuldigung, die Musik ist sehr laut.", "ru": "Извините, музыка очень громкая.", "options_ru": ["Он просит сделать тише", "Он спрашивает, где музыкальный магазин", "Он хочет послушать вместе"], "answer": 0 },
+        { "who": "human", "task_ru": "Извинись и скажи, что сделаешь музыку тише.", "de": "Entschuldigung, ich mache die Musik leiser.", "ru": "Извините, я сделаю музыку тише.", "chunks": ["Entschuldigung,", "ich mache", "die Musik", "leiser."] },
+        { "who": "bot", "de": "Danke. Ich arbeite morgen fruh.", "ru": "Спасибо. Я завтра рано работаю.", "options_ru": ["Он благодарит и объясняет, почему просит", "Он приглашает в гости", "Он жалуется на лампу"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что всё понятно, и пожелай доброго вечера.", "de": "Alles klar. Guten Abend.", "ru": "Всё понятно. Доброго вечера.", "chunks": ["Alles klar.", "Guten Abend."] }
       ]
     },
     {
       "id": "wohnung-kran",
       "title_ru": "Течёт кран",
       "order": 3,
-      "needs_words": ["haushalt"],
+      "needs_words": [],
       "needs_rules": ["wortfolge"],
-      "roles": {"bot": "Хозяин квартиры", "human": "Ты"},
+      "roles": { "bot": "Хозяин квартиры", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Guten Tag, der Wasserhahn tropft.",
-          "chunks": ["Guten Tag,", "der Wasserhahn", "tropft."]
-        },
-        {
-          "who": "bot",
-          "de": "Seit wann tropft er?",
-          "options_ru": ["Он спрашивает, давно ли это", "Он спрашивает, где кран", "Он спрашивает, сколько стоит вода"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Seit heute Morgen.",
-          "chunks": ["Seit", "heute Morgen."]
-        },
-        {
-          "who": "bot",
-          "de": "Gut, ich komme morgen um zehn.",
-          "options_ru": ["Он придёт завтра утром", "Он просит починить самому", "Он не придёт вообще"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Danke, bis morgen.",
-          "chunks": ["Danke,", "bis morgen."]
-        }
+        { "who": "human", "task_ru": "Позвони хозяину и скажи, что кран капает.", "de": "Guten Tag, der Wasserhahn tropft.", "ru": "Добрый день, кран капает.", "chunks": ["Guten Tag,", "der Wasserhahn", "tropft."] },
+        { "who": "bot", "de": "Seit wann tropft er?", "ru": "С каких пор он капает?", "options_ru": ["Он спрашивает, давно ли это", "Он спрашивает, где кран", "Он спрашивает, сколько стоит вода"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: с сегодняшнего утра.", "de": "Seit heute Morgen.", "ru": "С сегодняшнего утра.", "chunks": ["Seit", "heute Morgen."] },
+        { "who": "bot", "de": "Gut, ich komme morgen um zehn.", "ru": "Хорошо, я приду завтра в десять.", "options_ru": ["Он придёт завтра утром", "Он просит починить самому", "Он не придёт вообще"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи спасибо и до завтра.", "de": "Danke, bis morgen.", "ru": "Спасибо, до завтра.", "chunks": ["Danke,", "bis morgen."] }
       ]
     },
     {
       "id": "wohnung-internet",
       "title_ru": "Не работает интернет",
       "order": 7,
-      "needs_words": ["haushalt"],
+      "needs_words": [],
       "needs_rules": ["sein"],
-      "roles": {"bot": "Служба поддержки", "human": "Ты"},
+      "roles": { "bot": "Служба поддержки", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Guten Tag, was ist das Problem?",
-          "options_ru": ["Он спрашивает, что случилось", "Он спрашивает, как тебя зовут", "Он спрашивает адрес"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Das Internet geht nicht.",
-          "chunks": ["Das Internet", "geht", "nicht."]
-        },
-        {
-          "who": "bot",
-          "de": "Ist die Lampe am Router rot?",
-          "options_ru": ["Он спрашивает про лампочку на роутере", "Он спрашивает про цвет стены", "Он спрашивает, есть ли свет в квартире"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, die Lampe ist rot.",
-          "chunks": ["Ja,", "die Lampe", "ist rot."]
-        },
-        {
-          "who": "bot",
-          "de": "Alles klar, wir prüfen das.",
-          "options_ru": ["Они проверят", "Они приедут сегодня", "Они просят перезвонить завтра"],
-          "answer": 0
-        }
+        { "who": "bot", "de": "Guten Tag, was ist das Problem?", "ru": "Добрый день, в чём проблема?", "options_ru": ["Он спрашивает, что случилось", "Он спрашивает, как тебя зовут", "Он спрашивает адрес"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что интернет не работает.", "de": "Das Internet geht nicht.", "ru": "Интернет не работает.", "chunks": ["Das Internet", "geht", "nicht."] },
+        { "who": "bot", "de": "Ist die Lampe am Router rot?", "ru": "Лампочка на роутере красная?", "options_ru": ["Он спрашивает про лампочку на роутере", "Он спрашивает про цвет стены", "Он спрашивает, есть ли свет в квартире"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, лампочка красная.", "de": "Ja, die Lampe ist rot.", "ru": "Да, лампочка красная.", "chunks": ["Ja,", "die Lampe", "ist rot."] },
+        { "who": "bot", "de": "Alles klar, wir prufen das.", "ru": "Понятно, мы проверим.", "options_ru": ["Они проверят", "Они приедут сегодня", "Они просят перезвонить завтра"], "answer": 0 }
       ]
     },
     {
       "id": "wohnung-heizung",
       "title_ru": "Проблема с отоплением",
       "order": 8,
-      "needs_words": ["haushalt", "zahlen-zeit"],
+      "needs_words": [],
       "needs_rules": ["sein"],
-      "roles": {"bot": "Хозяин квартиры", "human": "Ты"},
+      "roles": { "bot": "Хозяин квартиры", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Guten Tag, die Heizung ist kalt.",
-          "chunks": ["Guten Tag,", "die Heizung", "ist kalt."]
-        },
-        {
-          "who": "bot",
-          "de": "Seit wann ist sie kalt?",
-          "options_ru": ["Он спрашивает, давно ли это", "Он спрашивает, где батарея", "Он спрашивает про температуру"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Seit gestern Abend.",
-          "chunks": ["Seit", "gestern Abend."]
-        },
-        {
-          "who": "bot",
-          "de": "Ich schicke jemanden morgen.",
-          "options_ru": ["Он пришлёт кого-то завтра", "Он просит включить самому", "Он говорит, что это нормально"],
-          "answer": 0
-        }
+        { "who": "human", "task_ru": "Скажи, что отопление холодное.", "de": "Guten Tag, die Heizung ist kalt.", "ru": "Добрый день, отопление холодное.", "chunks": ["Guten Tag,", "die Heizung", "ist kalt."] },
+        { "who": "bot", "de": "Seit wann ist sie kalt?", "ru": "С каких пор она холодная?", "options_ru": ["Он спрашивает, давно ли это", "Он спрашивает, где батарея", "Он спрашивает про температуру"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: с вчерашнего вечера.", "de": "Seit gestern Abend.", "ru": "С вчерашнего вечера.", "chunks": ["Seit", "gestern Abend."] },
+        { "who": "bot", "de": "Ich schicke jemanden morgen.", "ru": "Я пришлю кого-то завтра.", "options_ru": ["Он пришлёт кого-то завтра", "Он просит включить самому", "Он говорит, что это нормально"], "answer": 0 }
       ]
     },
     {
       "id": "wohnung-schluessel",
       "title_ru": "Потерянные ключи",
       "order": 10,
-      "needs_words": ["alltag", "stadt-weg"],
+      "needs_words": [],
       "needs_rules": ["haben"],
-      "roles": {"bot": "Сосед", "human": "Ты"},
+      "roles": { "bot": "Сосед", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Entschuldigung, ich habe meinen Schlüssel verloren.",
-          "chunks": ["Entschuldigung,", "ich habe", "meinen Schlüssel", "verloren."]
-        },
-        {
-          "who": "bot",
-          "de": "Wo haben Sie ihn zuletzt gesehen?",
-          "options_ru": ["Он спрашивает, где ты его видел", "Он спрашивает, есть ли запасной", "Он предлагает вызвать слесаря"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Vielleicht im Supermarkt.",
-          "chunks": ["Vielleicht", "im Supermarkt."]
-        },
-        {
-          "who": "bot",
-          "de": "Ich helfe Ihnen suchen.",
-          "options_ru": ["Он поможет искать", "Он говорит, что это невозможно", "Он даёт свой ключ"],
-          "answer": 0
-        }
+        { "who": "human", "task_ru": "Скажи, что потерял ключ.", "de": "Entschuldigung, ich habe meinen Schlussel verloren.", "ru": "Извините, я потерял свой ключ.", "chunks": ["Entschuldigung,", "ich habe", "meinen Schlussel", "verloren."] },
+        { "who": "bot", "de": "Wo haben Sie ihn zuletzt gesehen?", "ru": "Где вы его видели в последний раз?", "options_ru": ["Он спрашивает, где ты его видел", "Он спрашивает, есть ли запасной", "Он предлагает вызвать слесаря"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: возможно, в супермаркете.", "de": "Vielleicht im Supermarkt.", "ru": "Возможно, в супермаркете.", "chunks": ["Vielleicht", "im Supermarkt."] },
+        { "who": "bot", "de": "Ich helfe Ihnen suchen.", "ru": "Я помогу вам искать.", "options_ru": ["Он поможет искать", "Он говорит, что это невозможно", "Он даёт свой ключ"], "answer": 0 }
       ]
     },
     {
       "id": "wohnung-muell",
       "title_ru": "Вынос мусора",
       "order": 11,
-      "needs_words": ["haushalt", "natur-wetter"],
+      "needs_words": [],
       "needs_rules": ["sein"],
-      "roles": {"bot": "Сосед", "human": "Ты"},
+      "roles": { "bot": "Сосед", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Heute ist Mülltag.",
-          "options_ru": ["Сегодня день выноса мусора", "Сегодня уборка подъезда", "Сегодня праздник"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, ich bringe den Müll raus.",
-          "chunks": ["Ja,", "ich bringe", "den Müll", "raus."]
-        },
-        {
-          "who": "bot",
-          "de": "Danke, sehr nett.",
-          "options_ru": ["Он благодарит", "Он просит помочь", "Он жалуется на запах"],
-          "answer": 0
-        }
+        { "who": "bot", "de": "Heute ist Mulltag.", "ru": "Сегодня день выноса мусора.", "options_ru": ["Сегодня день выноса мусора", "Сегодня уборка подъезда", "Сегодня праздник"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что вынесешь мусор.", "de": "Ja, ich bringe den Mull raus.", "ru": "Да, я вынесу мусор.", "chunks": ["Ja,", "ich bringe", "den Mull", "raus."] },
+        { "who": "bot", "de": "Danke, sehr nett.", "ru": "Спасибо, очень мило.", "options_ru": ["Он благодарит", "Он просит помочь", "Он жалуется на запах"], "answer": 0 }
       ]
     }
   ]

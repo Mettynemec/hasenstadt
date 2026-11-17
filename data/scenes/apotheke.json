@@ -1,0 +1,96 @@
+{
+  "id": "apotheke",
+  "title_ru": "Аптека",
+  "title_de": "die Apotheke",
+  "order": 54,
+  "scenes": [
+    {
+      "id": "apotheke-eingang",
+      "title_ru": "Вход и описание проблемы",
+      "order": 1,
+      "needs_words": ["gesundheit", "stadt-weg"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Guten Tag. Was fehlt Ihnen.",
+          "options_ru": [
+            "Добрый день. Что у вас болит.",
+            "Добрый день. Где вы живете."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ich habe Kopfschmerzen.",
+          "chunks": ["Ich", "habe", "Kopfschmerzen."]
+        }
+      ]
+    },
+    {
+      "id": "apotheke-medikament",
+      "title_ru": "Выбор лекарства",
+      "order": 3,
+      "needs_words": ["gesundheit", "produkte"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Nehmen Sie diese Tabletten.",
+          "options_ru": [
+            "Примите эти таблетки.",
+            "Купите эти яблоки."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Wie oft muss ich nehmen.",
+          "chunks": ["Wie", "oft", "muss", "ich", "nehmen."]
+        }
+      ]
+    },
+    {
+      "id": "apotheke-anwendung",
+      "title_ru": "Инструкция по применению",
+      "order": 7,
+      "needs_words": ["gesundheit", "alltag"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Drei Mal am Tag, nach dem Essen.",
+          "options_ru": [
+            "Три раза в день, после еды.",
+            "Один раз в неделю, до еды."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Verstanden. Vielen Dank.",
+          "chunks": ["Verstanden.", "Vielen", "Dank."]
+        }
+      ]
+    },
+    {
+      "id": "apotheke-kasse",
+      "title_ru": "Оплата",
+      "order": 8,
+      "needs_words": ["zahlen", "einkaufen"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Das macht zehn Euro.",
+          "options_ru": [
+            "С вас десять евро.",
+            "С вас сто евро."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Hier sind zehn Euro.",
+          "chunks": ["Hier", "sind", "zehn", "Euro."]
+        }
+      ]
+    }
+  ]
+}

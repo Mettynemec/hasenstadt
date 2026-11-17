@@ -1,0 +1,96 @@
+{
+  "id": "wald",
+  "title_ru": "Лес",
+  "title_de": "der Wald",
+  "order": 56,
+  "scenes": [
+    {
+      "id": "wald-eingang",
+      "title_ru": "Вход в лес",
+      "order": 1,
+      "needs_words": ["natur-wetter", "stadt-weg"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Guten Tag. Der Wald ist ruhig heute.",
+          "options_ru": [
+            "Добрый день. Сегодня в лесу тихо.",
+            "Добрый день. Сегодня в лесу шумно."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Danke. Ich gehe in den Wald.",
+          "chunks": ["Danke.", "Ich", "gehe", "in", "den", "Wald."]
+        }
+      ]
+    },
+    {
+      "id": "wald-baeume",
+      "title_ru": "Деревья и цветы",
+      "order": 3,
+      "needs_words": ["natur-wetter", "tiere"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Sehen Sie die grossen Baeume dort.",
+          "options_ru": [
+            "Вы видите там большие деревья.",
+            "Вы видите там маленькие цветы."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ja, die Baeume sind sehr schoen.",
+          "chunks": ["Ja,", "die", "Baeume", "sind", "sehr", "schoen."]
+        }
+      ]
+    },
+    {
+      "id": "wald-tier",
+      "title_ru": "Встреча с животным",
+      "order": 7,
+      "needs_words": ["tiere", "natur-wetter"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Sehen Sie den Hund dort.",
+          "options_ru": [
+            "Вы видите там собаку.",
+            "Вы видите там кошку."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ja, der Hund ist klein und nett.",
+          "chunks": ["Ja,", "der", "Hund", "ist", "klein", "und", "nett."]
+        }
+      ]
+    },
+    {
+      "id": "wald-ausgang",
+      "title_ru": "Выход из леса",
+      "order": 8,
+      "needs_words": ["stadt-weg", "natur-wetter"],
+      "lines": [
+        {
+          "who": "bot",
+          "de": "Es wird dunkel. Gehen Sie nach Hause.",
+          "options_ru": [
+            "Становится темно. Идите домой.",
+            "Становится светло. Идите в парк."
+          ],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Verstanden. Ich gehe jetzt nach Hause.",
+          "chunks": ["Verstanden.", "Ich", "gehe", "jetzt", "nach", "Hause."]
+        }
+      ]
+    }
+  ]
+}

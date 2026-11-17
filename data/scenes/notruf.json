@@ -46,62 +46,42 @@
     {
       "id": "notruf-feuer",
       "title_ru": "Горит дом",
+      "order": 1,
       "needs_words": [],
       "needs_rules": [],
-      "roles": { "bot": "Диспетчер", "human": "Ты" },
+      "roles": {"bot": "Диспетчер", "human": "Ты"},
       "lines": [
         {
           "who": "human",
-          "task_ru": "Скажи, что горит.",
           "de": "Es brennt.",
-          "ru": "Горит.",
           "chunks": ["Es", "brennt."]
         },
         {
           "who": "bot",
           "de": "Wo brennt es?",
-          "ru": "Где горит?",
-          "options_ru": [
-            "Он спрашивает адрес",
-            "Он спрашивает имя",
-            "Он спрашивает, есть ли дым"
-          ],
+          "options_ru": ["Он спрашивает адрес", "Он спрашивает имя", "Он спрашивает, есть ли дым"],
           "answer": 0
         },
         {
           "who": "human",
-          "task_ru": "Назови адрес: Бергштрассе десять.",
           "de": "In der Bergstraße zehn.",
-          "ru": "На Бергштрассе десять.",
           "chunks": ["In der", "Bergstraße", "zehn."]
         },
         {
           "who": "bot",
           "de": "Sind Menschen im Haus?",
-          "ru": "В доме есть люди?",
-          "options_ru": [
-            "Он спрашивает, есть ли люди внутри",
-            "Он спрашивает, большой ли дом",
-            "Он спрашивает, кто вызвал"
-          ],
+          "options_ru": ["Он спрашивает, есть ли люди внутри", "Он спрашивает, большой ли дом", "Он спрашивает, кто вызвал"],
           "answer": 0
         },
         {
           "who": "human",
-          "task_ru": "Скажи, что в доме два человека.",
           "de": "Ja, zwei Personen.",
-          "ru": "Да, два человека.",
           "chunks": ["Ja,", "zwei Personen."]
         },
         {
           "who": "bot",
           "de": "Wir kommen sofort.",
-          "ru": "Мы сейчас приедем.",
-          "options_ru": [
-            "Они едут",
-            "Они просят перезвонить",
-            "Они дают инструкцию"
-          ],
+          "options_ru": ["Они едут", "Они просят перезвонить", "Они дают инструкцию"],
           "answer": 0
         }
       ]
@@ -109,52 +89,111 @@
     {
       "id": "notruf-arzt",
       "title_ru": "Нужна скорая",
-      "needs_words": [],
+      "order": 3,
+      "needs_words": ["gesundheit"],
       "needs_rules": [],
-      "roles": { "bot": "Диспетчер", "human": "Ты" },
+      "roles": {"bot": "Диспетчер", "human": "Ты"},
       "lines": [
         {
           "who": "human",
-          "task_ru": "Скажи, что нужен врач.",
           "de": "Ich brauche einen Arzt.",
-          "ru": "Мне нужен врач.",
           "chunks": ["Ich brauche", "einen Arzt."]
         },
         {
           "who": "bot",
           "de": "Was ist passiert?",
-          "ru": "Что случилось?",
-          "options_ru": [
-            "Он спрашивает, что случилось",
-            "Он спрашивает, где ты",
-            "Он спрашивает, как тебя зовут"
-          ],
+          "options_ru": ["Он спрашивает, что случилось", "Он спрашивает, где ты", "Он спрашивает, как тебя зовут"],
           "answer": 0
         },
         {
           "who": "human",
-          "task_ru": "Скажи, что человек пострадал.",
           "de": "Eine Person ist verletzt.",
-          "ru": "Один человек пострадал.",
           "chunks": ["Eine Person", "ist verletzt."]
         },
         {
           "who": "bot",
           "de": "Wie ist Ihr Name?",
-          "ru": "Как вас зовут?",
-          "options_ru": [
-            "Он спрашивает имя",
-            "Он спрашивает возраст",
-            "Он спрашивает адрес"
-          ],
+          "options_ru": ["Он спрашивает имя", "Он спрашивает возраст", "Он спрашивает адрес"],
           "answer": 0
         },
         {
           "who": "human",
-          "task_ru": "Назови своё имя.",
           "de": "Mein Name ist Matt.",
-          "ru": "Меня зовут Мэтт.",
           "chunks": ["Mein Name", "ist Matt."]
+        }
+      ]
+    },
+    {
+      "id": "notruf-diebstahl",
+      "title_ru": "Кража",
+      "order": 7,
+      "needs_words": ["einkaufen", "geld-freizeit"],
+      "needs_rules": [],
+      "roles": {"bot": "Диспетчер полиции", "human": "Ты"},
+      "lines": [
+        {
+          "who": "human",
+          "de": "Meine Tasche ist weg.",
+          "chunks": ["Meine Tasche", "ist weg."]
+        },
+        {
+          "who": "bot",
+          "de": "Wo sind Sie jetzt?",
+          "options_ru": ["Он спрашивает, где ты", "Он спрашивает, что было в сумке", "Он спрашивает, кто взял"],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Im Supermarkt an der Hauptstraße.",
+          "chunks": ["Im Supermarkt", "an der", "Hauptstraße."]
+        },
+        {
+          "who": "bot",
+          "de": "Haben Sie Ihre Papiere verloren?",
+          "options_ru": ["Он спрашивает про документы", "Он спрашивает про деньги", "Он спрашивает про телефон"],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ja, meinen Ausweis und Geld.",
+          "chunks": ["Ja,", "meinen Ausweis", "und Geld."]
+        }
+      ]
+    },
+    {
+      "id": "notruf-unfall",
+      "title_ru": "ДТП",
+      "order": 8,
+      "needs_words": ["transport-reise", "gesundheit"],
+      "needs_rules": [],
+      "roles": {"bot": "Диспетчер", "human": "Ты"},
+      "lines": [
+        {
+          "who": "human",
+          "de": "Es gab einen Unfall.",
+          "chunks": ["Es gab", "einen Unfall."]
+        },
+        {
+          "who": "bot",
+          "de": "Sind Personen verletzt?",
+          "options_ru": ["Он спрашивает, есть ли пострадавшие", "Он спрашивает, где это", "Он спрашивает, сколько машин"],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "Ja, eine Person.",
+          "chunks": ["Ja,", "eine Person."]
+        },
+        {
+          "who": "bot",
+          "de": "Wo genau?",
+          "options_ru": ["Он спрашивает точный адрес", "Он спрашивает время", "Он спрашивает имя"],
+          "answer": 0
+        },
+        {
+          "who": "human",
+          "de": "An der Kreuzung Bergstraße und Hauptstraße.",
+          "chunks": ["An der", "Kreuzung", "Bergstraße", "und Hauptstraße."]
         }
       ]
     }

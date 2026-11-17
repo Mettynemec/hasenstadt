@@ -1,0 +1,22 @@
+{
+  "id": "text-wohnung",
+  "title_ru": "Вечер дома",
+  "needs_topic": "wohnung",
+  "segments": [
+    "Я ", { "w": "kommen", "f": "base", "ru": "приходить" }, " домой. ",
+    "Моя ", { "w": "wohnung", "f": "base", "ru": "квартира" }, " ", { "w": "sein", "f": "base", "ru": "есть" }, " ", { "w": "klein", "f": "base", "ru": "маленький" }, ", но ", { "w": "gemuetlich", "f": "base", "ru": "уютный" }, ". ",
+    "Я ", { "w": "machen", "f": "base", "ru": "делать" }, " ", { "w": "licht", "f": "base", "ru": "свет" }, ". ",
+    "В ", { "w": "kueche", "f": "base", "ru": "кухня" }, " я ", { "w": "sehen", "f": "base", "ru": "видеть" }, " ", { "w": "tisch", "f": "base", "ru": "стол" }, " и ", { "w": "stuhl", "f": "base", "ru": "стул" }, ". ",
+    "Я ", { "w": "haben", "f": "base", "ru": "иметь" }, " ", { "w": "hunger", "f": "base", "ru": "голод" }, ". ",
+    "Я ", { "w": "essen", "f": "base", "ru": "есть" }, " ", { "w": "abendessen", "f": "base", "ru": "ужин" }, ". ",
+    "Потом я ", { "w": "waschen", "f": "base", "ru": "мыть" }, " ", { "w": "geschirr", "f": "base", "ru": "посуда" }, ". ",
+    "В ", { "w": "badezimmer", "f": "base", "ru": "ванная" }, " я ", { "w": "machen", "f": "base", "ru": "делать" }, " ", { "w": "bad", "f": "base", "ru": "ванна" }, ". ",
+    "Вода ", { "w": "sein", "f": "base", "ru": "есть" }, " ", { "w": "warm", "f": "base", "ru": "тёплый" }, ". ",
+    "Это ", { "w": "gut", "f": "base", "ru": "хороший" }, " после ", { "w": "arbeit", "f": "base", "ru": "работа" }, ". ",
+    "Потом я ", { "w": "gehen", "f": "base", "ru": "идти" }, " в ", { "w": "schlafzimmer", "f": "base", "ru": "спальня" }, ". ",
+    "Я ", { "w": "liegen", "f": "base", "ru": "лежать" }, " в ", { "w": "bett", "f": "base", "ru": "кровать" }, ". ",
+    "Я ", { "w": "lesen", "f": "base", "ru": "читать" }, " ", { "w": "buch", "f": "base", "ru": "книга" }, ". ",
+    "Потом я ", { "w": "schlafen", "f": "base", "ru": "спать" }, ". ",
+    "Завтра ", { "w": "sein", "f": "base", "ru": "есть" }, " новый ", { "w": "tag", "f": "base", "ru": "день" }, ". "
+  ]
+}

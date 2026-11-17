@@ -1,134 +1,32 @@
 [
-  {
-    "id": "handschuh",
-    "article": "der",
-    "de": "Handschuh",
-    "parts": [
-      { "de": "Hand", "ru": "рука" },
-      { "de": "Schuh", "ru": "туфля" }
-    ],
-    "ru": "перчатка",
-    "ru_ok": ["перчатки", "рукавица"]
-  },
-  {
-    "id": "kuehlschrank",
-    "article": "der",
-    "de": "Kühlschrank",
-    "parts": [
-      { "de": "kühl", "ru": "прохладный" },
-      { "de": "Schrank", "ru": "шкаф" }
-    ],
-    "ru": "холодильник",
-    "ru_ok": []
-  },
-  {
-    "id": "krankenhaus",
-    "article": "das",
-    "de": "Krankenhaus",
-    "parts": [
-      { "de": "krank", "ru": "больной" },
-      { "de": "Haus", "ru": "дом" }
-    ],
-    "ru": "больница",
-    "ru_ok": ["госпиталь"]
-  },
-  {
-    "id": "staubsauger",
-    "article": "der",
-    "de": "Staubsauger",
-    "parts": [
-      { "de": "Staub", "ru": "пыль" },
-      { "de": "Sauger", "ru": "сосун" }
-    ],
-    "ru": "пылесос",
-    "ru_ok": []
-  },
-  {
-    "id": "zahnbuerste",
-    "article": "die",
-    "de": "Zahnbürste",
-    "parts": [
-      { "de": "Zahn", "ru": "зуб" },
-      { "de": "Bürste", "ru": "щётка" }
-    ],
-    "ru": "зубная щётка",
-    "ru_ok": ["щётка для зубов", "зубная щетка"]
-  },
-  {
-    "id": "regenschirm",
-    "article": "der",
-    "de": "Regenschirm",
-    "parts": [
-      { "de": "Regen", "ru": "дождь" },
-      { "de": "Schirm", "ru": "щит" }
-    ],
-    "ru": "зонт",
-    "ru_ok": ["зонтик"]
-  },
-  {
-    "id": "fahrrad",
-    "article": "das",
-    "de": "Fahrrad",
-    "parts": [
-      { "de": "fahren", "ru": "ехать" },
-      { "de": "Rad", "ru": "колесо" }
-    ],
-    "ru": "велосипед",
-    "ru_ok": ["велик"]
-  },
-  {
-    "id": "haltestelle",
-    "article": "die",
-    "de": "Haltestelle",
-    "parts": [
-      { "de": "halten", "ru": "держать, останавливаться" },
-      { "de": "Stelle", "ru": "место" }
-    ],
-    "ru": "остановка",
-    "ru_ok": []
-  },
-  {
-    "id": "woerterbuch",
-    "article": "das",
-    "de": "Wörterbuch",
-    "parts": [
-      { "de": "Wörter", "ru": "слова" },
-      { "de": "Buch", "ru": "книга" }
-    ],
-    "ru": "словарь",
-    "ru_ok": []
-  },
-  {
-    "id": "schreibtisch",
-    "article": "der",
-    "de": "Schreibtisch",
-    "parts": [
-      { "de": "schreiben", "ru": "писать" },
-      { "de": "Tisch", "ru": "стол" }
-    ],
-    "ru": "письменный стол",
-    "ru_ok": ["рабочий стол", "стол"]
-  },
-  {
-    "id": "flughafen",
-    "article": "der",
-    "de": "Flughafen",
-    "parts": [
-      { "de": "Flug", "ru": "полёт" },
-      { "de": "Hafen", "ru": "порт" }
-    ],
-    "ru": "аэропорт",
-    "ru_ok": []
-  },
-  {
-    "id": "waschmaschine",
-    "article": "die",
-    "de": "Waschmaschine",
-    "parts": [
-      { "de": "waschen", "ru": "мыть, стирать" },
-      { "de": "Maschine", "ru": "машина" }
-    ],
-    "ru": "стиральная машина",
-    "ru_ok": ["стиралка"]
-  }
+  { "id": "wohnzimmer", "de": "das Wohnzimmer", "parts": ["die Wohnung", "das Zimmer"], "ru": "гостиная", "order": 1 },
+  { "id": "schlafzimmer", "de": "das Schlafzimmer", "parts": ["schlafen", "das Zimmer"], "ru": "спальня", "order": 3 },
+  { "id": "badezimmer", "de": "das Badezimmer", "parts": ["das Bad", "das Zimmer"], "ru": "ванная комната", "order": 7 },
+  { "id": "kuehlschrank", "de": "der Kühlschrank", "parts": ["kühlen", "der Schrank"], "ru": "холодильник", "order": 8 },
+  { "id": "fernseher", "de": "der Fernseher", "parts": ["fern", "sehen"], "ru": "телевизор", "order": 9 },
+  { "id": "haustuer", "de": "die Haustür", "parts": ["das Haus", "die Tür"], "ru": "входная дверь", "order": 10 },
+  { "id": "schluesselbund", "de": "der Schlüsselbund", "parts": ["der Schlüssel", "der Bund"], "ru": "связка ключей", "order": 11 },
+  { "id": "bahnhof", "de": "der Bahnhof", "parts": ["die Bahn", "der Hof"], "ru": "вокзал", "order": 13 },
+  { "id": "fahrkarte", "de": "die Fahrkarte", "parts": ["fahren", "die Karte"], "ru": "проездной билет", "order": 17 },
+  { "id": "einkaufstasche", "de": "die Einkaufstasche", "parts": ["der Einkauf", "die Tasche"], "ru": "сумка для покупок", "order": 18 },
+  { "id": "supermarkt", "de": "der Supermarkt", "parts": ["super", "der Markt"], "ru": "супермаркет", "order": 19 },
+  { "id": "arztpraxis", "de": "die Arztpraxis", "parts": ["der Arzt", "die Praxis"], "ru": "врачебный кабинет", "order": 20 },
+  { "id": "krankenhaus", "de": "das Krankenhaus", "parts": ["krank", "das Haus"], "ru": "больница", "order": 21 },
+  { "id": "wettervorhersage", "de": "die Wettervorhersage", "parts": ["das Wetter", "die Vorhersage"], "ru": "прогноз погоды", "order": 23 },
+  { "id": "regenschirm", "de": "der Regenschirm", "parts": ["der Regen", "der Schirm"], "ru": "зонт", "order": 27 },
+  { "id": "sonnenbrille", "de": "die Sonnenbrille", "parts": ["die Sonne", "die Brille"], "ru": "солнцезащитные очки", "order": 28 },
+  { "id": "freizeitpark", "de": "der Freizeitpark", "parts": ["die Freizeit", "der Park"], "ru": "парк развлечений", "order": 29 },
+  { "id": "arbeitsplatz", "de": "der Arbeitsplatz", "parts": ["die Arbeit", "der Platz"], "ru": "рабочее место", "order": 30 },
+  { "id": "sprachkurs", "de": "der Sprachkurs", "parts": ["die Sprache", "der Kurs"], "ru": "языковой курс", "order": 31 },
+  { "id": "handtuch", "de": "das Handtuch", "parts": ["die Hand", "das Tuch"], "ru": "полотенце", "order": 33 },
+  { "id": "zahnbuerste", "de": "die Zahnbürste", "parts": ["der Zahn", "die Bürste"], "ru": "зубная щётка", "order": 37 },
+  { "id": "zahnpasta", "de": "die Zahnpasta", "parts": ["der Zahn", "die Pasta"], "ru": "зубная паста", "order": 38 },
+  { "id": "nachttisch", "de": "der Nachttisch", "parts": ["die Nacht", "der Tisch"], "ru": "тумбочка", "order": 39 },
+  { "id": "schreibtisch", "de": "der Schreibtisch", "parts": ["schreiben", "der Tisch"], "ru": "письменный стол", "order": 40 },
+  { "id": "buecherregal", "de": "das Bücherregal", "parts": ["das Buch", "das Regal"], "ru": "книжная полка", "order": 41 },
+  { "id": "muelleimer", "de": "der Mülleimer", "parts": ["der Müll", "der Eimer"], "ru": "мусорное ведро", "order": 43 },
+  { "id": "staubsauger", "de": "der Staubsauger", "parts": ["der Staub", "saugen"], "ru": "пылесос", "order": 47 },
+  { "id": "waschmaschine", "de": "die Waschmaschine", "parts": ["waschen", "die Maschine"], "ru": "стиральная машина", "order": 48 },
+  { "id": "geschirrspueler", "de": "der Geschirrspüler", "parts": ["das Geschirr", "spülen"], "ru": "посудомоечная машина", "order": 49 },
+  { "id": "kuehlschrank-magnet", "de": "der Kühlschrankmagnet", "parts": ["der Kühlschrank", "der Magnet"], "ru": "магнит на холодильник", "order": 50 }
 ]

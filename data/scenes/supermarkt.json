@@ -8,88 +8,48 @@
       "id": "supermarkt-eingang",
       "title_ru": "Вход и корзина",
       "order": 1,
-      "needs_words": ["einkaufen", "stadt-weg"],
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Сотрудник", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Guten Tag. Brauchen Sie einen Korb?",
-          "options_ru": [
-            "Добрый день. Вам нужна корзина?",
-            "Добрый день. Вам нужна сумка?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, bitte. Einen Korb.",
-          "chunks": ["Ja,", "bitte.", "Einen", "Korb."]
-        }
+        { "who": "bot", "de": "Guten Tag. Brauchen Sie einen Korb?", "ru": "Добрый день. Вам нужна корзина?", "options_ru": ["Он спрашивает, нужна ли корзина", "Он спрашивает, нужна ли сумка", "Он спрашивает, где ты живёшь"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, пожалуйста, одну корзину.", "de": "Ja, bitte. Einen Korb.", "ru": "Да, пожалуйста. Одну корзину.", "chunks": ["Ja,", "bitte.", "Einen", "Korb."] }
       ]
     },
     {
       "id": "supermarkt-obst",
-      "title_ru": "Отдел овощей и фруктов",
+      "title_ru": "Отдел фруктов",
       "order": 3,
-      "needs_words": ["produkte", "essen"],
+      "needs_words": [],
+      "needs_rules": ["modalverben"],
+      "roles": { "bot": "Продавец", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Was mochten Sie? Apfel oder Bananen?",
-          "options_ru": [
-            "Что вы хотите? Яблоки или бананы?",
-            "Что вы ищете? Яблоки или груши?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ich mochte Apfel, bitte.",
-          "chunks": ["Ich", "mochte", "Apfel,", "bitte."]
-        }
+        { "who": "bot", "de": "Was möchten Sie? Äpfel oder Bananen?", "ru": "Что вы хотите? Яблоки или бананы?", "options_ru": ["Он спрашивает, яблоки или бананы", "Он спрашивает, груши или сливы", "Он спрашивает, сколько денег"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что хочешь яблоки.", "de": "Ich möchte Äpfel, bitte.", "ru": "Я хочу яблоки, пожалуйста.", "chunks": ["Ich", "möchte", "Äpfel,", "bitte."] }
       ]
     },
     {
       "id": "supermarkt-kasse",
       "title_ru": "На кассе",
       "order": 7,
-      "needs_words": ["zahlen", "einkaufen"],
+      "needs_words": [],
+      "needs_rules": ["zahlen-zeit"],
+      "roles": { "bot": "Кассир", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Das macht zwanzig Euro.",
-          "options_ru": [
-            "С вас двадцать евро.",
-            "Это стоит двадцать евро."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Hier sind zwanzig Euro.",
-          "chunks": ["Hier", "sind", "zwanzig", "Euro."]
-        }
+        { "who": "bot", "de": "Das macht zwanzig Euro.", "ru": "С вас двадцать евро.", "options_ru": ["Он называет цену", "Он спрашивает про пакет", "Он говорит, что закрыто"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: вот двадцать евро.", "de": "Hier sind zwanzig Euro.", "ru": "Вот двадцать евро.", "chunks": ["Hier", "sind", "zwanzig", "Euro."] }
       ]
     },
     {
       "id": "supermarkt-ausgang",
       "title_ru": "Поиск выхода",
       "order": 8,
-      "needs_words": ["stadt-weg", "einkaufen"],
+      "needs_words": [],
+      "needs_rules": ["wortfolge"],
+      "roles": { "bot": "Сотрудник", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Kann ich Ihnen helfen?",
-          "options_ru": [
-            "Я могу вам помочь?",
-            "Я могу вам дать помощь?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Wo ist der Ausgang?",
-          "chunks": ["Wo", "ist", "der", "Ausgang?"]
-        }
+        { "who": "bot", "de": "Kann ich Ihnen helfen?", "ru": "Я могу вам помочь?", "options_ru": ["Он предлагает помощь", "Он просит помочь ему", "Он спрашивает имя"], "answer": 0 },
+        { "who": "human", "task_ru": "Спроси, где выход.", "de": "Wo ist der Ausgang?", "ru": "Где выход?", "chunks": ["Wo", "ist", "der", "Ausgang?"] }
       ]
     }
   ]

@@ -1,6 +1,6 @@
 {
   "id": "strasse",
-  "title_de": "die Straße",
+  "title_de": "die Strasse",
   "title_ru": "Улица",
   "icon": "street",
   "order": 7,
@@ -11,127 +11,56 @@
       "id": "strasse-weg",
       "title_ru": "Спросить дорогу",
       "order": 1,
-      "needs_words": ["stadt-weg"],
+      "needs_words": [],
       "needs_rules": ["wortfolge"],
-      "roles": {"bot": "Прохожий", "human": "Ты"},
+      "roles": { "bot": "Прохожий", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Entschuldigung, wo ist die Bergstraße?",
-          "chunks": ["Entschuldigung,", "wo ist", "die Bergstraße?"]
-        },
-        {
-          "who": "bot",
-          "de": "Gehen Sie hier links und dann geradeaus.",
-          "options_ru": ["Он объясняет дорогу", "Он говорит, что не знает", "Он просит показать карту"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Links und dann geradeaus?",
-          "chunks": ["Links", "und dann", "geradeaus?"]
-        },
-        {
-          "who": "bot",
-          "de": "Genau. Es ist nicht weit.",
-          "options_ru": ["Он подтверждает и говорит, что близко", "Он поправляет дорогу", "Он предлагает проводить"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Vielen Dank.",
-          "chunks": ["Vielen", "Dank."]
-        }
+        { "who": "human", "task_ru": "Спроси, где Бергштрассе.", "de": "Entschuldigung, wo ist die Bergstrasse?", "ru": "Извините, где Бергштрассе?", "chunks": ["Entschuldigung,", "wo ist", "die Bergstrasse?"] },
+        { "who": "bot", "de": "Gehen Sie hier links und dann geradeaus.", "ru": "Идите здесь налево и потом прямо.", "options_ru": ["Он объясняет дорогу", "Он говорит, что не знает", "Он просит показать карту"], "answer": 0 },
+        { "who": "human", "task_ru": "Переспроси: налево, потом прямо?", "de": "Links und dann geradeaus?", "ru": "Налево и потом прямо?", "chunks": ["Links", "und dann", "geradeaus?"] },
+        { "who": "bot", "de": "Genau. Es ist nicht weit.", "ru": "Именно. Это недалеко.", "options_ru": ["Он подтверждает и говорит, что близко", "Он поправляет дорогу", "Он предлагает проводить"], "answer": 0 },
+        { "who": "human", "task_ru": "Поблагодари.", "de": "Vielen Dank.", "ru": "Большое спасибо.", "chunks": ["Vielen", "Dank."] }
       ]
     },
     {
       "id": "strasse-zeit",
       "title_ru": "Спросить время",
       "order": 3,
-      "needs_words": ["zahlen-zeit"],
+      "needs_words": [],
       "needs_rules": ["wortfolge"],
-      "roles": {"bot": "Прохожая", "human": "Ты"},
+      "roles": { "bot": "Прохожая", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Entschuldigung, wie viel Uhr ist es?",
-          "chunks": ["Entschuldigung,", "wie viel Uhr", "ist es?"]
-        },
-        {
-          "who": "bot",
-          "de": "Es ist zehn nach drei.",
-          "options_ru": ["Она говорит время", "Она говорит, что часов нет", "Она спрашивает, зачем тебе"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Danke, sehr nett.",
-          "chunks": ["Danke,", "sehr nett."]
-        }
+        { "who": "human", "task_ru": "Спроси, который час.", "de": "Entschuldigung, wie viel Uhr ist es?", "ru": "Извините, который час?", "chunks": ["Entschuldigung,", "wie viel Uhr", "ist es?"] },
+        { "who": "bot", "de": "Es ist zehn nach drei.", "ru": "Десять минут четвёртого.", "options_ru": ["Она говорит время", "Она говорит, что часов нет", "Она спрашивает, зачем тебе"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи спасибо.", "de": "Danke, sehr nett.", "ru": "Спасибо, очень мило.", "chunks": ["Danke,", "sehr nett."] }
       ]
     },
     {
       "id": "strasse-ampel",
       "title_ru": "Переход дороги",
       "order": 7,
-      "needs_words": ["stadt-weg", "alltag"],
+      "needs_words": [],
       "needs_rules": ["imperativ"],
-      "roles": {"bot": "Прохожий", "human": "Ты"},
+      "roles": { "bot": "Прохожий", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Warten Sie auf Grün.",
-          "options_ru": ["Он говорит ждать зелёного", "Он говорит бежать", "Он говорит вернуться"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, ich warte.",
-          "chunks": ["Ja,", "ich warte."]
-        },
-        {
-          "who": "bot",
-          "de": "Jetzt ist es grün. Gehen Sie.",
-          "options_ru": ["Сейчас зелёный, можно идти", "Сейчас красный", "Сейчас жёлтый"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Danke für die Hilfe.",
-          "chunks": ["Danke", "für die", "Hilfe."]
-        }
+        { "who": "bot", "de": "Warten Sie auf Grun.", "ru": "Ждите зелёного.", "options_ru": ["Он говорит ждать зелёного", "Он говорит бежать", "Он говорит вернуться"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, я жду.", "de": "Ja, ich warte.", "ru": "Да, я жду.", "chunks": ["Ja,", "ich warte."] },
+        { "who": "bot", "de": "Jetzt ist es grun. Gehen Sie.", "ru": "Сейчас зелёный. Идите.", "options_ru": ["Сейчас зелёный, можно идти", "Сейчас красный", "Сейчас жёлтый"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи спасибо за помощь.", "de": "Danke fur die Hilfe.", "ru": "Спасибо за помощь.", "chunks": ["Danke", "fur die", "Hilfe."] }
       ]
     },
     {
       "id": "strasse-parken",
       "title_ru": "Поиск парковки",
       "order": 8,
-      "needs_words": ["transport-reise", "geld-freizeit"],
+      "needs_words": [],
       "needs_rules": ["sein"],
-      "roles": {"bot": "Прохожий", "human": "Ты"},
+      "roles": { "bot": "Прохожий", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Entschuldigung, wo kann ich parken?",
-          "chunks": ["Entschuldigung,", "wo kann", "ich parken?"]
-        },
-        {
-          "who": "bot",
-          "de": "Der Parkplatz ist dort hinten.",
-          "options_ru": ["Он показывает, где парковка", "Он говорит, что парковки нет", "Он спрашивает, какая машина"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ist er kostenlos?",
-          "chunks": ["Ist er", "kostenlos?"]
-        },
-        {
-          "who": "bot",
-          "de": "Ja, zwei Stunden sind frei.",
-          "options_ru": ["Да, два часа бесплатно", "Нет, это дорого", "Да, но только ночью"],
-          "answer": 0
-        }
+        { "who": "human", "task_ru": "Спроси, где можно припарковаться.", "de": "Entschuldigung, wo kann ich parken?", "ru": "Извините, где я могу припарковаться?", "chunks": ["Entschuldigung,", "wo kann", "ich parken?"] },
+        { "who": "bot", "de": "Der Parkplatz ist dort hinten.", "ru": "Парковка вон там, сзади.", "options_ru": ["Он показывает, где парковка", "Он говорит, что парковки нет", "Он спрашивает, какая машина"], "answer": 0 },
+        { "who": "human", "task_ru": "Спроси: это бесплатно?", "de": "Ist er kostenlos?", "ru": "Это бесплатно?", "chunks": ["Ist er", "kostenlos?"] },
+        { "who": "bot", "de": "Ja, zwei Stunden sind frei.", "ru": "Да, два часа бесплатно.", "options_ru": ["Да, два часа бесплатно", "Нет, это дорого", "Да, но только ночью"], "answer": 0 }
       ]
     }
   ]

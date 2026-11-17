@@ -32,5 +32,7 @@
   { "type": "rule", "id": "dativ" },
   { "type": "words", "topic": "transport-reise" },
   { "type": "rule", "id": "trennbar" },
-  { "type": "words", "topic": "alltag" }
+  { "type": "words", "topic": "alltag" },
+  { "type": "rule", "id": "imperativ" },
+  { "type": "words", "topic": "natur-wetter" }
 ]

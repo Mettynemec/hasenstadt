@@ -24,5 +24,7 @@
   { "type": "words", "topic": "gesundheit" },
   { "type": "rule", "id": "zahlen-zeit" },
   { "type": "words", "topic": "zahlen" },
-  { "type": "words", "topic": "monate" }
+  { "type": "words", "topic": "monate" },
+  { "type": "words", "topic": "pronomen" },
+  { "type": "words", "topic": "praepposition" }
 ]

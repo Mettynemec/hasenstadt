@@ -74,6 +74,7 @@ const MENU = [
   ["trainer", "trainer", "#/trainer", false],
   ["learned", "learned", "#/learned", true],
   ["game", "game", "#/game", false],
+    { id: 'reading', title: 'ЧТЕНИЕ', icon: 'book', phoneHide: true },
   ["progress", "progress", "#/progress", true],
   ["settings", "settings", "#/settings", true]
 ];

@@ -74,7 +74,7 @@ const MENU = [
   ["trainer", "trainer", "#/trainer", false],
   ["learned", "learned", "#/learned", true],
   ["game", "game", "#/game", false],
-    { id: 'reading', title: 'ЧТЕНИЕ', icon: 'book', phoneHide: true },
+  ["reading", "rules", "#/reading", true],
   ["progress", "progress", "#/progress", true],
   ["settings", "settings", "#/settings", true]
 ];
@@ -87,7 +87,7 @@ export function buildShell(root, appName) {
   for (const [key, icon, href, phoneHide] of MENU) {
     const b = el("a.menu-item" + (phoneHide ? ".phone-hide" : ""), { href },
       ico(icon),
-      el("span.menu-label", { text: T.menu[key] })
+            el("span.menu-label", { text: T.menu[key] || (key === "reading" ? "Чтение" : key) })
     );
     b.dataset.key = key;
     menu.appendChild(b);
@@ -159,7 +159,7 @@ function toggleMore(btn) {
   if (moreSheet) { closeMore(); return; }
   moreSheet = el("div.more-sheet", { role: "menu" },
     MENU.filter((m) => m[3]).map(([key, icon, href]) =>
-      el("a.btn.btn-wide", { href, on: { click: closeMore } }, ico(icon, 20), T.menu[key]))
+            el("a.btn.btn-wide", { href, on: { click: closeMore } }, ico(icon, 20), T.menu[key] || (key === "reading" ? "Чтение" : key)))
   );
   document.body.appendChild(moreSheet);
   btn.setAttribute("aria-expanded", "true");

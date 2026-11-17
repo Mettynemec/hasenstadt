@@ -13,5 +13,6 @@
   { "id": "zahlen", "title_ru": "Числа и дни недели", "title_de": "die Zahlen", "order": 20, "bonus": false, "level": "a1" },
   { "id": "monate", "title_ru": "Месяцы", "title_de": "die Monate", "order": 21, "bonus": false, "level": "a1" },
   { "id": "pronomen", "title_ru": "Местоимения", "title_de": "die Pronomen", "order": 22, "bonus": false, "level": "a1" },
-  { "id": "praepposition", "title_ru": "Предлоги и союзы", "title_de": "die Präpositionen", "order": 23, "bonus": false, "level": "a1" }
+  { "id": "praepposition", "title_ru": "Предлоги и союзы", "title_de": "die Präpositionen", "order": 23, "bonus": false, "level": "a1" },
+  { "id": "stadt-weg", "title_ru": "Город и дорога", "title_de": "die Stadt und der Weg", "order": 27, "bonus": false, "rule_before": "praepositionen-ort", "level": "a1" }
 ]

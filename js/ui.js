@@ -84,10 +84,12 @@ let refs = {};
 export function buildShell(root, appName) {
   const menu = el("nav.menu", { "aria-label": "меню" });
 
-  for (const [key, icon, href, phoneHide] of MENU) {
+  for (const m of MENU) {
+    if (!Array.isArray(m)) continue;
+    const [key, icon, href, phoneHide] = m;
     const b = el("a.menu-item" + (phoneHide ? ".phone-hide" : ""), { href },
       ico(icon),
-            el("span.menu-label", { text: T.menu[key] || (key === "reading" ? "Чтение" : key) })
+      el("span.menu-label", { text: T.menu[key] || (key === "reading" ? "Чтение" : key) })
     );
     b.dataset.key = key;
     menu.appendChild(b);
@@ -158,8 +160,8 @@ let moreSheet = null;
 function toggleMore(btn) {
   if (moreSheet) { closeMore(); return; }
   moreSheet = el("div.more-sheet", { role: "menu" },
-    MENU.filter((m) => m[3]).map(([key, icon, href]) =>
-            el("a.btn.btn-wide", { href, on: { click: closeMore } }, ico(icon, 20), T.menu[key] || (key === "reading" ? "Чтение" : key)))
+    MENU.filter((m) => Array.isArray(m) && m[3]).map(([key, icon, href]) =>
+      el("a.btn.btn-wide", { href, on: { click: closeMore } }, ico(icon, 20), T.menu[key] || (key === "reading" ? "Чтение" : key)))
   );
   document.body.appendChild(moreSheet);
   btn.setAttribute("aria-expanded", "true");

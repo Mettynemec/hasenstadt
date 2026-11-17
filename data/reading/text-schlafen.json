@@ -1,0 +1,18 @@
+{
+  "id": "text-schlafen",
+  "title_ru": "Перед сном",
+  "needs_topic": "alltag",
+  "segments": [
+    "Сейчас ", { "w": "nacht", "f": "base", "ru": "ночь" }, ". ",
+    "Я ", { "w": "muede", "f": "base", "ru": "уставший" }, " и хочу ", { "w": "schlafen", "f": "base", "ru": "спать" }, ". ",
+    "Я ", { "w": "gehen", "f": "base", "ru": "идти" }, " в ", { "w": "badezimmer", "f": "base", "ru": "ванная" }, ". ",
+    "Я ", { "w": "putzen", "f": "base", "ru": "чистить" }, " ", { "w": "zahn", "f": "base", "ru": "зуб" }, ". ",
+    "Я ", { "w": "waschen", "f": "base", "ru": "мыть" }, " ", { "w": "gesicht", "f": "base", "ru": "лицо" }, ". ",
+    "Потом я ", { "w": "gehen", "f": "base", "ru": "идти" }, " в ", { "w": "schlafzimmer", "f": "base", "ru": "спальня" }, ". ",
+    "Я ", { "w": "ausziehen", "f": "base", "ru": "раздеваться" }, " ", { "w": "kleidung", "f": "base", "ru": "одежда" }, ". ",
+    "Я ", { "w": "liegen", "f": "base", "ru": "лежать" }, " в ", { "w": "bett", "f": "base", "ru": "кровать" }, ". ",
+    "Я ", { "w": "lesen", "f": "base", "ru": "читать" }, " немного. ",
+    "Потом я ", { "w": "machen", "f": "base", "ru": "делать" }, " ", { "w": "licht", "f": "base", "ru": "свет" }, " ", { "w": "aus", "f": "base", "ru": "выключенный" }, ". ",
+    "Я ", { "w": "schlafen", "f": "base", "ru": "спать" }, " крепко. "
+  ]
+}

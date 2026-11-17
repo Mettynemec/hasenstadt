@@ -11,133 +11,57 @@
       "id": "laden-kaufen",
       "title_ru": "Купить самое нужное",
       "order": 1,
-      "needs_words": ["produkte", "einkaufen"],
+      "needs_words": [],
       "needs_rules": ["wortfolge"],
-      "roles": {"bot": "Продавец", "human": "Ты"},
+      "roles": { "bot": "Продавец", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Guten Tag, was möchten Sie?",
-          "options_ru": ["Он спрашивает, что тебе нужно", "Он спрашивает, как дела", "Он спрашивает, где ты живёшь"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ich möchte Brot und Milch.",
-          "chunks": ["Ich möchte", "Brot", "und Milch."]
-        },
-        {
-          "who": "bot",
-          "de": "Das macht drei Euro.",
-          "options_ru": ["Он говорит цену", "Он спрашивает, нужен ли пакет", "Он говорит, что молока нет"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ich möchte mit Karte bezahlen.",
-          "chunks": ["Ich möchte", "mit Karte", "bezahlen."]
-        },
-        {
-          "who": "bot",
-          "de": "Gern. Möchten Sie eine Tüte?",
-          "options_ru": ["Он спрашивает про пакет", "Он спрашивает про сдачу", "Он спрашивает про скидку"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Nein, danke.",
-          "chunks": ["Nein,", "danke."]
-        }
+        { "who": "bot", "de": "Guten Tag, was mochten Sie?", "ru": "Добрый день, что вы хотите?", "options_ru": ["Он спрашивает, что тебе нужно", "Он спрашивает, как дела", "Он спрашивает, где ты живёшь"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что хочешь хлеб и молоко.", "de": "Ich mochte Brot und Milch.", "ru": "Я хочу хлеб и молоко.", "chunks": ["Ich mochte", "Brot", "und Milch."] },
+        { "who": "bot", "de": "Das macht drei Euro.", "ru": "С вас три евро.", "options_ru": ["Он говорит цену", "Он спрашивает, нужен ли пакет", "Он говорит, что молока нет"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что хочешь заплатить картой.", "de": "Ich mochte mit Karte bezahlen.", "ru": "Я хочу заплатить картой.", "chunks": ["Ich mochte", "mit Karte", "bezahlen."] },
+        { "who": "bot", "de": "Gern. Mochten Sie eine Tute?", "ru": "Пожалуйста. Пакет нужен?", "options_ru": ["Он спрашивает про пакет", "Он спрашивает про сдачу", "Он спрашивает про скидку"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: нет, спасибо.", "de": "Nein, danke.", "ru": "Нет, спасибо.", "chunks": ["Nein,", "danke."] }
       ]
     },
     {
       "id": "laden-wo",
       "title_ru": "Спросить, где лежит",
       "order": 3,
-      "needs_words": ["produkte"],
+      "needs_words": [],
       "needs_rules": ["wortfolge"],
-      "roles": {"bot": "Продавец", "human": "Ты"},
+      "roles": { "bot": "Продавец", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Entschuldigung, wo ist der Käse?",
-          "chunks": ["Entschuldigung,", "wo ist", "der Käse?"]
-        },
-        {
-          "who": "bot",
-          "de": "Der Käse ist da hinten links.",
-          "options_ru": ["Он показывает, где сыр", "Он говорит, что сыра нет", "Он спрашивает, какой сыр нужен"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Danke schön.",
-          "chunks": ["Danke", "schön."]
-        }
+        { "who": "human", "task_ru": "Спроси, где лежит сыр.", "de": "Entschuldigung, wo ist der Kase?", "ru": "Извините, где сыр?", "chunks": ["Entschuldigung,", "wo ist", "der Kase?"] },
+        { "who": "bot", "de": "Der Kase ist da hinten links.", "ru": "Сыр вон там, сзади слева.", "options_ru": ["Он показывает, где сыр", "Он говорит, что сыра нет", "Он спрашивает, какой сыр нужен"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи спасибо.", "de": "Danke schon.", "ru": "Спасибо.", "chunks": ["Danke", "schon."] }
       ]
     },
     {
       "id": "laden-oeffnungszeiten",
       "title_ru": "Часы работы",
       "order": 7,
-      "needs_words": ["zahlen-zeit", "alltag"],
+      "needs_words": [],
       "needs_rules": ["sein"],
-      "roles": {"bot": "Продавец", "human": "Ты"},
+      "roles": { "bot": "Продавец", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Wann schließen Sie heute?",
-          "chunks": ["Wann schließen", "Sie heute?"]
-        },
-        {
-          "who": "bot",
-          "de": "Wir schließen um acht Uhr.",
-          "options_ru": ["Он говорит время закрытия", "Он говорит, что уже закрыто", "Он спрашивает, что тебе нужно"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Und morgen?",
-          "chunks": ["Und", "morgen?"]
-        },
-        {
-          "who": "bot",
-          "de": "Morgen von neun bis acht.",
-          "options_ru": ["Он говорит часы работы завтра", "Он говорит, что завтра выходной", "Он говорит, что не знает"],
-          "answer": 0
-        }
+        { "who": "human", "task_ru": "Спроси, когда вы закрываетесь сегодня.", "de": "Wann schliessen Sie heute?", "ru": "Когда вы закрываетесь сегодня?", "chunks": ["Wann schliessen", "Sie heute?"] },
+        { "who": "bot", "de": "Wir schliessen um acht Uhr.", "ru": "Мы закрываемся в восемь часов.", "options_ru": ["Он говорит время закрытия", "Он говорит, что уже закрыто", "Он спрашивает, что тебе нужно"], "answer": 0 },
+        { "who": "human", "task_ru": "Спроси: а завтра?", "de": "Und morgen?", "ru": "А завтра?", "chunks": ["Und", "morgen?"] },
+        { "who": "bot", "de": "Morgen von neun bis acht.", "ru": "Завтра с девяти до восьми.", "options_ru": ["Он говорит часы работы завтра", "Он говорит, что завтра выходной", "Он говорит, что не знает"], "answer": 0 }
       ]
     },
     {
       "id": "laden-rueckgabe",
       "title_ru": "Возврат товара",
       "order": 8,
-      "needs_words": ["einkaufen", "produkte"],
+      "needs_words": [],
       "needs_rules": ["haben"],
-      "roles": {"bot": "Продавец", "human": "Ты"},
+      "roles": { "bot": "Продавец", "human": "Ты" },
       "lines": [
-        {
-          "who": "human",
-          "de": "Ich möchte das zurückgeben.",
-          "chunks": ["Ich möchte", "das", "zurückgeben."]
-        },
-        {
-          "who": "bot",
-          "de": "Haben Sie den Bon?",
-          "options_ru": ["Он спрашивает чек", "Он спрашивает, почему", "Он спрашивает, когда купил"],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, hier ist der Bon.",
-          "chunks": ["Ja,", "hier ist", "der Bon."]
-        },
-        {
-          "who": "bot",
-          "de": "Gut, Sie bekommen Ihr Geld zurück.",
-          "options_ru": ["Он возвращает деньги", "Он предлагает обмен", "Он отказывает"],
-          "answer": 0
-        }
+        { "who": "human", "task_ru": "Скажи, что хочу это вернуть.", "de": "Ich mochte das zuruckgeben.", "ru": "Я хочу это вернуть.", "chunks": ["Ich mochte", "das", "zuruckgeben."] },
+        { "who": "bot", "de": "Haben Sie den Bon?", "ru": "У вас есть чек?", "options_ru": ["Он спрашивает чек", "Он спрашивает, почему", "Он спрашивает, когда купил"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, вот чек.", "de": "Ja, hier ist der Bon.", "ru": "Да, вот чек.", "chunks": ["Ja,", "hier ist", "der Bon."] },
+        { "who": "bot", "de": "Gut, Sie bekommen Ihr Geld zuruck.", "ru": "Хорошо, вы получите свои деньги назад.", "options_ru": ["Он возвращает деньги", "Он предлагает обмен", "Он отказывает"], "answer": 0 }
       ]
     }
   ]

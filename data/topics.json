@@ -20,5 +20,6 @@
   { "id": "natur-wetter", "title_ru": "Природа и погода", "title_de": "die Natur und das Wetter", "order": 30, "bonus": false, "rule_before": "imperativ", "level": "a1" },
   { "id": "arbeit-beruf", "title_ru": "Работа и профессии", "title_de": "die Arbeit und die Berufe", "order": 31, "bonus": false, "rule_before": "konjunktionen", "level": "a1" },
   { "id": "geld-freizeit", "title_ru": "Деньги и свободное время", "title_de": "das Geld und die Freizeit", "order": 33, "bonus": false, "rule_before": "adjektive", "level": "a1" },
-  { "id": "verben", "title_ru": "Частые глаголы", "title_de": "die Verben", "order": 37, "bonus": false, "rule_before": "perfekt", "level": "a1" }
+  { "id": "verben", "title_ru": "Частые глаголы", "title_de": "die Verben", "order": 37, "bonus": false, "rule_before": "perfekt", "level": "a1" },
+  { "id": "adjektive2", "title_ru": "Частые прилагательные и письма", "title_de": "die Adjektive und Briefe", "order": 38, "bonus": false, "rule_before": "briefe", "level": "a1" }
 ]

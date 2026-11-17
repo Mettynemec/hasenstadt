@@ -89,5 +89,21 @@
     "order": 19,
     "bonus": false,
     "level": "a1"
+  },
+  {
+    "id": "zahlen",
+    "title_ru": "Числа и дни недели",
+    "title_de": "die Zahlen",
+    "order": 20,
+    "bonus": false,
+    "level": "a1"
+  },
+  {
+    "id": "monate",
+    "title_ru": "Месяцы",
+    "title_de": "die Monate",
+    "order": 21,
+    "bonus": false,
+    "level": "a1"
   }
 ]

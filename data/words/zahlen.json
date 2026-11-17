@@ -1,0 +1,414 @@
+[
+  {
+    "id": "null",
+    "topic": "zahlen",
+    "order": 1,
+    "pos": "num",
+    "de": "null",
+    "ru": "ноль",
+    "ru_ok": [],
+    "tr": "нуль",
+    "tr_ok": [
+      "нул"
+    ],
+    "syllables": [
+      "null"
+    ],
+    "phrase_de": "Null Grad.",
+    "phrase_ru": "Ноль градусов.",
+    "note": ""
+  },
+  {
+    "id": "eins",
+    "topic": "zahlen",
+    "order": 3,
+    "pos": "num",
+    "de": "eins",
+    "ru": "один",
+    "ru_ok": [],
+    "tr": "айнс",
+    "tr_ok": [
+      "эйнс"
+    ],
+    "syllables": [
+      "eins"
+    ],
+    "phrase_de": "Eins, zwei, drei.",
+    "phrase_ru": "Один, два, три.",
+    "note": ""
+  },
+  {
+    "id": "zwei",
+    "topic": "zahlen",
+    "order": 7,
+    "pos": "num",
+    "de": "zwei",
+    "ru": "два",
+    "ru_ok": [],
+    "tr": "цвай",
+    "tr_ok": [
+      "звай"
+    ],
+    "syllables": [
+      "zwei"
+    ],
+    "phrase_de": "Zwei Kinder.",
+    "phrase_ru": "Два ребёнка.",
+    "note": ""
+  },
+  {
+    "id": "drei",
+    "topic": "zahlen",
+    "order": 8,
+    "pos": "num",
+    "de": "drei",
+    "ru": "три",
+    "ru_ok": [],
+    "tr": "драй",
+    "tr_ok": [
+      "дрей"
+    ],
+    "syllables": [
+      "drei"
+    ],
+    "phrase_de": "Drei Euro.",
+    "phrase_ru": "Три евро.",
+    "note": ""
+  },
+  {
+    "id": "vier",
+    "topic": "zahlen",
+    "order": 9,
+    "pos": "num",
+    "de": "vier",
+    "ru": "четыре",
+    "ru_ok": [],
+    "tr": "фиа",
+    "tr_ok": [
+      "фир"
+    ],
+    "syllables": [
+      "vier"
+    ],
+    "phrase_de": "Vier Stühle.",
+    "phrase_ru": "Четыре стула.",
+    "note": ""
+  },
+  {
+    "id": "fuenf",
+    "topic": "zahlen",
+    "order": 10,
+    "pos": "num",
+    "de": "fünf",
+    "ru": "пять",
+    "ru_ok": [],
+    "tr": "фюнф",
+    "tr_ok": [
+      "фюнв"
+    ],
+    "syllables": [
+      "fünf"
+    ],
+    "phrase_de": "Fünf Tassen.",
+    "phrase_ru": "Пять чашек.",
+    "note": "Можно писать fuenf."
+  },
+  {
+    "id": "sechs",
+    "topic": "zahlen",
+    "order": 11,
+    "pos": "num",
+    "de": "sechs",
+    "ru": "шесть",
+    "ru_ok": [],
+    "tr": "зэкс",
+    "tr_ok": [
+      "сехс"
+    ],
+    "syllables": [
+      "sechs"
+    ],
+    "phrase_de": "Sechs Tage.",
+    "phrase_ru": "Шесть дней.",
+    "note": ""
+  },
+  {
+    "id": "sieben",
+    "topic": "zahlen",
+    "order": 13,
+    "pos": "num",
+    "de": "sieben",
+    "ru": "семь",
+    "ru_ok": [],
+    "tr": "зи́бен",
+    "tr_ok": [
+      "зибэн"
+    ],
+    "syllables": [
+      "sie",
+      "ben"
+    ],
+    "phrase_de": "Sieben Tage.",
+    "phrase_ru": "Семь дней.",
+    "note": ""
+  },
+  {
+    "id": "acht",
+    "topic": "zahlen",
+    "order": 17,
+    "pos": "num",
+    "de": "acht",
+    "ru": "восемь",
+    "ru_ok": [],
+    "tr": "ахт",
+    "tr_ok": [
+      "акт"
+    ],
+    "syllables": [
+      "acht"
+    ],
+    "phrase_de": "Acht Uhr.",
+    "phrase_ru": "Восемь часов.",
+    "note": ""
+  },
+  {
+    "id": "neun",
+    "topic": "zahlen",
+    "order": 18,
+    "pos": "num",
+    "de": "neun",
+    "ru": "девять",
+    "ru_ok": [],
+    "tr": "нойн",
+    "tr_ok": [
+      "нейн"
+    ],
+    "syllables": [
+      "neun"
+    ],
+    "phrase_de": "Neun Euro.",
+    "phrase_ru": "Девять евро.",
+    "note": ""
+  },
+  {
+    "id": "zehn",
+    "topic": "zahlen",
+    "order": 19,
+    "pos": "num",
+    "de": "zehn",
+    "ru": "десять",
+    "ru_ok": [],
+    "tr": "цэн",
+    "tr_ok": [
+      "цен"
+    ],
+    "syllables": [
+      "zehn"
+    ],
+    "phrase_de": "Zehn Minuten.",
+    "phrase_ru": "Десять минут.",
+    "note": "h после гласной не читается."
+  },
+  {
+    "id": "elf",
+    "topic": "zahlen",
+    "order": 20,
+    "pos": "num",
+    "de": "elf",
+    "ru": "одиннадцать",
+    "ru_ok": [],
+    "tr": "эльф",
+    "tr_ok": [
+      "елф"
+    ],
+    "syllables": [
+      "elf"
+    ],
+    "phrase_de": "Elf Uhr.",
+    "phrase_ru": "Одиннадцать часов.",
+    "note": ""
+  },
+  {
+    "id": "zwoelf",
+    "topic": "zahlen",
+    "order": 21,
+    "pos": "num",
+    "de": "zwölf",
+    "ru": "двенадцать",
+    "ru_ok": [],
+    "tr": "цвёльф",
+    "tr_ok": [
+      "цвелф"
+    ],
+    "syllables": [
+      "zwölf"
+    ],
+    "phrase_de": "Zwölf Monate.",
+    "phrase_ru": "Двенадцать месяцев.",
+    "note": "Можно писать zwoelf."
+  },
+  {
+    "id": "montag",
+    "topic": "zahlen",
+    "order": 23,
+    "pos": "noun",
+    "article": "der",
+    "de": "Montag",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "понедельник",
+    "ru_ok": [],
+    "tr": "мо́нтак",
+    "tr_ok": [
+      "монтаг"
+    ],
+    "syllables": [
+      "Mon",
+      "tag"
+    ],
+    "phrase_de": "Montag ist hart.",
+    "phrase_ru": "Понедельник тяжёлый.",
+    "note": ""
+  },
+  {
+    "id": "dienstag",
+    "topic": "zahlen",
+    "order": 27,
+    "pos": "noun",
+    "article": "der",
+    "de": "Dienstag",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "вторник",
+    "ru_ok": [],
+    "tr": "ди́нстак",
+    "tr_ok": [
+      "динстаг"
+    ],
+    "syllables": [
+      "Dien",
+      "stag"
+    ],
+    "phrase_de": "Dienstag ist ruhig.",
+    "phrase_ru": "Вторник спокойный.",
+    "note": ""
+  },
+  {
+    "id": "mittwoch",
+    "topic": "zahlen",
+    "order": 28,
+    "pos": "noun",
+    "article": "der",
+    "de": "Mittwoch",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "среда",
+    "ru_ok": [],
+    "tr": "ми́твох",
+    "tr_ok": [
+      "миттвох"
+    ],
+    "syllables": [
+      "Mitt",
+      "woch"
+    ],
+    "phrase_de": "Mittwoch ist lang.",
+    "phrase_ru": "Среда длинная.",
+    "note": ""
+  },
+  {
+    "id": "donnerstag",
+    "topic": "zahlen",
+    "order": 29,
+    "pos": "noun",
+    "article": "der",
+    "de": "Donnerstag",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "четверг",
+    "ru_ok": [],
+    "tr": "до́нэрстак",
+    "tr_ok": [
+      "доннерстаг"
+    ],
+    "syllables": [
+      "Don",
+      "ners",
+      "tag"
+    ],
+    "phrase_de": "Donnerstag ist gut.",
+    "phrase_ru": "Четверг хороший.",
+    "note": ""
+  },
+  {
+    "id": "freitag",
+    "topic": "zahlen",
+    "order": 30,
+    "pos": "noun",
+    "article": "der",
+    "de": "Freitag",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "пятница",
+    "ru_ok": [],
+    "tr": "фра́йтак",
+    "tr_ok": [
+      "фрейтаг"
+    ],
+    "syllables": [
+      "Frei",
+      "tag"
+    ],
+    "phrase_de": "Freitag ist schön.",
+    "phrase_ru": "Пятница хорошая.",
+    "note": ""
+  },
+  {
+    "id": "samstag",
+    "topic": "zahlen",
+    "order": 31,
+    "pos": "noun",
+    "article": "der",
+    "de": "Samstag",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "суббота",
+    "ru_ok": [],
+    "tr": "за́мстак",
+    "tr_ok": [
+      "замстаг",
+      "самстаг"
+    ],
+    "syllables": [
+      "Sams",
+      "tag"
+    ],
+    "phrase_de": "Samstag ist frei.",
+    "phrase_ru": "Суббота свободная.",
+    "note": ""
+  },
+  {
+    "id": "sonntag",
+    "topic": "zahlen",
+    "order": 33,
+    "pos": "noun",
+    "article": "der",
+    "de": "Sonntag",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "воскресенье",
+    "ru_ok": [],
+    "tr": "зо́нтак",
+    "tr_ok": [
+      "зонтаг",
+      "соннтаг"
+    ],
+    "syllables": [
+      "Sonn",
+      "tag"
+    ],
+    "phrase_de": "Sonntag ist ruhig.",
+    "phrase_ru": "Воскресенье спокойное.",
+    "note": ""
+  }
+]

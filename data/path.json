@@ -21,5 +21,8 @@
   { "type": "rule", "id": "possessiv" },
   { "type": "words", "topic": "koerper" },
   { "type": "rule", "id": "modalverben" },
-  { "type": "words", "topic": "gesundheit" }
+  { "type": "words", "topic": "gesundheit" },
+  { "type": "rule", "id": "zahlen-zeit" },
+  { "type": "words", "topic": "zahlen" },
+  { "type": "words", "topic": "monate" }
 ]

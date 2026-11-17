@@ -1,0 +1,282 @@
+[
+  {
+    "id": "januar",
+    "topic": "monate",
+    "order": 1,
+    "pos": "noun",
+    "article": "der",
+    "de": "Januar",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "январь",
+    "ru_ok": [],
+    "tr": "я́нуа",
+    "tr_ok": [
+      "януар"
+    ],
+    "syllables": [
+      "Ja",
+      "nu",
+      "ar"
+    ],
+    "phrase_de": "Der Januar ist kalt.",
+    "phrase_ru": "Январь холодный.",
+    "note": ""
+  },
+  {
+    "id": "februar",
+    "topic": "monate",
+    "order": 3,
+    "pos": "noun",
+    "article": "der",
+    "de": "Februar",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "февраль",
+    "ru_ok": [],
+    "tr": "фэ́бруа",
+    "tr_ok": [
+      "фебруар"
+    ],
+    "syllables": [
+      "Feb",
+      "ru",
+      "ar"
+    ],
+    "phrase_de": "Der Februar ist kurz.",
+    "phrase_ru": "Февраль короткий.",
+    "note": ""
+  },
+  {
+    "id": "maerz",
+    "topic": "monate",
+    "order": 7,
+    "pos": "noun",
+    "article": "der",
+    "de": "März",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "март",
+    "ru_ok": [],
+    "tr": "мэрц",
+    "tr_ok": [
+      "мерц"
+    ],
+    "syllables": [
+      "März"
+    ],
+    "phrase_de": "Der März ist mild.",
+    "phrase_ru": "Март мягкий.",
+    "note": "Можно писать maerz."
+  },
+  {
+    "id": "april",
+    "topic": "monate",
+    "order": 8,
+    "pos": "noun",
+    "article": "der",
+    "de": "April",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "апрель",
+    "ru_ok": [],
+    "tr": "апри́ль",
+    "tr_ok": [
+      "априль"
+    ],
+    "syllables": [
+      "Ap",
+      "ril"
+    ],
+    "phrase_de": "Der April ist nass.",
+    "phrase_ru": "Апрель дождливый.",
+    "note": ""
+  },
+  {
+    "id": "mai",
+    "topic": "monate",
+    "order": 9,
+    "pos": "noun",
+    "article": "der",
+    "de": "Mai",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "май",
+    "ru_ok": [],
+    "tr": "май",
+    "tr_ok": [
+      "маи"
+    ],
+    "syllables": [
+      "Mai"
+    ],
+    "phrase_de": "Der Mai ist schön.",
+    "phrase_ru": "Май красивый.",
+    "note": ""
+  },
+  {
+    "id": "juni",
+    "topic": "monate",
+    "order": 10,
+    "pos": "noun",
+    "article": "der",
+    "de": "Juni",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "июнь",
+    "ru_ok": [],
+    "tr": "ю́ни",
+    "tr_ok": [
+      "йуни"
+    ],
+    "syllables": [
+      "Ju",
+      "ni"
+    ],
+    "phrase_de": "Der Juni ist warm.",
+    "phrase_ru": "Июнь тёплый.",
+    "note": ""
+  },
+  {
+    "id": "juli",
+    "topic": "monate",
+    "order": 11,
+    "pos": "noun",
+    "article": "der",
+    "de": "Juli",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "июль",
+    "ru_ok": [],
+    "tr": "ю́ли",
+    "tr_ok": [
+      "йули"
+    ],
+    "syllables": [
+      "Ju",
+      "li"
+    ],
+    "phrase_de": "Der Juli ist heiß.",
+    "phrase_ru": "Июль жаркий.",
+    "note": ""
+  },
+  {
+    "id": "august",
+    "topic": "monate",
+    "order": 13,
+    "pos": "noun",
+    "article": "der",
+    "de": "August",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "август",
+    "ru_ok": [],
+    "tr": "аугу́ст",
+    "tr_ok": [
+      "аугуст"
+    ],
+    "syllables": [
+      "Au",
+      "gust"
+    ],
+    "phrase_de": "Der August ist heiß.",
+    "phrase_ru": "Август жаркий.",
+    "note": ""
+  },
+  {
+    "id": "september",
+    "topic": "monate",
+    "order": 17,
+    "pos": "noun",
+    "article": "der",
+    "de": "September",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "сентябрь",
+    "ru_ok": [],
+    "tr": "зэптэ́мба",
+    "tr_ok": [
+      "септембер"
+    ],
+    "syllables": [
+      "Sep",
+      "tem",
+      "ber"
+    ],
+    "phrase_de": "Der September ist mild.",
+    "phrase_ru": "Сентябрь мягкий.",
+    "note": ""
+  },
+  {
+    "id": "oktober",
+    "topic": "monate",
+    "order": 18,
+    "pos": "noun",
+    "article": "der",
+    "de": "Oktober",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "октябрь",
+    "ru_ok": [],
+    "tr": "окто́ба",
+    "tr_ok": [
+      "октобер"
+    ],
+    "syllables": [
+      "Ok",
+      "to",
+      "ber"
+    ],
+    "phrase_de": "Der Oktober ist bunt.",
+    "phrase_ru": "Октябрь пёстрый.",
+    "note": ""
+  },
+  {
+    "id": "november",
+    "topic": "monate",
+    "order": 19,
+    "pos": "noun",
+    "article": "der",
+    "de": "November",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "ноябрь",
+    "ru_ok": [],
+    "tr": "новэ́мба",
+    "tr_ok": [
+      "новембер"
+    ],
+    "syllables": [
+      "No",
+      "vem",
+      "ber"
+    ],
+    "phrase_de": "Der November ist grau.",
+    "phrase_ru": "Ноябрь серый.",
+    "note": ""
+  },
+  {
+    "id": "dezember",
+    "topic": "monate",
+    "order": 20,
+    "pos": "noun",
+    "article": "der",
+    "de": "Dezember",
+    "plural_de": "",
+    "no_plural": true,
+    "ru": "декабрь",
+    "ru_ok": [],
+    "tr": "децэ́мба",
+    "tr_ok": [
+      "децембер"
+    ],
+    "syllables": [
+      "De",
+      "zem",
+      "ber"
+    ],
+    "phrase_de": "Der Dezember ist kalt.",
+    "phrase_ru": "Декабрь холодный.",
+    "note": ""
+  }
+]

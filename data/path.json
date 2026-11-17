@@ -26,5 +26,7 @@
   { "type": "words", "topic": "zahlen" },
   { "type": "words", "topic": "monate" },
   { "type": "words", "topic": "pronomen" },
-  { "type": "words", "topic": "praepposition" }
+  { "type": "words", "topic": "praepposition" },
+  { "type": "rule", "id": "praepositionen-ort" },
+  { "type": "words", "topic": "stadt-weg" }
 ]

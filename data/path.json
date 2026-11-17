@@ -44,5 +44,9 @@
   { "type": "rule", "id": "briefe" },
   { "type": "words", "topic": "adjektive2" },
   { "type": "rule", "id": "wetter-es" },
-  { "type": "words", "topic": "fueller" }
+  { "type": "words", "topic": "fueller" },
+  { "type": "words", "topic": "tiere" },
+  { "type": "words", "topic": "gefuehle" },
+  { "type": "words", "topic": "haus-erweitert" },
+  { "type": "rule", "id": "a1-fertig" }
 ]

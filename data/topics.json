@@ -1,109 +1,17 @@
 [
-  {
-    "id": "menschen",
-    "title_ru": "Люди",
-    "title_de": "die Menschen",
-    "order": 1,
-    "bonus": false,
-    "rule_before": "alphabet",
-    "level": "a1"
-  },
-  {
-    "id": "wohnung",
-    "title_ru": "Дом и квартира",
-    "title_de": "die Wohnung",
-    "order": 3,
-    "bonus": false,
-    "rule_before": "artikel",
-    "level": "a1"
-  },
-  {
-    "id": "moebel",
-    "title_ru": "Мебель и вещи",
-    "title_de": "die Möbel",
-    "order": 8,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "haushalt",
-    "title_ru": "Быт и уборка",
-    "title_de": "der Haushalt",
-    "order": 9,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "essen",
-    "title_ru": "Еда",
-    "title_de": "das Essen",
-    "order": 7,
-    "bonus": false,
-    "rule_before": "sein",
-    "level": "a1"
-  },
-  {
-    "id": "produkte",
-    "title_ru": "Продукты",
-    "title_de": "die Produkte",
-    "order": 10,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "cafe",
-    "title_ru": "Кафе и ресторан",
-    "title_de": "das Café",
-    "order": 11,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "einkaufen",
-    "title_ru": "Покупки",
-    "title_de": "das Einkaufen",
-    "order": 13,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "kleidung",
-    "title_ru": "Одежда и цвета",
-    "title_de": "die Kleidung",
-    "order": 17,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "koerper",
-    "title_ru": "Тело",
-    "title_de": "der Körper",
-    "order": 18,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "gesundheit",
-    "title_ru": "Здоровье и врач",
-    "title_de": "die Gesundheit",
-    "order": 19,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "zahlen",
-    "title_ru": "Числа и дни недели",
-    "title_de": "die Zahlen",
-    "order": 20,
-    "bonus": false,
-    "level": "a1"
-  },
-  {
-    "id": "monate",
-    "title_ru": "Месяцы",
-    "title_de": "die Monate",
-    "order": 21,
-    "bonus": false,
-    "level": "a1"
-  }
+  { "id": "menschen", "title_ru": "Люди", "title_de": "die Menschen", "order": 1, "bonus": false, "rule_before": "alphabet", "level": "a1" },
+  { "id": "wohnung", "title_ru": "Дом и квартира", "title_de": "die Wohnung", "order": 3, "bonus": false, "rule_before": "artikel", "level": "a1" },
+  { "id": "essen", "title_ru": "Еда", "title_de": "das Essen", "order": 7, "bonus": false, "rule_before": "sein", "level": "a1" },
+  { "id": "moebel", "title_ru": "Мебель и вещи", "title_de": "die Möbel", "order": 8, "bonus": false, "level": "a1" },
+  { "id": "haushalt", "title_ru": "Быт и уборка", "title_de": "der Haushalt", "order": 9, "bonus": false, "level": "a1" },
+  { "id": "produkte", "title_ru": "Продукты", "title_de": "die Produkte", "order": 10, "bonus": false, "level": "a1" },
+  { "id": "cafe", "title_ru": "Кафе и ресторан", "title_de": "das Café", "order": 11, "bonus": false, "level": "a1" },
+  { "id": "einkaufen", "title_ru": "Покупки", "title_de": "das Einkaufen", "order": 13, "bonus": false, "level": "a1" },
+  { "id": "kleidung", "title_ru": "Одежда и цвета", "title_de": "die Kleidung", "order": 17, "bonus": false, "level": "a1" },
+  { "id": "koerper", "title_ru": "Тело", "title_de": "der Körper", "order": 18, "bonus": false, "level": "a1" },
+  { "id": "gesundheit", "title_ru": "Здоровье и врач", "title_de": "die Gesundheit", "order": 19, "bonus": false, "level": "a1" },
+  { "id": "zahlen", "title_ru": "Числа и дни недели", "title_de": "die Zahlen", "order": 20, "bonus": false, "level": "a1" },
+  { "id": "monate", "title_ru": "Месяцы", "title_de": "die Monate", "order": 21, "bonus": false, "level": "a1" },
+  { "id": "pronomen", "title_ru": "Местоимения", "title_de": "die Pronomen", "order": 22, "bonus": false, "level": "a1" },
+  { "id": "praepposition", "title_ru": "Предлоги и союзы", "title_de": "die Präpositionen", "order": 23, "bonus": false, "level": "a1" }
 ]

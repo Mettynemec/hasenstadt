@@ -38,5 +38,7 @@
   { "type": "rule", "id": "konjunktionen" },
   { "type": "words", "topic": "arbeit-beruf" },
   { "type": "rule", "id": "adjektive" },
-  { "type": "words", "topic": "geld-freizeit" }
+  { "type": "words", "topic": "geld-freizeit" },
+  { "type": "rule", "id": "perfekt" },
+  { "type": "words", "topic": "verben" }
 ]

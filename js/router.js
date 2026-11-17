@@ -14,6 +14,7 @@ import * as learned from "./screens/learned.js";
 import * as progress from "./screens/progress.js";
 import * as settings from "./screens/settings.js";
 import * as games from "./screens/games.js";
+import * as reading from "./screens/reading.js";
 
 import * as city from "./games/city.js";
 import * as sketch from "./games/sketch.js";
@@ -38,7 +39,8 @@ const ROUTES = [
   { re: /^\/game\/duel$/, mod: duel, menu: "game", title: () => "Дуэль артиклей" },
   { re: /^\/game\/gaps$/, mod: gaps, menu: "game", title: () => "Пропуски" },
   { re: /^\/progress$/, mod: progress, menu: "progress", title: () => T.menu.progress },
-  { re: /^\/settings$/, mod: settings, menu: "settings", title: () => T.menu.settings }
+  { re: /^\/settings$/, mod: settings, menu: "settings", title: () => T.menu.settings },
+    { re: /^\/reading$/, mod: reading, menu: "reading", title: () => "Чтение" }
 ];
 
 let current = null;

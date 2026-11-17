@@ -28,5 +28,7 @@
   { "type": "words", "topic": "pronomen" },
   { "type": "words", "topic": "praepposition" },
   { "type": "rule", "id": "praepositionen-ort" },
-  { "type": "words", "topic": "stadt-weg" }
+  { "type": "words", "topic": "stadt-weg" },
+  { "type": "rule", "id": "dativ" },
+  { "type": "words", "topic": "transport-reise" }
 ]

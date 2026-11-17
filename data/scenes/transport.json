@@ -8,88 +8,48 @@
       "id": "transport-bahnhof",
       "title_ru": "На вокзале",
       "order": 1,
-      "needs_words": ["transport-reise", "zahlen"],
+      "needs_words": [],
+      "needs_rules": ["wortfolge"],
+      "roles": { "bot": "Сотрудник", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Guten Tag. Wohin mochten Sie fahren?",
-          "options_ru": [
-            "Добрый день. Куда вы хотите поехать?",
-            "Добрый день. Где вы хотите спать?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ich mochte nach Berlin fahren.",
-          "chunks": ["Ich", "mochte", "nach", "Berlin", "fahren."]
-        }
+        { "who": "bot", "de": "Guten Tag. Wohin möchten Sie fahren?", "ru": "Добрый день. Куда вы хотите поехать?", "options_ru": ["Он спрашивает, куда ты едешь", "Он спрашивает, где ты спишь", "Он спрашивает, что ты ешь"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи, что хочешь поехать в Берлин.", "de": "Ich möchte nach Berlin fahren.", "ru": "Я хочу поехать в Берлин.", "chunks": ["Ich", "möchte", "nach", "Berlin", "fahren."] }
       ]
     },
     {
       "id": "transport-billett",
       "title_ru": "Покупка билета",
       "order": 3,
-      "needs_words": ["einkaufen", "zahlen"],
+      "needs_words": [],
+      "needs_rules": ["zahlen-zeit"],
+      "roles": { "bot": "Кассир", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Ein Ticket kostet funfzehn Euro.",
-          "options_ru": [
-            "Один билет стоит пятнадцать евро.",
-            "Один билет стоит пятьдесят евро."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Hier sind funfzehn Euro.",
-          "chunks": ["Hier", "sind", "funfzehn", "Euro."]
-        }
+        { "who": "bot", "de": "Ein Ticket kostet fünfzehn Euro.", "ru": "Билет стоит пятнадцать евро.", "options_ru": ["Он называет цену билета", "Он говорит, что билетов нет", "Он спрашивает про багаж"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: вот пятнадцать евро.", "de": "Hier sind fünfzehn Euro.", "ru": "Вот пятнадцать евро.", "chunks": ["Hier", "sind", "fünfzehn", "Euro."] }
       ]
     },
     {
       "id": "transport-zug",
       "title_ru": "В поезде",
       "order": 7,
-      "needs_words": ["transport-reise", "stadt-weg"],
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Попутчик", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Ist dieser Platz frei?",
-          "options_ru": [
-            "Это место свободно?",
-            "Это место занято?"
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Ja, der Platz ist frei.",
-          "chunks": ["Ja,", "der", "Platz", "ist", "frei."]
-        }
+        { "who": "bot", "de": "Ist dieser Platz frei?", "ru": "Это место свободно?", "options_ru": ["Он спрашивает, свободно ли место", "Он спрашивает, занято ли место", "Он спрашивает, где выход"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, место свободно.", "de": "Ja, der Platz ist frei.", "ru": "Да, место свободно.", "chunks": ["Ja,", "der", "Platz", "ist", "frei."] }
       ]
     },
     {
       "id": "transport-ankunft",
-      "title_ru": "Прибытие и выход",
+      "title_ru": "Прибытие",
       "order": 8,
-      "needs_words": ["stadt-weg", "transport-reise"],
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Проводник", "human": "Ты" },
       "lines": [
-        {
-          "who": "bot",
-          "de": "Wir sind am Bahnhof.",
-          "options_ru": [
-            "Мы на вокзале.",
-            "Мы в поезде."
-          ],
-          "answer": 0
-        },
-        {
-          "who": "human",
-          "de": "Danke schon. Auf Wiedersehen.",
-          "chunks": ["Danke", "schon.", "Auf", "Wiedersehen."]
-        }
+        { "who": "bot", "de": "Wir sind am Bahnhof.", "ru": "Мы на вокзале.", "options_ru": ["Он говорит, что приехали", "Он говорит, что поезд стоит", "Он просит билет"], "answer": 0 },
+        { "who": "human", "task_ru": "Поблагодари и попрощайся.", "de": "Danke schön. Auf Wiedersehen.", "ru": "Спасибо. До свидания.", "chunks": ["Danke", "schön.", "Auf", "Wiedersehen."] }
       ]
     }
   ]

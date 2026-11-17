@@ -1,0 +1,18 @@
+{
+  "id": "text-essen-zuhause",
+  "title_ru": "Готовим дома",
+  "needs_topic": "essen",
+  "segments": [
+    "Я ", { "w": "kochen", "f": "base", "ru": "готовить" }, " ", { "w": "essen", "f": "base", "ru": "еда" }, ". ",
+    "Я ", { "w": "gehen", "f": "base", "ru": "идти" }, " в ", { "w": "kueche", "f": "base", "ru": "кухня" }, ". ",
+    "Я ", { "w": "nehmen", "f": "base", "ru": "брать" }, " ", { "w": "topf", "f": "base", "ru": "кастрюля" }, " и ", { "w": "pfanne", "f": "base", "ru": "сковорода" }, ". ",
+    "Я ", { "w": "schneiden", "f": "base", "ru": "резать" }, " ", { "w": "gemuese", "f": "base", "ru": "овощи" }, ". ",
+    "Я ", { "w": "braten", "f": "base", "ru": "жарить" }, " ", { "w": "fleisch", "f": "base", "ru": "мясо" }, ". ",
+    "Я ", { "w": "kochen", "f": "base", "ru": "варить" }, " ", { "w": "kartoffel", "f": "base", "ru": "картофель" }, ". ",
+    "Еда ", { "w": "riechen", "f": "base", "ru": "пахнуть" }, " очень ", { "w": "gut", "f": "base", "ru": "хороший" }, ". ",
+    "Я ", { "w": "decken", "f": "base", "ru": "накрывать" }, " ", { "w": "tisch", "f": "base", "ru": "стол" }, ". ",
+    "Я ", { "w": "essen", "f": "base", "ru": "есть" }, " с ", { "w": "gabel", "f": "base", "ru": "вилка" }, " и ", { "w": "messer", "f": "base", "ru": "нож" }, ". ",
+    "Это ", { "w": "lecker", "f": "base", "ru": "вкусный" }, " ", { "w": "gericht", "f": "base", "ru": "блюдо" }, ". ",
+    "Потом я ", { "w": "waschen", "f": "base", "ru": "мыть" }, " ", { "w": "geschirr", "f": "base", "ru": "посуда" }, ". "
+  ]
+}

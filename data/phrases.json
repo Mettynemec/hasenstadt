@@ -1,122 +1,1082 @@
 [
   {
-    "id": "gurken",
-    "de": "Ich möchte achtzig Gurken.",
-    "ru": "Я хочу восемьдесят огурцов.",
-    "gap_words": ["achtzig", "Gurken"],
-    "needs_words": ["gurke"],
-    "place": "laden"
+    "id": "phrase-menschen-guten-morgen",
+    "de": "Guten Morgen, wie geht es Ihnen?",
+    "ru": "Доброе утро, как ваши дела?",
+    "gap_words": [
+      "Morgen",
+      "geht"
+    ],
+    "order": 1
   },
   {
-    "id": "tisch-klein",
-    "de": "Der Tisch ist klein.",
-    "ru": "Стол маленький.",
-    "gap_words": ["Tisch", "klein"],
-    "needs_words": ["tisch", "klein"],
-    "place": "wohnung"
+    "id": "phrase-menschen-name-herkunft",
+    "de": "Ich heiße Max und komme aus Deutschland.",
+    "ru": "Меня зовут Макс, и я из Германии.",
+    "gap_words": [
+      "heiße",
+      "komme"
+    ],
+    "order": 3
   },
   {
-    "id": "tuer-gross",
-    "de": "Die Tür ist groß.",
-    "ru": "Дверь большая.",
-    "gap_words": ["Tür", "groß"],
-    "needs_words": ["tuer", "gross"],
-    "place": "wohnung"
+    "id": "phrase-menschen-wer-ist-das",
+    "de": "Wer ist das? Das ist mein Freund.",
+    "ru": "Кто это? Это мой друг.",
+    "gap_words": [
+      "Wer",
+      "Freund"
+    ],
+    "order": 7
   },
   {
-    "id": "brot-milch",
-    "de": "Ich kaufe Brot und Milch.",
-    "ru": "Я покупаю хлеб и молоко.",
-    "gap_words": ["kaufe", "Brot", "Milch"],
-    "needs_words": ["brot", "milch", "kaufen"],
-    "place": "laden"
+    "id": "phrase-menschen-wie-alt",
+    "de": "Wie alt sind Sie? Ich bin zwanzig Jahre alt.",
+    "ru": "Сколько вам лет? Мне двадцать лет.",
+    "gap_words": [
+      "alt",
+      "Jahre"
+    ],
+    "order": 8
   },
   {
-    "id": "nachbar-laut",
-    "de": "Der Nachbar ist sehr laut.",
-    "ru": "Сосед очень громкий.",
-    "gap_words": ["Nachbar", "laut"],
-    "needs_words": ["nachbar", "laut"],
-    "place": "wohnung"
+    "id": "phrase-wohnung-wohnung-gross",
+    "de": "Die Wohnung ist groß und hell.",
+    "ru": "Квартира большая и светлая.",
+    "gap_words": [
+      "Wohnung",
+      "groß"
+    ],
+    "order": 9
   },
   {
-    "id": "kaese-kostet",
-    "de": "Wie viel kostet der Käse?",
-    "ru": "Сколько стоит сыр?",
-    "gap_words": ["kostet", "Käse"],
-    "needs_words": ["kosten", "kaese"],
-    "place": "laden"
+    "id": "phrase-wohnung-zimmer-fenster",
+    "de": "Das Zimmer hat ein Fenster und eine Tür.",
+    "ru": "В комнате есть окно и дверь.",
+    "gap_words": [
+      "Zimmer",
+      "Fenster"
+    ],
+    "order": 10
   },
   {
-    "id": "zimmer-leise",
-    "de": "Das Zimmer ist leise.",
-    "ru": "В комнате тихо.",
-    "gap_words": ["Zimmer", "leise"],
-    "needs_words": ["zimmer", "leise"],
-    "place": "wohnung"
+    "id": "phrase-wohnung-wo-kueche",
+    "de": "Wo ist die Küche? Sie ist hier links.",
+    "ru": "Где кухня? Она здесь слева.",
+    "gap_words": [
+      "Küche",
+      "links"
+    ],
+    "order": 11
   },
   {
-    "id": "kaffee-ohne",
-    "de": "Ich trinke Kaffee ohne Milch.",
-    "ru": "Я пью кофе без молока.",
-    "gap_words": ["trinke", "Kaffee", "Milch"],
-    "needs_words": ["kaffee", "milch", "trinken"],
-    "place": "wohnung"
+    "id": "phrase-wohnung-bad-sauber",
+    "de": "Das Bad ist klein, aber sehr sauber.",
+    "ru": "Ванная маленькая, но очень чистая.",
+    "gap_words": [
+      "Bad",
+      "sauber"
+    ],
+    "order": 13
   },
   {
-    "id": "schluessel-wo",
-    "de": "Wo ist der Schlüssel?",
-    "ru": "Где ключ?",
-    "gap_words": ["Schlüssel"],
-    "needs_words": ["schluessel"],
-    "place": "wohnung"
+    "id": "phrase-essen-esse-brot",
+    "de": "Ich esse gern Brot und Käse.",
+    "ru": "Я люблю есть хлеб и сыр.",
+    "gap_words": [
+      "esse",
+      "Käse"
+    ],
+    "order": 17
   },
   {
-    "id": "wasser-kalt",
-    "de": "Das Wasser ist kalt.",
-    "ru": "Вода холодная.",
-    "gap_words": ["Wasser", "kalt"],
-    "needs_words": ["wasser"],
-    "place": "wohnung"
+    "id": "phrase-essen-trinken-wasser",
+    "de": "Möchten Sie etwas trinken? Ja, Wasser bitte.",
+    "ru": "Хотите что-нибудь выпить? Да, воду пожалуйста.",
+    "gap_words": [
+      "trinken",
+      "Wasser"
+    ],
+    "order": 18
   },
   {
-    "id": "kochen-heute",
-    "de": "Heute koche ich.",
-    "ru": "Сегодня готовлю я.",
-    "gap_words": ["koche"],
-    "needs_words": ["kochen"],
-    "place": "wohnung"
+    "id": "phrase-essen-essen-schmeckt",
+    "de": "Das Essen schmeckt sehr gut.",
+    "ru": "Еда очень вкусная.",
+    "gap_words": [
+      "Essen",
+      "schmeckt"
+    ],
+    "order": 19
   },
   {
-    "id": "miete-hoch",
-    "de": "Die Miete ist zu hoch.",
-    "ru": "Квартплата слишком высокая.",
-    "gap_words": ["Miete", "hoch"],
-    "needs_words": ["miete"],
-    "place": "wohnung"
+    "id": "phrase-essen-hunger-essen",
+    "de": "Ich habe Hunger. Wir gehen zum Essen.",
+    "ru": "Я голоден. Мы идем есть.",
+    "gap_words": [
+      "Hunger",
+      "Essen"
+    ],
+    "order": 20
   },
   {
-    "id": "freundin-heisst",
-    "de": "Meine Freundin heißt Amiko.",
-    "ru": "Мою подругу зовут Амико.",
-    "gap_words": ["Freundin", "heißt"],
-    "needs_words": ["freundin", "heissen"],
-    "place": "wohnung"
+    "id": "phrase-moebel-tisch-mitte",
+    "de": "Der Tisch steht in der Mitte des Raumes.",
+    "ru": "Стол стоит в центре комнаты.",
+    "gap_words": [
+      "Tisch",
+      "Mitte"
+    ],
+    "order": 21
   },
   {
-    "id": "wasserhahn-tropft",
-    "de": "Der Wasserhahn tropft.",
-    "ru": "Кран капает.",
-    "gap_words": ["Wasserhahn", "tropft"],
-    "needs_words": ["wasserhahn"],
-    "place": "wohnung"
+    "id": "phrase-moebel-stuhl-bequem",
+    "de": "Der Stuhl ist bequem und neu.",
+    "ru": "Стул удобный и новый.",
+    "gap_words": [
+      "Stuhl",
+      "bequem"
+    ],
+    "order": 23
   },
   {
-    "id": "teller-schmutzig",
-    "de": "Der Teller ist schmutzig.",
-    "ru": "Тарелка грязная.",
-    "gap_words": ["Teller", "schmutzig"],
-    "needs_words": ["teller"],
-    "place": "wohnung"
+    "id": "phrase-moebel-bett-weich",
+    "de": "Das Bett ist weich und warm.",
+    "ru": "Кровать мягкая и теплая.",
+    "gap_words": [
+      "Bett",
+      "weich"
+    ],
+    "order": 27
+  },
+  {
+    "id": "phrase-moebel-schrank-voll",
+    "de": "Der Schrank ist voll mit Kleidung.",
+    "ru": "Шкаф полон одежды.",
+    "gap_words": [
+      "Schrank",
+      "Kleidung"
+    ],
+    "order": 28
+  },
+  {
+    "id": "phrase-haushalt-mache-bett",
+    "de": "Ich mache das Bett jeden Morgen.",
+    "ru": "Я застилаю постель каждое утро.",
+    "gap_words": [
+      "mache",
+      "Morgen"
+    ],
+    "order": 29
+  },
+  {
+    "id": "phrase-haushalt-putzen-wohnung",
+    "de": "Wir putzen die Wohnung am Samstag.",
+    "ru": "Мы убираем квартиру в субботу.",
+    "gap_words": [
+      "putzen",
+      "Samstag"
+    ],
+    "order": 30
+  },
+  {
+    "id": "phrase-haushalt-muell-heute",
+    "de": "Der Müll muss heute rausgebracht werden.",
+    "ru": "Мусор нужно вынести сегодня.",
+    "gap_words": [
+      "Müll",
+      "heute"
+    ],
+    "order": 31
+  },
+  {
+    "id": "phrase-haushalt-wasche-geschirr",
+    "de": "Ich wasche das Geschirr nach dem Essen.",
+    "ru": "Я мою посуду после еды.",
+    "gap_words": [
+      "wasche",
+      "Geschirr"
+    ],
+    "order": 33
+  },
+  {
+    "id": "phrase-produkte-milch-frisch",
+    "de": "Die Milch ist frisch und kalt.",
+    "ru": "Молоко свежее и холодное.",
+    "gap_words": [
+      "Milch",
+      "frisch"
+    ],
+    "order": 37
+  },
+  {
+    "id": "phrase-produkte-obst-gesund",
+    "de": "Das Obst ist gesund und lecker.",
+    "ru": "Фрукты полезные и вкусные.",
+    "gap_words": [
+      "Obst",
+      "gesund"
+    ],
+    "order": 38
+  },
+  {
+    "id": "phrase-produkte-kaufe-fleisch",
+    "de": "Ich kaufe Fleisch und Wurst.",
+    "ru": "Я покупаю мясо и колбасу.",
+    "gap_words": [
+      "kaufe",
+      "Fleisch"
+    ],
+    "order": 39
+  },
+  {
+    "id": "phrase-produkte-gemuese-garten",
+    "de": "Das Gemüse kommt aus dem Garten.",
+    "ru": "Овощи из сада.",
+    "gap_words": [
+      "Gemüse",
+      "Garten"
+    ],
+    "order": 40
+  },
+  {
+    "id": "phrase-cafe-haette-kaffee",
+    "de": "Ich hätte gern einen Kaffee mit Milch.",
+    "ru": "Я бы хотел кофе с молоком.",
+    "gap_words": [
+      "hätte",
+      "Kaffee"
+    ],
+    "order": 41
+  },
+  {
+    "id": "phrase-cafe-rechnung-stimmt",
+    "de": "Die Rechnung, bitte. Stimmt so.",
+    "ru": "Счет, пожалуйста. Сдачи не надо.",
+    "gap_words": [
+      "Rechnung",
+      "Stimmt"
+    ],
+    "order": 43
+  },
+  {
+    "id": "phrase-cafe-tisch-frei",
+    "de": "Ist dieser Tisch noch frei?",
+    "ru": "Этот стол еще свободен?",
+    "gap_words": [
+      "Tisch",
+      "frei"
+    ],
+    "order": 47
+  },
+  {
+    "id": "phrase-cafe-mochten-bestellen",
+    "de": "Wir möchten zwei Stück Kuchen bestellen.",
+    "ru": "Мы хотели бы заказать два куска торта.",
+    "gap_words": [
+      "möchten",
+      "bestellen"
+    ],
+    "order": 48
+  },
+  {
+    "id": "phrase-einkaufen-kostet-euro",
+    "de": "Was kostet diese Hose? Zwanzig Euro.",
+    "ru": "Сколько стоят эти брюки? Двадцать евро.",
+    "gap_words": [
+      "kostet",
+      "Euro"
+    ],
+    "order": 49
+  },
+  {
+    "id": "phrase-einkaufen-suche-geschenk",
+    "de": "Ich suche ein Geschenk für meinen Freund.",
+    "ru": "Я ищу подарок для моего друга.",
+    "gap_words": [
+      "suche",
+      "Geschenk"
+    ],
+    "order": 50
+  },
+  {
+    "id": "phrase-einkaufen-haben-groesse",
+    "de": "Haben Sie das auch in Größe M?",
+    "ru": "У вас есть это также в размере M?",
+    "gap_words": [
+      "Haben",
+      "Größe"
+    ],
+    "order": 51
+  },
+  {
+    "id": "phrase-einkaufen-nehme-zahlen",
+    "de": "Ich nehme das. Kann ich mit Karte zahlen?",
+    "ru": "Я беру это. Могу я заплатить картой?",
+    "gap_words": [
+      "nehme",
+      "zahlen"
+    ],
+    "order": 53
+  },
+  {
+    "id": "phrase-kleidung-jacke-warm",
+    "de": "Die Jacke ist warm und winddicht.",
+    "ru": "Куртка теплая и непродуваемая.",
+    "gap_words": [
+      "Jacke",
+      "warm"
+    ],
+    "order": 57
+  },
+  {
+    "id": "phrase-kleidung-trage-hemd",
+    "de": "Ich trage heute ein blaues Hemd.",
+    "ru": "Я ношу сегодня синюю рубашку.",
+    "gap_words": [
+      "trage",
+      "Hemd"
+    ],
+    "order": 58
+  },
+  {
+    "id": "phrase-kleidung-schuhe-bequem",
+    "de": "Die Schuhe sind neu und bequem.",
+    "ru": "Туфли новые и удобные.",
+    "gap_words": [
+      "Schuhe",
+      "bequem"
+    ],
+    "order": 59
+  },
+  {
+    "id": "phrase-kleidung-mantel-teuer",
+    "de": "Der Mantel ist zu teuer für mich.",
+    "ru": "Пальто слишком дорогое для меня.",
+    "gap_words": [
+      "Mantel",
+      "teuer"
+    ],
+    "order": 60
+  },
+  {
+    "id": "phrase-koerper-kopf-weh",
+    "de": "Mein Kopf tut weh.",
+    "ru": "У меня болит голова.",
+    "gap_words": [
+      "Kopf",
+      "weh"
+    ],
+    "order": 61
+  },
+  {
+    "id": "phrase-koerper-schmerzen-ruecken",
+    "de": "Ich habe Schmerzen im Rücken.",
+    "ru": "У меня болит спина.",
+    "gap_words": [
+      "Schmerzen",
+      "Rücken"
+    ],
+    "order": 63
+  },
+  {
+    "id": "phrase-koerper-hand-kalt",
+    "de": "Meine Hand ist kalt.",
+    "ru": "Моя рука холодная.",
+    "gap_words": [
+      "Hand",
+      "kalt"
+    ],
+    "order": 67
+  },
+  {
+    "id": "phrase-koerper-augen-haare",
+    "de": "Er hat blaue Augen und braune Haare.",
+    "ru": "У него голубые глаза и коричневые волосы.",
+    "gap_words": [
+      "Augen",
+      "Haare"
+    ],
+    "order": 68
+  },
+  {
+    "id": "phrase-gesundheit-brauche-arzt",
+    "de": "Ich brauche einen Termin beim Arzt.",
+    "ru": "Мне нужна запись к врачу.",
+    "gap_words": [
+      "brauche",
+      "Arzt"
+    ],
+    "order": 69
+  },
+  {
+    "id": "phrase-gesundheit-nehmen-taeglich",
+    "de": "Nehmen Sie diese Tabletten dreimal täglich.",
+    "ru": "Принимайте эти таблетки три раза в день.",
+    "gap_words": [
+      "Nehmen",
+      "täglich"
+    ],
+    "order": 70
+  },
+  {
+    "id": "phrase-gesundheit-fieber-husten",
+    "de": "Ich habe Fieber und Husten.",
+    "ru": "У меня температура и кашель.",
+    "gap_words": [
+      "Fieber",
+      "Husten"
+    ],
+    "order": 71
+  },
+  {
+    "id": "phrase-gesundheit-apotheke-ecke",
+    "de": "Die Apotheke ist gleich um die Ecke.",
+    "ru": "Аптека сразу за углом.",
+    "gap_words": [
+      "Apotheke",
+      "Ecke"
+    ],
+    "order": 73
+  },
+  {
+    "id": "phrase-zahlen-uhr-dreissig",
+    "de": "Es ist jetzt zehn Uhr dreißig.",
+    "ru": "Сейчас десять тридцать.",
+    "gap_words": [
+      "Uhr",
+      "dreißig"
+    ],
+    "order": 77
+  },
+  {
+    "id": "phrase-zahlen-erste-mai",
+    "de": "Heute ist der erste Mai.",
+    "ru": "Сегодня первое мая.",
+    "gap_words": [
+      "erste",
+      "Mai"
+    ],
+    "order": 78
+  },
+  {
+    "id": "phrase-zahlen-fuenf-euro",
+    "de": "Ich habe nur fünf Euro dabei.",
+    "ru": "У меня с собой только пять евро.",
+    "gap_words": [
+      "fünf",
+      "Euro"
+    ],
+    "order": 79
+  },
+  {
+    "id": "phrase-zahlen-treffen-uhr",
+    "de": "Wir treffen uns um acht Uhr.",
+    "ru": "Мы встречаемся в восемь часов.",
+    "gap_words": [
+      "treffen",
+      "Uhr"
+    ],
+    "order": 80
+  },
+  {
+    "id": "phrase-monate-sommer-warm",
+    "de": "Im Sommer ist es sehr warm.",
+    "ru": "Летом очень тепло.",
+    "gap_words": [
+      "Sommer",
+      "warm"
+    ],
+    "order": 81
+  },
+  {
+    "id": "phrase-monate-geburtstag-dezember",
+    "de": "Mein Geburtstag ist im Dezember.",
+    "ru": "Мой день рождения в декабре.",
+    "gap_words": [
+      "Geburtstag",
+      "Dezember"
+    ],
+    "order": 83
+  },
+  {
+    "id": "phrase-monate-woche-urlaub",
+    "de": "Nächste Woche fahre ich in Urlaub.",
+    "ru": "На следующей неделе я еду в отпуск.",
+    "gap_words": [
+      "Woche",
+      "Urlaub"
+    ],
+    "order": 87
+  },
+  {
+    "id": "phrase-monate-winter-kalt",
+    "de": "Der Winter ist kalt und schneereich.",
+    "ru": "Зима холодная и снежная.",
+    "gap_words": [
+      "Winter",
+      "kalt"
+    ],
+    "order": 88
+  },
+  {
+    "id": "phrase-pronomen-gehe-arbeit",
+    "de": "Ich gehe heute nicht zur Arbeit.",
+    "ru": "Я сегодня не иду на работу.",
+    "gap_words": [
+      "gehe",
+      "Arbeit"
+    ],
+    "order": 89
+  },
+  {
+    "id": "phrase-pronomen-bist-freundlich",
+    "de": "Du bist sehr nett und freundlich.",
+    "ru": "Ты очень милый и дружелюбный.",
+    "gap_words": [
+      "bist",
+      "freundlich"
+    ],
+    "order": 90
+  },
+  {
+    "id": "phrase-pronomen-arbeitet-buero",
+    "de": "Er arbeitet in einem großen Büro.",
+    "ru": "Он работает в большом офисе.",
+    "gap_words": [
+      "arbeitet",
+      "Büro"
+    ],
+    "order": 91
+  },
+  {
+    "id": "phrase-pronomen-lernen-deutsch",
+    "de": "Wir lernen zusammen Deutsch.",
+    "ru": "Мы вместе учим немецкий.",
+    "gap_words": [
+      "lernen",
+      "Deutsch"
+    ],
+    "order": 93
+  },
+  {
+    "id": "phrase-praepposition-liegt-tisch",
+    "de": "Das Buch liegt auf dem Tisch.",
+    "ru": "Книга лежит на столе.",
+    "gap_words": [
+      "liegt",
+      "Tisch"
+    ],
+    "order": 97
+  },
+  {
+    "id": "phrase-praepposition-gehe-stadt",
+    "de": "Ich gehe in die Stadt.",
+    "ru": "Я иду в город.",
+    "gap_words": [
+      "gehe",
+      "Stadt"
+    ],
+    "order": 98
+  },
+  {
+    "id": "phrase-praepposition-hund-unter",
+    "de": "Der Hund ist unter dem Stuhl.",
+    "ru": "Собака под стулом.",
+    "gap_words": [
+      "Hund",
+      "unter"
+    ],
+    "order": 99
+  },
+  {
+    "id": "phrase-praepposition-fahren-bus",
+    "de": "Wir fahren mit dem Bus.",
+    "ru": "Мы едем на автобусе.",
+    "gap_words": [
+      "fahren",
+      "Bus"
+    ],
+    "order": 100
+  },
+  {
+    "id": "phrase-stadt_weg-bahnhof-links",
+    "de": "Wo ist der Bahnhof? Geradeaus und dann links.",
+    "ru": "Где вокзал? Прямо и потом налево.",
+    "gap_words": [
+      "Bahnhof",
+      "links"
+    ],
+    "order": 101
+  },
+  {
+    "id": "phrase-stadt_weg-post-neben",
+    "de": "Die Post ist neben der Bank.",
+    "ru": "Почта рядом с банком.",
+    "gap_words": [
+      "Post",
+      "neben"
+    ],
+    "order": 103
+  },
+  {
+    "id": "phrase-stadt_weg-wohne-naehe",
+    "de": "Ich wohne in der Nähe vom Park.",
+    "ru": "Я живу рядом с парком.",
+    "gap_words": [
+      "wohne",
+      "Nähe"
+    ],
+    "order": 107
+  },
+  {
+    "id": "phrase-stadt_weg-gehen-ampel",
+    "de": "Gehen Sie bis zur Ampel.",
+    "ru": "Идите до светофора.",
+    "gap_words": [
+      "Gehen",
+      "Ampel"
+    ],
+    "order": 108
+  },
+  {
+    "id": "phrase-transport_reise-zug-verspaetung",
+    "de": "Der Zug hat zwanzig Minuten Verspätung.",
+    "ru": "Поезд опаздывает на двадцать минут.",
+    "gap_words": [
+      "Zug",
+      "Verspätung"
+    ],
+    "order": 109
+  },
+  {
+    "id": "phrase-transport_reise-brauche-ticket",
+    "de": "Ich brauche ein Ticket nach Berlin.",
+    "ru": "Мне нужен билет до Берлина.",
+    "gap_words": [
+      "brauche",
+      "Ticket"
+    ],
+    "order": 110
+  },
+  {
+    "id": "phrase-transport_reise-bushaltestelle-hinten",
+    "de": "Wo ist die Bushaltestelle? Dort hinten.",
+    "ru": "Где автобусная остановка? Вон там сзади.",
+    "gap_words": [
+      "Bushaltestelle",
+      "hinten"
+    ],
+    "order": 111
+  },
+  {
+    "id": "phrase-transport_reise-flugzeug-landet",
+    "de": "Das Flugzeug landet um fünfzehn Uhr.",
+    "ru": "Самолет приземляется в пятнадцать часов.",
+    "gap_words": [
+      "Flugzeug",
+      "landet"
+    ],
+    "order": 113
+  },
+  {
+    "id": "phrase-alltag-stehe-auf",
+    "de": "Ich stehe jeden Tag um sieben Uhr auf.",
+    "ru": "Я встаю каждый день в семь часов.",
+    "gap_words": [
+      "stehe",
+      "auf"
+    ],
+    "order": 117
+  },
+  {
+    "id": "phrase-alltag-abends-fern",
+    "de": "Abends sehe ich gern fern.",
+    "ru": "Вечером я люблю смотреть телевизор.",
+    "gap_words": [
+      "Abends",
+      "fern"
+    ],
+    "order": 118
+  },
+  {
+    "id": "phrase-alltag-kochen-abendessen",
+    "de": "Wir kochen zusammen das Abendessen.",
+    "ru": "Мы вместе готовим ужин.",
+    "gap_words": [
+      "kochen",
+      "Abendessen"
+    ],
+    "order": 119
+  },
+  {
+    "id": "phrase-alltag-duscht-morgen",
+    "de": "Er duscht sich jeden Morgen.",
+    "ru": "Он принимает душ каждое утро.",
+    "gap_words": [
+      "duscht",
+      "Morgen"
+    ],
+    "order": 130
+  },
+  {
+    "id": "phrase-natur_wetter-regnet-stark",
+    "de": "Heute regnet es stark.",
+    "ru": "Сегодня сильно идет дождь.",
+    "gap_words": [
+      "regnet",
+      "stark"
+    ],
+    "order": 131
+  },
+  {
+    "id": "phrase-natur_wetter-sonne-blau",
+    "de": "Die Sonne scheint und der Himmel ist blau.",
+    "ru": "Солнце светит, и небо голубое.",
+    "gap_words": [
+      "Sonne",
+      "blau"
+    ],
+    "order": 133
+  },
+  {
+    "id": "phrase-natur_wetter-kalt-heute",
+    "de": "Es ist sehr kalt heute.",
+    "ru": "Сегодня очень холодно.",
+    "gap_words": [
+      "kalt",
+      "heute"
+    ],
+    "order": 137
+  },
+  {
+    "id": "phrase-natur_wetter-wind-norden",
+    "de": "Der Wind weht stark vom Norden.",
+    "ru": "Ветер сильно дует с севера.",
+    "gap_words": [
+      "Wind",
+      "Norden"
+    ],
+    "order": 138
+  },
+  {
+    "id": "phrase-arbeit_beruf-lehrer-beruf",
+    "de": "Ich bin Lehrer von Beruf.",
+    "ru": "Я учитель по профессии.",
+    "gap_words": [
+      "Lehrer",
+      "Beruf"
+    ],
+    "order": 139
+  },
+  {
+    "id": "phrase-arbeit_beruf-buero-stock",
+    "de": "Mein Büro ist im dritten Stock.",
+    "ru": "Мой офис на третьем этаже.",
+    "gap_words": [
+      "Büro",
+      "Stock"
+    ],
+    "order": 170
+  },
+  {
+    "id": "phrase-arbeit_beruf-besprechung-heute",
+    "de": "Wir haben heute eine wichtige Besprechung.",
+    "ru": "У нас сегодня важная встреча.",
+    "gap_words": [
+      "Besprechung",
+      "heute"
+    ],
+    "order": 171
+  },
+  {
+    "id": "phrase-arbeit_beruf-arbeitet-gerne",
+    "de": "Er arbeitet viel und gerne.",
+    "ru": "Он много и охотно работает.",
+    "gap_words": [
+      "arbeitet",
+      "gerne"
+    ],
+    "order": 173
+  },
+  {
+    "id": "phrase-geld_freizeit-spare-geld",
+    "de": "Ich spare Geld für ein neues Auto.",
+    "ru": "Я коплю деньги на новую машину.",
+    "gap_words": [
+      "spare",
+      "Geld"
+    ],
+    "order": 177
+  },
+  {
+    "id": "phrase-geld_freizeit-wochenende-kino",
+    "de": "Am Wochenende gehe ich ins Kino.",
+    "ru": "В выходные я иду в кино.",
+    "gap_words": [
+      "Wochenende",
+      "Kino"
+    ],
+    "order": 178
+  },
+  {
+    "id": "phrase-geld_freizeit-hobby-wandern",
+    "de": "Mein Hobby ist Lesen und Wandern.",
+    "ru": "Мое хобби - чтение и пешие прогулки.",
+    "gap_words": [
+      "Hobby",
+      "Wandern"
+    ],
+    "order": 179
+  },
+  {
+    "id": "phrase-geld_freizeit-konzert-teuer",
+    "de": "Das Konzert war sehr teuer.",
+    "ru": "Концерт был очень дорогим.",
+    "gap_words": [
+      "Konzert",
+      "teuer"
+    ],
+    "order": 180
+  },
+  {
+    "id": "phrase-verben-verstehe-frage",
+    "de": "Ich verstehe die Frage nicht.",
+    "ru": "Я не понимаю вопрос.",
+    "gap_words": [
+      "verstehe",
+      "Frage"
+    ],
+    "order": 181
+  },
+  {
+    "id": "phrase-verben-kannst-helfen",
+    "de": "Kannst du mir bitte helfen?",
+    "ru": "Можешь мне, пожалуйста, помочь?",
+    "gap_words": [
+      "Kannst",
+      "helfen"
+    ],
+    "order": 183
+  },
+  {
+    "id": "phrase-verben-warten-bus",
+    "de": "Wir warten auf den Bus.",
+    "ru": "Мы ждем автобус.",
+    "gap_words": [
+      "warten",
+      "Bus"
+    ],
+    "order": 187
+  },
+  {
+    "id": "phrase-verben-spricht-deutsch",
+    "de": "Sie spricht sehr gut Deutsch.",
+    "ru": "Она очень хорошо говорит по-немецки.",
+    "gap_words": [
+      "spricht",
+      "Deutsch"
+    ],
+    "order": 188
+  },
+  {
+    "id": "phrase-adjektive_zwei-brief-wichtig",
+    "de": "Der Brief ist sehr wichtig.",
+    "ru": "Письмо очень важное.",
+    "gap_words": [
+      "Brief",
+      "wichtig"
+    ],
+    "order": 189
+  },
+  {
+    "id": "phrase-adjektive_zwei-aufgabe-leicht",
+    "de": "Die Aufgabe ist leicht zu lösen.",
+    "ru": "Задачу легко решить.",
+    "gap_words": [
+      "Aufgabe",
+      "leicht"
+    ],
+    "order": 190
+  },
+  {
+    "id": "phrase-adjektive_zwei-gute-idee",
+    "de": "Das ist eine gute Idee.",
+    "ru": "Это хорошая идея.",
+    "gap_words": [
+      "gute",
+      "Idee"
+    ],
+    "order": 191
+  },
+  {
+    "id": "phrase-adjektive_zwei-muede-schlafen",
+    "de": "Ich bin müde und möchte schlafen.",
+    "ru": "Я устал и хочу спать.",
+    "gap_words": [
+      "müde",
+      "schlafen"
+    ],
+    "order": 193
+  },
+  {
+    "id": "phrase-fueller-vielleicht-spaeter",
+    "de": "Vielleicht gehen wir später ins Café.",
+    "ru": "Может быть, мы пойдем в кафе позже.",
+    "gap_words": [
+      "Vielleicht",
+      "später"
+    ],
+    "order": 197
+  },
+  {
+    "id": "phrase-fueller-genau-richtig",
+    "de": "Genau, das ist richtig.",
+    "ru": "Именно, это правильно.",
+    "gap_words": [
+      "Genau",
+      "richtig"
+    ],
+    "order": 198
+  },
+  {
+    "id": "phrase-fueller-also-denke",
+    "de": "Also, ich denke, das ist gut.",
+    "ru": "Итак, я думаю, это хорошо.",
+    "gap_words": [
+      "Also",
+      "denke"
+    ],
+    "order": 199
+  },
+  {
+    "id": "phrase-fueller-eigentlich-zeit",
+    "de": "Eigentlich habe ich heute keine Zeit.",
+    "ru": "Вообще-то, у меня сегодня нет времени.",
+    "gap_words": [
+      "Eigentlich",
+      "Zeit"
+    ],
+    "order": 200
+  },
+  {
+    "id": "phrase-tiere-hund-garten",
+    "de": "Der Hund spielt im Garten.",
+    "ru": "Собака играет в саду.",
+    "gap_words": [
+      "Hund",
+      "Garten"
+    ],
+    "order": 201
+  },
+  {
+    "id": "phrase-tiere-katze-schlaeft",
+    "de": "Die Katze schläft auf dem Sofa.",
+    "ru": "Кошка спит на диване.",
+    "gap_words": [
+      "Katze",
+      "schläft"
+    ],
+    "order": 203
+  },
+  {
+    "id": "phrase-tiere-voegel-morgen",
+    "de": "Vögel singen am Morgen.",
+    "ru": "Птицы поют утром.",
+    "gap_words": [
+      "Vögel",
+      "Morgen"
+    ],
+    "order": 207
+  },
+  {
+    "id": "phrase-tiere-pferd-schnell",
+    "de": "Das Pferd ist sehr schnell.",
+    "ru": "Лошадь очень быстрая.",
+    "gap_words": [
+      "Pferd",
+      "schnell"
+    ],
+    "order": 208
+  },
+  {
+    "id": "phrase-gefuehle-gluecklich-heute",
+    "de": "Ich bin sehr glücklich heute.",
+    "ru": "Я очень счастлив сегодня.",
+    "gap_words": [
+      "glücklich",
+      "heute"
+    ],
+    "order": 209
+  },
+  {
+    "id": "phrase-gefuehle-traurig-bist",
+    "de": "Warum bist du so traurig?",
+    "ru": "Почему ты такой грустный?",
+    "gap_words": [
+      "traurig",
+      "bist"
+    ],
+    "order": 210
+  },
+  {
+    "id": "phrase-gefuehle-angst-hunden",
+    "de": "Ich habe Angst vor Hunden.",
+    "ru": "Я боюсь собак.",
+    "gap_words": [
+      "Angst",
+      "Hunden"
+    ],
+    "order": 211
+  },
+  {
+    "id": "phrase-gefuehle-macht-wuetend",
+    "de": "Das macht mich sehr wütend.",
+    "ru": "Это меня очень злит.",
+    "gap_words": [
+      "macht",
+      "wütend"
+    ],
+    "order": 213
+  },
+  {
+    "id": "phrase-haus_erweitert-keller-kuehl",
+    "de": "Der Keller ist dunkel und kühl.",
+    "ru": "Подвал темный и прохладный.",
+    "gap_words": [
+      "Keller",
+      "kühl"
+    ],
+    "order": 217
+  },
+  {
+    "id": "phrase-haus_erweitert-balkon-schoenen",
+    "de": "Wir haben einen schönen Balkon.",
+    "ru": "У нас есть красивый балкон.",
+    "gap_words": [
+      "Balkon",
+      "schönen"
+    ],
+    "order": 218
+  },
+  {
+    "id": "phrase-haus_erweitert-garage-neben",
+    "de": "Die Garage ist neben dem Haus.",
+    "ru": "Гараж рядом с домом.",
+    "gap_words": [
+      "Garage",
+      "neben"
+    ],
+    "order": 219
+  },
+  {
+    "id": "phrase-haus_erweitert-dachboden-sachen",
+    "de": "Der Dachboden ist voller alter Sachen.",
+    "ru": "Чердак полон старых вещей.",
+    "gap_words": [
+      "Dachboden",
+      "Sachen"
+    ],
+    "order": 230
   }
 ]

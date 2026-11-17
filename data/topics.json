@@ -16,5 +16,6 @@
   { "id": "praepposition", "title_ru": "Предлоги и союзы", "title_de": "die Präpositionen", "order": 23, "bonus": false, "level": "a1" },
   { "id": "stadt-weg", "title_ru": "Город и дорога", "title_de": "die Stadt und der Weg", "order": 27, "bonus": false, "rule_before": "praepositionen-ort", "level": "a1" },
   { "id": "transport-reise", "title_ru": "Транспорт и поездка", "title_de": "der Transport und die Reise", "order": 28, "bonus": false, "rule_before": "dativ", "level": "a1" },
-  { "id": "alltag", "title_ru": "Повседневные действия", "title_de": "der Alltag", "order": 29, "bonus": false, "rule_before": "trennbar", "level": "a1" }
+  { "id": "alltag", "title_ru": "Повседневные действия", "title_de": "der Alltag", "order": 29, "bonus": false, "rule_before": "trennbar", "level": "a1" },
+  { "id": "natur-wetter", "title_ru": "Природа и погода", "title_de": "die Natur und das Wetter", "order": 30, "bonus": false, "rule_before": "imperativ", "level": "a1" }
 ]

@@ -1,0 +1,17 @@
+{
+  "id": "text-arbeit",
+  "title_ru": "Рабочий день",
+  "needs_topic": "arbeit-beruf",
+  "segments": [
+    "Я ", { "w": "arbeiten", "f": "base", "ru": "работать" }, " в большом ", { "w": "buero", "f": "base", "ru": "офис" }, ". ",
+    "Мой офис светлый и ", { "w": "sauber", "f": "base", "ru": "чистый" }, ". ",
+    "Я ", { "w": "sitzen", "f": "base", "ru": "сидеть" }, " за ", { "w": "tisch", "f": "base", "ru": "стол" }, ". ",
+    "Я ", { "w": "arbeiten", "f": "base", "ru": "работать" }, " на ", { "w": "computer", "f": "base", "ru": "компьютер" }, ". ",
+    "Я ", { "w": "schreiben", "f": "base", "ru": "писать" }, " важные ", { "w": "brief", "f": "base", "ru": "письмо" }, ". ",
+    "Я ", { "w": "sprechen", "f": "base", "ru": "говорить" }, " с ", { "w": "kollege", "f": "base", "ru": "коллега" }, ". ",
+    "В ", { "w": "mittag", "f": "base", "ru": "обед" }, " я ем в ", { "w": "cafe", "f": "base", "ru": "кафе" }, ". ",
+    "Моя ", { "w": "arbeit", "f": "base", "ru": "работа" }, " очень ", { "w": "interessant", "f": "base", "ru": "интересный" }, ". ",
+    "Вечером я ", { "w": "gehen", "f": "base", "ru": "идти" }, " домой. ",
+    "Я ", { "w": "machen", "f": "base", "ru": "делать" }, " ", { "w": "pause", "f": "base", "ru": "пауза" }, " и отдыхаю. "
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "text-reise",
+  "title_ru": "Путешествие",
+  "needs_topic": "transport-reise",
+  "segments": [
+    "Я ", { "w": "fahren", "f": "base", "ru": "ехать" }, " в ", { "w": "urlaub", "f": "base", "ru": "отпуск" }, ". ",
+    "Я ", { "w": "packen", "f": "base", "ru": "собирать" }, " ", { "w": "koffer", "f": "base", "ru": "чемодан" }, ". ",
+    "Я ", { "w": "nehmen", "f": "base", "ru": "брать" }, " ", { "w": "kleidung", "f": "base", "ru": "одежда" }, " и ", { "w": "buch", "f": "base", "ru": "книга" }, ". ",
+    "Я ", { "w": "gehen", "f": "base", "ru": "идти" }, " на ", { "w": "bahnhof", "f": "base", "ru": "вокзал" }, ". ",
+    "Я ", { "w": "kaufen", "f": "base", "ru": "купить" }, " ", { "w": "ticket", "f": "base", "ru": "билет" }, ". ",
+    "Поезд ", { "w": "fahren", "f": "base", "ru": "ехать" }, " очень ", { "w": "schnell", "f": "base", "ru": "быстрый" }, ". ",
+    "Я ", { "w": "sehen", "f": "base", "ru": "видеть" }, " красивые ", { "w": "landschaft", "f": "base", "ru": "пейзаж" }, ". ",
+    "Я ", { "w": "ankommen", "f": "base", "ru": "прибывать" }, " в ", { "w": "hotel", "f": "base", "ru": "отель" }, ". ",
+    "Комната ", { "w": "sein", "f": "base", "ru": "быть" }, " ", { "w": "gross", "f": "base", "ru": "большой" }, " и ", { "w": "hell", "f": "base", "ru": "светлый" }, ". ",
+    "Я ", { "w": "schlafen", "f": "base", "ru": "спать" }, " хорошо. ",
+    "Завтра я ", { "w": "besuchen", "f": "base", "ru": "посещать" }, " ", { "w": "museum", "f": "base", "ru": "музей" }, ". "
+  ]
+}

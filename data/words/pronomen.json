@@ -1,0 +1,12 @@
+[
+  { "id": "ich", "order": 1, "pos": "pronoun", "de": "ich", "ru": "я", "tr": "их", "syllables": ["ich"] },
+  { "id": "du", "order": 3, "pos": "pronoun", "de": "du", "ru": "ты", "tr": "ду", "syllables": ["du"] },
+  { "id": "er", "order": 7, "pos": "pronoun", "de": "er", "ru": "он", "tr": "э́а", "syllables": ["er"] },
+  { "id": "sie", "order": 8, "pos": "pronoun", "de": "sie", "ru": "она", "tr": "зи", "syllables": ["sie"] },
+  { "id": "es", "order": 9, "pos": "pronoun", "de": "es", "ru": "оно", "tr": "эс", "syllables": ["es"] },
+  { "id": "wir", "order": 10, "pos": "pronoun", "de": "wir", "ru": "мы", "tr": "ви́а", "syllables": ["wir"] },
+  { "id": "ihr", "order": 11, "pos": "pronoun", "de": "ihr", "ru": "вы", "tr": "и́а", "syllables": ["ihr"] },
+  { "id": "sie_plural", "order": 13, "pos": "pronoun", "de": "sie", "ru": "они", "tr": "зи", "syllables": ["sie"] },
+  { "id": "sie_formal", "order": 17, "pos": "pronoun", "de": "Sie", "ru": "Вы (вежл.)", "tr": "зи", "syllables": ["Sie"] },
+  { "id": "man", "order": 18, "pos": "pronoun", "de": "man", "ru": "неопределённо-личное «мы/они»", "tr": "ман", "syllables": ["man"] }
+]

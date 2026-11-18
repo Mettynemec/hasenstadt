@@ -38,6 +38,7 @@
   { "type": "words", "topic": "natur-wetter" },
   { "type": "rule", "id": "konjunktionen" },
   { "type": "words", "topic": "arbeit-beruf" },
+  { "type": "words", "topic": "technik" },
   { "type": "rule", "id": "adjektive" },
   { "type": "words", "topic": "geld-freizeit" },
   { "type": "rule", "id": "perfekt" },

@@ -36,6 +36,7 @@
   { "type": "words", "topic": "alltag" },
   { "type": "rule", "id": "imperativ" },
   { "type": "words", "topic": "natur-wetter" },
+  { "type": "words", "topic": "jahreszeiten" },
   { "type": "rule", "id": "konjunktionen" },
   { "type": "words", "topic": "arbeit-beruf" },
   { "type": "words", "topic": "technik" },

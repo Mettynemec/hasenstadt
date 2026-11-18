@@ -39,6 +39,7 @@
   { "type": "rule", "id": "konjunktionen" },
   { "type": "words", "topic": "arbeit-beruf" },
   { "type": "words", "topic": "technik" },
+  { "type": "words", "topic": "schule" },
   { "type": "rule", "id": "adjektive" },
   { "type": "words", "topic": "geld-freizeit" },
   { "type": "rule", "id": "perfekt" },

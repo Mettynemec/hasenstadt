@@ -1,11 +1,17 @@
 // Экран «Чтение». Список из data/reading/index.json, тексты — по файлу на текст.
 // Слова берутся из словаря, очки и факт прочтения — в базу, как в играх.
 // Тексты, чьих файлов ещё нет в папке, в списке не показываются.
+// Знакомые слова (оценка grade >= 3 в тренажёре) сразу показываются немецким,
+// незнакомые — русским; клик переключает язык у слова.
 
 import { CONFIG } from "../../config.js";
 import { store } from "../store.js";
 import * as db from "../db.js";
 import { toast } from "../ui.js";
+
+// Порог «знакомо»: оценка слова в тренажёре (поле grade, шкала 1–5).
+// В trainer.js золото = 5, серебро = 4; граница «уже знаю» = 3.
+const KNOWN_GRADE = 3;
 
 const V = () => encodeURIComponent(CONFIG.CONTENT_VERSION);
 
@@ -20,6 +26,10 @@ async function exists(name) {
     const r = await fetch("data/reading/" + name + "?v=" + V(), { cache: "no-cache" });
     return r.ok;
   } catch (e) { return false; }
+}
+
+function deForm(w, f) {
+  return f === "pl" && w.plural_de ? w.plural_de : w.de;
 }
 
 export function mount(root) {
@@ -78,7 +88,9 @@ async function openText(root, meta) {
   try { doc = await grabJson(meta.id + ".json"); }
   catch (e) { box.textContent = "текст не загрузился"; return; }
 
-  const words = (store.get().content && store.get().content.wordsById) || {};
+  const state = store.get();
+  const words = (state.content && state.content.wordsById) || {};
+  const progress = (state.progress && state.progress.byWordId) || {};
   box.innerHTML = "";
   const p = document.createElement("p");
   box.appendChild(p);
@@ -89,17 +101,26 @@ async function openText(root, meta) {
       continue;
     }
     const w = words[seg.w];
-    const de = w ? (seg.f === "pl" && w.plural_de ? w.plural_de : w.de) : null;
+    const de = w ? deForm(w, seg.f) : null;
+    const ru = seg.ru;
     const span = document.createElement("span");
-    span.textContent = seg.ru;
-    if (de) {
-      span.style.cursor = "pointer";
-      span.style.borderBottom = "1px dotted currentColor";
-      span.title = de + " — " + (w.ru || seg.ru);
-      span.addEventListener("click", () => {
-        span.textContent = span.textContent === seg.ru ? de : seg.ru;
-      });
+    if (!de) {
+      span.textContent = ru;
+      p.appendChild(span);
+      continue;
     }
+    const prog = progress[seg.w] || null;
+    const known = !!prog && Number(prog.grade) >= KNOWN_GRADE;
+    let showingDe = known;
+    span.textContent = showingDe ? de : ru;
+    span.style.cursor = "pointer";
+    span.style.borderBottom = "1px dotted currentColor";
+    span.title = showingDe ? ru : de;
+    span.addEventListener("click", () => {
+      showingDe = !showingDe;
+      span.textContent = showingDe ? de : ru;
+      span.title = showingDe ? ru : de;
+    });
     p.appendChild(span);
   }
 

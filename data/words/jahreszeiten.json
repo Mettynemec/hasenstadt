@@ -1,0 +1,23 @@
+[
+  { "id": "fruehling", "order": 1, "pos": "noun", "article": "der", "de": "der Frühling", "ru": "весна", "ru_gender": "f", "tr": "дэр фрю́линг", "plural_de": "die Frühlinge", "syllables": ["der ", "Früh", "ling"] },
+  { "id": "sommer", "order": 3, "pos": "noun", "article": "der", "de": "der Sommer", "ru": "лето", "ru_gender": "n", "tr": "дэр зо́мэа", "plural_de": "die Sommer", "syllables": ["der ", "Som", "mer"] },
+  { "id": "herbst", "order": 7, "pos": "noun", "article": "der", "de": "der Herbst", "ru": "осень", "ru_gender": "f", "tr": "дэр хэрпст", "plural_de": "die Herbste", "syllables": ["der ", "Herbst"] },
+  { "id": "winter", "order": 8, "pos": "noun", "article": "der", "de": "der Winter", "ru": "зима", "ru_gender": "f", "tr": "дэр ви́нтэа", "plural_de": "die Winter", "syllables": ["der ", "Win", "ter"] },
+  { "id": "jahreszeit", "order": 9, "pos": "noun", "article": "die", "de": "die Jahreszeit", "ru": "время года", "ru_gender": "n", "tr": "ди я́рэсцайт", "plural_de": "die Jahreszeiten", "syllables": ["die ", "Jah", "res", "zeit"] },
+  { "id": "neujahr", "order": 10, "pos": "noun", "article": "das", "de": "das Neujahr", "ru": "Новый год", "ru_gender": "m", "tr": "дас но́йяа", "no_plural": true, "syllables": ["das ", "Neu", "jahr"] },
+  { "id": "weihnachten", "order": 11, "pos": "noun", "article": "das", "de": "das Weihnachten", "ru": "Рождество", "tr": "дас ва́йнахтэн", "no_plural": true, "syllables": ["das ", "Weih", "nach", "ten"] },
+  { "id": "ostern", "order": 13, "pos": "noun", "article": "das", "de": "das Ostern", "ru": "Пасха", "ru_gender": "f", "tr": "дас о́стэан", "no_plural": true, "syllables": ["das ", "Os", "tern"] },
+  { "id": "lied", "order": 17, "pos": "noun", "article": "das", "de": "das Lied", "ru": "песня", "ru_gender": "f", "tr": "дас лит", "plural_de": "die Lieder", "syllables": ["das ", "Lied"] },
+  { "id": "tanz", "order": 18, "pos": "noun", "article": "der", "de": "der Tanz", "ru": "танец", "tr": "дэр танц", "plural_de": "die Tänze", "syllables": ["der ", "Tanz"] },
+  { "id": "spiel", "order": 19, "pos": "noun", "article": "das", "de": "das Spiel", "ru": "игра", "ru_gender": "f", "tr": "дас шпиль", "plural_de": "die Spiele", "syllables": ["das ", "Spiel"] },
+  { "id": "glueckwunsch", "order": 20, "pos": "noun", "article": "der", "de": "der Glückwunsch", "ru": "поздравление", "ru_gender": "n", "tr": "дэр глю́квунш", "plural_de": "die Glückwünsche", "syllables": ["der ", "Glück", "wunsch"] },
+  { "id": "wuenschen", "order": 21, "pos": "verb", "de": "wünschen", "ru": "желать", "tr": "вю́ншэн", "no_plural": true, "syllables": ["wün", "schen"] },
+  { "id": "schenken", "order": 23, "pos": "verb", "de": "schenken", "ru": "дарить", "tr": "шэ́нкэн", "no_plural": true, "syllables": ["schen", "ken"] },
+  { "id": "eis", "order": 27, "pos": "noun", "article": "das", "de": "das Eis", "ru": "лёд", "ru_gender": "m", "tr": "дас айс", "no_plural": true, "syllables": ["das ", "Eis"] },
+  { "id": "laub", "order": 28, "pos": "noun", "article": "das", "de": "das Laub", "ru": "листва", "ru_gender": "f", "tr": "дас лауп", "no_plural": true, "syllables": ["das ", "Laub"] },
+  { "id": "blatt", "order": 29, "pos": "noun", "article": "das", "de": "das Blatt", "ru": "лист", "ru_gender": "m", "tr": "дас блат", "plural_de": "die Blätter", "syllables": ["das ", "Blatt"] },
+  { "id": "ernte", "order": 30, "pos": "noun", "article": "die", "de": "die Ernte", "ru": "урожай", "ru_gender": "m", "tr": "ди э́рнтэ", "plural_de": "die Ernten", "syllables": ["die ", "Ern", "te"] },
+  { "id": "hitze", "order": 31, "pos": "noun", "article": "die", "de": "die Hitze", "ru": "жара", "tr": "ди хи́цэ", "no_plural": true, "syllables": ["die ", "Hit", "ze"] },
+  { "id": "kaelte", "order": 33, "pos": "noun", "article": "die", "de": "die Kälte", "ru": "холод", "ru_gender": "m", "tr": "ди кэ́льтэ", "no_plural": true, "syllables": ["die ", "Käl", "te"] },
+  { "id": "frost", "order": 37, "pos": "noun", "article": "der", "de": "der Frost", "ru": "мороз", "tr": "дэр фрост", "plural_de": "die Fröste", "syllables": ["der ", "Frost"] }
+]

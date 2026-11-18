@@ -1,0 +1,23 @@
+[
+  { "id": "schule", "order": 1, "pos": "noun", "article": "die", "de": "die Schule", "ru": "школа", "tr": "ди шу́лэ", "plural_de": "die Schulen", "syllables": ["die ", "Schu", "le"] },
+  { "id": "kurs", "order": 3, "pos": "noun", "article": "der", "de": "der Kurs", "ru": "курс", "tr": "дэр курс", "plural_de": "die Kurse", "syllables": ["der ", "Kurs"] },
+  { "id": "heft", "order": 7, "pos": "noun", "article": "das", "de": "das Heft", "ru": "тетрадь", "ru_gender": "f", "tr": "дас хэфт", "plural_de": "die Hefte", "syllables": ["das ", "Heft"] },
+  { "id": "stift", "order": 8, "pos": "noun", "article": "der", "de": "der Stift", "ru": "ручка", "ru_gender": "f", "tr": "дэр штифт", "plural_de": "die Stifte", "syllables": ["der ", "Stift"] },
+  { "id": "bleistift", "order": 9, "pos": "noun", "article": "der", "de": "der Bleistift", "ru": "карандаш", "tr": "дэр бла́йштифт", "plural_de": "die Bleistifte", "syllables": ["der ", "Blei", "stift"] },
+  { "id": "papier", "order": 10, "pos": "noun", "article": "das", "de": "das Papier", "ru": "бумага", "ru_gender": "f", "tr": "дас папи́а", "plural_de": "die Papiere", "syllables": ["das ", "Pa", "pier"] },
+  { "id": "tafel", "order": 11, "pos": "noun", "article": "die", "de": "die Tafel", "ru": "школьная доска", "tr": "ди та́фэль", "plural_de": "die Tafeln", "syllables": ["die ", "Ta", "fel"] },
+  { "id": "kreide", "order": 13, "pos": "noun", "article": "die", "de": "die Kreide", "ru": "мел", "ru_gender": "m", "tr": "ди кра́йдэ", "plural_de": "die Kreiden", "syllables": ["die ", "Krei", "de"] },
+  { "id": "schueler", "order": 17, "pos": "noun", "article": "der", "de": "der Schüler", "ru": "ученик", "tr": "дэр шю́лэа", "plural_de": "die Schüler", "syllables": ["der ", "Schü", "ler"] },
+  { "id": "lehrer", "order": 18, "pos": "noun", "article": "der", "de": "der Lehrer", "ru": "учитель", "tr": "дэр ле́рэа", "plural_de": "die Lehrer", "syllables": ["der ", "Leh", "rer"] },
+  { "id": "klasse", "order": 19, "pos": "noun", "article": "die", "de": "die Klasse", "ru": "класс", "ru_gender": "m", "tr": "ди кла́сэ", "plural_de": "die Klassen", "syllables": ["die ", "Klas", "se"] },
+  { "id": "stunde", "order": 20, "pos": "noun", "article": "die", "de": "die Stunde", "ru": "урок", "ru_gender": "m", "tr": "ди шту́ндэ", "plural_de": "die Stunden", "syllables": ["die ", "Stun", "de"] },
+  { "id": "uebung", "order": 21, "pos": "noun", "article": "die", "de": "die Übung", "ru": "упражнение", "ru_gender": "n", "tr": "ди ю́бунк", "plural_de": "die Übungen", "syllables": ["die ", "Ü", "bung"] },
+  { "id": "pruefung", "order": 23, "pos": "noun", "article": "die", "de": "die Prüfung", "ru": "экзамен", "ru_gender": "m", "tr": "ди прю́функ", "plural_de": "die Prüfungen", "syllables": ["die ", "Prü", "fung"] },
+  { "id": "note", "order": 27, "pos": "noun", "article": "die", "de": "die Note", "ru": "оценка", "tr": "ди но́тэ", "plural_de": "die Noten", "syllables": ["die ", "No", "te"] },
+  { "id": "ueben", "order": 28, "pos": "verb", "de": "üben", "ru": "упражняться", "tr": "ю́бэн", "no_plural": true, "syllables": ["ü", "ben"] },
+  { "id": "antwort", "order": 29, "pos": "noun", "article": "die", "de": "die Antwort", "ru": "ответ", "ru_gender": "m", "tr": "ди а́нтворт", "plural_de": "die Antworten", "syllables": ["die ", "Ant", "wort"] },
+  { "id": "frage", "order": 30, "pos": "noun", "article": "die", "de": "die Frage", "ru": "вопрос", "ru_gender": "m", "tr": "ди фра́гэ", "plural_de": "die Fragen", "syllables": ["die ", "Fra", "ge"] },
+  { "id": "satz", "order": 31, "pos": "noun", "article": "der", "de": "der Satz", "ru": "предложение", "ru_gender": "n", "tr": "дэр зац", "plural_de": "die Sätze", "syllables": ["der ", "Satz"] },
+  { "id": "wort", "order": 33, "pos": "noun", "article": "das", "de": "das Wort", "ru": "слово", "tr": "дас ворт", "plural_de": "die Wörter", "syllables": ["das ", "Wort"] },
+  { "id": "fehler", "order": 37, "pos": "noun", "article": "der", "de": "der Fehler", "ru": "ошибка", "ru_gender": "f", "tr": "дэр фе́лэа", "plural_de": "die Fehler", "syllables": ["der ", "Feh", "ler"] }
+]

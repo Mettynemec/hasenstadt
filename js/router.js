@@ -40,7 +40,7 @@ const ROUTES = [
   { re: /^\/game\/gaps$/, mod: gaps, menu: "game", title: () => "Пропуски" },
   { re: /^\/progress$/, mod: progress, menu: "progress", title: () => T.menu.progress },
   { re: /^\/settings$/, mod: settings, menu: "settings", title: () => T.menu.settings },
-    { re: /^\/reading$/, mod: reading, menu: "reading", title: () => "Чтение" }
+    { re: /^\/reading$/, mod: reading, menu: "reading", title: () => "ЧТЕНИЕ" }
 ];
 
 let current = null;

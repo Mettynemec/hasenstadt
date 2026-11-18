@@ -27,5 +27,6 @@
   { "id": "gefuehle", "title_ru": "Эмоции и чувства", "title_de": "die Gefühle", "order": 41, "bonus": false, "level": "a1" },
   { "id": "haus-erweitert", "title_ru": "Дом расширенно", "title_de": "das Haus erweitert", "order": 43, "bonus": false, "level": "a1" },
   { "id": "geschirr", "title_ru": "Кухня и посуда", "title_de": "das Geschirr", "order": 47, "bonus": false, "level": "a1" },
-  { "id": "technik", "title_ru": "Техника и связь", "title_de": "die Technik", "order": 48, "bonus": false, "level": "a1" }
+  { "id": "technik", "title_ru": "Техника и связь", "title_de": "die Technik", "order": 48, "bonus": false, "level": "a1" },
+  { "id": "schule", "title_ru": "Учёба", "title_de": "die Schule", "order": 49, "bonus": false, "level": "a1" }
 ]

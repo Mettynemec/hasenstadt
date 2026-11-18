@@ -3,5 +3,20 @@
   { "id": "text-strasse", "order": 3, "title_ru": "Прогулка по городу", "needs_topic": "stadt-weg" },
   { "id": "text-laden", "order": 7, "title_ru": "Покупки в магазине", "needs_topic": "einkaufen" },
   { "id": "text-wohnung", "order": 8, "title_ru": "Вечер дома", "needs_topic": "wohnung" },
-  { "id": "text-arzt", "order": 9, "title_ru": "Визит к врачу", "needs_topic": "gesundheit" }
+  { "id": "text-arzt", "order": 9, "title_ru": "Визит к врачу", "needs_topic": "gesundheit" },
+  { "id": "text-park", "order": 10, "title_ru": "Прогулка в парке", "needs_topic": "natur-wetter" },
+  { "id": "text-transport", "order": 11, "title_ru": "Поездка на поезде", "needs_topic": "transport-reise" },
+  { "id": "text-arbeit", "order": 13, "title_ru": "Рабочий день", "needs_topic": "arbeit-beruf" },
+  { "id": "text-wochenende", "order": 17, "title_ru": "Выходные дни", "needs_topic": "geld-freizeit" },
+  { "id": "text-kaufen", "order": 18, "title_ru": "Покупка одежды", "needs_topic": "kleidung" },
+  { "id": "text-sprache", "order": 19, "title_ru": "Изучение языка", "needs_topic": "verben" },
+  { "id": "text-freunde", "order": 20, "title_ru": "Встреча с друзьями", "needs_topic": "menschen" },
+  { "id": "text-schlafen", "order": 21, "title_ru": "Перед сном", "needs_topic": "alltag" },
+  { "id": "text-essen-zuhause", "order": 23, "title_ru": "Готовим дома", "needs_topic": "essen" },
+  { "id": "text-reise", "order": 27, "title_ru": "Путешествие", "needs_topic": "transport-reise" },
+  { "id": "text-sport", "order": 28, "title_ru": "Спорт и здоровье", "needs_topic": "geld-freizeit" },
+  { "id": "text-gefuehle", "order": 29, "title_ru": "Что я чувствую", "needs_topic": "gefuehle" },
+  { "id": "text-tiere", "order": 30, "title_ru": "Мои животные", "needs_topic": "tiere" },
+  { "id": "text-haus", "order": 31, "title_ru": "Мой дом", "needs_topic": "haus-erweitert" },
+  { "id": "text-fertig", "order": 33, "title_ru": "Я готов к А2", "needs_topic": "a1-fertig" }
 ]

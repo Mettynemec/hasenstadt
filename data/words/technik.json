@@ -1,0 +1,23 @@
+[
+  { "id": "handy", "order": 1, "pos": "noun", "article": "das", "de": "das Handy", "ru": "мобильник", "ru_gender": "m", "tr": "дас хэ́нди", "plural_de": "die Handys", "syllables": ["das ", "Han", "dy"] },
+  { "id": "telefon", "order": 3, "pos": "noun", "article": "das", "de": "das Telefon", "ru": "телефон", "ru_gender": "m", "tr": "дас тэлэфо́н", "plural_de": "die Telefone", "syllables": ["das ", "Te", "le", "fon"] },
+  { "id": "bildschirm", "order": 7, "pos": "noun", "article": "der", "de": "der Bildschirm", "ru": "экран", "tr": "дэр би́льтширм", "plural_de": "die Bildschirme", "syllables": ["der ", "Bild", "schirm"] },
+  { "id": "taste", "order": 8, "pos": "noun", "article": "die", "de": "die Taste", "ru": "клавиша", "tr": "ди та́стэ", "plural_de": "die Tasten", "syllables": ["die ", "Tas", "te"] },
+  { "id": "drucker", "order": 9, "pos": "noun", "article": "der", "de": "der Drucker", "ru": "принтер", "tr": "дэр дру́кэа", "plural_de": "die Drucker", "syllables": ["der ", "Dru", "cker"] },
+  { "id": "kabel", "order": 10, "pos": "noun", "article": "das", "de": "das Kabel", "ru": "кабель", "ru_gender": "m", "tr": "дас ка́бэль", "plural_de": "die Kabel", "syllables": ["das ", "Ka", "bel"] },
+  { "id": "stecker", "order": 11, "pos": "noun", "article": "der", "de": "der Stecker", "ru": "штекер", "tr": "дэр штэ́кэа", "plural_de": "die Stecker", "syllables": ["der ", "Ste", "cker"] },
+  { "id": "akku", "order": 13, "pos": "noun", "article": "der", "de": "der Akku", "ru": "батарея", "ru_gender": "f", "tr": "дэр а́ку", "plural_de": "die Akkus", "syllables": ["der ", "Ak", "ku"] },
+  { "id": "laden", "order": 17, "pos": "verb", "de": "laden", "ru": "заряжать", "tr": "ла́дэн", "no_plural": true, "syllables": ["la", "den"] },
+  { "id": "ladung", "order": 18, "pos": "noun", "article": "die", "de": "die Ladung", "ru": "заряд", "ru_gender": "m", "tr": "ди ла́дунк", "plural_de": "die Ladungen", "syllables": ["die ", "La", "dung"] },
+  { "id": "anruf", "order": 19, "pos": "noun", "article": "der", "de": "der Anruf", "ru": "звонок", "tr": "дэр а́нруф", "plural_de": "die Anrufe", "syllables": ["der ", "An", "ruf"] },
+  { "id": "netz", "order": 20, "pos": "noun", "article": "das", "de": "das Netz", "ru": "сеть", "ru_gender": "f", "tr": "дас нэц", "plural_de": "die Netze", "syllables": ["das ", "Netz"] },
+  { "id": "foto", "order": 21, "pos": "noun", "article": "das", "de": "das Foto", "ru": "фото", "tr": "дас фо́то", "plural_de": "die Fotos", "syllables": ["das ", "Fo", "to"] },
+  { "id": "klicken", "order": 23, "pos": "verb", "de": "klicken", "ru": "кликать", "tr": "кли́кэн", "no_plural": true, "syllables": ["kli", "cken"] },
+  { "id": "tippen", "order": 27, "pos": "verb", "de": "tippen", "ru": "набирать", "tr": "ти́пэн", "no_plural": true, "syllables": ["tip", "pen"] },
+  { "id": "senden", "order": 28, "pos": "verb", "de": "senden", "ru": "отправлять", "tr": "зэ́ндэн", "no_plural": true, "syllables": ["sen", "den"] },
+  { "id": "speichern", "order": 29, "pos": "verb", "de": "speichern", "ru": "сохранять", "tr": "шпа́йхьан", "no_plural": true, "syllables": ["spei", "chern"] },
+  { "id": "loeschen", "order": 30, "pos": "verb", "de": "löschen", "ru": "удалять", "tr": "лё́шэн", "no_plural": true, "syllables": ["lö", "schen"] },
+  { "id": "drucken", "order": 31, "pos": "verb", "de": "drucken", "ru": "печатать", "tr": "дру́кэн", "no_plural": true, "syllables": ["dru", "cken"] },
+  { "id": "signal", "order": 33, "pos": "noun", "article": "das", "de": "das Signal", "ru": "сигнал", "ru_gender": "m", "tr": "дас зигна́л", "plural_de": "die Signale", "syllables": ["das ", "Si", "gnal"] },
+  { "id": "leitung", "order": 37, "pos": "noun", "article": "die", "de": "die Leitung", "ru": "линия", "tr": "ди ла́йтунк", "plural_de": "die Leitungen", "syllables": ["die ", "Lei", "tung"] }
+]

@@ -1,15 +1,25 @@
 // Экран «Чтение». Список из data/reading/index.json, тексты — по файлу на текст.
 // Слова берутся из словаря, очки и факт прочтения — в базу, как в играх.
+// Тексты, чьих файлов ещё нет в папке, в списке не показываются.
 
 import { CONFIG } from "../../config.js";
 import { store } from "../store.js";
 import * as db from "../db.js";
 import { toast } from "../ui.js";
 
+const V = () => encodeURIComponent(CONFIG.CONTENT_VERSION);
+
 async function grabJson(name) {
-  const r = await fetch("data/reading/" + name + "?v=" + encodeURIComponent(CONFIG.CONTENT_VERSION), { cache: "no-cache" });
+  const r = await fetch("data/reading/" + name + "?v=" + V(), { cache: "no-cache" });
   if (!r.ok) throw new Error(name + ": " + r.status);
   return r.json();
+}
+
+async function exists(name) {
+  try {
+    const r = await fetch("data/reading/" + name + "?v=" + V(), { cache: "no-cache" });
+    return r.ok;
+  } catch (e) { return false; }
 }
 
 export function mount(root) {
@@ -22,11 +32,20 @@ export function mount(root) {
   list.appendChild(hint);
   root.appendChild(list);
 
-  grabJson("index.json").then((texts) => {
-    if (!alive) return;
-    list.innerHTML = "";
+  (async () => {
+    let texts;
+    try { texts = await grabJson("index.json"); }
+    catch (e) { if (alive) hint.textContent = "список текстов не загрузился"; return; }
     texts.sort((a, b) => a.order - b.order);
-    for (const t of texts) {
+    const flags = await Promise.all(texts.map((t) => exists(t.id + ".json")));
+    if (!alive) return;
+    const shown = texts.filter((t, i) => flags[i]);
+    list.innerHTML = "";
+    const count = document.createElement("p");
+    count.className = "small dim";
+    count.textContent = shown.length ? "текстов: " + shown.length : "текстов пока нет";
+    list.appendChild(count);
+    for (const t of shown) {
       const read = !!db.kvGet("read_" + t.id, false);
       const b = document.createElement("button");
       b.type = "button";
@@ -35,13 +54,7 @@ export function mount(root) {
       b.addEventListener("click", () => openText(root, t));
       list.appendChild(b);
     }
-    if (!texts.length) {
-      const p = document.createElement("p");
-      p.className = "small dim";
-      p.textContent = "текстов пока нет";
-      list.appendChild(p);
-    }
-  }).catch(() => { if (alive) hint.textContent = "тексты не загрузились"; });
+  })();
 
   return () => { alive = false; };
 }

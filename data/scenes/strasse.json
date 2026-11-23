@@ -62,6 +62,34 @@
         { "who": "human", "task_ru": "Спроси: это бесплатно?", "de": "Ist er kostenlos?", "ru": "Это бесплатно?", "chunks": ["Ist er", "kostenlos?"] },
         { "who": "bot", "de": "Ja, zwei Stunden sind frei.", "ru": "Да, два часа бесплатно.", "options_ru": ["Да, два часа бесплатно", "Нет, это дорого", "Да, но только ночью"], "answer": 0 }
       ]
+    },
+    {
+      "id": "strasse-fahrrad",
+      "title_ru": "Сломанный велосипед",
+      "order": 10,
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Прохожий", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Скажи, что велосипед сломан.", "de": "Das Fahrrad ist kaputt.", "ru": "Велосипед сломан.", "chunks": ["Das Fahrrad", "ist kaputt."] },
+        { "who": "bot", "de": "Wo ist das Problem?", "ru": "В чём проблема?", "options_ru": ["Он спрашивает, в чём проблема", "Он спрашивает, чей велосипед", "Он предлагает помощь"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: колесо сломано.", "de": "Das Rad ist kaputt.", "ru": "Колесо сломано.", "chunks": ["Das Rad", "ist kaputt."] },
+        { "who": "bot", "de": "Es gibt einen Laden dort.", "ru": "Там есть магазин.", "options_ru": ["Он указывает на магазин", "Он говорит, что не знает", "Он предлагает автобус"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "strasse-taxi",
+      "title_ru": "Поиск такси",
+      "order": 11,
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Прохожий", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Спроси, где можно взять такси.", "de": "Wo ist ein Taxi?", "ru": "Где такси?", "chunks": ["Wo ist", "ein Taxi?"] },
+        { "who": "bot", "de": "Die Taxis sind am Bahnhof.", "ru": "Такси на вокзале.", "options_ru": ["Он говорит, что такси на вокзале", "Он говорит, что такси нет", "Он предлагает идти пешком"], "answer": 0 },
+        { "who": "human", "task_ru": "Спроси: это далеко?", "de": "Ist das weit?", "ru": "Это далеко?", "chunks": ["Ist das", "weit?"] },
+        { "who": "bot", "de": "Nein, nur zwei Minuten.", "ru": "Нет, всего две минуты.", "options_ru": ["Нет, всего две минуты", "Да, очень далеко", "Да, десять минут"], "answer": 0 }
+      ]
     }
   ]
 }

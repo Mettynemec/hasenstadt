@@ -63,6 +63,33 @@
         { "who": "human", "task_ru": "Скажи: да, вот чек.", "de": "Ja, hier ist der Bon.", "ru": "Да, вот чек.", "chunks": ["Ja,", "hier ist", "der Bon."] },
         { "who": "bot", "de": "Gut, Sie bekommen Ihr Geld zuruck.", "ru": "Хорошо, вы получите свои деньги назад.", "options_ru": ["Он возвращает деньги", "Он предлагает обмен", "Он отказывает"], "answer": 0 }
       ]
+    },
+    {
+      "id": "laden-tasche",
+      "title_ru": "Порванный пакет",
+      "order": 10,
+      "needs_words": [],
+      "needs_rules": ["modalverben"],
+      "roles": { "bot": "Продавец", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Скажи, что пакет порвался.", "de": "Die Tute ist kaputt.", "ru": "Пакет порвался.", "chunks": ["Die Tute", "ist kaputt."] },
+        { "who": "bot", "de": "Mochten Sie eine neue Tute?", "ru": "Хотите новый пакет?", "options_ru": ["Он предлагает новый пакет", "Он спрашивает, что выпало", "Он отказывает"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, пожалуйста.", "de": "Ja, bitte.", "ru": "Да, пожалуйста.", "chunks": ["Ja,", "bitte."] },
+        { "who": "bot", "de": "Hier ist eine neue Tute.", "ru": "Вот новый пакет.", "options_ru": ["Он даёт новый пакет", "Он просит заплатить", "Он говорит, что пакетов нет"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "laden-kasse",
+      "title_ru": "Где касса",
+      "order": 11,
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Продавец", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Спроси, где касса.", "de": "Wo ist die Kasse?", "ru": "Где касса?", "chunks": ["Wo ist", "die Kasse?"] },
+        { "who": "bot", "de": "Die Kasse ist dort hinten.", "ru": "Касса вон там, сзади.", "options_ru": ["Он показывает, где касса", "Он говорит, что касса закрыта", "Он спрашивает, что ты купил"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи спасибо.", "de": "Danke schon.", "ru": "Спасибо.", "chunks": ["Danke", "schon."] }
+      ]
     }
   ]
 }

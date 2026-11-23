@@ -91,6 +91,46 @@
         { "who": "human", "task_ru": "Скажи, что вынесешь мусор.", "de": "Ja, ich bringe den Mull raus.", "ru": "Да, я вынесу мусор.", "chunks": ["Ja,", "ich bringe", "den Mull", "raus."] },
         { "who": "bot", "de": "Danke, sehr nett.", "ru": "Спасибо, очень мило.", "options_ru": ["Он благодарит", "Он просит помочь", "Он жалуется на запах"], "answer": 0 }
       ]
+    },
+    {
+      "id": "wohnung-luft",
+      "title_ru": "В комнате душно",
+      "order": 13,
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Сосед", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Скажи, что в комнате очень тепло.", "de": "Es ist sehr warm im Zimmer.", "ru": "В комнате очень тепло.", "chunks": ["Es ist", "sehr warm", "im Zimmer."] },
+        { "who": "bot", "de": "Machen wir das Fenster auf?", "ru": "Откроем окно?", "options_ru": ["Он предлагает открыть окно", "Он просит закрыть дверь", "Он жалуется на холод"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, пожалуйста.", "de": "Ja, bitte.", "ru": "Да, пожалуйста.", "chunks": ["Ja,", "bitte."] }
+      ]
+    },
+    {
+      "id": "wohnung-bett",
+      "title_ru": "Сломанная кровать",
+      "order": 17,
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Хозяин квартиры", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Скажи, что кровать сломана.", "de": "Das Bett ist kaputt.", "ru": "Кровать сломана.", "chunks": ["Das Bett", "ist kaputt."] },
+        { "who": "bot", "de": "Seit wann ist es kaputt?", "ru": "С каких пор она сломана?", "options_ru": ["Он спрашивает, давно ли это", "Он спрашивает, где кровать", "Он предлагает починить"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: со вчерашнего дня.", "de": "Seit gestern.", "ru": "Со вчера.", "chunks": ["Seit", "gestern."] },
+        { "who": "bot", "de": "Ich kaufe ein neues Bett.", "ru": "Я куплю новую кровать.", "options_ru": ["Он купит новую кровать", "Он просит спать на полу", "Он говорит, что это нормально"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "wohnung-post",
+      "title_ru": "Посылка",
+      "order": 18,
+      "needs_words": [],
+      "needs_rules": ["sein"],
+      "roles": { "bot": "Сосед", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Скажи, что пришла посылка.", "de": "Ein Paket ist da.", "ru": "Пришла посылка.", "chunks": ["Ein Paket", "ist da."] },
+        { "who": "bot", "de": "Ist das Paket fur Sie?", "ru": "Посылка для вас?", "options_ru": ["Он спрашивает, для вас ли это", "Он спрашивает, что внутри", "Он просит деньги"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: да, это для меня.", "de": "Ja, es ist fur mich.", "ru": "Да, это для меня.", "chunks": ["Ja,", "es ist", "fur mich."] }
+      ]
     }
   ]
 }

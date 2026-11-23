@@ -77,6 +77,34 @@
         { "who": "bot", "de": "Wo genau?", "ru": "Где именно?", "options_ru": ["Он спрашивает точный адрес", "Он спрашивает время", "Он спрашивает имя"], "answer": 0 },
         { "who": "human", "task_ru": "Скажи: на перекрестке Бергштрассе и Гауптштрассе.", "de": "An der Kreuzung Bergstrasse und Hauptstrasse.", "ru": "На перекрестке Бергштрассе и Гауптштрассе.", "chunks": ["An der", "Kreuzung", "Bergstrasse", "und Hauptstrasse."] }
       ]
+    },
+    {
+      "id": "notruf-wasser",
+      "title_ru": "Затопление",
+      "order": 10,
+      "needs_words": [],
+      "needs_rules": [],
+      "roles": { "bot": "Диспетчер", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Скажи, что в квартире вода.", "de": "Es gibt Wasser in der Wohnung.", "ru": "В квартире вода.", "chunks": ["Es gibt", "Wasser", "in der", "Wohnung."] },
+        { "who": "bot", "de": "Wie viel Wasser?", "ru": "Сколько воды?", "options_ru": ["Он спрашивает, сколько воды", "Он спрашивает, откуда вода", "Он просит закрыть кран"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: очень много воды.", "de": "Sehr viel Wasser.", "ru": "Очень много воды.", "chunks": ["Sehr viel", "Wasser."] },
+        { "who": "bot", "de": "Wir kommen sofort.", "ru": "Мы сейчас приедем.", "options_ru": ["Они едут", "Они просят ждать", "Они дают совет"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "notruf-kind",
+      "title_ru": "Потерялся ребёнок",
+      "order": 11,
+      "needs_words": [],
+      "needs_rules": [],
+      "roles": { "bot": "Диспетчер", "human": "Ты" },
+      "lines": [
+        { "who": "human", "task_ru": "Скажи, что ребёнок потерялся.", "de": "Ein Kind ist weg.", "ru": "Ребёнок потерялся.", "chunks": ["Ein Kind", "ist weg."] },
+        { "who": "bot", "de": "Wie alt ist das Kind?", "ru": "Сколько лет ребёнку?", "options_ru": ["Он спрашивает возраст", "Он спрашивает имя", "Он спрашивает, где он"], "answer": 0 },
+        { "who": "human", "task_ru": "Скажи: пять лет.", "de": "Funf Jahre.", "ru": "Пять лет.", "chunks": ["Funf", "Jahre."] },
+        { "who": "bot", "de": "Wo sind Sie jetzt?", "ru": "Где вы сейчас?", "options_ru": ["Он спрашивает, где вы", "Он спрашивает, что на ребёнке", "Он просит не двигаться"], "answer": 0 }
+      ]
     }
   ]
 }
